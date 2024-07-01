@@ -2,7 +2,7 @@
 
 The aim of this repository is to centralize the work performed by the ISA Group to write the paper for ICSOC 2024 about the current status of SaaS pricings.
 
-## Work Status
+## Work Status
 
 The cells of the following table should be filled as follows in order to keep track of the work status:
 
@@ -44,3 +44,6 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Rippling       |        |        |        |        |        |        |
 | Wrike          |        |        |        |        |        |        |
 
+## Important Links
+
+- 37 Popular SaaS: https://clickup.com/blog/saas-examples/
