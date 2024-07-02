@@ -15,8 +15,8 @@ Empty cells indicate that the SaaS has not been modeled yet.
 |----------------|:------:|:------:|:------:|:------:|:------:|:------:|
 | ClickUp        |        |        |        |        |        |        |
 | HubSpot        |        |        |        |        |        |        |
-| Salesforce     |        |        |        |        |        |        |
-| Slack          |        |        |        |        |        |        |
+| Salesforce     |        |        |        |        | ✅     |        |
+| Slack          | 🔄     |        |        |        |        |        |
 | Buffer         |        |        |        |        |        |        |
 | Hypercontext   |        |        |        |        |        |        |
 | DocuSign       |        |        |        |        |        |        |
@@ -32,17 +32,17 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Databox        |        |        |        |        |        |        |
 | Trustmary      |        |        |        |        |        |        |
 | Evernote       |        |        |        |        |        |        |
-| Canva          |        |        |        |        |        |        |
-| Clockify       |        |        |        |        |        |        |
-| Figma          |        |        |        |        |        |        |
-| GitHub         |        |        |        |        |        |        |
-| Jira           |        |        |        |        |        |        |
-| Microsoft 365  |        |        |        |        |        |        |
-| Monday         |        |        |        |        |        |        |
-| Postman        |        |        |        |        |        |        |
-| RapidAPI       |        |        |        |        |        |        |
-| Rippling       |        |        |        |        |        |        |
-| Wrike          |        |        |        |        |        |        |
+| Canva          |        |        |        |        | ✅     |        |
+| Clockify       |        |        |        |        | ✅     |        |
+| GitHub         |        |        |        |        | ✅     |        |
+| Figma          |        |        |        |        | ✅     |        |
+| Jira           |        |        |        |        | ✅     |        |
+| Microsoft 365  |        |        |        |        | ✅     |        |
+| Monday         |        |        |        |        | ✅     |        |
+| Postman        |        |        |        |        | ✅     |        |
+| RapidAPI       |        |        |        |        | ✅     |        |
+| Rippling       |        |        |        |        | ✅     |        |
+| Wrike          |        |        |        |        | ✅     |        |
 
 ## Research Questions
 
