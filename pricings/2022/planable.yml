@@ -91,9 +91,7 @@ features:
     description: "See who did what and when. Preview & restore previous versions of your posts."
     valueType: BOOLEAN
     defaultValue: true
-    type: INFORMATION
-  # Confirma que version history la modelaba antes como information.
-  # Vas por el bloque de support, sin empezar
+    type: DOMAIN
   helpCenter:
     description: ""
     valueType: BOOLEAN
