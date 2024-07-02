@@ -29,7 +29,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Deskera       |  ❌  |  ❌  |      |      |      |      |
 | UserGuiding   |  ❌  |      |      |      |      |  ❌  |
 | PickFu        |  ❌  |      |      |      |      |      |
-| Planable      |      |      |      |      |      |      |
+| Planable      |  🔄  |      |      |      |      |      |
 | Databox       |      |      |      |      |      |      |
 | Trustmary     |  ❌  |      |      |      |      |      |
 | Evernote      |  ✅  |      |      |      |      |      |
