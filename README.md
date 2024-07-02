@@ -8,6 +8,7 @@ The cells of the following table should be filled as follows in order to keep tr
 
 - ✅: The SaaS is modeled for the indicated year.
 - 🔄: The SaaS is being modeled for the indicated year.
+- ✖️: There is a snapshot, but a clear feature list cannot be extracted.
 - ❌: There isn't a snapshot for the SaaS in the indicated year.
 
 Empty cells indicate that the SaaS has not been modeled yet.
@@ -29,7 +30,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Deskera       |  ❌  |  ❌  |      |      |      |      |
 | UserGuiding   |  ❌  |      |      |      |      |  ❌  |
 | PickFu        |  ❌  |      |      |      |      |      |
-| Planable      |  🔄  |      |      |      |      |      |
+| Planable      |  ✖️  |  ✖️  |  ✖️  |  ✅   |      |      |
 | Databox       |      |      |      |      |      |      |
 | Trustmary     |  ❌  |      |      |      |      |      |
 | Evernote      |  ✅  |      |      |      |      |      |
