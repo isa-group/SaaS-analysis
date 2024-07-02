@@ -31,7 +31,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | UserGuiding   |  ❌  |      |      |      |      |  ❌  |
 | PickFu        |  ❌  |      |      |      |      |      |
 | Planable      |  ✖️  |  ✖️  |  ✖️  |  ✅   |      |      |
-| Databox       |      |      |      |      |      |      |
+| Databox       |  🔄  |      |      |      |      |      |
 | Trustmary     |  ❌  |      |      |      |      |      |
 | Evernote      |  ✅  |      |      |      |      |      |
 | Canva         |      |      |      |      |  ✅  |      |
