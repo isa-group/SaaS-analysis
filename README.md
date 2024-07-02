@@ -24,7 +24,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | DocuSign      |  ❌  |  ❌  |  ❌  |  ❌  |      |      |
 | OpenPhone     |  ❌  |  ❌  |  ❌  |      |      |      |
 | Pumble        |  ❌  |  ❌  |      |      |      |      |
-| Tableau       |      |      |      |      |      |      |
+| Tableau       |  ✅  |      |      |      |      |      |
 | Quip          |  ✅  |      |      |      |      |      |
 | MailChimp     |  ❌  |  ❌  |      |      |      |      |
 | Deskera       |  ❌  |  ❌  |      |      |      |      |

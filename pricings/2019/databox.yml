@@ -148,14 +148,14 @@ usageLimits:
       - databoards
 plans:
   FREE:
-    description: "Take great notes"
+    description: ""
     monthlyPrice: 0.0
     annualPrice: 0.0
     unit: forever
     features: null
     usageLimits: null
   BASIC:
-    description: "Organize everything"
+    description: ""
     monthlyPrice: 59.0
     annualPrice: 49.0
     unit: /month
@@ -172,7 +172,7 @@ plans:
       databoardsLimit:
         value: 10
   PLUS:
-    description: "Bring your team together"
+    description: ""
     monthlyPrice: 119.0
     annualPrice: 99.0
     unit: /month
@@ -195,7 +195,7 @@ plans:
       databoardsLimit:
         value: 10
   BUSINESS:
-    description: "Bring your team together"
+    description: ""
     monthlyPrice: 299.0
     annualPrice: 248.0
     unit: user/month
