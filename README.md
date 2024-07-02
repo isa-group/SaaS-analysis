@@ -15,7 +15,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 
 | SaaS          | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 |
 | ------------- | :--: | :--: | :--: | :--: | :--: | :--: |
-| ClickUp       |      |      |      |      |      |      |
+| ClickUp       |  ✖️   |  🔄  |      |      |      |      |
 | HubSpot       |  ❌  |  ❌  |      |      |      |      |
 | Salesforce    |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |      |
 | Slack         |  🔄  |      |      |      |      |      |
