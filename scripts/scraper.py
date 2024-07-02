@@ -152,7 +152,7 @@ saas_list = [
     },
     {
         "name": "PickFu",
-        "url": "https://www.pickfu.com/es/pricing",
+        "url": "https://www.pickfu.com/pricing",
         "extended_pricing_button_text": "",
         "feature_elem": "div",
         "feature_selector": {"class": "col-5 p-0 col-desc"},
