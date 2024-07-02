@@ -142,6 +142,14 @@ features:
     type: PAYMENT
     paymentType: GATEWAY
 usageLimits: 
+  postsLimit:
+    description: ""
+    valueType: NUMERIC
+    defaultValue: 1000000000000
+    unit: posts
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - posts
   postsPerMonthLimit:
     description: ""
     valueType: NUMERIC
@@ -191,16 +199,51 @@ usageLimits:
     linkedFeatures:
       - versionHistory
 plans:
-  BASIC:
-    description: "Take great notes"
+  FREE:
+    description: "For anyone wanting to test Planable out"
     monthlyPrice: 0.0
+    annualPrice: 0.0
     unit: /month
+    features:
+      saveAsAnAd:
+        value: true
+      gridView:
+        value: true
+      listView:
+        value: true
+      syncPreviousContent:
+        value: true
+      requiredApprovalWorkflows:
+        value: true
+      multiLevelApprovalWorkflows:
+        value: true
+      internalAndExternalCollaboration:
+        value: true
+    usageLimits:
+      postsLimit:
+        value: 50
+      postsPerMonthLimit:
+        value: 50
+      socialMediaPagesLimit:
+        value: 10
+      numberOfLabels:
+        value: 10000000
+      mediaStorageCapacity:
+        value: 1000000
+      versionHistoryThreshold:
+        value: 1000000
+  BASIC:
+    description: "For businesses getting started with social media"
+    monthlyPrice: 13.0
+    annualPrice: 11.0
+    unit: user/month
     features: null
     usageLimits: null
   PRO:
-    description: "Organize everything"
-    monthlyPrice: 7.99
-    unit: /month
+    description: "For growing social media teams"
+    monthlyPrice: 26.0
+    annualPrice: 22.0
+    unit: user/month
     features:
       saveAsAnAd:
         value: true
@@ -226,8 +269,9 @@ plans:
       versionHistoryThreshold:
         value: 30
   ENTERPRISE:
-    description: "Bring your team together"
-    monthlyPrice: 14.99
+    description: "For large social media teams wanting to scale"
+    monthlyPrice: Custom
+    annualPrice: Custom
     unit: user/month
     features:
       saveAsAnAd:

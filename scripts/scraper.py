@@ -44,7 +44,7 @@ saas_list = [
     # },
     {
         "name": "Slack",
-        "url": "https://slack.com/intl/es-es/pricing",
+        "url": "https://slack.com/pricing",
         "extended_pricing_button_text": "",
         "feature_elem": "tr",
         "feature_selector": {"class": "o-pricing-table__row--feature"},
