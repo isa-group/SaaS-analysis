@@ -1,0 +1,283 @@
+saasName: Slack
+day: 31
+month: 10
+year: 2019
+currency: USD
+hasAnnualPayment: true
+
+features:
+  messagesAccess:
+    description: "Slack guarda todos tus mensajes para ti, pero con el plan gratuito solo puedes ver y buscar los 10.000 más recientes."
+    defaultValue: true
+    valueType: BOOLEAN
+    type: DOMAIN
+  appsAndServices:
+    description: "Utiliza las integraciones para conectar con las herramientas y servicios que usas a diario. Consulta la lista completa de integraciones y bots en el Directorio de Aplicaciones de Slack."
+    defaultValue: true
+    valueType: BOOLEAN
+    type: DOMAIN
+  sharedChannels:
+    description: "Shared channels: Utiliza canales compartidos para trabajar."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  monocanalGuests:
+    description: "Invitados monocanal: Utiliza cuentas de invitado para trabajar con individuos que no pertenecen a tu equipo, como clientes, proveedores y socios."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  multicanalGuests:
+    description: "Invitados multicanal: Utiliza cuentas de invitado para trabajar con organizaciones que no pertenecen a tu equipo, como clientes, proveedores y socios."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  twoFactorAuthentication:
+    description: "Autenticación de dos factores."
+    defaultValue: true
+    valueType: BOOLEAN
+    type: INTEGRATION
+    integrationType: EXTERNAL_DEVICE
+  oAuthGoogle:
+    description: "OAuth con Google."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: INTEGRATION
+    integrationType: IDENTITY_PROVIDER
+  singleSignOn:
+    description: "Inicio de sesión único basado en SAML (SSO)."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: INTEGRATION
+    integrationType: IDENTITY_PROVIDER
+  customRules:
+    description: "Políticas personalizadas de retención de mensajes y archivos."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: MANAGEMENT
+  exportMessages:
+    description: "Exportación corporativa para todos los mensajes."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  dataResidence:
+    description: "Residencia de datos"
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  privilegesGeneralChannelManagement:
+    description: "Gestionar los permisos de publicación en el canal #general."
+    defaultValue: true
+    valueType: BOOLEAN
+    type: MANAGEMENT
+  privilegesPrivateChannelManagement:
+    description: "Gestionar los permisos de publicación de un número ilimitados de canales."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: MANAGEMENT
+  customUserGroups:
+    description: "Grupos de usuarios personalizados para contactar con un equipo o departamento."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: MANAGEMENT
+  usersManagement:
+    description: "Gestión de usuarios."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: MANAGEMENT
+  activeDirectorySync:
+    description: "Sincronización de Active Directory en tiempo real con OneLogin, Okta y Ping."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: INTEGRATION
+    integrationType: WEB_SAAS
+    pricingURLs:
+      - "https://www.onelogin.com/pages/active-directory-sso"
+      - "https://www.okta.com/integrations/active-directory/"
+      - "https://docs.pingidentity.com/r/en-us/pingoneforenterprise/p14e_connect_adc"
+  voiceAndVideoCalls:
+    description: "Llamadas de voz y de vídeo"
+    defaultValue: true
+    valueType: BOOLEAN
+    type: DOMAIN
+  screenSharing:
+    description: "Además de poder presentar tu pantalla, todo el que participe en la llamada puede escribir en la pantalla para añadir anotaciones."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  peopleChannelsFilesSearch:
+    description: "Búsqueda de personas, canales y archivos relevantes: Las funciones inteligentes te ayudan a encontrar lo que necesitas con rapidez y a estar al día de las conversaciones importantes."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  channelRecommendations:
+    description: "Recomendaciones del canal: Las funciones inteligentes te ayudan a encontrar lo que necesitas con rapidez y a estar al día de las conversaciones importantes."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  outlinedMessages:
+    description: "Mensajes destacados: Las funciones inteligentes te ayudan a encontrar lo que necesitas con rapidez y a estar al día de las conversaciones importantes."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  storageByAccount:
+    description: "Almacenamiento de archivos por cuenta (en total)."
+    defaultValue: true
+    valueType: BOOLEAN
+    type: DOMAIN
+  storageByTeamMember:
+    description: "Almacenamiento de archivos por cada miembro del equipo."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  support:
+    description: "Ayuda (Asistencia técnica)."
+    defaultValue: Asistencia Estándar
+    valueType: TEXT
+    type: GUARANTEE
+  availability:
+    description: "Disponibilidad del 99,99 % garantizada en nuestro ANS."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: GUARANTEE
+
+usageLimits:
+  useMessagesAccess:
+    description: "The number of messages you can access"
+    valueType: NUMERIC
+    defaultValue: 10000
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - messagesAccess
+  useAppsAndServices:
+    description: "The limits of apps and services that can be used"
+    valueType: NUMERIC
+    defaultValue: 10
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - appsAndServices
+  useVoiceAndVideoCalls:
+    description: "The number of people that can be in the same voice and video calls you make"
+    valueType: NUMERIC
+    defaultValue: 1
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - voiceAndVideoCalls
+  useStorageByAccount:
+    description: "The storage limit by account"
+    valueType: NUMERIC
+    defaultValue: 5
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - storageByAccount
+  useStorageByTeamMember:
+    description: "The storage limit by team member"
+    valueType: NUMERIC
+    defaultValue: 10
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - storageByTeamMember
+
+plans:
+  FREE:
+    description: "Para equipos pequeños que quieren probar Slack durante un período ilimitado."
+    monthlyPrice: 0
+    annualPrice: 0
+    unit: user/month
+    features: null
+    usageLimits: null
+  STANDARD:
+    description: "Para equipos y empresas que quieren hacer de Slack el centro de sus proyectos y comunicaciones."
+    monthlyPrice: 8
+    annualPrice: 6.67
+    unit: user/month
+    features:
+      sharedChannels:
+        value: true
+      monocanalGuests:
+        value: true
+      multicanalGuests:
+        value: true
+      oAuthGoogle:
+        value: true
+      customRules:
+        value: true
+      customUserGroups:
+        value: true
+      screenSharing:
+        value: true
+      peopleChannelsFilesSearch:
+        value: true
+      channelRecommendations:
+        value: true
+      outlinedMessages:
+        value: true
+      storageByAccount:
+        value: false
+      storageByTeamMember:
+        value: true
+      support:
+        value: Asistencia Prioritaria
+    usageLimits:
+      useMessagesAccess:
+        value: 100000000000000000
+      useAppsAndServices:
+        value: 100000000000000000
+      useVoiceAndVideoCalls:
+        value: 15
+  PLUS:
+    description: "Para empresas que necesiten inicio de sesión único, exportación de datos y tiempo de actividad garantizado en un único espacio de trabajo de Slack."
+    monthlyPrice: 15
+    annualPrice: 12.5
+    unit: user/month
+    features:
+      sharedChannels:
+        value: true
+      monocanalGuests:
+        value: true
+      multicanalGuests:
+        value: true
+      oAuthGoogle:
+        value: true
+      singleSignOn:
+        value: true
+      customRules:
+        value: true
+      exportMessages:
+        value: true
+      dataResidence:
+        value: true
+      privilegesPrivateChannelManagement:
+        value: true
+      customUserGroups:
+        value: true
+      usersManagement:
+        value: true
+      activeDirectorySync:
+        value: true
+      screenSharing:
+        value: true
+      peopleChannelsFilesSearch:
+        value: true
+      channelRecommendations:
+        value: true
+      outlinedMessages:
+        value: true
+      storageByAccount:
+        value: false
+      storageByTeamMember:
+        value: true
+      support:
+        value: Asistencia las 24 horas del día, 7 días a la semana, con un tiempo de respuesta de cuatro horas
+      availability:
+        value: true
+    usageLimits:
+      useMessagesAccess:
+        value: 100000000000000000
+      useAppsAndServices:
+        value: 100000000000000000
+      useVoiceAndVideoCalls:
+        value: 15
+      useStorageByTeamMember:
+        value: 20
+
+addOns: null

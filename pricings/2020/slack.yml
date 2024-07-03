@@ -1,0 +1,391 @@
+saasName: Slack
+day: 22
+month: 10
+year: 2020
+currency: USD
+hasAnnualPayment: true
+
+features:
+  messagesAccess:
+    description: "Cuanto más usas Slack, más útil se vuelve. Al poder buscar y acceder a todos los mensajes de tu organización, puedes aprovechar el contexto de las decisiones anteriores o poner a los nuevos miembros del equipo al día más rápido."
+    defaultValue: true
+    valueType: BOOLEAN
+    type: DOMAIN
+  search:
+    description: "Personas, canales y archivos relevantes en los resultados de búsqueda"
+    defaultValue: true
+    valueType: BOOLEAN
+    type: DOMAIN
+  appsAndServices:
+    description: "Recibe notificaciones, encuentra información y realiza acciones sin salir de Slack, por medio de las integraciones y herramientas que ya usas todos los días. También puedes crear tus propias aplicaciones adaptadas a tus necesidades concretas."
+    defaultValue: true
+    valueType: BOOLEAN
+    type: DOMAIN
+  storageByAccount:
+    description: "Almacenamiento de archivos por cuenta (en total)."
+    defaultValue: true
+    valueType: BOOLEAN
+    type: DOMAIN
+  storageByTeamMember:
+    description: "Almacenamiento de archivos por cada miembro del equipo."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  workspaces:
+    description: "Los espacios de trabajo de Slack son el motor de tu trabajo, como si fuesen una oficina virtual. Es donde residen tus canales, mensajes directos y herramientas."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  customSections:
+    description: "Mantén tus proyectos, equipos y prioridades en orden. Consíguelo mediante la organización de tus canales y conversaciones en secciones personalizables que se pueden contraer en la barra lateral."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: MANAGEMENT
+  slackConnect:
+    description: "Slack Connect hace posible la colaboración fluida entre departamentos de la organización. Dos organizaciones pueden trabajar juntas desde sus propios espacios de trabajo en Slack."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  guestsAccounts:
+    description: "Reduce los interminables intercambios de correos, e incluso los correos puntuales, reuniendo a contratistas, autónomos y proveedores en Slack mediante las cuentas de invitado."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  dataCypher:
+    description: "Cifrado de datos en reposo y en tránsito."
+    defaultValue: true
+    valueType: BOOLEAN
+    type: GUARANTEE
+  twoFactorAuthentication:
+    description: "Autenticación de dos factores."
+    defaultValue: true
+    valueType: BOOLEAN
+    type: INTEGRATION
+    integrationType: EXTERNAL_DEVICE
+  oAuthGoogle:
+    description: "OAuth con Google."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: INTEGRATION
+    integrationType: IDENTITY_PROVIDER
+  singleSignOn:
+    description: "Inicio de sesión único basado en SAML (SSO)."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: INTEGRATION
+    integrationType: IDENTITY_PROVIDER
+  adminSlackEnterpriseKeys:
+    description: "Administración de claves Enterprise de Slack"
+    defaultValue: false
+    valueType: BOOLEAN
+    type: INTEGRATION
+    integrationType: WEB_SAAS
+    pricingURLs:
+      - "https://docs.aws.amazon.com/es_es/kms/latest/developerguide/overview.html"
+  enterpriseMobilitySecurity:
+    description: "Integración con la Gestión de movilidad empresarial (EMM)"
+    defaultValue: false
+    valueType: BOOLEAN
+    type: GUARANTEE
+  customRules:
+    description: "Políticas personalizadas de retención de mensajes y archivos."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: MANAGEMENT
+  exportMessages:
+    description: "Exportaciones de datos para todos los mensajes."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  complianceHIPAA:
+    description: "Compatibilidad con los requisitos de la HIPAA."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: GUARANTEE
+  dataResidence:
+    description: "Residencia de datos"
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  privilegesGeneralChannelManagement:
+    description: "Gestionar los permisos de publicación en el canal #general."
+    defaultValue: true
+    valueType: BOOLEAN
+    type: MANAGEMENT
+  privilegesPrivateChannelManagement:
+    description: "Gestionar los permisos de publicación de un número ilimitados de canales."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: MANAGEMENT
+  customUserGroups:
+    description: "Grupos de usuarios personalizados: Facilita la recepción de notificaciones y la comunicación con equipos, departamentos y grupos al completo."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: MANAGEMENT
+  usersManagement:
+    description: "Gestión de usuarios."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: MANAGEMENT
+  activeDirectorySync:
+    description: "Sincronización de Active Directory en tiempo real con OneLogin, Okta y Ping."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: INTEGRATION
+    integrationType: WEB_SAAS
+    pricingURLs:
+      - "https://www.onelogin.com/pages/active-directory-sso"
+      - "https://www.okta.com/integrations/active-directory/"
+      - "https://docs.pingidentity.com/r/en-us/pingoneforenterprise/p14e_connect_adc"
+  usersManagementSCIM:
+    description: "Gestión de usuarios meidante SCIM."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: INTEGRATION
+    integrationType: WEB_SAAS
+  extraCompatibility:
+    description: "Compatibilidad con los proveedores de prevención de pérdida de datos (DLP), eDiscovery y copias de seguridad sin conexión."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: GUARANTEE
+  domainName:
+    description: "Reclamación de nombres de dominios."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  customSLAs:
+    description: "Condiciones de servicio personalizadas."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: GUARANTEE
+  voiceAndVideoCalls:
+    description: "Llamadas de voz y de vídeo"
+    defaultValue: true
+    valueType: BOOLEAN
+    type: DOMAIN
+  screenSharing:
+    description: "Además de poder presentar tu pantalla, todo el que participe en la llamada puede escribir en la pantalla para añadir anotaciones."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: DOMAIN
+  support:
+    description: "Acceso a asistencia al cliente."
+    defaultValue: Asistencia Estándar
+    valueType: TEXT
+    type: GUARANTEE
+  availability:
+    description: "Disponibilidad del 99,99 % garantizada en nuestro ANS"
+    defaultValue: false
+    valueType: BOOLEAN
+    type: GUARANTEE
+  personalTechnicalSupport:
+    description: "Equipo de cuenta y satisfacción del cliente con dedicación exclusiva."
+    defaultValue: false
+    valueType: BOOLEAN
+    type: GUARANTEE
+
+usageLimits:
+  useMessagesAccess:
+    description: "The number of messages you can access"
+    valueType: NUMERIC
+    defaultValue: 10000
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - messagesAccess
+  useAppsAndServices:
+    description: "The limits of apps and services that can be used"
+    valueType: NUMERIC
+    defaultValue: 10
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - appsAndServices
+  useVoiceAndVideoCalls:
+    description: "The number of people that can be in the same voice and video calls you make"
+    valueType: NUMERIC
+    defaultValue: 1
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - voiceAndVideoCalls
+  useStorageByAccount:
+    description: "The storage limit by account"
+    valueType: NUMERIC
+    defaultValue: 5
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - storageByAccount
+  useStorageByTeamMember:
+    description: "The storage limit by team member"
+    valueType: NUMERIC
+    defaultValue: 10
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - storageByTeamMember
+  useWorkspaces:
+    description: "The number of workspaces you can use"
+    valueType: NUMERIC
+    defaultValue: 1
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - workspaces
+
+plans:
+  FREE:
+    description: "Para equipos pequeños que prueban Slack durante un período ilimitado"
+    monthlyPrice: 0
+    annualPrice: 0
+    unit: user/month
+    features: null
+    usageLimits: null
+  STANDARD:
+    description: "Para las pequeñas y medianas empresas"
+    monthlyPrice: 8
+    annualPrice: 6.67
+    unit: user/month
+    features:
+      customSections:
+        value: true
+      storageByAccount:
+        value: false
+      storageByTeamMember:
+        value: true
+      slackConnect:
+        value: true
+      guestsAccounts:
+        value: true
+      oAuthGoogle:
+        value: true
+      customRules:
+        value: true
+      customUserGroups:
+        value: true
+      screenSharing:
+        value: true
+      support:
+        value: Asistencia de lunes a domingo, las 24 horas del día
+    usageLimits:
+      useMessagesAccess:
+        value: 10000000000000
+      useAppsAndServices:
+        value: 10000000000000
+      useVoiceAndVideoCalls:
+        value: 15
+      useStorageByTeamMember:
+        value: 10
+
+  PLUS:
+    description: "Para las empresas de un tamaño un poco mayor o con necesidades de administración avanzadas"
+    monthlyPrice: 15
+    annualPrice: 12.5
+    unit: user/month
+    features:
+      storageByAccount:
+        value: false
+      storageByTeamMember:
+        value: true
+      customSections:
+        value: true
+      slackConnect:
+        value: true
+      guestsAccounts:
+        value: true
+      oAuthGoogle:
+        value: true
+      singleSignOn:
+        value: true
+      customRules:
+        value: true
+      exportMessages:
+        value: true
+      dataResidence:
+        value: true
+      privilegesPrivateChannelManagement:
+        value: true
+      customUserGroups:
+        value: true
+      activeDirectorySync:
+        value: true
+      usersManagementSCIM:
+        value: true
+      screenSharing:
+        value: true
+      support:
+        value: Asistencia de lunes a domingo, las 24 horas del día, con un tiempo de respuesta inicial de 4 horas
+      availability:
+        value: true
+    usageLimits:
+      useMessagesAccess:
+        value: 10000000000000
+      useAppsAndServices:
+        value: 10000000000000
+      useVoiceAndVideoCalls:
+        value: 15
+      useStorageByTeamMember:
+        value: 20
+      
+  ENTERPRISE_GRID:
+    description: "Para las empresas de gran tamaño o las que están en sectores regulados"
+    monthlyPrice: Contacta con Ventas
+    annualPrice: Contacta con Ventas
+    unit: user/month
+    features:
+      storageByAccount:
+        value: false
+      storageByTeamMember:
+        value: true
+      customSections:
+        value: true
+      slackConnect:
+        value: true
+      guestsAccounts:
+        value: true
+      singleSignOn:
+        value: true
+      adminSlackEnterpriseKeys:
+        value: true
+      enterpriseMobilitySecurity:
+        value: true
+      customRules:
+        value: true
+      exportMessages:
+        value: true
+      complianceHIPAA:
+        value: true
+      dataResidence:
+        value: true
+      privilegesPrivateChannelManagement:
+        value: true
+      customUserGroups:
+        value: true
+      usersManagement:
+        value: true
+      activeDirectorySync:
+        value: true
+      usersManagementSCIM:
+        value: true
+      extraCompatibility:
+        value: true
+      domainName:
+        value: true
+      customSLAs:
+        value: true
+      screenSharing:
+        value: true
+      support:
+        value: Asistencia prioritaria de lunes a domingo, las 24 horas del día, con un tiempo de respuesta inicial de 4 horas
+      availability:
+        value: true
+      personalTechnicalSupport:
+        value: true
+    usageLimits:
+      useMessagesAccess:
+        value: 10000000000000
+      useAppsAndServices:
+        value: 10000000000000
+      useVoiceAndVideoCalls:
+        value: 15
+      useStorageByTeamMember:
+        value: 1024
+      useWorkspaces:
+        value: 10000000000000
+
+addOns: null
