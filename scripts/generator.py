@@ -169,8 +169,8 @@ def check_args(saas_name:str, year:int, html_url:str, previous_html_url:str, yea
         raise ValueError("The year argument minus the year_gap argument must be less than the current year.")
     if year <= 1970:
         raise ValueError("The year argument must be greater than 1970.")
-    if year_gap == 0:
-        raise ValueError("The year_gap argument must be greater than 0.")
+    if year - year_gap <= 1970:
+        raise ValueError("The year argument minus the year_gap argument must be greater than 1970.")
     
     if not is_valid_url(html_url):
         raise ValueError("The html_url argument must be a valid URL.")

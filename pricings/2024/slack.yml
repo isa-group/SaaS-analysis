@@ -1,18 +1,17 @@
-saasName: Slack
-day: 24
-month: 10
-year: 2023
+saasName: slack
+day: 3
+month: 7
+year: 2024
 currency: USD
 hasAnnualPayment: true
-
 features:
   messagesAccess:
-    description: "Historial de mensajes y archivos: Cuanto más usas Slack, más útil se vuelve. Al poder buscar y acceder a todos los mensajes de tu organización, puedes aprovechar el contexto de las decisiones anteriores o poner a los nuevos miembros del equipo al día más rápido."
+    description: "Historial de mensajes de 90 días: Todos los mensajes enviados en Slack se guardan durante 90 días. Además, se puede buscar en ellos. Puedes ascender a un plan de pago para conseguir acceso ilimitado a todos tus mensajes y archivos."
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
   voiceAndVideoCalls:
-    description: "Juntas de Slack: Tómate un descanso de la escritura e inicia conversaciones de audio en directo (con vídeo, función de compartir pantalla, un hilo de la conversación y reacciones/efectos de lo más divertidos) en un canal o un por mensaje directo. Lluvias de ideas, tomas de decisiones o puestas al día, todo al alcance de tu mano."
+    description: "Juntas de Slack: Tómate un descanso de la escritura e inicia conversaciones de audio en directo (con vídeo, función de compartir pantalla, un hilo de la conversación y reacciones/efectos de lo más divertidos) en un canal o un por mensaje directo. Lluvias de ideas, tomas de decisiones o actualizaciones, todo al alcance de tu mano."
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
@@ -31,11 +30,27 @@ features:
     valueType: TEXT
     defaultValue: LIMITED
     type: DOMAIN
+  lists:
+    description: "Listas de Slack: Las listas llevan la gestión del trabajo al lugar donde los equipos ya colaboran. Puedes ver y organizar las tareas desde tus conversaciones para llevar un seguimiento de los proyectos interdepartamentales, las solicitudes, las aprobaciones y mucho más."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INFORMATION
+  customTemplates:
+    description: "Plantillas personalizadas: Simplifica y sistematiza los procesos colaborativos en los canvas de Slack con plantillas personalizadas. Crea y comparte plantillas listas para usar con potentes automatizaciones ya incorporadas. Cualquier miembro de tu organización podrá usarlas con solo un clic."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: TASK_AUTOMATION
   customizableSections:
     description: "Secciones personalizables: Mantén tus proyectos, equipos y prioridades en orden. Consíguelo mediante la organización de tus canales y conversaciones en secciones personalizables que se pueden contraer en la barra lateral."
     valueType: BOOLEAN
     defaultValue: false
     type: MANAGEMENT
+  atlas:
+    description: "Atlas de Slack: Encuentra a la persona que mejor pueda ayudarte a sacar el trabajo adelante. Busca personas y palabras clave en el directorio, consulta los perfiles de los miembros del equipo y consigue todo el contexto que necesites para ponerte en contacto con ellos."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
   appsAndServices:
     description: "Integraciones con otras aplicaciones: Tienes más de 2600 aplicaciones esperándote en el Directorio de Aplicaciones de Slack para llevar a cabo todo tipo de trabajos, como Salesforce, Jira, Google Drive, ChatGPT y muchas más."
     valueType: BOOLEAN
@@ -65,7 +80,7 @@ features:
     type: AUTOMATION
     automationType: TASK_AUTOMATION
   premiumWorkflows:
-    description: "Flujos de trabajo prémium: Los flujos de trabajo prémium incluyen, como mínimo, un paso personalizado o dos o más pasos de conector. Gracias a los pasos de conector, puedes incorporar otras herramientas en tu flujo de trabajo (Salesforce, Hojas de cálculo de Google, Jira y muchas más). Si superas tu asignación mensual de flujos de trabajo prémium, no se te cobrará hasta que termine el periodo promocional el 31 de octubre de 2023."
+    description: "Flujos de trabajo prémium: Los flujos de trabajo prémium incluyen, como mínimo, un paso personalizado o dos o más pasos de conector. Gracias a los pasos de conector, puedes incorporar otras herramientas en tu flujo de trabajo (Salesforce, Hojas de cálculo de Google, Jira y muchas más). Los planes de pago de Slack incluyen de 1000 a 5000 ejecuciones mensuales dependiendo del plan. Cada ejecución de flujo de trabajo prémium que supere esa asignación, tendrá un precio de 0,05 USD."
     valueType: BOOLEAN
     defaultValue: false
     type: AUTOMATION
@@ -94,17 +109,17 @@ features:
     type: INTEGRATION
     integrationType: IDENTITY_PROVIDER
   complianceHIPAA:
-    description: "Compatibilidad con los requisitos de la HIPAA."
+    description: "Colaboración de archivos y mensajes conforme a la HIPAA."
     valueType: BOOLEAN
     defaultValue: false
     type: GUARANTEE
   dataResidence:
-    description: "Residencia de datos"
+    description: "Residencia de datos."
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
   adminSlackEnterpriseKeys:
-    description: "Administración de claves de cifrado (EKM) de Slack"
+    description: "Administración de claves de cifrado (EKM) de Slack."
     valueType: BOOLEAN
     defaultValue: false
     type: INTEGRATION
@@ -112,7 +127,7 @@ features:
     pricingURLs:
       - "https://docs.aws.amazon.com/es_es/kms/latest/developerguide/overview.html"
   enterpriseMobilitySecurity:
-    description: "Integración con la Gestión de movilidad empresarial (EMM)"
+    description: "Integración con la Gestión de movilidad empresarial (EMM)."
     valueType: BOOLEAN
     defaultValue: false
     type: GUARANTEE
@@ -195,12 +210,7 @@ features:
   support:
     description: "Acceso a asistencia al cliente."
     valueType: TEXT
-    defaultValue: "Asistencia Estándar"
-    type: GUARANTEE
-  availability:
-    description: "Disponibilidad del 99,99 % garantizada en nuestro ANS"
-    valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: "Asistencia estándar"
     type: GUARANTEE
   granularRoles:
     description: "Roles detallados: Asigna roles de sistema a miembros individuales o a grupos de proveedores de identidad, o bien asigna miembros a varios roles de sistema. Los controles detallados te permiten elegir si los miembros pueden gestionar tareas administrativas de todos los espacios de trabajo o solo de algunos en tu organización Enterprise Grid."
@@ -223,7 +233,12 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: INFORMATION
-
+  slackAI:
+    description: "IA de Slack: Tu tiempo es muy valioso y queremos que lo aproveches al máximo. Explora nuestra última innovación y descubre cómo la IA de Slack ayuda a todo el mundo a trabajar de la mejor forma posible."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
 usageLimits:
   useMessagesAccess:
     description: "El número de días a los que puedes acceder a la información de mensajes y archivos"
@@ -275,7 +290,7 @@ usageLimits:
       - standardWorkflow
       - premiumWorkflows
   useSlackConnect:
-    description: "El número de personas de otras organizaciones con las que puedes colaborar en Slack Connect"
+    description: "El número de personas de otras organzaciones con las que puedes colaborar en Slack Connect"
     valueType: NUMERIC
     defaultValue: 1
     unit: persons
@@ -297,8 +312,8 @@ plans:
     annualPrice: 7.25
     unit: user/month
     features:
-      canvas:
-        value: FULL
+      lists:
+        value: true
       customizableSections:
         value: true
       workflowBuilder:
@@ -320,7 +335,7 @@ plans:
       adminAnalyticsDashboard:
         value: true
       support:
-        value: Asistencia de lunes a domingo, las 24 horas del día
+        value: Asistencia las 24 horas, todos los días
     usageLimits:
       useMessagesAccess:
         value: 10000000000000
@@ -328,17 +343,18 @@ plans:
         value: 10000000000000
       useVoiceAndVideoCalls:
         value: 50
+      useWorkflowsPremium:
+        value: 1000
       useSlackConnect:
         value: 10000000000000
-      
   BUSINESS_PLUS:
     description: "Amplía tu empresa, aumenta la productividad y mantén a tus equipos conectados"
     monthlyPrice: 15
     annualPrice: 12.5
     unit: user/month
     features:
-      canvas:
-        value: FULL
+      lists:
+        value: true
       customizableSections:
         value: true
       workflowBuilder:
@@ -352,8 +368,6 @@ plans:
       premiumWorkflows:
         value: true
       oAuthGoogle:
-        value: true
-      singleSignOn:
         value: true
       customRules:
         value: true
@@ -374,9 +388,7 @@ plans:
       messageActivityAnalytics:
         value: true
       support:
-        value: Asistencia de lunes a domingo, las 24 horas del día, con un tiempo de respuesta inicial de 4 horas
-      availability:
-        value: true
+        value: Asistencia las 24 horas, todos los días, con un tiempo de respuesta inicial de 4 horas
     usageLimits:
       useMessagesAccess:
         value: 10000000000000
@@ -388,16 +400,17 @@ plans:
         value: 2000
       useSlackConnect:
         value: 10000000000000
-      
   ENTERPRISE_GRID:
-    description: "El plan de Slack para las empresas más exigentes. Incluye la flexibilidad necesaria para satisfacer tus requisitos normativos y una gran potencia que acompañará tu rendimiento paso a paso"
+    description: "Maximiza el rendimiento y la productividad en todos los niveles de tu empresa"
     monthlyPrice: Contacta con Ventas
     annualPrice: Contacta con Ventas
     unit: user/month
     features:
-      canvas:
-        value: FULL
+      lists:
+        value: true
       customizableSections:
+        value: true
+      atlas:
         value: true
       workflowBuilder:
         value: true
@@ -419,15 +432,17 @@ plans:
         value: true
       identityProvidersGroups:
         value: true
+      customRules:
+        value: true
+      exportMessages:
+        value: true
+      dataResidence:
+        value: true
       complianceHIPAA:
         value: true
       slackConnectLostPrevention:
         value: true
       informationBarriers:
-        value: true
-      legalRetentionHold:
-        value: true
-      privilegesPrivateChannelManagement:
         value: true
       customUserGroups:
         value: true
@@ -435,11 +450,13 @@ plans:
         value: true
       extraCompatibility:
         value: true
-      granularRoles:
-        value: true
       domainName:
-        value: true 
+        value: true
       customSLAs:
+        value: true
+      privilegesPrivateChannelManagement:
+        value: true
+      granularRoles:
         value: true
       adminAnalyticsAPI:
         value: true
@@ -447,10 +464,10 @@ plans:
         value: true
       messageActivityAnalytics:
         value: true
-      support:
-        value: Asistencia prioritaria de lunes a domingo, las 24 horas del día, con un tiempo de respuesta inicial de 4 horas
-      availability:
+      legalRetentionHold:
         value: true
+      support:
+        value: Asistencia prioritaria las 24 horas, todos los días, con un tiempo de respuesta inicial de 4 horas
     usageLimits:
       useMessagesAccess:
         value: 10000000000000
@@ -458,12 +475,42 @@ plans:
         value: 10000000000000
       useVoiceAndVideoCalls:
         value: 50
+      useWorkspaces:
+        value: 1
       useWorkflowsPremium:
         value: 5000
+      useWorkflows:
+        value: 10000000000000
       useSlackConnect:
         value: 10000000000000
 
+      
+
 addOns:
+  slackAI:
+    availableFor:
+      - PRO
+      - BUSINESS_PLUS
+      - ENTERPRISE_GRID
+    monthlyPrice: Contacta con Ventas
+    annualPrice: Contacta con Ventas
+    unit: USD/user
+    features:
+      slackAI:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions: null
+  slackAtlas:
+    availableFor:
+      - BUSINESS_PLUS
+    monthlyPrice: Contacta con Ventas
+    annualPrice: Contacta con Ventas
+    unit: USD/user
+    features:
+      atlas:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions: null
   slackEnterpriseKeys:
     availableFor:
       - ENTERPRISE_GRID
@@ -475,3 +522,16 @@ addOns:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
+  premiumWorkflowOverageCost:
+    availableFor:
+      - PRO
+      - BUSINESS_PLUS
+      - ENTERPRISE_GRID
+    monthlyPrice: 0.05
+    annualPrice: 0.05
+    unit: USD/execution
+    features: null
+    usageLimits: null
+    usageLimitsExtensions:
+      useWorkflowsPremium:
+        value: 1

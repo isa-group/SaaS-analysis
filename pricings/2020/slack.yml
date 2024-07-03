@@ -340,8 +340,6 @@ plans:
         value: true
       singleSignOn:
         value: true
-      adminSlackEnterpriseKeys:
-        value: true
       enterpriseMobilitySecurity:
         value: true
       customRules:
@@ -388,4 +386,15 @@ plans:
       useWorkspaces:
         value: 10000000000000
 
-addOns: null
+addOns:
+  slackEnterpriseKeys:
+    availableFor:
+      - ENTERPRISE_GRID
+    monthlyPrice: Contacta con Ventas
+    annualPrice: Contacta con Ventas
+    unit: USD/user
+    features:
+      adminSlackEnterpriseKeys:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions: null
