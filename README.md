@@ -28,7 +28,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Quip          |  ✅  |      |      |      |      |      |
 | MailChimp     |  ❌  |  ❌  |      |      |      |      |
 | Deskera       |  ❌  |  ❌  |      |      |      |      |
-| UserGuiding   |  ❌  |      |      |      |      |  ❌  |
+| UserGuiding   |  ❌  |  ✅  |      |      |      |  ❌  |
 | PickFu        |  ❌  |      |      |      |      |      |
 | Planable      |  ✖️  |  ✖️  |  ✖️  |  ✅   |      |      |
 | Databox       |  ✅  |      |      |      |      |      |
