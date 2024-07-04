@@ -1,7 +1,7 @@
 saasName: UserGuiding
 day: 25
 month: 11
-year: 2019
+year: 2020
 currency: USD
 hasAnnualPayment: true
 features:
@@ -165,7 +165,7 @@ plans:
     description: ""
     monthlyPrice: 199.0
     annualPrice: 165.83
-    unit: /moth
+    unit: /month
     features: null
     usageLimits: null
   GROWTH:

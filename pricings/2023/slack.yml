@@ -391,8 +391,8 @@ plans:
       
   ENTERPRISE_GRID:
     description: "El plan de Slack para las empresas más exigentes. Incluye la flexibilidad necesaria para satisfacer tus requisitos normativos y una gran potencia que acompañará tu rendimiento paso a paso"
-    monthlyPrice: Contacta con Ventas
-    annualPrice: Contacta con Ventas
+    monthlyPrice: Contact Sales
+    annualPrice: Contact Sales
     unit: user/month
     features:
       canvas:
@@ -467,8 +467,8 @@ addOns:
   slackEnterpriseKeys:
     availableFor:
       - ENTERPRISE_GRID
-    monthlyPrice: Contacta con Ventas
-    annualPrice: Contacta con Ventas
+    monthlyPrice: Contact Sales
+    annualPrice: Contact Sales
     unit: USD/user
     features:
       adminSlackEnterpriseKeys:

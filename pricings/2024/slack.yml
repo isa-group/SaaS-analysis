@@ -402,8 +402,8 @@ plans:
         value: 10000000000000
   ENTERPRISE_GRID:
     description: "Maximiza el rendimiento y la productividad en todos los niveles de tu empresa"
-    monthlyPrice: Contacta con Ventas
-    annualPrice: Contacta con Ventas
+    monthlyPrice: Contact Sales
+    annualPrice: Contact Sales
     unit: user/month
     features:
       lists:
@@ -492,8 +492,8 @@ addOns:
       - PRO
       - BUSINESS_PLUS
       - ENTERPRISE_GRID
-    monthlyPrice: Contacta con Ventas
-    annualPrice: Contacta con Ventas
+    monthlyPrice: Contact Sales
+    annualPrice: Contact Sales
     unit: USD/user
     features:
       slackAI:
@@ -503,8 +503,8 @@ addOns:
   slackAtlas:
     availableFor:
       - BUSINESS_PLUS
-    monthlyPrice: Contacta con Ventas
-    annualPrice: Contacta con Ventas
+    monthlyPrice: Contact Sales
+    annualPrice: Contact Sales
     unit: USD/user
     features:
       atlas:
@@ -514,8 +514,8 @@ addOns:
   slackEnterpriseKeys:
     availableFor:
       - ENTERPRISE_GRID
-    monthlyPrice: Contacta con Ventas
-    annualPrice: Contacta con Ventas
+    monthlyPrice: Contact Sales
+    annualPrice: Contact Sales
     unit: USD/user
     features:
       adminSlackEnterpriseKeys:

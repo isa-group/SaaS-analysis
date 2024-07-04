@@ -324,8 +324,8 @@ plans:
       
   ENTERPRISE_GRID:
     description: "Para las empresas de gran tamaño o las que están en sectores regulados"
-    monthlyPrice: Contacta con Ventas
-    annualPrice: Contacta con Ventas
+    monthlyPrice: Contact Sales
+    annualPrice: Contact Sales
     unit: user/month
     features:
       storageByAccount:
@@ -390,8 +390,8 @@ addOns:
   slackEnterpriseKeys:
     availableFor:
       - ENTERPRISE_GRID
-    monthlyPrice: Contacta con Ventas
-    annualPrice: Contacta con Ventas
+    monthlyPrice: Contact Sales
+    annualPrice: Contact Sales
     unit: USD/user
     features:
       adminSlackEnterpriseKeys:
