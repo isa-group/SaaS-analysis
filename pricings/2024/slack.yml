@@ -211,7 +211,7 @@ features:
     description: "Acceso a asistencia al cliente."
     valueType: TEXT
     defaultValue: "Asistencia estándar"
-    type: GUARANTEE
+    type: SUPPORT
   granularRoles:
     description: "Roles detallados: Asigna roles de sistema a miembros individuales o a grupos de proveedores de identidad, o bien asigna miembros a varios roles de sistema. Los controles detallados te permiten elegir si los miembros pueden gestionar tareas administrativas de todos los espacios de trabajo o solo de algunos en tu organización Enterprise Grid."
     valueType: BOOLEAN

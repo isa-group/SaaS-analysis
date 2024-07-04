@@ -172,7 +172,7 @@ features:
     description: "Acceso a asistencia al cliente."
     defaultValue: Asistencia Estándar
     valueType: TEXT
-    type: GUARANTEE
+    type: SUPPORT
   availability:
     description: "Disponibilidad del 99,99 % garantizada en nuestro ANS"
     defaultValue: false
@@ -182,7 +182,7 @@ features:
     description: "Equipo de cuenta y satisfacción del cliente con dedicación exclusiva."
     defaultValue: false
     valueType: BOOLEAN
-    type: GUARANTEE
+    type: SUPPORT
 
 usageLimits:
   useMessagesAccess:

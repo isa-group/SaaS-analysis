@@ -19,7 +19,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | HubSpot       |  ❌  |  ❌  |      |      |      |      |
 | Salesforce    |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |      |
 | Slack         |  ✅  |  ✅  |  ❌  |  ❌  |  ✅  |  ✅  |
-| Buffer        |  ✅  |  🔄  |      |      |      |      |
+| Buffer        |  ✅  |  ✅  |  ✅  |  ✅  |  🔄  |      |
 | Hypercontext  |  ❌  |  ❌  |  🔄  |      |      |      |
 | DocuSign      |  ❌  |  ❌  |  ❌  |  ❌  |      |      |
 | OpenPhone     |  ❌  |  ❌  |  ❌  |      |      |      |
