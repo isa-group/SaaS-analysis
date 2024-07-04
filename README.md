@@ -20,15 +20,15 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Salesforce    |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |      |
 | Slack         |  ✅  |  ✅  |  ❌  |  ❌  |  ✅  |  ✅  |
 | Buffer        |  ✅  |  ✅  |  ✅  |  ✅  |  🔄  |      |
-| Hypercontext  |  ❌  |  ❌  |  🔄  |      |      |      |
+| Hypercontext  |  ❌  |  ❌  |  ✅  |      |      |      |
 | DocuSign      |  ❌  |  ❌  |  ❌  |  ❌  |      |      |
 | OpenPhone     |  ❌  |  ❌  |  ❌  |      |      |      |
 | Pumble        |  ❌  |  ❌  |      |      |      |      |
-| Tableau       |  ✅  |      |      |      |      |      |
-| Quip          |  ✅  |      |      |      |      |      |
+| Tableau       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Quip          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | MailChimp     |  ❌  |  ❌  |      |      |      |      |
 | Deskera       |  ❌  |  ❌  |      |      |      |      |
-| UserGuiding   |  ❌  |  ✅  |      |      |      |  ❌  |
+| UserGuiding   |  ❌  |  ✅  |  🔄  |  🔄  |  🔄  |  🔄  |
 | PickFu        |  ❌  |      |      |      |      |      |
 | Planable      |  ✖️  |  ✖️  |  ✖️  |  ✅   |      |      |
 | Databox       |  ✅  |      |      |      |      |      |
