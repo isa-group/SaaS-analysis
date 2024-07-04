@@ -69,7 +69,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingsURLs: 
+    pricingURLs: 
       - https://workspace.google.com/pricing
   personalicedHomepage:
     description: ""
@@ -228,7 +228,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingsURLs:
+    pricingURLs:
       - https://workspace.google.com/pricing
   googleCalendar:
     description: ""
@@ -236,7 +236,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingsURLs:
+    pricingURLs:
       - https://workspace.google.com/pricing
   googleMeet:
     description: ""
@@ -244,7 +244,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingsURLs:
+    pricingURLs:
       - https://workspace.google.com/pricing
   chromeMeetingExtension:
     description: ""
