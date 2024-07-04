@@ -1,7 +1,7 @@
 saasName: Quip
-day: 26
-month: 11
-year: 2019
+day: 2
+month: 7
+year: 2024
 currency: USD
 hasAnnualPayment: true
 features:
@@ -15,17 +15,6 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  slides:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
-  basicLiveApps:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: INTEGRATION
-    integrationType: API
   groupChat:
     description: ""
     valueType: BOOLEAN
@@ -54,17 +43,6 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: EXTERNAL_DEVICE
-  teamManagement:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: MANAGEMENT
-  secureProductivity:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: GUARANTEE
-    docURL: "https://quip.com/security/governance-and-compliance"
   customAndAdvancedLiveApps:
     description: ""
     valueType: BOOLEAN
@@ -83,7 +61,12 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: API
-  quipComponent:
+  customization:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  integratedChatWithinSalesforce:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
@@ -94,13 +77,15 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: INFORMATION
-  salesforceRecordLiveApp:
+  twoWaySyncWithLiveSalesforceData:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
     type: INTEGRATION
-    integrationType: API
-  embedQuipDocumentComponentsInAllObjectsInSalesforce:
+    integrationType: WEB_SAAS
+    pricingURLs:
+      - https://www.salesforce.com/eu/sales/pricing/
+  embedDocumentsInAllSalesforceObjects:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
@@ -115,7 +100,7 @@ plans:
     unit: user/month
     features: null
     usageLimits: null
-  ENTERPRISE:
+  PLUS:
     description: "Secure productivity platform for large and complex teams."
     monthlyPrice: null
     annualPrice: 25.0
@@ -127,11 +112,13 @@ plans:
         value: true
       enterpriseAPI:
         value: true
+      customization:
+        value: true
     usageLimits: null
-  CUSTOMER360:
+  ADVANCED:
     description: "Real-time alerts and collaboration inside Salesforce for sales and service teams."
-    monthlyPrice: Contact Sales
-    annualPrice: Contact Sales
+    monthlyPrice: null
+    annualPrice: 100.0
     unit: user/month
     features:
       customAndAdvancedLiveApps:
@@ -140,13 +127,15 @@ plans:
         value: true
       enterpriseAPI:
         value: true
-      quipComponent:
+      customization:
+        value: true
+      integratedChatWithinSalesforce:
         value: true
       spreadsheetsWithLiveSalesforceData:
         value: true
-      salesforceRecordLiveApp:
+      twoWaySyncWithLiveSalesforceData:
         value: true
-      embedQuipDocumentComponentsInAllObjectsInSalesforce:
+      embedDocumentsInAllSalesforceObjects:
         value: true
     usageLimits: null
 addOns: null

@@ -25,10 +25,10 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | OpenPhone     |  ❌  |  ❌  |  ❌  |      |      |      |
 | Pumble        |  ❌  |  ❌  |      |      |      |      |
 | Tableau       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Quip          |  ✅  |  🔄  |  🔄  |  🔄  |  🔄  |  🔄  |
+| Quip          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | MailChimp     |  ❌  |  ❌  |      |      |      |      |
 | Deskera       |  ❌  |  ❌  |      |      |      |      |
-| UserGuiding   |  ❌  |  ✅  |      |      |      |  ❌  |
+| UserGuiding   |  ❌  |  ✅  |  🔄  |  🔄  |  🔄  |  🔄  |
 | PickFu        |  ❌  |      |      |      |      |      |
 | Planable      |  ✖️  |  ✖️  |  ✖️  |  ✅   |      |      |
 | Databox       |  ✅  |      |      |      |      |      |
