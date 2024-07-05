@@ -232,7 +232,7 @@ features:
     defaultValue: false
     type: AUTOMATION
     automationType: TASK_AUTOMATION
-  engagementGridView:
+  gridView:
     description: "See which posts have unanswered comments and quickly jump in."
     valueType: BOOLEAN
     defaultValue: false
@@ -475,7 +475,7 @@ plans:
         value: true
       customReports:
         value: true
-      engagementGridView:
+      gridView:
         value: true
       importantCommentDetection:  
         value: true

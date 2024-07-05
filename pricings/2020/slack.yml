@@ -7,128 +7,128 @@ hasAnnualPayment: true
 
 features:
   messagesAccess:
-    description: "Cuanto más usas Slack, más útil se vuelve. Al poder buscar y acceder a todos los mensajes de tu organización, puedes aprovechar el contexto de las decisiones anteriores o poner a los nuevos miembros del equipo al día más rápido."
+    description: "The more you use Slack, the more useful it becomes. By being able to search and access all messages in your organization, you can leverage the context of previous decisions or onboard new team members faster."
     defaultValue: true
     valueType: BOOLEAN
     type: DOMAIN
   search:
-    description: "Personas, canales y archivos relevantes en los resultados de búsqueda"
+    description: "Relevant people, channels, and files in search results"
     defaultValue: true
     valueType: BOOLEAN
     type: DOMAIN
   appsAndServices:
-    description: "Recibe notificaciones, encuentra información y realiza acciones sin salir de Slack, por medio de las integraciones y herramientas que ya usas todos los días. También puedes crear tus propias aplicaciones adaptadas a tus necesidades concretas."
+    description: "Receive notifications, find information, and take action without leaving Slack, through integrations and tools you already use every day. You can also create your own apps tailored to your specific needs."
     defaultValue: true
     valueType: BOOLEAN
     type: DOMAIN
   storageByAccount:
-    description: "Almacenamiento de archivos por cuenta (en total)."
+    description: "File storage per account (in total)."
     defaultValue: true
     valueType: BOOLEAN
     type: DOMAIN
   storageByTeamMember:
-    description: "Almacenamiento de archivos por cada miembro del equipo."
+    description: "File storage per team member."
     defaultValue: false
     valueType: BOOLEAN
     type: DOMAIN
   workspaces:
-    description: "Los espacios de trabajo de Slack son el motor de tu trabajo, como si fuesen una oficina virtual. Es donde residen tus canales, mensajes directos y herramientas."
+    description: "Slack workspaces are the engine of your work, like a virtual office. It's where your channels, direct messages, and tools reside."
     defaultValue: false
     valueType: BOOLEAN
     type: DOMAIN
   customSections:
-    description: "Mantén tus proyectos, equipos y prioridades en orden. Consíguelo mediante la organización de tus canales y conversaciones en secciones personalizables que se pueden contraer en la barra lateral."
+    description: "Keep your projects, teams, and priorities in order. Achieve this by organizing your channels and conversations into customizable, collapsible sections in the sidebar."
     defaultValue: false
     valueType: BOOLEAN
     type: MANAGEMENT
   slackConnect:
-    description: "Slack Connect hace posible la colaboración fluida entre departamentos de la organización. Dos organizaciones pueden trabajar juntas desde sus propios espacios de trabajo en Slack."
+    description: "Slack Connect enables smooth collaboration between departments of the organization. Two organizations can work together from their own workspaces in Slack."
     defaultValue: false
     valueType: BOOLEAN
     type: DOMAIN
   guestsAccounts:
-    description: "Reduce los interminables intercambios de correos, e incluso los correos puntuales, reuniendo a contratistas, autónomos y proveedores en Slack mediante las cuentas de invitado."
+    description: "Reduce endless email exchanges, and even occasional emails, by bringing contractors, freelancers, and vendors into Slack through guest accounts."
     defaultValue: false
     valueType: BOOLEAN
     type: DOMAIN
   dataCypher:
-    description: "Cifrado de datos en reposo y en tránsito."
+    description: "Data encryption at rest and in transit."
     defaultValue: true
     valueType: BOOLEAN
     type: GUARANTEE
   twoFactorAuthentication:
-    description: "Autenticación de dos factores."
+    description: "Two-factor authentication."
     defaultValue: true
     valueType: BOOLEAN
     type: INTEGRATION
     integrationType: EXTERNAL_DEVICE
   oAuthGoogle:
-    description: "OAuth con Google."
+    description: "OAuth with Google."
     defaultValue: false
     valueType: BOOLEAN
     type: INTEGRATION
     integrationType: IDENTITY_PROVIDER
   singleSignOn:
-    description: "Inicio de sesión único basado en SAML (SSO)."
+    description: "SAML-based single sign-on (SSO)."
     defaultValue: false
     valueType: BOOLEAN
     type: INTEGRATION
     integrationType: IDENTITY_PROVIDER
   adminSlackEnterpriseKeys:
-    description: "Administración de claves Enterprise de Slack"
+    description: "Administration of Slack Enterprise Keys"
     defaultValue: false
     valueType: BOOLEAN
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingURLs:
-      - "https://docs.aws.amazon.com/es_es/kms/latest/developerguide/overview.html"
+      - "https://docs.aws.amazon.com/kms/latest/developerguide/overview.html"
   enterpriseMobilitySecurity:
-    description: "Integración con la Gestión de movilidad empresarial (EMM)"
+    description: "Integration with Enterprise Mobility Management (EMM)"
     defaultValue: false
     valueType: BOOLEAN
     type: GUARANTEE
   customRules:
-    description: "Políticas personalizadas de retención de mensajes y archivos."
+    description: "Custom message and file retention policies."
     defaultValue: false
     valueType: BOOLEAN
     type: MANAGEMENT
   exportMessages:
-    description: "Exportaciones de datos para todos los mensajes."
+    description: "Data exports for all messages."
     defaultValue: false
     valueType: BOOLEAN
     type: DOMAIN
   complianceHIPAA:
-    description: "Compatibilidad con los requisitos de la HIPAA."
+    description: "Compliance with HIPAA requirements."
     defaultValue: false
     valueType: BOOLEAN
     type: GUARANTEE
   dataResidence:
-    description: "Residencia de datos"
+    description: "Data residency"
     defaultValue: false
     valueType: BOOLEAN
     type: DOMAIN
   privilegesGeneralChannelManagement:
-    description: "Gestionar los permisos de publicación en el canal #general."
+    description: "Manage posting permissions in the #general channel."
     defaultValue: true
     valueType: BOOLEAN
     type: MANAGEMENT
   privilegesPrivateChannelManagement:
-    description: "Gestionar los permisos de publicación de un número ilimitados de canales."
+    description: "Manage posting permissions for an unlimited number of channels."
     defaultValue: false
     valueType: BOOLEAN
     type: MANAGEMENT
   customUserGroups:
-    description: "Grupos de usuarios personalizados: Facilita la recepción de notificaciones y la comunicación con equipos, departamentos y grupos al completo."
+    description: "Custom user groups: Facilitate notifications and communication with entire teams, departments, and groups."
     defaultValue: false
     valueType: BOOLEAN
     type: MANAGEMENT
   usersManagement:
-    description: "Gestión de usuarios."
+    description: "User management."
     defaultValue: false
     valueType: BOOLEAN
     type: MANAGEMENT
   activeDirectorySync:
-    description: "Sincronización de Active Directory en tiempo real con OneLogin, Okta y Ping."
+    description: "Real-time Active Directory sync with OneLogin, Okta, and Ping."
     defaultValue: false
     valueType: BOOLEAN
     type: INTEGRATION
@@ -138,48 +138,48 @@ features:
       - "https://www.okta.com/integrations/active-directory/"
       - "https://docs.pingidentity.com/r/en-us/pingoneforenterprise/p14e_connect_adc"
   usersManagementSCIM:
-    description: "Gestión de usuarios meidante SCIM."
+    description: "User management via SCIM."
     defaultValue: false
     valueType: BOOLEAN
     type: INTEGRATION
     integrationType: WEB_SAAS
   extraCompatibility:
-    description: "Compatibilidad con los proveedores de prevención de pérdida de datos (DLP), eDiscovery y copias de seguridad sin conexión."
+    description: "Compatibility with Data Loss Prevention (DLP) providers, eDiscovery, and offline backups."
     defaultValue: false
     valueType: BOOLEAN
     type: GUARANTEE
   domainName:
-    description: "Reclamación de nombres de dominios."
+    description: "Domain name claim."
     defaultValue: false
     valueType: BOOLEAN
     type: DOMAIN
   customSLAs:
-    description: "Condiciones de servicio personalizadas."
+    description: "Custom service level agreements."
     defaultValue: false
     valueType: BOOLEAN
     type: GUARANTEE
   voiceAndVideoCalls:
-    description: "Llamadas de voz y de vídeo"
+    description: "Voice and video calls"
     defaultValue: true
     valueType: BOOLEAN
     type: DOMAIN
   screenSharing:
-    description: "Además de poder presentar tu pantalla, todo el que participe en la llamada puede escribir en la pantalla para añadir anotaciones."
+    description: "In addition to being able to present your screen, everyone on the call can write on the screen to add annotations."
     defaultValue: false
     valueType: BOOLEAN
     type: DOMAIN
   support:
-    description: "Acceso a asistencia al cliente."
-    defaultValue: Asistencia Estándar
+    description: "Access to customer support."
+    defaultValue: Standard Support
     valueType: TEXT
     type: SUPPORT
   availability:
-    description: "Disponibilidad del 99,99 % garantizada en nuestro ANS"
+    description: "99.99% availability guaranteed in our SLA"
     defaultValue: false
     valueType: BOOLEAN
     type: GUARANTEE
   personalTechnicalSupport:
-    description: "Equipo de cuenta y satisfacción del cliente con dedicación exclusiva."
+    description: "Dedicated account and customer satisfaction team."
     defaultValue: false
     valueType: BOOLEAN
     type: SUPPORT
@@ -230,14 +230,14 @@ usageLimits:
 
 plans:
   FREE:
-    description: "Para equipos pequeños que prueban Slack durante un período ilimitado"
+    description: "For small teams trying Slack for an unlimited period"
     monthlyPrice: 0
     annualPrice: 0
     unit: user/month
     features: null
     usageLimits: null
   STANDARD:
-    description: "Para las pequeñas y medianas empresas"
+    description: "For small and medium-sized businesses"
     monthlyPrice: 8
     annualPrice: 6.67
     unit: user/month
@@ -261,7 +261,7 @@ plans:
       screenSharing:
         value: true
       support:
-        value: Asistencia de lunes a domingo, las 24 horas del día
+        value: 24/7 support
     usageLimits:
       useMessagesAccess:
         value: 10000000000000
@@ -273,7 +273,7 @@ plans:
         value: 10
 
   PLUS:
-    description: "Para las empresas de un tamaño un poco mayor o con necesidades de administración avanzadas"
+    description: "For slightly larger companies or those with advanced administrative needs"
     monthlyPrice: 15
     annualPrice: 12.5
     unit: user/month
@@ -309,7 +309,7 @@ plans:
       screenSharing:
         value: true
       support:
-        value: Asistencia de lunes a domingo, las 24 horas del día, con un tiempo de respuesta inicial de 4 horas
+        value: 24/7 support with a 4-hour initial response time
       availability:
         value: true
     usageLimits:
@@ -323,7 +323,7 @@ plans:
         value: 20
       
   ENTERPRISE_GRID:
-    description: "Para las empresas de gran tamaño o las que están en sectores regulados"
+    description: "For large enterprises or those in regulated industries"
     monthlyPrice: Contact Sales
     annualPrice: Contact Sales
     unit: user/month
@@ -369,7 +369,7 @@ plans:
       screenSharing:
         value: true
       support:
-        value: Asistencia prioritaria de lunes a domingo, las 24 horas del día, con un tiempo de respuesta inicial de 4 horas
+        value: Priority 24/7 support with a 4-hour initial response time
       availability:
         value: true
       personalTechnicalSupport:
