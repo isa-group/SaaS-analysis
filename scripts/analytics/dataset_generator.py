@@ -9,6 +9,7 @@ class PricingsLoader():
         self._load_pricings()
     
     def find_pricing(self, name, year):
+
         dataset_entry = self.dataset[(self.dataset['name'] == name) & (self.dataset['year'] == year)]
         if dataset_entry.empty:
             return None
@@ -36,4 +37,4 @@ class PricingsLoader():
             pricings = list(filter(lambda x: x.endswith('.yml'), os.listdir(year_folder)))
 
             for pricing in pricings:
-                self.dataset.loc[len(self.dataset)] = {'name': pricing, 'year': year, 'path': os.path.join(year_folder, pricing)}
+                self.dataset.loc[len(self.dataset)] = {'name': pricing.replace(".yml", ""), 'year': year, 'path': os.path.join(year_folder, pricing)}

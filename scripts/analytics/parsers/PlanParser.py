@@ -39,7 +39,7 @@ class PlanParser:
                 raise FeatureNotFoundException(f"The feature {plan_feature_name} is not defined in the global features")
 
             feature = Feature.clone_feature(global_features_map[plan_feature_name])
-            feature.value = plan_feature_value
+            feature.value = plan_feature_value.get("value", plan_feature_value)
 
             if feature.value_type == ValueType.NUMERIC:
                 if not isinstance(feature.value, (int, float)):
@@ -68,7 +68,7 @@ class PlanParser:
                 raise FeatureNotFoundException(f"The feature {plan_usage_limit_name} is not defined in the global features")
 
             usage_limit = UsageLimit.clone_usage_limit(global_usage_limits_map[plan_usage_limit_name])
-            usage_limit.value = plan_usage_limit_value
+            usage_limit.value = plan_usage_limit_value.get("value", plan_usage_limit_value)
 
             if usage_limit.value_type == ValueType.NUMERIC:
                 if not isinstance(usage_limit.value, (int, float)):

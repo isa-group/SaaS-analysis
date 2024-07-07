@@ -1,8 +1,10 @@
 from typing import Dict, Any
 from models import PricingManager
 from parsers.exceptions import PricingParsingException
-from parsers import FeatureParser, UsageLimitParser, PlanParser, AddOnParser
-
+from parsers import FeatureParser, PlanParser, AddOnParser
+from .UsageLimitParser import UsageLimitParser
+from .PlanParser import PlanParser
+from .AddOnParser import AddOnParser
 class PricingManagerParser:
     @staticmethod
     def parse_map_to_pricing_manager(yaml_config_map: Dict[str, Any]) -> 'PricingManager':
@@ -31,7 +33,7 @@ class PricingManagerParser:
         currency = yaml_config_map["currency"]
         has_annual_payment = yaml_config_map.get("hasAnnualPayment", False)
 
-        pricing_manager = PricingManager(saas_name, day, month, year, currency, has_annual_payment)
+        pricing_manager = PricingManager(saas_name, day, month, year, currency, has_annual_payment, pricing_dict=yaml_config_map)
 
         return pricing_manager
 

@@ -108,14 +108,9 @@ class FeatureParser:
             raise InvalidDefaultValueException(f"Missing required field in feature {feature_name}: {str(e)}")
 
         try:
-            if "expression" not in feature_map:
-                feature.expression = None
-            else:
-                feature.expression = feature_map["expression"]
-            if "serverExpression" not in feature_map:
-                feature.server_expression = None
-            else:
-                feature.server_expression = feature_map["serverExpression"]
+            
+            feature.expression = feature_map.get("expression", None)
+            feature.server_expression = feature_map.get("serverExpression", None)
         except KeyError as e:
             raise PricingParsingException(f"The feature {feature_name} does not have either an evaluation expression or serverExpression.")
 
