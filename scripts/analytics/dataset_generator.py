@@ -3,14 +3,15 @@ import pandas as pd
 from pricing_parser import parse_pricing
 
 class PricingsLoader():
-    def __init__(self, pricings_folder):
+    def __init__(self, pricings_folder: str):
         self.pricings_folder = pricings_folder
         self.dataset = pd.DataFrame(columns=['name', 'year', 'path'])
         self._load_pricings()
     
-    def find_pricing(self, name, year):
+    def find_pricing(self, name: str, year: int):
 
-        dataset_entry = self.dataset[(self.dataset['name'] == name) & (self.dataset['year'] == year)]
+        print(self.dataset)
+        dataset_entry = self.dataset[(self.dataset['name'] == name) & (self.dataset['year'] == str(year))]
         if dataset_entry.empty:
             return None
         return self._get_pricing(dataset_entry.index[0])
