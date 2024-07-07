@@ -9,8 +9,6 @@ class PricingsLoader():
         self._load_pricings()
     
     def find_pricing(self, name: str, year: int):
-
-        print(self.dataset)
         dataset_entry = self.dataset[(self.dataset['name'] == name) & (self.dataset['year'] == str(year))]
         if dataset_entry.empty:
             return None

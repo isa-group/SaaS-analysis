@@ -1,6 +1,8 @@
 from typing import Dict, Any
 from models import AddOn, PricingManager, ValueType, UsageLimit, Feature
+from models.feature_types import Payment
 from parsers.exceptions import PricingParsingException, InvalidPlanException, FeatureNotFoundException, InvalidDefaultValueException
+from .FeatureParser import FeatureParser
 
 class AddOnParser:
     @staticmethod
@@ -54,7 +56,7 @@ class AddOnParser:
                 raise FeatureNotFoundException(f"The feature {addon_feature_name} is not defined in the global features")
 
             feature = Feature.clone_feature(global_features_map[addon_feature_name])
-            feature.value = addon_feature_value
+            feature.value = addon_feature_value.get("value", addon_feature_value)
 
             if feature.value_type == ValueType.NUMERIC:
                 if not isinstance(feature.value, (int, float)):
@@ -63,6 +65,8 @@ class AddOnParser:
                 if not isinstance(feature.value, bool):
                     raise InvalidDefaultValueException(f"The feature {addon_feature_name} does not have a valid value. Current valueType: {feature.value_type}; Current value in {addon.name}: {addon_feature_value}")
             elif feature.value_type == ValueType.TEXT:
+                if isinstance(feature, Payment):
+                    FeatureParser.parse_payment_value(feature)
                 if not isinstance(feature.value, str):
                     raise InvalidDefaultValueException(f"The feature {addon_feature_name} does not have a valid value. Current valueType: {feature.value_type}; Current value in {addon.name}: {addon_feature_value}")
 
@@ -82,7 +86,7 @@ class AddOnParser:
                 raise FeatureNotFoundException(f"The feature {addon_usage_limit_name} is not defined in the global features")
 
             usage_limit = UsageLimit.clone_usage_limit(global_usage_limits_map[addon_usage_limit_name])
-            usage_limit.value = addon_usage_limit_value
+            usage_limit.value = addon_usage_limit_value.get("value", addon_usage_limit_value)
 
             if usage_limit.value_type == ValueType.NUMERIC:
                 if not isinstance(usage_limit.value, (int, float)):

@@ -1,6 +1,6 @@
 from typing import Dict, Any
 from models import PricingManager, ValueType, UsageLimit, Feature, Plan
-from models.feature_types import PaymentType
+from models.feature_types import PaymentType, Payment
 from parsers.exceptions import PricingParsingException, FeatureNotFoundException, InvalidDefaultValueException
 
 class PlanParser:
@@ -50,9 +50,12 @@ class PlanParser:
                     raise InvalidDefaultValueException(
                         f"The feature {plan_feature_name} does not have a valid value. Current valueType: {feature.value_type}; Current value in {plan.name}: {plan_feature_value}")
             elif feature.value_type == ValueType.TEXT:
-                if not isinstance(feature.value, str):
-                    raise InvalidDefaultValueException(
-                        f"The feature {plan_feature_name} does not have a valid value. Current valueType: {feature.value_type}; Current value in {plan.name}: {plan_feature_value}")
+                if isinstance(feature, Payment):
+                    PlanParser.parse_payment_value(feature)
+                else:
+                    if not isinstance(feature.value, str):
+                        raise InvalidDefaultValueException(
+                            f"The feature {plan_feature_name} does not have a valid value. Current valueType: {feature.value_type}; Current value in {plan.name}: {plan_feature_value}")
 
             plan_features[plan_feature_name] = feature
 
@@ -86,17 +89,15 @@ class PlanParser:
             plan.usage_limits[plan_usage_limit_name] = usage_limit
 
     @staticmethod
-    def parse_payment_value(feature: 'Feature', feature_name: str, map: Dict[str, Any]):
-        payment_value = map.get("value")
+    def parse_payment_value(feature: 'Feature'):
+        payment_value = feature.value
         if isinstance(payment_value, str):
-            raise PricingParsingException(f"{feature_name} should be a list of supported payment types")
+            raise PricingParsingException(f"{feature.name} should be a list of supported payment types")
 
-        allowed_payment_types = payment_value
-        for type_ in allowed_payment_types:
-            if type_ not in PaymentType.__members__:
+        for type in payment_value:
+            if type not in PaymentType.__members__:
                 raise InvalidDefaultValueException(
-                    f"The feature {feature_name} does not have a supported paymentType. PaymentType that generates the issue: {type_}")
-        feature.value = allowed_payment_types
+                    f"The feature {feature.name} does not have a supported paymentType. PaymentType that generates the issue: {type}")
 
     @staticmethod
     def is_valid_price(price: Any) -> bool:

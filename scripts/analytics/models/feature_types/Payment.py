@@ -1,4 +1,4 @@
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, List
 from models import Feature, FeatureType, ValueType
 from models.feature_types import PaymentType
 
@@ -6,7 +6,7 @@ class Payment(Feature):
 
     def __init__(self, name: str = None, description: Optional[str] = None, value_type: ValueType = None,
                  default_value: Any = None, value: Optional[Any] = None, expression: Optional[str] = None,
-                 server_expression: Optional[str] = None, payment_type: Optional['PaymentType'] = None):
+                 server_expression: Optional[str] = None, payment_type: Optional[List['PaymentType']] = None):
         super().__init__(name, description, value_type, default_value, value, expression, server_expression)
         self.payment_type = payment_type
 

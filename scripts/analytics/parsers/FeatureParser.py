@@ -83,7 +83,8 @@ class FeatureParser:
         payment = Payment()
         payment.name = feature_name
         FeatureParser.set_common_fields(payment, feature_name, feature_map)
-        FeatureParser.parse_payment_value(payment, feature_name, feature_map)
+        if payment.value_type == ValueType.TEXT:
+            FeatureParser.parse_payment_value(payment, feature_name, feature_map)
         return payment
 
     @staticmethod
@@ -117,8 +118,15 @@ class FeatureParser:
     @staticmethod
     def parse_payment_value(feature: 'Feature', feature_name: str, feature_map: Dict[str, Any]):
         allowed_payment_types = feature_map["defaultValue"]
-        for type_ in allowed_payment_types:
-            if type_ not in PaymentType.__members__:
-                raise InvalidDefaultValueException(
-                    f"The feature {feature_name} does not have a supported paymentType. PaymentType that generates the issue: {type_}")
+        if not isinstance(allowed_payment_types, list):
+            f"The feature {feature_name} does not have a not have a valid defaultValue. As it is a PAYMENT feature with valueType = ValueType.TEXT, it should have a list of PaymentOptions as defaultValue. Current defaultValue: {allowed_payment_types}"
+        
+        try:
+            for type in allowed_payment_types:
+                if not hasattr(PaymentType, type):
+                    raise InvalidDefaultValueException(
+                        f"The feature {feature_name} does not have a supported PaymentOptions. PaymentType that generates the issue: {type}")
+        except:
+            raise InvalidDefaultValueException(
+                f"The feature {feature_name} does not have a list of PaymentOptions as default value.")
         feature.default_value = allowed_payment_types
