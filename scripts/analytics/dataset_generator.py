@@ -30,7 +30,6 @@ class PricingsLoader():
     def _load_pricings(self):
 
         years = list(filter(lambda x: os.path.isdir(os.path.join(self.pricings_folder, x)), os.listdir(self.pricings_folder)))
-
         for year in years:
             year_folder = os.path.join(self.pricings_folder, year)
             pricings = list(filter(lambda x: x.endswith('.yml'), os.listdir(year_folder)))
