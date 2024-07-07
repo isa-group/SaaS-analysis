@@ -1,0 +1,9 @@
+from enum import Enum
+
+class IntegrationType(Enum):
+    API = "API"
+    EXTENSION = "EXTENSION"
+    IDENTITY_PROVIDER = "IDENTITY_PROVIDER"
+    WEB_SAAS = "WEB_SAAS"
+    MARKETPLACE = "MARKETPLACE"
+    EXTERNAL_DEVICE = "EXTERNAL_DEVICE"
