@@ -117,30 +117,12 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: SUPPORT
-  cardPayment:
+  paymentOptions:
     description: ""
-    valueType: BOOLEAN
-    defaultValue: true
+    valueType: TEXT
+    defaultValue:
+      - CARD
     type: PAYMENT
-    paymentType: CARD
-  achPayment:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: PAYMENT
-    paymentType: ACH
-  bankTransfer:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: PAYMENT
-    paymentType: WIRE_TRANSFER
-  paypal:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: PAYMENT
-    paymentType: GATEWAY
 usageLimits: 
   postsLimit:
     description: ""
@@ -296,10 +278,12 @@ plans:
         value: true
       dedicatedAccountManager:
         value: true
-      achPayment:
-        value: true
-      bankTransfer:
-        value: true
+      paymentOptions:
+        value:
+          - CARD
+          - ACH
+          - WIRE_TRANSFER
+          - GATEWAY
     usageLimits:
       socialMediaPagesLimit:
         value: 10

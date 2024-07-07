@@ -586,7 +586,7 @@ plans:
         value: true
       generativeAI:
         value: true
-      annomalyDetection:
+      anomalyDetection:
         value: true
       advancedBenchmarks:
         value: true
@@ -663,7 +663,7 @@ plans:
         value: true
       generativeAI:
         value: true
-      annomalyDetection:
+      anomalyDetection:
         value: true
       advancedBenchmarks:
         value: true

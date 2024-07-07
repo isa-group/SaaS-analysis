@@ -272,7 +272,7 @@ usageLimits:
     unit: workflow
     type: NON_RENEWABLE
     linkedFeatures:
-      - standardWorkflow
+      - standardWorkflows
       - premiumWorkflows
   useSlackConnect:
     description: "Number of people from other organizations you can collaborate with on Slack Connect."
