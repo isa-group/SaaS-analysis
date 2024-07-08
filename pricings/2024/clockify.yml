@@ -1,7 +1,7 @@
 saasName: Clockify
-day: 16
-month: 11
-year: 2022
+day: 6
+month: 7
+year: 2024
 currency: USD
 hasAnnualPayment: true
 features:
@@ -57,8 +57,18 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: MARKETPLACE
+  favoriteEntries:
+    description: "Pin existing time entries to the top of the Time Tracker page so you can quickly start timers for your most common activities."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
   importTime:
     description: "Upload a file with time entries to Clockify."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  splitTime:
+    description: "Split one time entry into two"
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
@@ -149,6 +159,11 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: API
+  multiYearRange:
+    description: "Generate reports that show more than 1 year at once in a single view."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
   decimalFormat:
     description: "See, enter, and export time in decimal format."
     valueType: BOOLEAN
@@ -174,6 +189,11 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
+  attendanceAndOvertime:
+    description: "See employees' daily start/end time, breaks, overtime, and time off in one report."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INFORMATION
   quickBooksIntegration:
     description: "Sync users and project, and send time to QuickBooks."
     valueType: BOOLEAN
@@ -197,6 +217,16 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
+  multipleCurrencies:
+    description: "Set custom currencies for each client."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  forecasting:
+    description: "Visualize project progress and see if it'll go over the schedule."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INFORMATION
   alerts:
     description: "Get notified when a project reaches its allocated budget or estimate."
     valueType: BOOLEAN
@@ -340,6 +370,13 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: INFORMATION
+  accessToAllCake.comProducts:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: INTEGRATION
+    integrationType: WEB_SAAS
+    pricingURLs: null
 usageLimits: null
 plans:
   FREE:
@@ -355,13 +392,19 @@ plans:
     annualPrice: 3.99
     unit: user/month
     features:
+      favoriteEntries:
+        value: true
       importTime:
+        value: true
+      splitTime:
         value: true
       breaks:
         value: true
       requiredFields:
         value: true
       addTimeForOthers:
+        value: true
+      multiYearRange:
         value: true
       decimalFormat:
         value: true
@@ -388,7 +431,11 @@ plans:
     annualPrice: 5.49
     unit: user/month
     features:
+      favoriteEntries:
+        value: true
       importTime:
+        value: true
+      splitTime:
         value: true
       breaks:
         value: true
@@ -402,6 +449,8 @@ plans:
         value: true
       lockTimesheets:
         value: true
+      multiYearRange:
+        value: true
       decimalFormat:
         value: true
       timeAudit:
@@ -411,6 +460,8 @@ plans:
       historicalRates:
         value: true
       rounding:
+        value: true
+      attendanceAndOvertime:
         value: true
       quickBooksIntegration:
         value: true
@@ -443,7 +494,11 @@ plans:
     annualPrice: 7.99
     unit: user/month
     features:
+      favoriteEntries:
+        value: true
       importTime:
+        value: true
+      splitTime:
         value: true
       breaks:
         value: true
@@ -465,6 +520,8 @@ plans:
         value: true
       screenshots:
         value: true
+      multiYearRange:
+        value: true
       decimalFormat:
         value: true
       timeAudit:
@@ -475,6 +532,8 @@ plans:
         value: true
       rounding:
         value: true
+      attendanceAndOvertime:
+        value: true
       quickBooksIntegration:
         value: true
       taskRates:
@@ -482,6 +541,10 @@ plans:
       laborCostAndProfit:
         value: true
       budgetAndEstimates:
+        value: true
+      multipleCurrencies:
+        value: true
+      forecasting:
         value: true
       alerts:
         value: true
@@ -526,7 +589,11 @@ plans:
     annualPrice: 11.99
     unit: user/month
     features:
+      favoriteEntries:
+        value: true
       importTime:
+        value: true
+      splitTime:
         value: true
       breaks:
         value: true
@@ -548,6 +615,8 @@ plans:
         value: true
       screenshots:
         value: true
+      multiYearRange:
+        value: true
       decimalFormat:
         value: true
       timeAudit:
@@ -558,6 +627,8 @@ plans:
         value: true
       rounding:
         value: true
+      attendanceAndOvertime:
+        value: true
       quickBooksIntegration:
         value: true
       taskRates:
@@ -565,6 +636,10 @@ plans:
       laborCostAndProfit:
         value: true
       budgetAndEstimates:
+        value: true
+      multipleCurrencies:
+        value: true
+      forecasting:
         value: true
       alerts:
         value: true
@@ -611,11 +686,117 @@ plans:
       auditLog:
         value: true
     usageLimits: null
+  CAKE_BUNDLE:
+    description: ""
+    monthlyPrice: 15.99
+    annualPrice: 12.99
+    unit: user/month
+    features:
+      favoriteEntries:
+        value: true
+      importTime:
+        value: true
+      splitTime:
+        value: true
+      breaks:
+        value: true
+      requiredFields:
+        value: true
+      addTimeForOthers:
+        value: true
+      timeOff:
+        value: true
+      targetsAndReminders:
+        value: true
+      lockTimesheets:
+        value: true
+      customFields:
+        value: true
+      forceTimer:
+        value: true
+      gpsTracking:
+        value: true
+      screenshots:
+        value: true
+      multiYearRange:
+        value: true
+      decimalFormat:
+        value: true
+      timeAudit:
+        value: true
+      customizeExports:
+        value: true
+      historicalRates:
+        value: true
+      rounding:
+        value: true
+      attendanceAndOvertime:
+        value: true
+      quickBooksIntegration:
+        value: true
+      taskRates:
+        value: true
+      laborCostAndProfit:
+        value: true
+      budgetAndEstimates:
+        value: true
+      multipleCurrencies:
+        value: true
+      forecasting:
+        value: true
+      alerts:
+        value: true
+      userFields:
+        value: true
+      assigmentReport:
+        value: true
+      expenseReport:
+        value: true
+      emailReports:
+        value: true
+      hideTimeAndPages:
+        value: true
+      bulkEdit:
+        value: true
+      projectTemplates:
+        value: true
+      editProfiles:
+        value: true
+      kioskPIN:
+        value: true
+      customizeKiosk:
+        value: true
+      invoicing:
+        value: true
+      approval:
+        value: true
+      managerRole:
+        value: true
+      force2FA:
+        value: true
+      scheduling:
+        value: true
+      expenses:
+        value: true
+      dataRegion:
+        value: true
+      singleSignOn:
+        value: true
+      customSubdomain:
+        value: true
+      controlAccounts:
+        value: true
+      auditLog:
+        value: true
+      accessToAllCake.comProducts:
+        value: true
+    usageLimits: null
 addOns:
   kioskBasic:
     availableFor:
       - BASIC
-    price: 0.99
+    monthlyPrice: 0.99
+    annualPrice: 0.79
     unit: per kiosk user/month
     features:
       kiosk:
@@ -625,7 +806,8 @@ addOns:
   kioskStandard:
     availableFor:
       - STANDARD
-    price: 1.49
+    monthlyPrice: 1.49
+    annualPrice: 1.19
     unit: per kiosk user/month
     features:
       kiosk:
@@ -635,7 +817,8 @@ addOns:
   kioskPro:
     availableFor:
       - PRO
-    price: 1.99
+    monthlyPrice: 1.99
+    annualPrice: 1.59
     unit: per kiosk user/month
     features:
       kiosk:
@@ -645,7 +828,8 @@ addOns:
   kioskEnterprise:
     availableFor:
       - ENTERPRISE
-    price: 2.99
+    monthlyPrice: 2.99
+    annualPrice: 2.39
     unit: per kiosk user/month
     features:
       kiosk:
