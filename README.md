@@ -35,7 +35,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Trustmary     |  ❌  |      |      |      |      |      |
 | Evernote      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Canva         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Clockify      |  ❌  |  ❌  |  ❌  |      |  ✅  |      |
+| Clockify      |  ❌  |  ❌  |  ❌  |  🔄  |  ✅  |  🔄  |
 | GitHub        |      |      |      |      |  ✅  |      |
 | Figma         |      |      |      |      |  ✅  |      |
 | Jira          |      |      |      |      |  ✅  |      |
