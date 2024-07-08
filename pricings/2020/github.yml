@@ -1,7 +1,7 @@
-saasName: github
-day: 21
+saasName: Github
+day: 30
 month: 11
-year: 2023
+year: 2020
 currency: EUR
 hasAnnualPayment: true
 features:
@@ -14,11 +14,6 @@ features:
     description: "Host code in private GitHub repositories, accessible via appliance, web, and command line. Private repositories are only accessible to you and people you share them with."
     valueType: BOOLEAN
     defaultValue: true
-    type: DOMAIN
-  githubCodespaces:
-    description: "Spin up fully configured dev environments in the cloud with the power of your favorite editor. A \"core hour\" denotes compute usage. On a 2-core machine, you would get 60 hours free. On a 4-core machine, you would get 30 hours free, etc. Free hours are assigned to personal accounts, rather than free organizations."
-    valueType: BOOLEAN
-    defaultValue: false
     type: DOMAIN
   githubActions:
     description: "Use execution minutes with GitHub Actions to automate your software development workflows. Write tasks and combine them to build, test, and deploy any code project on GitHub. Minutes are free for public repositories."
@@ -62,11 +57,11 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: MANAGEMENT
-  repositoryInsights:
-    description: "See data about activity and contributions within your repositories, including trends. You can use this data to improve collaboration and make development faster and more effective."
+  multiplePullRequestsReviewers:
+    description: "Assign multiple users or a team to review a pull request."
     valueType: BOOLEAN
     defaultValue: true
-    type: INFORMATION
+    type: MANAGEMENT
   scheduledReminders:
     description: "Send scheduled messages to you or your team listing open pull requests."
     valueType: BOOLEAN
@@ -79,16 +74,6 @@ features:
     defaultValue: true
     type: AUTOMATION
     automationType: TASK_AUTOMATION
-  enviromentProtectionRules:
-    description: "When a workflow job references an environment, the job won't start until all of the environment's protection rules pass."
-    valueType: BOOLEAN
-    defaultValue: true
-    type: MANAGEMENT
-  enviromentDeploymentBranchesAndSecrets:
-    description: "A job cannot access secrets that are defined in an environment unless it is running on the specified branch."
-    valueType: BOOLEAN
-    defaultValue: true
-    type: MANAGEMENT
   collaboratorsForPublicRepositories:
     description: "Invite any GitHub member, or all GitHub members, to work with you on code in a public repository you control including making changes and opening issues."
     valueType: BOOLEAN
@@ -129,35 +114,24 @@ features:
    valueType: BOOLEAN
    defaultValue: true
    type: DOMAIN
+  repositoryInsights:
+    description: "See data about activity and contributions within your repositories, including trends. You can use this data to improve collaboration and make development faster and more effective."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: INFORMATION
   multipleIssueAssignees:
     description: "Assign more than one person to an issue."
     valueType: BOOLEAN
     defaultValue: true
     type: MANAGEMENT
-  codeScanning:
-    description: "Integrate automated security review into your pull requests with CodeQL. Find, prioritize, and fix vulnerabilities in your repositories without disrupting your workflow."
-    valueType: BOOLEAN
-    defaultValue: true
-    type: AUTOMATION
-    automationType: TRACKING
-  secretScanning:
-    description: "Detect credentials exposed in your git history, comments, or discussions. Prevent further exposures with push protection, which proactively blocks secrets from being pushed into your code."
-    valueType: BOOLEAN
-    defaultValue: true
-    type: AUTOMATION
-    automationType: TRACKING
-  dependencyReview:
-    description: "Understand the security impact of newly introduced dependencies during pull requests, before they get merged."
-    valueType: BOOLEAN
-    defaultValue: true
-    type: INFORMATION
-  securityOverview:
-    description: "Get a centralized view of your organization's security risks. Know where security features have and haven’t yet been configured."
-    valueType: BOOLEAN
-    defaultValue: false
-    type: INFORMATION
   dependabotAlerts:
     description: "Get notified when there are new vulnerabilities affecting dependencies in your repositories."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: AUTOMATION
+    automationType: TRACKING
+  publicSecretScanning:
+    description: "Detect credentials exposed in your public repositories."
     valueType: BOOLEAN
     defaultValue: true
     type: AUTOMATION
@@ -168,17 +142,6 @@ features:
     defaultValue: true
     type: AUTOMATION
     automationType: TASK_AUTOMATION
-  dependabotVersionUpdates:
-    description: "Keep projects up-to-date by automatically opening pull requests that update out-of-date dependencies."
-    valueType: BOOLEAN
-    defaultValue: true
-    type: AUTOMATION
-    automationType: TASK_AUTOMATION
-  repositoryRules:
-    description: "Enforce branch and tag protections across repositories. Rule insights allow you to review rule enforcement and understand its impact."
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
   requiredReviews:
     description: "Ensure that pull requests have a specific number of approving reviews before collaborators can make changes to a protected branch."
     valueType: BOOLEAN
@@ -189,6 +152,12 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: MANAGEMENT
+  automatedCodeScanning:
+    description: "Automatically scan your code for security vulnerabilities and get detailed information on how to fix them."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: AUTOMATION
+    automationType: TASK_AUTOMATION
   githubSecurityAdvisories:
     description: "Privately discuss, fix, and publish information about security vulnerabilities found in your repository."
     valueType: BOOLEAN
@@ -271,6 +240,11 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: SUPPORT
+  phoneSupport:
+    description: "Get help with your GitHub questions and issues via phone."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: SUPPORT
   invoiceBilling:
     description: "Pay bills via invoice, rather than using your credit card."
     valueType: TEXT
@@ -281,126 +255,6 @@ features:
     description: "Self-hosted GitHub for on-prem appliances or self-managed cloud tenants."
     valueType: BOOLEAN
     defaultValue: false
-    type: INTEGRATION
-    integrationType: EXTERNAL_DEVICE
-  copilotChatInIDEAndMobile:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: INTEGRATION
-    integrationType: EXTENSION
-  copilotCLIAssistance:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  copilotSecurityVulnerabilityFilter:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: FILTERING
-  copilotCodeReferencing:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  copilotPublicCodeFilter:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: FILTERING
-  copilotIPIndemnity:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  copilotEnterpriseGradeSecuritySafetyAndPrivacy:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  copilotCodebasePersonalizedChat:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  copilotDocumentationSearchAndSummaries:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  copilotPullRequestSummaries:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  copilotCodeReviewSkills:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  copilotFinedTunedModels:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  copilotTelemetry:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  copilotBlocksSuggestionsMatchingPublicCode:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: FILTERING
-  copilotEditorPlugin:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: INTEGRATION
-    integrationType: EXTENSION
-  copilotMultilineFunctionSuggestions:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  copilotOrganizationWidePolicyManagement:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
-  copilotExcludeSpecifiedFiles:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  copilotAuditLogs:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: INFORMATION
-  copilotHTTPProxySupportViaCustomCertificates:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  gitLFS:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
     type: INTEGRATION
     integrationType: EXTERNAL_DEVICE
 usageLimits:
@@ -417,13 +271,8 @@ usageLimits:
       - repositoryInsights
       - scheduledReminders
       - automaticCodeReviewAssigment
-      - enviromentProtectionRules
-      - enviromentDeploymentBranchesAndSecrets
       - pagesAndWikis
       - multipleIssueAssignees
-      - codeScanning
-      - secretScanning
-      - dependencyReview
       - requiredReviews
       - requiredStatusChecks
       - githubSecurityAdvisories
@@ -433,13 +282,15 @@ usageLimits:
     defaultValue: false
     type: NON_RENEWABLE
     linkedFeatures:
-      - enviromentProtectionRules
-      - codeScanning
-      - secretScanning
-      - dependencyReview
-      - requiredReviews
-      - requiredStatusChecks
+      - automatedCodeScanning
       - githubSecurityAdvisories
+  githubOnlyForPublicRepositoriesEnterpriseAndOneTiers:
+    description: "Enterprise and One tiers usage limit for public repositories"
+    valueType: BOOLEAN
+    defaultValue: false
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - automatedCodeScanning
   githubActionsQuota:
     description: ""
     valueType: NUMERIC
@@ -456,103 +307,43 @@ usageLimits:
     type: NON_RENEWABLE
     linkedFeatures: 
       - githubPackages
-  githubCodepacesStorage:
-    description: "Free storage included in personal accounts like Free and Pro"
-    valueType: NUMERIC
-    defaultValue: 15
-    unit: GB/month
-    type: RENEWABLE
-    linkedFeatures: 
-      - githubCodespaces
-  githubCodepacesCoreHours:
-    description: "Free storage included in personal accounts like Free and Pro"
-    valueType: NUMERIC
-    defaultValue: 120
-    unit: coreHours/month
-    type: RENEWABLE
-    linkedFeatures:
-      - githubCodespaces
-  gitLFSMaximunFileSize:
-    description: ""
-    valueType: NUMERIC
-    defaultValue: 2
-    unit: GB
-    type: NON_RENEWABLE
-    linkedFeatures:
-      - gitLFS
-  gitLFSStorageLimit:
-    description: ""
-    valueType: NUMERIC
-    defaultValue: 1
-    unit: GB
-    type: NON_RENEWABLE
-    linkedFeatures:
-      - gitLFS
-  gitLFSBandwithLimit:
-    description: ""
-    valueType: NUMERIC
-    defaultValue: 1
-    unit: GB
-    type: NON_RENEWABLE
-    linkedFeatures:
-      - gitLFS
 plans:
   FREE:
     description: "The basics for individuals and organizations"
     monthlyPrice: 0.0
     annualPrice: 0.0
     unit: user/month
-    features:
-      githubCodespaces:
-        value: true
+    features: null
     usageLimits: 
       githubOnlyForPublicRepositoriesFreeTier:
         value: true
   TEAM:
     description: "Advanced collaboration for individuals and organizations"
     monthlyPrice: 4.0
-    annualPrice: 48.0
+    annualPrice: 4.0
     unit: user/month
     features:
-      githubCodespaces:
-        value: true
       standardSupport:
         value: true
     usageLimits:
-      githubOnlyForPublicRepositoriesFreeTier:
+      githubOnlyForPublicRepositoriesTeamTier:
         value: true
       githubActionsQuota:
         value: 3000
       diskSpaceForGithubPackages:
         value: 2
-      githubCodepacesStorage:
-        value: 20
-      githubCodepacesCoreHours:
-        value: 180
-      gitLFSMaximunFileSize:
-        value: 4
   ENTERPRISE:
     description: "Security, compliance, and flexible deployment"
     monthlyPrice: 21.0
-    annualPrice: 252.0
+    annualPrice: 21.0
     unit: user/month
     features:
-      codeScanning:
+      publicSecretScanning:
         value: false
-      secretScanning:
-        value: false
-      dependencyReview:
+      dependabotSecurityUpdates:
         value: false
       githubSecurityAdvisories:
         value: false
-      codeOwners:
-        value: true
-      draftPullRequests:
-        value: true
-      securityOverview:
-        value: true
-      repositoryRules:
-        value: true
       auditLogAPI:
         value: true
       githubConnect:
@@ -568,241 +359,48 @@ plans:
           - CARD
           - INVOICE
     usageLimits:
-      githubOnlyForPublicRepositoriesTeamTier:
+      githubOnlyForPublicRepositoriesEnterpriseAndOneTiers:
         value: true
       githubActionsQuota:
         value: 50000
       diskSpaceForGithubPackages:
         value: 50
-      gitLFSMaximunFileSize:
-        value: 5
+  ONE:
+    description: "All of our best tools, support, and services"
+    monthlyPrice: Contact Sales
+    annualPrice: Contact Sales
+    unit: user/month
+    features:
+      publicSecretScanning:
+        value: false
+      dependabotSecurityUpdates:
+        value: false
+      githubSecurityAdvisories:
+        value: true
+      auditLogAPI:
+        value: true
+      githubConnect:
+        value: true
+      singleSignOn:
+        value: true
+      ldap:
+        value: true
+      standardSupport:
+        value: true
+      premiumAndPremiumPlusSupport:
+        value: true
+      invoiceBilling:
+        value:
+          - CARD
+          - INVOICE
+    usageLimits:
+      githubOnlyForPublicRepositoriesEnterpriseAndOneTiers:
+        value: true
+      githubActionsQuota:
+        value: 50000
+      diskSpaceForGithubPackages:
+        value: 50
 addOns:
-  githubCopilotIndividuals:
-    availableFor:
-      - FREE
-      - TEAM
-    price: 10.0
-    unit: user/month
-    features:
-      copilotChatInIDEAndMobile:
-        value: true
-      copilotCLIAssistance:
-        value: false
-      copilotSecurityVulnerabilityFilter:
-        value: false
-      copilotCodeReferencing:
-        value: false
-      copilotPublicCodeFilter:
-        value: false
-      copilotIPIndemnity:
-        value: false
-      copilotEnterpriseGradeSecuritySafetyAndPrivacy:
-        value: false
-      copilotCodebasePersonalizedChat:
-        value: false
-      copilotDocumentationSearchAndSummaries:
-        value: false
-      copilotPullRequestSummaries:
-        value: false
-      copilotCodeReviewSkills:
-        value: false
-      copilotFinedTunedModels:
-        value: false
-      copilotTelemetry:
-        value: true
-      copilotBlocksSuggestionsMatchingPublicCode:
-        value: true
-      copilotEditorPlugin:
-        value: true
-      copilotMultilineFunctionSuggestions:
-        value: true
-      copilotOrganizationWidePolicyManagement:
-        value: false
-      copilotExcludeSpecifiedFiles:
-        value: false
-      copilotAuditLogs:
-        value: false
-      copilotHTTPProxySupportViaCustomCertificates:
-        value: false
-    usageLimits: null
-    usageLimitsExtensions: null
-  githubCopilotBusiness:
-    availableFor:
-      - TEAM
-      - ENTERPRISE
-    price: 19.0
-    unit: user/month
-    features:
-      copilotChatInIDEAndMobile:
-        value: true
-      copilotCLIAssistance:
-        value: true
-      copilotSecurityVulnerabilityFilter:
-        value: true
-      copilotCodeReferencing:
-        value: true
-      copilotPublicCodeFilter:
-        value: true
-      copilotIPIndemnity:
-        value: true
-      copilotEnterpriseGradeSecuritySafetyAndPrivacy:
-        value: true
-      copilotBlocksSuggestionsMatchingPublicCode:
-        value: true
-      copilotEditorPlugin:
-        value: true
-      copilotMultilineFunctionSuggestions:
-        value: true
-    usageLimits: null
-    usageLimitsExtensions: null
-  githubCopilotEnterprise:
-    availableFor:
-      - ENTERPRISE
-    price: 39.0
-    unit: user/month
-    features:
-      copilotChatInIDEAndMobile:
-        value: true
-      copilotCLIAssistance:
-        value: true
-      copilotSecurityVulnerabilityFilter:
-        value: true
-      copilotCodeReferencing:
-        value: true
-      copilotPublicCodeFilter:
-        value: true
-      copilotIPIndemnity:
-        value: true
-      copilotEnterpriseGradeSecuritySafetyAndPrivacy:
-        value: true
-      copilotCodebasePersonalizedChat:
-        value: true
-      copilotDocumentationSearchAndSummaries:
-        value: true
-      copilotPullRequestSummaries:
-        value: true
-      copilotCodeReviewSkills:
-        value: true
-      copilotFinedTunedModels:
-        value: true
-      copilotTelemetry:
-        value: false
-      copilotBlocksSuggestionsMatchingPublicCode:
-        value: true
-      copilotEditorPlugin:
-        value: true
-      copilotMultilineFunctionSuggestions:
-        value: true
-      copilotOrganizationWidePolicyManagement:
-        value: true
-      copilotExcludeSpecifiedFiles:
-        value: true
-      copilotAuditLogs:
-        value: true
-      copilotHTTPProxySupportViaCustomCertificates:
-        value: true
-    usageLimits: null
-    usageLimitsExtensions: null
-  githubCodespaces2Core:
-    availableFor:
-      - FREE
-      - TEAM
-      - ENTERPRISE
-    price: 0.18
-    unit: activeHour
-    features:
-      githubCodespaces:
-        value: true
-    usageLimits: null
-    usageLimitsExtensions: null
-  githubCodespaces4Core:
-    availableFor:
-      - FREE
-      - TEAM
-      - ENTERPRISE
-    price: 0.36
-    unit: activeHour
-    features:
-      githubCodespaces:
-        value: true
-    usageLimits: null
-    usageLimitsExtensions: null
-  githubCodespaces8Core:
-    availableFor:
-      - FREE
-      - TEAM
-      - ENTERPRISE
-    price: 0.72
-    unit: activeHour
-    features:
-      githubCodespaces:
-        value: true
-    usageLimits: null
-    usageLimitsExtensions: null
-  githubCodespaces16Core:
-    availableFor:
-      - FREE
-      - TEAM
-      - ENTERPRISE
-    price: 1.44
-    unit: activeHour
-    features:
-      githubCodespaces:
-        value: true
-    usageLimits: null
-    usageLimitsExtensions: null
-  githubCodespaces32Core:
-    availableFor:
-      - FREE
-      - TEAM
-      - ENTERPRISE
-    price: 2.88
-    unit: activeHour
-    features:
-      githubCodespaces:
-        value: true
-    usageLimits: null
-    usageLimitsExtensions: null
-  githubCodespacesStorage:
-    availableFor:
-      - FREE
-      - TEAM
-      - ENTERPRISE
-    price: 0.07
-    unit: GB/month
-    features:
-      githubCodespaces:
-        value: true
-    usageLimits: null
-    usageLimitsExtensions: null
-  gitLFSDataPack:
-    availableFor:
-      - FREE
-      - TEAM
-      - ENTERPRISE
-    monthlyPrice: 5.0
-    unit: user/month
-    features: null
-    usageLimits: null
-    usageLimitsExtensions:
-      gitLFSStorageLimit:
-        value: 50
-      gitLFSBandwithLimit:
-        value: 50
-  githubAdvancedSecurity:
-    availableFor:
-      - ENTERPRISE
-    price: 49.00
-    unit: activeCommiter/month
-    features:
-      codeScanning:
-        value: true
-      secretScanning:
-        value: true
-      dependencyReview:
-        value: true
-    usageLimits: null
-    usageLimitsExtensions: null
   premiumSupport:
     availableFor:
       - ENTERPRISE
@@ -811,11 +409,14 @@ addOns:
     features:
       premiumAndPremiumPlusSupport:
         value: true
+      phoneSupport:
+        value: true
     usageLimits: null
     usageLimitsExtensions: null
   enterpriseServer:
     availableFor:
       - ENTERPRISE
+      - ONE
     price: Contact Sales
     unit: user/month
     features:
@@ -831,11 +432,27 @@ addOns:
     price: Contact Sales
     unit: user/month
     features:
+      publicSecretScanning:
+        value: true
+      dependabotSecurityUpdates:
+        value: true
       githubSecurityAdvisories:
         value: true
       ipAllowList:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
-
-
+  oneEnterpriseCloud:
+    availableFor:
+      - ONE
+    price: Contact Sales
+    unit: user/month
+    features:
+      publicSecretScanning:
+        value: true
+      dependabotSecurityUpdates:
+        value: true
+      ipAllowList:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions: null

@@ -1,7 +1,7 @@
-saasName: github
-day: 21
-month: 11
-year: 2023
+saasName: Github
+day: 8
+month: 6
+year: 2024
 currency: EUR
 hasAnnualPayment: true
 features:
@@ -18,7 +18,7 @@ features:
   githubCodespaces:
     description: "Spin up fully configured dev environments in the cloud with the power of your favorite editor. A \"core hour\" denotes compute usage. On a 2-core machine, you would get 60 hours free. On a 4-core machine, you would get 30 hours free, etc. Free hours are assigned to personal accounts, rather than free organizations."
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   githubActions:
     description: "Use execution minutes with GitHub Actions to automate your software development workflows. Write tasks and combine them to build, test, and deploy any code project on GitHub. Minutes are free for public repositories."
@@ -283,120 +283,170 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: EXTERNAL_DEVICE
-  copilotChatInIDEAndMobile:
-    description: ""
+  copilotMessagesAndInteractions:
+    description: "Chat with Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  copilotContextAwareCodingSupport:
+    description: "Get code suggestions from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  copilotContextAwareCodingExplanation:
+    description: "Get code suggestions from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  copilotDebuggingAssistance:
+    description: "Get debugging assistance from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  copilotSecurityRemediationAssistance:
+    description: "Get security remediation assistance from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  copilotConversationsTailoredToRepositories:
+    description: "Get tailored conversations from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  copilotAnswersBasedOnKnowledgeBase:
+    description: "Get answers from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  copilotAccessToKnowledgeFromTopOpenSourceRepos:
+    description: "Get access to knowledge from top open source repositories in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  copilotPullRequestDiffAnalysis:
+    description: "Get pull request diff analysis from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  copilotWebSearch:
+    description: "Get web search from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  copilotRealTimeCodeSuggestions:
+    description: "Get real-time code suggestions from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  copilotCommentsToCode:
+    description: "Get comments to code from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  copilotFineTunedModels:
+    description: "Get fine-tuned models from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  copilotInlineChat:
+    description: "Get inline chat from Copilot in your IDE and mobile devices."
     valueType: BOOLEAN
     defaultValue: false
     type: INTEGRATION
     integrationType: EXTENSION
-  copilotCLIAssistance:
-    description: ""
+  copilotPromptSuggestions:
+    description: "Get prompt suggestions from Copilot in your IDE and mobile devices."
     valueType: BOOLEAN
     defaultValue: false
     type: AUTOMATION
     automationType: BOT
-  copilotSecurityVulnerabilityFilter:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: FILTERING
-  copilotCodeReferencing:
-    description: ""
+  copilotSlashCommandsAndContextVariables:
+    description: "Get slash commands from Copilot in your IDE and mobile devices."
     valueType: BOOLEAN
     defaultValue: false
     type: AUTOMATION
     automationType: BOT
+  copilotCommitmessageGeneration:
+    description: "Get commit message generation from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  copilotPullRequestDescriptionAndSummarization:
+    description: "Get pull request description and summarization from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  copilotIDEIntegration:
+    description: "Get IDE integration from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INTEGRATION
+    integrationType: EXTENSION
+  copilotCLIIntegration:
+    description: "Get IDE integration from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INTEGRATION
+    integrationType: EXTENSION
+  copilotForGithubMobile:
+    description: "Get IDE integration from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INTEGRATION
+    integrationType: EXTERNAL_DEVICE
+  copilotForGithubWebsite:
+    description: "Get IDE integration from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INTEGRATION
+    integrationType: EXTENSION
   copilotPublicCodeFilter:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: FILTERING
-  copilotIPIndemnity:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  copilotEnterpriseGradeSecuritySafetyAndPrivacy:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  copilotCodebasePersonalizedChat:
-    description: ""
+    description: "Get public code filter from Copilot in your IDE and mobile devices."
     valueType: BOOLEAN
     defaultValue: false
     type: AUTOMATION
     automationType: BOT
-  copilotDocumentationSearchAndSummaries:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  copilotPullRequestSummaries:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  copilotCodeReviewSkills:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  copilotFinedTunedModels:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  copilotTelemetry:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  copilotBlocksSuggestionsMatchingPublicCode:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: FILTERING
-  copilotEditorPlugin:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: INTEGRATION
-    integrationType: EXTENSION
-  copilotMultilineFunctionSuggestions:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  copilotOrganizationWidePolicyManagement:
-    description: ""
+  copilotUserManagement:
+    description: "Get user management from Copilot in your IDE and mobile devices."
     valueType: BOOLEAN
     defaultValue: false
     type: MANAGEMENT
-  copilotExcludeSpecifiedFiles:
-    description: ""
+  copilotDataExcludedFromTrainingByDefault:
+    description: "Get data excluded from training by default from Copilot in your IDE and mobile devices."
     valueType: BOOLEAN
     defaultValue: false
-    type: DOMAIN
-  copilotAuditLogs:
-    description: ""
+    type: MANAGEMENT
+  copilotIpIndemnity:
+    description: "Get IP indemnity from Copilot in your IDE and mobile devices."
     valueType: BOOLEAN
     defaultValue: false
-    type: INFORMATION
-  copilotHTTPProxySupportViaCustomCertificates:
-    description: ""
+    type: MANAGEMENT
+  copilotContentExclusions:
+    description: "Get content exclusions from Copilot in your IDE and mobile devices."
     valueType: BOOLEAN
     defaultValue: false
-    type: DOMAIN
+    type: MANAGEMENT
+  copilotSSO:
+    description: "Get SSO from Copilot in your IDE and mobile devices."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INTEGRATION
+    integrationType: IDENTITY_PROVIDER
   gitLFS:
     description: ""
     valueType: BOOLEAN
@@ -437,8 +487,6 @@ usageLimits:
       - codeScanning
       - secretScanning
       - dependencyReview
-      - requiredReviews
-      - requiredStatusChecks
       - githubSecurityAdvisories
   githubActionsQuota:
     description: ""
@@ -502,24 +550,20 @@ plans:
     monthlyPrice: 0.0
     annualPrice: 0.0
     unit: user/month
-    features:
-      githubCodespaces:
-        value: true
+    features: null
     usageLimits: 
       githubOnlyForPublicRepositoriesFreeTier:
         value: true
   TEAM:
     description: "Advanced collaboration for individuals and organizations"
     monthlyPrice: 4.0
-    annualPrice: 48.0
+    annualPrice: 4.0
     unit: user/month
     features:
-      githubCodespaces:
-        value: true
       standardSupport:
         value: true
     usageLimits:
-      githubOnlyForPublicRepositoriesFreeTier:
+      githubOnlyForPublicRepositoriesTeamTier:
         value: true
       githubActionsQuota:
         value: 3000
@@ -534,7 +578,7 @@ plans:
   ENTERPRISE:
     description: "Security, compliance, and flexible deployment"
     monthlyPrice: 21.0
-    annualPrice: 252.0
+    annualPrice: 21.0
     unit: user/month
     features:
       codeScanning:
@@ -545,10 +589,6 @@ plans:
         value: false
       githubSecurityAdvisories:
         value: false
-      codeOwners:
-        value: true
-      draftPullRequests:
-        value: true
       securityOverview:
         value: true
       repositoryRules:
@@ -584,46 +624,36 @@ addOns:
     price: 10.0
     unit: user/month
     features:
-      copilotChatInIDEAndMobile:
+      copilotMessagesAndInteractions:
         value: true
-      copilotCLIAssistance:
-        value: false
-      copilotSecurityVulnerabilityFilter:
-        value: false
-      copilotCodeReferencing:
-        value: false
+      copilotContextAwareCodingSupport:
+        value: true
+      copilotContextAwareCodingExplanation:
+        value: true
+      copilotDebuggingAssistance:
+        value: true
+      copilotSecurityRemediationAssistance:
+        value: true
+      copilotRealTimeCodeSuggestions:
+        value: true
+      copilotCommentsToCode:
+        value: true
+      copilotInlineChat:
+        value: true
+      copilotPromptSuggestions:
+        value: true
+      copilotSlashCommandsAndContextVariables:
+        value: true
+      copilotCommitmessageGeneration:
+        value: true
+      copilotIDEIntegration:
+        value: true
+      copilotCLIIntegration:
+        value: true
+      copilotForGithubMobile:
+        value: true
       copilotPublicCodeFilter:
-        value: false
-      copilotIPIndemnity:
-        value: false
-      copilotEnterpriseGradeSecuritySafetyAndPrivacy:
-        value: false
-      copilotCodebasePersonalizedChat:
-        value: false
-      copilotDocumentationSearchAndSummaries:
-        value: false
-      copilotPullRequestSummaries:
-        value: false
-      copilotCodeReviewSkills:
-        value: false
-      copilotFinedTunedModels:
-        value: false
-      copilotTelemetry:
         value: true
-      copilotBlocksSuggestionsMatchingPublicCode:
-        value: true
-      copilotEditorPlugin:
-        value: true
-      copilotMultilineFunctionSuggestions:
-        value: true
-      copilotOrganizationWidePolicyManagement:
-        value: false
-      copilotExcludeSpecifiedFiles:
-        value: false
-      copilotAuditLogs:
-        value: false
-      copilotHTTPProxySupportViaCustomCertificates:
-        value: false
     usageLimits: null
     usageLimitsExtensions: null
   githubCopilotBusiness:
@@ -633,25 +663,43 @@ addOns:
     price: 19.0
     unit: user/month
     features:
-      copilotChatInIDEAndMobile:
+      copilotMessagesAndInteractions:
         value: true
-      copilotCLIAssistance:
+      copilotContextAwareCodingSupport:
         value: true
-      copilotSecurityVulnerabilityFilter:
+      copilotContextAwareCodingExplanation:
         value: true
-      copilotCodeReferencing:
+      copilotDebuggingAssistance:
+        value: true
+      copilotSecurityRemediationAssistance:
+        value: true
+      copilotRealTimeCodeSuggestions:
+        value: true
+      copilotCommentsToCode:
+        value: true
+      copilotInlineChat:
+        value: true
+      copilotPromptSuggestions:
+        value: true
+      copilotSlashCommandsAndContextVariables:
+        value: true
+      copilotCommitmessageGeneration:
+        value: true
+      copilotIDEIntegration:
+        value: true
+      copilotCLIIntegration:
+        value: true
+      copilotForGithubMobile:
         value: true
       copilotPublicCodeFilter:
         value: true
-      copilotIPIndemnity:
+      copilotUserManagement:
         value: true
-      copilotEnterpriseGradeSecuritySafetyAndPrivacy:
+      copilotDataExcludedFromTrainingByDefault:
         value: true
-      copilotBlocksSuggestionsMatchingPublicCode:
+      copilotContentExclusions:
         value: true
-      copilotEditorPlugin:
-        value: true
-      copilotMultilineFunctionSuggestions:
+      copilotSSO:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
@@ -661,45 +709,59 @@ addOns:
     price: 39.0
     unit: user/month
     features:
-      copilotChatInIDEAndMobile:
+      copilotMessagesAndInteractions:
         value: true
-      copilotCLIAssistance:
+      copilotContextAwareCodingSupport:
         value: true
-      copilotSecurityVulnerabilityFilter:
+      copilotContextAwareCodingExplanation:
         value: true
-      copilotCodeReferencing:
+      copilotDebuggingAssistance:
+        value: true
+      copilotSecurityRemediationAssistance:
+        value: true
+      copilotConversationsTailoredToRepositories:
+        value: true
+      copilotAnswersBasedOnKnowledgeBase:
+        value: true
+      copilotAccessToKnowledgeFromTopOpenSourceRepos:
+        value: true
+      copilotPullRequestDiffAnalysis:
+        value: true
+      copilotWebSearch:
+        value: true
+      copilotRealTimeCodeSuggestions:
+        value: true
+      copilotCommentsToCode:
+        value: true
+      copilotFineTunedModels:
+        value: true
+      copilotInlineChat:
+        value: true
+      copilotPromptSuggestions:
+        value: true
+      copilotSlashCommandsAndContextVariables:
+        value: true
+      copilotCommitmessageGeneration:
+        value: true
+      copilotPullRequestDescriptionAndSummarization:
+        value: true
+      copilotIDEIntegration:
+        value: true
+      copilotCLIIntegration:
+        value: true
+      copilotForGithubMobile:
+        value: true
+      copilotForGithubWebsite:
         value: true
       copilotPublicCodeFilter:
         value: true
-      copilotIPIndemnity:
+      copilotUserManagement:
         value: true
-      copilotEnterpriseGradeSecuritySafetyAndPrivacy:
+      copilotDataExcludedFromTrainingByDefault:
         value: true
-      copilotCodebasePersonalizedChat:
+      copilotContentExclusions:
         value: true
-      copilotDocumentationSearchAndSummaries:
-        value: true
-      copilotPullRequestSummaries:
-        value: true
-      copilotCodeReviewSkills:
-        value: true
-      copilotFinedTunedModels:
-        value: true
-      copilotTelemetry:
-        value: false
-      copilotBlocksSuggestionsMatchingPublicCode:
-        value: true
-      copilotEditorPlugin:
-        value: true
-      copilotMultilineFunctionSuggestions:
-        value: true
-      copilotOrganizationWidePolicyManagement:
-        value: true
-      copilotExcludeSpecifiedFiles:
-        value: true
-      copilotAuditLogs:
-        value: true
-      copilotHTTPProxySupportViaCustomCertificates:
+      copilotSSO:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
@@ -837,5 +899,4 @@ addOns:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
-
 

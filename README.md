@@ -36,7 +36,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Evernote      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Canva         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Clockify      |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |
-| GitHub        |  🔄  |  🔄  |  🔄  |  🔄  |  ✅  |  🔄  |
+| GitHub        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Figma         |      |      |      |      |  ✅  |      |
 | Jira          |      |      |      |      |  ✅  |      |
 | Microsoft 365 |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |      |
