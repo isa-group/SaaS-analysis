@@ -40,7 +40,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Figma         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Jira          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Microsoft 365 |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |      |
-| Monday        |      |      |      |      |  ✅  |      |
+| Monday        |  🔄  |  🔄  |  🔄  |  🔄  |  ✅  |  🔄  |
 | Postman       |  ❌  |      |      |      |  ✅  |      |
 | RapidAPI      |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |      |
 | Rippling      |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ❌  |
