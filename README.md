@@ -41,7 +41,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Jira          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Microsoft 365 |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |      |
 | Monday        |  🔄  |  🔄  |  🔄  |  🔄  |  ✅  |  🔄  |
-| Postman       |  ❌  |      |      |      |  ✅  |      |
+| Postman       |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | RapidAPI      |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |      |
 | Rippling      |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ❌  |
 | Wrike         |  ❌  |  ❌  |  ❌  |      |  ✅  |      |
