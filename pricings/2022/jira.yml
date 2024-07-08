@@ -1,7 +1,7 @@
 saasName: Jira 
-day: 17
+day: 30
 month: 11
-year: 2023
+year: 2022
 currency: USD
 hasAnnualPayment: false
 features:
@@ -10,38 +10,7 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  automation:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: AUTOMATION
-    automationType: TASK_AUTOMATION
-  basicPlanning:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
-  advancedPlanning:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  basicDependencyManagement:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
-  advancedDependencyManagement:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  projectBoards:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
-  jiraWorkManagment:
+  scrumAndKanbanBoards:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
@@ -51,7 +20,7 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  reportingAndInsights:
+  agileReporting:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
@@ -67,7 +36,33 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: MARKETPLACE
-  capacityManagement:
+  automation:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: AUTOMATION
+    automationType: TASK_AUTOMATION
+  basicRoadmaps:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  advancedRoadmaps:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  basicDependencyManagement:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  advancedDependencyManagement:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  capacityPlanning:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
@@ -108,7 +103,7 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: MANAGEMENT
-  userRolesAndPermissions:
+  projectRoles:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
@@ -129,16 +124,6 @@ features:
     defaultValue: false
     type: DOMAIN
   releaseTracks:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  userCounts:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: INFORMATION
-  productRequests:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
@@ -179,31 +164,16 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: MANAGEMENT
-  dataResidency:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
   ipAllowlisting:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
     type: MANAGEMENT
-  multipleIdp:
+  dataResidency:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  auditLogsForUsersActivity:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: INFORMATION
-  byokEncryption:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: GUARANTEE
   storage:
     description: ""
     valueType: BOOLEAN
@@ -254,22 +224,6 @@ usageLimits:
     unit: site
     type: NON_RENEWABLE
     linkedFeatures: null
-  totalAutomationLimit:
-    description: ""
-    valueType: NUMERIC
-    defaultValue: 100
-    unit: rule/month
-    type: RENEWABLE
-    linkedFeatures: 
-      - automation
-  perUserAutomationLimit:
-    description: ""
-    valueType: NUMERIC
-    defaultValue: 0
-    unit: rule/month
-    type: RENEWABLE
-    linkedFeatures: 
-      - automation
   storageLimit:
     description: ""
     valueType: NUMERIC
@@ -278,6 +232,14 @@ usageLimits:
     type: NON_RENEWABLE
     linkedFeatures: 
       - storage
+  projectWithAutomationsLimit:
+    description: ""
+    valueType: NUMERIC
+    defaultValue: 1
+    unit: project
+    type: NON_RENEWABLE
+    linkedFeatures: 
+      - automation
 plans:
   FREE:
     description: ""
@@ -290,7 +252,7 @@ plans:
     monthlyPrice: 7.16
     unit: user/month
     features:
-      userRolesAndPermissions: 
+      projectRoles: 
         value: true
       advancedPermissions:
         value: true
@@ -305,8 +267,6 @@ plans:
     usageLimits:
       usersLimit:
         value: 35000
-      totalAutomationLimit:
-        value: 1700
       storageLimit:
         value: 250
   PREMIUM:
@@ -314,15 +274,15 @@ plans:
     monthlyPrice: 12.48
     unit: user/month
     features:
-      advancedPlanning:
+      advancedRoadmaps:
         value: true
       advancedDependencyManagement:
         value: true
-      capacityManagement:
+      capacityPlanning:
         value: true
       projectArchiving:
         value: true
-      userRolesAndPermissions: 
+      projectRoles: 
         value: true
       advancedPermissions:
         value: true
@@ -336,9 +296,9 @@ plans:
         value: true
       anonymousAccess:
         value: true
-      dataResidency:
-        value: true
       ipAllowlisting:
+        value: true
+      dataResidency:
         value: true
       localBusinessHoursSupport:
         value: true
@@ -349,22 +309,20 @@ plans:
     usageLimits:
       usersLimit:
         value: 35000
-      totalAutomationLimit:
-        value: .inf
-      perUserAutomationLimit:
-        value: 1000
       storageLimit:
+        value: .inf
+      projectWithAutomationsLimit:
         value: .inf
   ENTERPRISE:
     description: ""
     monthlyPrice: Contact Sales
     unit: user/month
     features:
-      advancedPlanning:
+      advancedRoadmaps:
         value: true
       advancedDependencyManagement:
         value: true
-      capacityManagement:
+      capacityPlanning:
         value: true
       projectArchiving:
         value: true
@@ -374,7 +332,7 @@ plans:
         value: true
       dataConnectors:
         value: true
-      userRolesAndPermissions: 
+      projectRoles: 
         value: true
       advancedPermissions:
         value: true
@@ -384,25 +342,15 @@ plans:
         value: true
       releaseTracks:
         value: true
-      userCounts:
-        value: true
-      productRequests:
-        value: true
       atlassianAccess:
         value: true
       auditLogs:
         value: true
       anonymousAccess:
         value: true
-      dataResidency:
-        value: true
       ipAllowlisting:
         value: true
-      multipleIdp:
-        value: true
-      auditLogsForUsersActivity:
-        value: true
-      byokEncryption:
+      dataResidency:
         value: true
       localBusinessHoursSupport:
         value: true
@@ -418,12 +366,10 @@ plans:
       usersLimit:
         value: 35000
       sitesLimit:
-        value: 150
-      totalAutomationLimit:
-        value: .inf
-      perUserAutomationLimit:
         value: .inf
       storageLimit:
+        value: .inf
+      projectWithAutomationsLimit:
         value: .inf
 addOns:
   atlassianAccessAddOn:
