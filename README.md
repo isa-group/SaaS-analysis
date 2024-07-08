@@ -38,7 +38,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Clockify      |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |
 | GitHub        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Figma         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Jira          |      |      |      |      |  ✅  |      |
+| Jira          |  🔄  |  🔄  |  🔄  |  🔄  |  ✅  |  🔄  |
 | Microsoft 365 |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |      |
 | Monday        |      |      |      |      |  ✅  |      |
 | Postman       |  ❌  |      |      |      |  ✅  |      |
