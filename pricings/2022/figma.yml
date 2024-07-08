@@ -1,8 +1,8 @@
 saasName: Figma 
-day: 9
+day: 30
 month: 11
-year: 2023
-currency: EUR
+year: 2022
+currency: USD
 hasAnnualPayment: true
 features:
   versionHistory:
@@ -25,6 +25,11 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
+  styles:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
   pluginsAndWidgets:
     description: ""
     valueType: BOOLEAN
@@ -43,6 +48,31 @@ features:
     defaultValue: true
     type: DOMAIN
   sketchImport:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  interactivePrototypes:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  videosInPrototypes:
+    description: ""
+    valueType: TEXT
+    defaultValue: "Choose videos from the Figma Community"
+    type: DOMAIN
+  overlays:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  transitions:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  advancedAnimations:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
@@ -87,11 +117,6 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  teamAndProjectTransfer:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
   teams:
     description: ""
     valueType: BOOLEAN
@@ -107,70 +132,10 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  interactivePrototypes:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
-  videosInPrototypes:
-    description: ""
-    valueType: TEXT
-    defaultValue: "Choose videos from the Figma Community"
-    type: DOMAIN
-  overlays:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
-  transitions:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
-  advancedAnimations:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
-  setVariable:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  conditionalLogic:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  multipleActions:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  expressions:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  variables:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
   components:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
-    type: DOMAIN
-  styles:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
-  modes:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
     type: DOMAIN
   teamLibraries:
     description: ""
@@ -192,34 +157,12 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: INFORMATION
-  defaultLibrariesByWorkspace:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
-  restApiForVariables:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: INTEGRATION
-    integrationType: API
-  devMode:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  figmaForVsCode:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: INTEGRATION
-    integrationType: EXTENSION
   restApis:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
     type: INTEGRATION
-    integrationType: API
+    integrationType: MARKETPLACE
   thirdPartyIntegrations:
     description: ""
     valueType: BOOLEAN
@@ -232,23 +175,23 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: EXTENSION
-  webhooks:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
   privatePluginsAndWidgets:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
     type: INTEGRATION
     integrationType: MARKETPLACE
+  webhooks:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
   passwordProtection:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
     type: MANAGEMENT
-  pluginAndWidgetApproval:
+  pluginAndWidgetManagement:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
@@ -268,15 +211,15 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: MANAGEMENT
-  centralizedContentAdministration:
+  centralizedContentManagent:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
     type: MANAGEMENT
   singleSignOn:
     description: ""
-    valueType: TEXT
-    defaultValue: ""
+    valueType: BOOLEAN
+    defaultValue: true
     type: INTEGRATION
     integrationType: IDENTITY_PROVIDER
   activityLogs:
@@ -306,8 +249,8 @@ features:
     type: MANAGEMENT
   roleAssigmentViaSCIM:
     description: ""
-    valueType: TEXT
-    defaultValue: ""
+    valueType: BOOLEAN
+    defaultValue: false
     type: INTEGRATION
     integrationType: IDENTITY_PROVIDER
   passwordProtectionRequired:
@@ -315,52 +258,6 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: MANAGEMENT
-  teamCreationControls:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
-  networkAccessRestrictions:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
-  externalContentsControls:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
-  activityLogsApi:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: INTEGRATION
-    integrationType: API
-  windowsInstaller:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  idleSessionTimeout:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
-  euDataHosting:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
-  expiringPublicLinks:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
-  puglinAndWidgetsAnalytics:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: INFORMATION
   figmaSupportForum:
     description: ""
     valueType: BOOLEAN
@@ -390,22 +287,13 @@ usageLimits:
     type: NON_RENEWABLE
     linkedFeatures: 
       - versionHistory
-  teamsLimit:
+  unlimitedTeamsPermitted:
     description: ""
-    valueType: NUMERIC
-    defaultValue: 100
-    unit: team
+    valueType: BOOLEAN
+    defaultValue: false
     type: NON_RENEWABLE
     linkedFeatures: 
       - teams
-  modesLimits:
-    description: ""
-    valueType: NUMERIC
-    defaultValue: 0
-    unit: mode
-    type: NON_RENEWABLE
-    linkedFeatures: 
-      - modes
 plans:
   STARTER:
     description: ""
@@ -414,7 +302,7 @@ plans:
     unit: editor/month
     features: null
     usageLimits: null
-  FIGMA_PROFESSIONAL:
+  PROFESSIONAL:
     description: ""
     monthlyPrice: 15.00
     annualPrice: 12.00
@@ -426,36 +314,14 @@ plans:
         value: true
       audioConversations:
         value: true
-      teamAndProjectTransfer:
-        value: true
-      videosInPrototypes:
-        value: "Upload your own videos"
-      setVariable:
-        value: true
-      conditionalLogic:
-        value: true
-      multipleActions:
-        value: true
-      expressions:
-        value: true
-      modes:
-        value: true
       teamLibraries:
-        value: true
-      devMode:
-        value: true
-      figmaForVsCode:
-        value: true
-      webhooks:
         value: true
       passwordProtection:
         value: true
     usageLimits:
       versionHistoryDepth:
         value: .inf
-      modesLimits:
-        value: 4
-  FIGMA_ORGANIZATION:
+  ORGANIZATION:
     description: ""
     monthlyPrice: null
     annualPrice: 45.00
@@ -467,23 +333,7 @@ plans:
         value: true
       audioConversations:
         value: true
-      teamAndProjectTransfer:
-        value: true
-      teams:
-        value: true
       branchingAndMerging:
-        value: true
-      videosInPrototypes:
-        value: "Upload videos from any source"
-      setVariable:
-        value: true
-      conditionalLogic:
-        value: true
-      multipleActions:
-        value: true
-      expressions:
-        value: true
-      modes:
         value: true
       teamLibraries:
         value: true
@@ -493,17 +343,13 @@ plans:
         value: true
       designSystemAnalytics:
         value: true
-      devMode:
-        value: true
-      figmaForVsCode:
+      privatePluginsAndWidgets:
         value: true
       webhooks:
         value: true
-      privatePluginsAndWidgets:
-        value: true
       passwordProtection:
         value: true
-      pluginAndWidgetApproval:
+      pluginAndWidgetManagement:
         value: true
       centralizedAdministration:
         value: true
@@ -511,19 +357,17 @@ plans:
         value: true
       linkAccessControls:
         value: true
-      centralizedContentAdministration:
+      centralizedContentManagent:
         value: true
       singleSignOn:
-        value: "Azure Active Directory (Azure AD), Okta, OneLogin, Google SSO, Active Directory Federation Services (AD FS)"
+        value: true
       activityLogs:
         value: true
     usageLimits:
       versionHistoryDepth:
         value: .inf
-      teamsLimit:
-        value: .inf
-      modesLimits:
-        value: 4
+      unlimitedTeamsPermitted:
+        value: true
   ENTERPRISE:
     description: ""
     monthlyPrice: null
@@ -536,25 +380,7 @@ plans:
         value: true
       audioConversations:
         value: true
-      teamAndProjectTransfer:
-        value: true
-      teams:
-        value: true
       branchingAndMerging:
-        value: true
-      customWorkspaces:
-        value: true
-      videosInPrototypes:
-        value: "Upload videos from any source"
-      setVariable:
-        value: true
-      conditionalLogic:
-        value: true
-      multipleActions:
-        value: true
-      expressions:
-        value: true
-      modes:
         value: true
       teamLibraries:
         value: true
@@ -564,21 +390,13 @@ plans:
         value: true
       designSystemAnalytics:
         value: true
-      defaultLibrariesByWorkspace:
-        value: true
-      restApiForVariables:
-        value: true
-      devMode:
-        value: true
-      figmaForVsCode:
+      privatePluginsAndWidgets:
         value: true
       webhooks:
         value: true
-      privatePluginsAndWidgets:
-        value: true
       passwordProtection:
         value: true
-      pluginAndWidgetApproval:
+      pluginAndWidgetManagement:
         value: true
       centralizedAdministration:
         value: true
@@ -586,10 +404,10 @@ plans:
         value: true
       linkAccessControls:
         value: true
-      centralizedContentAdministration:
+      centralizedContentManagent:
         value: true
       singleSignOn:
-        value: "Azure Active Directory (Azure AD), Okta, OneLogin, Google SSO, Active Directory Federation Services (AD FS)"
+        value: true
       activityLogs:
         value: true
       workspaceAdministration:
@@ -601,36 +419,16 @@ plans:
       defaultTeams:
         value: true
       roleAssigmentViaSCIM:
-        value: "Azure Active Directory (Azure AD), Okta, OneLogin"
+        value: true
       passwordProtectionRequired:
-        value: true
-      teamCreationControls:
-        value: true
-      networkAccessRestrictions:
-        value: true
-      externalContentsControls:
-        value: true
-      activityLogsApi:
-        value: true
-      windowsInstaller:
-        value: true
-      idleSessionTimeout:
-        value: true
-      euDataHosting:
-        value: true
-      expiringPublicLinks:
-        value: true
-      puglinAndWidgetsAnalytics:
         value: true
       onboardingPlanningAndSupport:
         value: true
-        dedicatedAccountManager:
-          value: true
+      dedicatedAccountManager:
+        value: true
     usageLimits:
       versionHistoryDepth:
         value: .inf
-      teamsLimit:
-        value: .inf
-      modesLimits:
-        value: 40
+      unlimitedTeamsPermitted:
+        value: true
 addOns: null

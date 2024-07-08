@@ -37,7 +37,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Canva         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Clockify      |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |
 | GitHub        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Figma         |  🔄  |  🔄  |  🔄  |  🔄  |  ✅  |  🔄  |
+| Figma         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Jira          |      |      |      |      |  ✅  |      |
 | Microsoft 365 |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |      |
 | Monday        |      |      |      |      |  ✅  |      |

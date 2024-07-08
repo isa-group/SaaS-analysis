@@ -1,8 +1,8 @@
 saasName: Figma 
-day: 9
-month: 11
-year: 2023
-currency: EUR
+day: 6
+month: 7
+year: 2024
+currency: USD
 hasAnnualPayment: true
 features:
   versionHistory:
@@ -47,11 +47,17 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  pdfPngJpgSvgExport:
+  viewPropertiesAndVariables:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
-    type: DOMAIN
+    type: INFORMATION
+  basicCodeGen:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: AUTOMATION
+    automationType: BOT
   multiplayer:
     description: ""
     valueType: BOOLEAN
@@ -132,6 +138,11 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
+  responsivePrototypingViewer:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
   setVariable:
     description: ""
     valueType: BOOLEAN
@@ -167,7 +178,12 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  modes:
+  uiKits:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  variableModes:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
@@ -177,21 +193,27 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  organizationWideDesignSystems:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
   sharedFonts:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  designSystemAnalytics:
+  organizationWideDesignSystems:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  inAppLibraryAnalytics:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
     type: INFORMATION
+  libraryAnalyticsAPI:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INTEGRATION
+    integrationType: API
   defaultLibrariesByWorkspace:
     description: ""
     valueType: BOOLEAN
@@ -203,7 +225,43 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: API
-  devMode:
+  approvedLibraries:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: MANAGEMENT
+  advancedInspection:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  readyForDev:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  compareChanges:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  annotations:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  assetExport:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  advancedCodeGen:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  devResources:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
@@ -214,6 +272,56 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: EXTENSION
+  devPlugins:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INTEGRATION
+    integrationType: MARKETPLACE
+  viewDetachedComponents:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  componentPlayground:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  privatePlugins:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INTEGRATION
+    integrationType: MARKETPLACE
+  codeConnect:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INTEGRATION
+    integrationType: MARKETPLACE
+  handoffProcessManagement:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  syncingWorkflowsThroughAPI:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INTEGRATION
+    integrationType: API
+  automatingWorkflowsThroughAPI:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INTEGRATION
+    integrationType: API
+  adminControlsForInspectPanel:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: MANAGEMENT
   restApis:
     description: ""
     valueType: BOOLEAN
@@ -248,6 +356,11 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: MANAGEMENT
+  defaultRoles:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: MANAGEMENT
   pluginAndWidgetApproval:
     description: ""
     valueType: BOOLEAN
@@ -268,15 +381,10 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: MANAGEMENT
-  centralizedContentAdministration:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
   singleSignOn:
     description: ""
-    valueType: TEXT
-    defaultValue: ""
+    valueType: BOOLEAN
+    defaultValue: true
     type: INTEGRATION
     integrationType: IDENTITY_PROVIDER
   activityLogs:
@@ -294,11 +402,6 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: MANAGEMENT
-  defaultRoles:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
   defaultTeams:
     description: ""
     valueType: BOOLEAN
@@ -306,8 +409,8 @@ features:
     type: MANAGEMENT
   roleAssigmentViaSCIM:
     description: ""
-    valueType: TEXT
-    defaultValue: ""
+    valueType: BOOLEAN
+    defaultValue: false
     type: INTEGRATION
     integrationType: IDENTITY_PROVIDER
   passwordProtectionRequired:
@@ -316,11 +419,6 @@ features:
     defaultValue: false
     type: MANAGEMENT
   teamCreationControls:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
-  networkAccessRestrictions:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
@@ -376,11 +474,6 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: SUPPORT
-  dedicatedAccountManager:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: SUPPORT
 usageLimits:
   versionHistoryDepth:
     description: ""
@@ -390,22 +483,21 @@ usageLimits:
     type: NON_RENEWABLE
     linkedFeatures: 
       - versionHistory
-  teamsLimit:
-    description: ""
-    valueType: NUMERIC
-    defaultValue: 100
-    unit: team
-    type: NON_RENEWABLE
-    linkedFeatures: 
-      - teams
-  modesLimits:
+  variableModesLimits:
     description: ""
     valueType: NUMERIC
     defaultValue: 0
     unit: mode
     type: NON_RENEWABLE
     linkedFeatures: 
-      - modes
+      - variableModes
+  unlimitedTeamsPermitted:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: NON_RENEWABLE
+    linkedFeatures: 
+      - teams
 plans:
   STARTER:
     description: ""
@@ -414,7 +506,7 @@ plans:
     unit: editor/month
     features: null
     usageLimits: null
-  FIGMA_PROFESSIONAL:
+  PROFESSIONAL:
     description: ""
     monthlyPrice: 15.00
     annualPrice: 12.00
@@ -438,24 +530,44 @@ plans:
         value: true
       expressions:
         value: true
-      modes:
+      variableModes:
         value: true
       teamLibraries:
         value: true
-      devMode:
+      advancedInspection:
+        value: true
+      readyForDev:
+        value: true
+      compareChanges:
+        value: true
+      annotations:
+        value: true
+      assetExport:
+        value: true
+      advancedCodeGen:
+        value: true
+      devResources:
         value: true
       figmaForVsCode:
         value: true
-      webhooks:
+      devPlugins:
+        value: true
+      viewDetachedComponents:
+        value: true
+      componentPlayground:
+        value: true
+      codeConnect:
         value: true
       passwordProtection:
+        value: true
+      defaultRoles:
         value: true
     usageLimits:
       versionHistoryDepth:
         value: .inf
-      modesLimits:
+      variableModesLimits:
         value: 4
-  FIGMA_ORGANIZATION:
+  ORGANIZATION:
     description: ""
     monthlyPrice: null
     annualPrice: 45.00
@@ -469,12 +581,10 @@ plans:
         value: true
       teamAndProjectTransfer:
         value: true
-      teams:
-        value: true
       branchingAndMerging:
         value: true
       videosInPrototypes:
-        value: "Upload videos from any source"
+        value: "Included"
       setVariable:
         value: true
       conditionalLogic:
@@ -483,25 +593,51 @@ plans:
         value: true
       expressions:
         value: true
-      modes:
+      variableModes:
         value: true
       teamLibraries:
         value: true
-      organizationWideDesignSystems:
-        value: true
       sharedFonts:
         value: true
-      designSystemAnalytics:
+      organizationWideDesignSystems:
         value: true
-      devMode:
+      inAppLibraryAnalytics:
+        value: true
+      advancedInspection:
+        value: true
+      readyForDev:
+        value: true
+      compareChanges:
+        value: true
+      annotations:
+        value: true
+      assetExport:
+        value: true
+      advancedCodeGen:
+        value: true
+      devResources:
         value: true
       figmaForVsCode:
+        value: true
+      devPlugins:
+        value: true
+      viewDetachedComponents:
+        value: true
+      componentPlayground:
+        value: true
+      privatePlugins:
+        value: true
+      codeConnect:
+        value: true
+      handoffProcessManagement:
         value: true
       webhooks:
         value: true
       privatePluginsAndWidgets:
         value: true
       passwordProtection:
+        value: true
+      defaultRoles:
         value: true
       pluginAndWidgetApproval:
         value: true
@@ -511,19 +647,52 @@ plans:
         value: true
       linkAccessControls:
         value: true
-      centralizedContentAdministration:
-        value: true
       singleSignOn:
-        value: "Azure Active Directory (Azure AD), Okta, OneLogin, Google SSO, Active Directory Federation Services (AD FS)"
+        value: true
       activityLogs:
         value: true
     usageLimits:
       versionHistoryDepth:
         value: .inf
-      teamsLimit:
-        value: .inf
-      modesLimits:
+      variableModesLimits:
         value: 4
+      unlimitedTeamsPermitted:
+        value: true
+  DEV_MODE_ORGANIZATION:
+    description: ""
+    monthlyPrice: null
+    annualPrice: 25.00
+    unit: editor/month
+    features:
+      advancedInspection:
+        value: true
+      readyForDev:
+        value: true
+      compareChanges:
+        value: true
+      annotations:
+        value: true
+      assetExport:
+        value: true
+      advancedCodeGen:
+        value: true
+      devResources:
+        value: true
+      figmaForVsCode:
+        value: true
+      devPlugins:
+        value: true
+      viewDetachedComponents:
+        value: true
+      componentPlayground:
+        value: true
+      privatePlugins:
+        value: true
+      codeConnect:
+        value: true
+      handoffProcessManagement:
+        value: true
+    usageLimits: null
   ENTERPRISE:
     description: ""
     monthlyPrice: null
@@ -538,14 +707,12 @@ plans:
         value: true
       teamAndProjectTransfer:
         value: true
-      teams:
-        value: true
       branchingAndMerging:
         value: true
       customWorkspaces:
         value: true
       videosInPrototypes:
-        value: "Upload videos from any source"
+        value: "Included"
       setVariable:
         value: true
       conditionalLogic:
@@ -554,29 +721,65 @@ plans:
         value: true
       expressions:
         value: true
-      modes:
+      variableModes:
         value: true
       teamLibraries:
         value: true
-      organizationWideDesignSystems:
-        value: true
       sharedFonts:
         value: true
-      designSystemAnalytics:
+      organizationWideDesignSystems:
+        value: true
+      inAppLibraryAnalytics:
+        value: true
+      libraryAnalyticsAPI:
         value: true
       defaultLibrariesByWorkspace:
         value: true
       restApiForVariables:
         value: true
-      devMode:
+      approvedLibraries:
+        value: true
+      advancedInspection:
+        value: true
+      readyForDev:
+        value: true
+      compareChanges:
+        value: true
+      annotations:
+        value: true
+      assetExport:
+        value: true
+      advancedCodeGen:
+        value: true
+      devResources:
         value: true
       figmaForVsCode:
+        value: true
+      devPlugins:
+        value: true
+      viewDetachedComponents:
+        value: true
+      componentPlayground:
+        value: true
+      privatePlugins:
+        value: true
+      codeConnect:
+        value: true
+      handoffProcessManagement:
+        value: true
+      syncingWorkflowsThroughAPI:
+        value: true
+      automatingWorkflowsThroughAPI:
+        value: true
+      adminControlsForInspectPanel:
         value: true
       webhooks:
         value: true
       privatePluginsAndWidgets:
         value: true
       passwordProtection:
+        value: true
+      defaultRoles:
         value: true
       pluginAndWidgetApproval:
         value: true
@@ -586,27 +789,21 @@ plans:
         value: true
       linkAccessControls:
         value: true
-      centralizedContentAdministration:
-        value: true
       singleSignOn:
-        value: "Azure Active Directory (Azure AD), Okta, OneLogin, Google SSO, Active Directory Federation Services (AD FS)"
+        value: true
       activityLogs:
         value: true
       workspaceAdministration:
         value: true
       guestAccessControls:
         value: true
-      defaultRoles:
-        value: true
       defaultTeams:
         value: true
       roleAssigmentViaSCIM:
-        value: "Azure Active Directory (Azure AD), Okta, OneLogin"
+        value: true
       passwordProtectionRequired:
         value: true
       teamCreationControls:
-        value: true
-      networkAccessRestrictions:
         value: true
       externalContentsControls:
         value: true
@@ -624,13 +821,52 @@ plans:
         value: true
       onboardingPlanningAndSupport:
         value: true
-        dedicatedAccountManager:
-          value: true
     usageLimits:
       versionHistoryDepth:
         value: .inf
-      teamsLimit:
-        value: .inf
-      modesLimits:
+      variableModesLimits:
         value: 40
+      unlimitedTeamsPermitted:
+        value: true
+  DEV_MODE_ENTERPRISE:
+    description: ""
+    monthlyPrice: null
+    annualPrice: 35.00
+    unit: editor/month
+    features:
+      advancedInspection:
+        value: true
+      readyForDev:
+        value: true
+      compareChanges:
+        value: true
+      annotations:
+        value: true
+      assetExport:
+        value: true
+      advancedCodeGen:
+        value: true
+      devResources:
+        value: true
+      figmaForVsCode:
+        value: true
+      devPlugins:
+        value: true
+      viewDetachedComponents:
+        value: true
+      componentPlayground:
+        value: true
+      privatePlugins:
+        value: true
+      codeConnect:
+        value: true
+      handoffProcessManagement:
+        value: true
+      syncingWorkflowsThroughAPI:
+        value: true
+      automatingWorkflowsThroughAPI:
+        value: true
+      adminControlsForInspectPanel:
+        value: true
+    usageLimits: null
 addOns: null
