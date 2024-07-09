@@ -123,15 +123,6 @@ saas_list = [
         "category": "Marketing",
         "product": ""
     },
-    # {
-    #     "name": "Zapier",
-    #     "url": "https://zapier.com/app/planbuilder/pricing",
-    #     "extended_pricing_button_text": "",
-    #     "feature_elem": "span",
-    #     "feature_selector": {"data-testid": "iconContainer"},
-    #     "category": "Automation & Cloud Integration",
-    #     "product": ""
-    # },
     {
         "name": "Deskera",
         "url": "https://www.deskera.com/pricing",
@@ -268,12 +259,12 @@ saas_list = [
         "product": ""
     },
     {
-        "name": "RapidAPI",
-        "url": "https://rapidapi.com/products/pricing/",
+        "name": "Zapier",
+        "url": "https://zapier.com/pricing",
         "extended_pricing_button_text": "",
-        "feature_elem": "div",
-        "feature_selector": {"class": "feature-item"},
-        "category": "API Marketplace",
+        "feature_elem": "span",
+        "feature_selector": {"data-testid": "iconContainer"},
+        "category": "Task Automation",
         "product": ""
     },
     {
@@ -311,19 +302,27 @@ if __name__ == '__main__':
         EXTENDED_PRICING_BUTTON_TEXT = saas["extended_pricing_button_text"]
         FEATURE_ELEM = saas["feature_elem"]
         FEATURE_SELECTOR = saas["feature_selector"]
+        
+        features = None
 
-        driver.get(WEB_URL)
+        try:
+            driver.get(WEB_URL)
 
-        if EXTENDED_PRICING_BUTTON_TEXT != "":
-            elem = driver.find_element(By.XPATH, f"//*[text()='{EXTENDED_PRICING_BUTTON_TEXT}']")
-            driver.execute_script("arguments[0].scrollIntoView({behavior: 'instant', block: 'center'});", elem)
-            elem.click()
-        page_source = driver.page_source
-        soup = BeautifulSoup(page_source, 'lxml')
+            if EXTENDED_PRICING_BUTTON_TEXT != "":
+                elem = driver.find_element(By.XPATH, f"//*[text()='{EXTENDED_PRICING_BUTTON_TEXT}']")
+                driver.execute_script("arguments[0].scrollIntoView({behavior: 'instant', block: 'center'});", elem)
+                elem.click()
+            page_source = driver.page_source
+            soup = BeautifulSoup(page_source, 'lxml')
 
-        features = soup.find_all(FEATURE_ELEM, FEATURE_SELECTOR)
+            features = soup.find_all(FEATURE_ELEM, FEATURE_SELECTOR)
+        except:
+            pass
 
         with open(DATASET_PATH, 'a') as f:
-            f.write(f"{saas['name']},{datetime.today().strftime('%Y-%m-%d')},{len(features)},{saas['category']},{saas['url']},{saas['product']}\n")
+            if features is not None:
+                f.write(f"{saas['name']},{datetime.today().strftime('%Y-%m-%d')},{len(features)},{saas['category']},{saas['url']},{saas['product']}\n")
+            else:
+                f.write(f"{saas['name']},{datetime.today().strftime('%Y-%m-%d')},,{saas['category']},{saas['url']},{saas['product']}\n")
 
     driver.close()

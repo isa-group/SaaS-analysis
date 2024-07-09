@@ -42,7 +42,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Microsoft 365 |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |      |
 | Monday        |  🔄  |  🔄  |  🔄  |  🔄  |  ✅  |  🔄  |
 | Postman       |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| RapidAPI      |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |      |
+| Zapier        |  ✅  |  ✅  |  ❌  |  ✅  |  ✅  |  ✅  |
 | Rippling      |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ❌  |
 | Wrike         |  ❌  |  ❌  |  ❌  |      |  ✅  |      |
 
