@@ -1,7 +1,7 @@
 saasName: Wrike
-day: 3
-month: 12
-year: 2023
+day: 10
+month: 7
+year: 2024
 currency: USD
 hasAnnualPayment: false
 features:
@@ -115,7 +115,7 @@ features:
   chartView:
     description: "Enable customizable 360 bird-eye view of your team’s work with Chart view. See task statuses by assignee or team in real-time."
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   tableauIntegration:
     description: "https://www.wrike.com/apps/business-intelligence/tableau/"
@@ -144,37 +144,37 @@ features:
   voiceAssistantInteraction:
     description: "https://www.wrike.com/features/work-intelligence/"
     valueType: BOOLEAN
-    defaultValue: true
+    defaultValue: false
     type: AUTOMATION
     automationType: BOT
   smartRepliesAndQuickReactions:
     description: "https://www.wrike.com/features/work-intelligence/"
     valueType: BOOLEAN
-    defaultValue: true
+    defaultValue: false
     type: AUTOMATION
     automationType: BOT
   documentProcessingAndTextRecognition:
     description: "https://www.wrike.com/features/work-intelligence/"
     valueType: BOOLEAN
-    defaultValue: true
+    defaultValue: false
     type: AUTOMATION
     automationType: BOT
   generativeAI:
     description: "https://www.wrike.com/features/work-intelligence/"
     valueType: BOOLEAN
-    defaultValue: true
+    defaultValue: false
     type: AUTOMATION
     automationType: BOT
   aiRecommendedTasks:
     description: "https://www.wrike.com/features/work-intelligence/"
     valueType: BOOLEAN
-    defaultValue: true
+    defaultValue: false
     type: AUTOMATION
     automationType: BOT
   aiSubitemCreation:
     description: "https://www.wrike.com/features/work-intelligence/"
     valueType: BOOLEAN
-    defaultValue: true
+    defaultValue: false
     type: AUTOMATION
     automationType: BOT
   aiProjectRiskPrediction:
@@ -515,10 +515,6 @@ plans:
         value: true
       customFieldsWorkflows&Statuses:
         value: true
-      aiRecommendedTasks:
-        value: false
-      aiSubitemCreation:
-        value: false
       calendars:
         value: true
       dynamicGanttChart:
@@ -527,7 +523,17 @@ plans:
         value: true
       analyticsView:
         value: true
-      chartView:
+      voiceAssistantInteraction:
+        value: true
+      smartRepliesAndQuickReactions:
+        value: true
+      documentProcessingAndTextRecognition:
+        value: true
+      generativeAI:
+        value: true
+      aiRecommendedTasks:
+        value: true
+      aiSubitemCreation:
         value: true
       automations:
         value: true
@@ -569,6 +575,18 @@ plans:
       dashboards:
         value: true
       realTimeReports:
+        value: true
+      voiceAssistantInteraction:
+        value: true
+      smartRepliesAndQuickReactions:
+        value: true
+      documentProcessingAndTextRecognition:
+        value: true
+      generativeAI:
+        value: true
+      aiRecommendedTasks:
+        value: true
+      aiSubitemCreation:
         value: true
       aiProjectRiskPrediction:
         value: true
@@ -660,11 +678,21 @@ plans:
         value: true
       analyticsView:
         value: true
-      chartView:
-        value: true
       tableauIntegration:
         value: true
       businessIntelligenceAPI:
+        value: true
+      voiceAssistantInteraction:
+        value: true
+      smartRepliesAndQuickReactions:
+        value: true
+      documentProcessingAndTextRecognition:
+        value: true
+      generativeAI:
+        value: true
+      aiRecommendedTasks:
+        value: true
+      aiSubitemCreation:
         value: true
       aiProjectRiskPrediction:
         value: true
@@ -770,13 +798,23 @@ plans:
         value: true
       analyticsView:
         value: true
-      chartView:
-        value: true
       tableauIntegration:
         value: true
       businessIntelligenceAPI:
         value: true
       advancedAnalytics&DataVisualizations:
+        value: true
+      voiceAssistantInteraction:
+        value: true
+      smartRepliesAndQuickReactions:
+        value: true
+      documentProcessingAndTextRecognition:
+        value: true
+      generativeAI:
+        value: true
+      aiRecommendedTasks:
+        value: true
+      aiSubitemCreation:
         value: true
       aiProjectRiskPrediction:
         value: true

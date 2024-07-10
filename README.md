@@ -44,7 +44,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Postman       |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Zapier        |  ✅  |  ✅  |  ❌  |  ✅  |  ✅  |  ✅  |
 | Rippling      |  ❌  |  ❌  |  ❌  |  ❌  |  ✅  |  ❌  |
-| Wrike         |  ❌  |  ❌  |  ❌  |  🔄  |  ✅  |  🔄  |
+| Wrike         |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |
 
 ## Research Questions
 
