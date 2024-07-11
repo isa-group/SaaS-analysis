@@ -940,10 +940,6 @@ plans:
     features:
       guestsPermissions:
         value: true
-      boxView:
-        value: true
-      formView:
-        value: true
       futureRecurringTasksOnCalendar:
         value: true
       columnCalculations:
@@ -1221,8 +1217,6 @@ plans:
         value: 1000000000
       useGuestsPermissions:
         value: 10
-      useGuestsPermissionsPerExtraSeat:
-        value: 5
       useCustomFields:
         value: 1000000000
       useGantt:
@@ -1400,8 +1394,6 @@ plans:
         value: 1000000000
       useGuestsPermissions:
         value: 10
-      useGuestsPermissionsPerExtraSeat:
-        value: 5
       useCustomFields:
         value: 1000000000
       useGantt:
