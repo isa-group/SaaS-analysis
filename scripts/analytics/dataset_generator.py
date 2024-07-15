@@ -31,8 +31,9 @@ class PricingsLoader():
 
         years = list(filter(lambda x: os.path.isdir(os.path.join(self.pricings_folder, x)), os.listdir(self.pricings_folder)))
         for year in years:
-            year_folder = os.path.join(self.pricings_folder, year)
-            pricings = list(filter(lambda x: x.endswith('.yml'), os.listdir(year_folder)))
+            if year != 'extras':
+                year_folder = os.path.join(self.pricings_folder, year)
+                pricings = list(filter(lambda x: x.endswith('.yml'), os.listdir(year_folder)))
 
-            for pricing in pricings:
-                self.dataset.loc[len(self.dataset)] = {'name': pricing.replace(".yml", ""), 'year': year, 'path': os.path.join(year_folder, pricing)}
+                for pricing in pricings:
+                    self.dataset.loc[len(self.dataset)] = {'name': pricing.replace(".yml", ""), 'year': year, 'path': os.path.join(year_folder, pricing)}

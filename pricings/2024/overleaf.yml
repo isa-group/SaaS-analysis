@@ -1,7 +1,7 @@
 saasName: Overleaf - Individual
-day: 28
-month: 11
-year: 2023
+day: 11
+month: 7
+year: 2024
 currency: USD
 hasAnnualPayment: true
 features:
@@ -110,8 +110,8 @@ usageLimits:
   compileTimeoutLimit:
     description: "This is how much time you get to compile your project on the Overleaf servers. You may need additional time for longer or more complex projects."
     valueType: NUMERIC
-    defaultValue: 1
-    unit: minute
+    defaultValue: 20
+    unit: second
     type: TIME_DRIVEN
     linkedFeatures:
       - fastCompileServers
@@ -156,7 +156,7 @@ plans:
       maxCollaboratorsPerProject:
         value: 11
       compileTimeoutLimit:
-        value: 4
+        value: 240
   PROFESSIONAL:
     description: ""
     monthlyPrice: 42
@@ -189,5 +189,5 @@ plans:
       maxCollaboratorsPerProject:
         value: .inf
       compileTimeoutLimit:
-        value: 4
+        value: 240
 addOns: null
