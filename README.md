@@ -32,7 +32,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | PickFu        |  ❌  |      |      |      |      |      |
 | Planable      |  ✖️  |  ✖️  |  ✖️  |  ✅   |      |      |
 | Databox       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Trustmary     |  ❌  |      |      |      |      |      |
+| Trustmary     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Evernote      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Canva         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Clockify      |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |
