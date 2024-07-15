@@ -1,10 +1,35 @@
-saasName: MailChimp 
+saasName: MailChimp - Marketing
 day: 30
 month: 11
-year: 2020
+year: 2023
 currency: USD
 hasAnnualPayment: false
 features:
+  ownerRole:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: MANAGEMENT
+  adminRole:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: MANAGEMENT
+  authorRole:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: MANAGEMENT
+  viewerRole:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: MANAGEMENT
+  managerRole:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: MANAGEMENT
   contacts:
     description: ""
     valueType: BOOLEAN
@@ -25,12 +50,17 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
+  contactProfiles:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
   tags:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  contactProfiles:
+  inbox:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
@@ -51,10 +81,26 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  behavioralTargeting:
+  predictedDemographics:
     description: ""
     valueType: BOOLEAN
-    defaultValue: true
+    defaultValue: false
+    type: AUTOMATION
+    automationType: BOT
+  customerLifetimeValue:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  purchaseLikelihood:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  addressFinder:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
     type: DOMAIN
   campainEngagement:
     description: ""
@@ -81,38 +127,6 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  behaviorBasedAutomationSeries:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: TASK_AUTOMATION
-  predictedDemographics:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  customerLifetimeValue:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  purchaseLikelihood:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  lookalikeAudienceFinder:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  addressFinder:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
   contentStudio:
     description: ""
     valueType: BOOLEAN
@@ -123,17 +137,17 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  allPrebuiltTemplates:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  removeMailchimpFooter:
+  prebuiltTemplates:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
   customCodedTemplates:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  removeMailchimpFooter:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
@@ -148,69 +162,22 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  buildAndPublishWebsite:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
-  buyButton:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: INTEGRATION
-    integrationType: EXTENSION
-  siteAnalytics:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: INFORMATION
-  freeMailchimpDomain:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
-  buyCustomDomain:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  connectAnExistingDomain:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: INTEGRATION
-    integrationType: MARKETPLACE
   emailMarketing:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
+  emailScheduling:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: TASK_AUTOMATION
   landingPages:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  shoppableLandingPages:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
-  facebookAds:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: INTEGRATION
-    integrationType: WEB_SAAS
-    pricingURLs:
-      - https://facebook.com/business
-  instagramAds:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: INTEGRATION
-    integrationType: WEB_SAAS
-    pricingURLs:
-      - https://business.instagram.com/advertising
   socialPosting:
     description: ""
     valueType: BOOLEAN
@@ -223,6 +190,11 @@ features:
     defaultValue: false
     type: AUTOMATION
     automationType: TASK_AUTOMATION
+  campaignManager:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
   postCards:
     description: ""
     valueType: BOOLEAN
@@ -243,7 +215,7 @@ features:
   marketingCalendar:
     description: ""
     valueType: BOOLEAN
-    defaultValue: true
+    defaultValue: false
     type: DOMAIN
   singleStepAutomations:
     description: ""
@@ -251,11 +223,12 @@ features:
     defaultValue: true
     type: AUTOMATION
     automationType: TASK_AUTOMATION
-  classicAutomationsBuilder:
+  multiStepAutomations:
     description: ""
     valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: TASK_AUTOMATION
   customerJourneyBuilder:
     description: ""
     valueType: BOOLEAN
@@ -271,7 +244,34 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  prebuiltJourneys:
+  smsMarketing:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  mmsMarketing:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  autoVetting:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: TASK_AUTOMATION
+  standardVetting:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: TASK_AUTOMATION
+  sendSmsFromCustomerJourneyBuiler:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  sendMmsFromCustomerJourneyBuiler:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
@@ -281,6 +281,12 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: INFORMATION
+  anomalyDetection:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: TRACKING
   comparativeReporting:
     description: ""
     valueType: BOOLEAN
@@ -301,6 +307,22 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
+  nextBestAction:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: AUTOMATION
+    automationType: BOT
+  subjectLineHelper:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  contentOptimizer:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
   dynamicContent:
     description: ""
     valueType: BOOLEAN
@@ -316,34 +338,18 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  nextBestAction:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: AUTOMATION
-    automationType: BOT
-  subjectLineHelper:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
   integrations:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
     type: INTEGRATION
     integrationType: MARKETPLACE
-  knowledgeBase:
+  guides:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
     type: SUPPORT
-  marketingGlossary:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: SUPPORT
-  marketingTips:
+  tutorials:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
@@ -358,7 +364,12 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: SUPPORT
-  24/7ChatSupport:
+  liveChatSupport:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: SUPPORT
+  personalizedOnboarding:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
@@ -368,11 +379,52 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: SUPPORT
+  transactionalEmails:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INTEGRATION
+    integrationType: API
+  buildAndPublishWebsite:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  pages:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  unlimitedBandwidth:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  seoTools:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  sslCertificate:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: GUARANTEE
+  siteVisitAnalytics:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: INFORMATION
+  freeMailchimpDomain:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
 usageLimits:
   contactsLimit:
     description: ""
     valueType: NUMERIC
-    defaultValue: 2000
+    defaultValue: 500
     unit: contact
     type: NON_RENEWABLE
     linkedFeatures:
@@ -403,11 +455,35 @@ usageLimits:
   monthlyEmailSends:
     description: ""
     valueType: NUMERIC
-    defaultValue: 10000
-    unit: email
+    defaultValue: 2500
+    unit: email/month
     type: RENEWABLE
     linkedFeatures:
       - emailMarketing
+  dailyEmailSends:
+    description: ""
+    valueType: NUMERIC
+    defaultValue: 500
+    unit: email/day
+    type: RENEWABLE
+    linkedFeatures:
+      - emailMarketing
+  standardVettingIncludedCredits:
+    description: ""
+    valueType: NUMERIC
+    defaultValue: 5000
+    unit: credit
+    type: RESPONSE_DRIVEN
+    linkedFeatures:
+      - standardVetting
+  personalizedOnboardingSessionsLimit:
+    description: ""
+    valueType: NUMERIC
+    defaultValue: 0
+    unit: session
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - personalizedOnboarding
 plans:
   FREE:
     description: "All the basics for businesses that are just getting started."
@@ -420,19 +496,21 @@ plans:
     monthlyPrice: 9.99
     unit: /month
     features:
-      allPrebuiltTemplates:
+      adminRole:
+        value: true
+      prebuiltTemplates:
         value: true
       removeMailchimpFooter:
         value: true
-      customerJourneyBuilder:
+      emailScheduling:
         value: true
-      prebuiltJourneys:
+      customerJourneyBuilder:
         value: true
       abTesting:
         value: true
       24/7EmailSupport:
         value: true
-      24/7ChatSupport:
+      liveChatSupport:
         value: true
     usageLimits:
       contactsLimit:
@@ -443,14 +521,20 @@ plans:
         value: 3
       monthlyEmailSends:
         value: 500000
+      dailyEmailSends:
+        value: .inf
   STANDARD:
     description: "Better insights for growing businesses that want more customers."
     monthlyPrice: 14.99
     unit: /month
     features:
-      pageViewsWebsiteEngagement:
+      adminRole:
         value: true
-      behaviorBasedAutomationSeries:
+      authorRole:
+        value: true
+      viewerRole:
+        value: true
+      advancedSegmentation:
         value: true
       predictedDemographics:
         value: true
@@ -458,21 +542,29 @@ plans:
         value: true
       purchaseLikelihood:
         value: true
-      lookalikeAudienceFinder:
-        value: true
       addressFinder:
         value: true
-      allPrebuiltTemplates:
+      pageViewsWebsiteEngagement:
         value: true
-      removeMailchimpFooter:
+      prebuiltTemplates:
         value: true
       customCodedTemplates:
         value: true
+      removeMailchimpFooter:
+        value: true
       downloadDesigns:
+        value: true
+      emailScheduling:
         value: true
       socialPostScheduling:
         value: true
+      campaignManager:
+        value: true
       retargetingAds:
+        value: true
+      marketingCalendar:
+        value: true
+      multiStepAutomations:
         value: true
       customerJourneyBuilder:
         value: true
@@ -480,9 +572,15 @@ plans:
         value: true
       branchingPoints:
         value: true
-      prebuiltJourneys:
+      anomalyDetection:
+        value: true
+      comparativeReporting:
         value: true
       abTesting:
+        value: true
+      multivarianteTesting:
+        value: true
+      contentOptimizer:
         value: true
       dynamicContent:
         value: true
@@ -492,7 +590,9 @@ plans:
         value: true
       24/7EmailSupport:
         value: true
-      24/7ChatSupport:
+      liveChatSupport:
+        value: true
+      personalizedOnboarding:
         value: true
     usageLimits:
       contactsLimit:
@@ -505,16 +605,22 @@ plans:
         value: 5
       monthlyEmailSends:
         value: 1200000
+      personalizedOnboardingSessionsLimit:
+        value: 1
   PREMIUM:
     description: "Advanced features for pros who need more customization."
     monthlyPrice: 299.0
     unit: /month
     features:
+      adminRole:
+        value: true
+      authorRole:
+        value: true
+      viewerRole:
+        value: true
+      managerRole:
+        value: true
       advancedSegmentation:
-        value: true
-      pageViewsWebsiteEngagement:
-        value: true
-      behaviorBasedAutomationSeries:
         value: true
       predictedDemographics:
         value: true
@@ -522,21 +628,29 @@ plans:
         value: true
       purchaseLikelihood:
         value: true
-      lookalikeAudienceFinder:
-        value: true
       addressFinder:
         value: true
-      allPrebuiltTemplates:
+      pageViewsWebsiteEngagement:
         value: true
-      removeMailchimpFooter:
+      prebuiltTemplates:
         value: true
       customCodedTemplates:
         value: true
+      removeMailchimpFooter:
+        value: true
       downloadDesigns:
+        value: true
+      emailScheduling:
         value: true
       socialPostScheduling:
         value: true
+      campaignManager:
+        value: true
       retargetingAds:
+        value: true
+      marketingCalendar:
+        value: true
+      multiStepAutomations:
         value: true
       customerJourneyBuilder:
         value: true
@@ -544,13 +658,15 @@ plans:
         value: true
       branchingPoints:
         value: true
-      prebuiltJourneys:
+      anomalyDetection:
         value: true
       comparativeReporting:
         value: true
       abTesting:
         value: true
       multivarianteTesting:
+        value: true
+      contentOptimizer:
         value: true
       dynamicContent:
         value: true
@@ -560,13 +676,15 @@ plans:
         value: true
       24/7EmailSupport:
         value: true
-      24/7ChatSupport:
+      liveChatSupport:
+        value: true
+      personalizedOnboarding:
         value: true
       phoneSupport:
         value: true
     usageLimits:
       contactsLimit:
-        value: 200000
+        value: .inf
       audiencesLimit:
         value: .inf
       appEngagementThreshold:
@@ -574,5 +692,72 @@ plans:
       seatsLimit:
         value: .inf
       monthlyEmailSends:
-        value: 3000000
-addOns: null
+        value: .inf
+      personalizedOnboardingSessionsLimit:
+        value: 4
+addOns:
+  transactionalEmailsAddOn:
+    availableFor:
+      - STANDARD
+      - PREMIUM
+    price: Contact Sales
+    unit: /month
+    features:
+      transactionalEmails:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions: null
+  smsAndMmsMarketingAddOnForEssentialsTier:
+    availableFor:
+      - ESSENTIALS
+    price: Contact Sales
+    unit: /month
+    features:
+      smsMarketing:
+        value: true
+      autoVetting:
+        value: true
+      standardVetting:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions: null
+  smsAndMmsMarketingAddOnForStandardTier:
+    availableFor:
+      - STANDARD
+    price: Contact Sales
+    unit: /month
+    features:
+      smsMarketing:
+        value: true
+      mmsMarketing:
+        value: true
+      autoVetting:
+        value: true
+      standardVetting:
+        value: true
+      sendSmsFromCustomerJourneyBuiler:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions: null
+  smsAndMmsMarketingAddOnForPremiumTier:
+    availableFor:
+      - PREMIUM
+    price: Contact Sales
+    unit: /month
+    features:
+      smsMarketing:
+        value: true
+      mmsMarketing:
+        value: true
+      autoVetting:
+        value: true
+      standardVetting:
+        value: true
+      sendSmsFromCustomerJourneyBuiler:
+        value: true
+      sendMmsFromCustomerJourneyBuiler:
+        value: true
+    usageLimits:
+      standardVettingIncludedCredits:
+        value: .inf
+    usageLimitsExtensions: null
