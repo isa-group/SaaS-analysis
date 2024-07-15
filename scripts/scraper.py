@@ -141,13 +141,22 @@ saas_list = [
         "category": "User Onboarding",
         "product": ""
     },
+    # {
+    #     "name": "PickFu",
+    #     "url": "https://www.pickfu.com/pricing",
+    #     "extended_pricing_button_text": "",
+    #     "feature_elem": "div",
+    #     "feature_selector": {"class": "col-5 p-0 col-desc"},
+    #     "category": "Document Research",
+    #     "product": ""
+    # },
     {
-        "name": "PickFu",
-        "url": "https://www.pickfu.com/pricing",
+        "name": "Crowdcast",
+        "url": "https://www.crowdcast.io/pricing",
         "extended_pricing_button_text": "",
-        "feature_elem": "div",
-        "feature_selector": {"class": "col-5 p-0 col-desc"},
-        "category": "Document Research",
+        "feature_elem": "",
+        "feature_selector": {},
+        "category": "Online Streaming",
         "product": ""
     },
     {
