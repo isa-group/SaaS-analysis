@@ -26,7 +26,7 @@ saas_list = [
     },
     {
         "name": "Salesforce",
-        "url": "https://www.salesforce.com/eu/sales/pricing/",
+        "url": "https://www.salesforce.com/products/sales-cloud/pricing/",
         "extended_pricing_button_text": "",
         "feature_elem": "div",
         "feature_selector": {"class": "table_column_header"},
