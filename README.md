@@ -23,7 +23,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Hypercontext  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |
 | DocuSign      |  ❌  |  ❌  |  ❌  |  ❌  |      |      |
 | OpenPhone     |  ❌  |  ❌  |  ❌  |      |      |      |
-| Pumble        |  ❌  |  ❌  |      |      |      |      |
+| Pumble        |  ❌  |  ❌  |  🔄  |  🔄  |  🔄  |  🔄  |
 | Tableau       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Quip          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | MailChimp     |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
