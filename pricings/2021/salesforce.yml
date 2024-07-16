@@ -1,8 +1,8 @@
 saasName: Salesforce - SalesCloud
-day: 3
-month: 12
-year: 2023
-currency: EUR
+day: 30
+month: 11
+year: 2021
+currency: USD
 hasAnnualPayment: true
 features:
   leadManagement:
@@ -40,6 +40,11 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
+  rulesBasedLeadScoring:
+    description: "Automatically score leads based on their behavior and profile."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
   leadRegistration:
     description: "Let your partners register leads via your website with integrated web-to-lead capture."
     valueType: BOOLEAN
@@ -65,7 +70,12 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  taskManagementActivityFeed:
+  taskManagement:
+    description: "Get the complete view of all customer engagement in one place."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  activityFeed:
     description: "Get the complete view of all customer engagement in one place."
     valueType: BOOLEAN
     defaultValue: true
@@ -87,16 +97,6 @@ features:
     type: MANAGEMENT
   calendarAll:
     description: "Create a calendar from any object to be able to visualize and act on important sales data."
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  inbox:
-    description: "Automatically capture every touchpoint and manage communications. Insert real-time availability to scheduling with contacts, send emails later, and show recommended in-network contacts."
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  workQueue:
-    description: "See exactly who to reach out to and how, and easily manage the day with a smart, prioritized to-do list."
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
@@ -137,13 +137,7 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  predictiveForeCasting:
-    description: "Take the guesswork out of forecasting using your company’s sales history. Use automated machine learning to make predictions and share intuitive insights behind the prediction."
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  contacts:
+  contracts:
     description: "Help your sales teams manage contract approvals and renewals."
     valueType: BOOLEAN
     defaultValue: false
@@ -153,7 +147,12 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  productAndPriceBooks:
+  productBooks:
+    description: "Save your product catalog and assign prices for every scenario."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  priceBooks:
     description: "Save your product catalog and assign prices for every scenario."
     valueType: BOOLEAN
     defaultValue: false
@@ -163,7 +162,12 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  configurableReportsAndDashboards:
+  customizableReports:
+    description: "Make more informed, consistent decisions with real-time configurable reports and dashboards."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  customizableDashboards:
     description: "Make more informed, consistent decisions with real-time configurable reports and dashboards."
     valueType: BOOLEAN
     defaultValue: true
@@ -173,32 +177,17 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  opportunityScoring:
-    description: "Analyze your data, predict which opportunities are most likely to convert, and see the intuitive factors behind the scores allowing you to prioritize the best deals to close."
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  leadScoring:
-    description: "Analyze your data, predict which leads are the most likely to convert, which allows for prioritization and increased lead conversion."
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  pipelineInspection:
-    description: "Maintain a healthy pipeline in a robust consolidated view. Track real-time pipeline movement, identify changes and de-risk deals with actionable insights."
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  conversationInsights:
-    description: "Gain actionable insights from your digital sales calls to accelerate win rates. Identify trending topics, surface coachable moments, and scale best-in-class conversations."
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
   files:
     description: "Share and collaborate on key files relevant to each deal."
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  topicsAndRecommendations:
+  topics:
+    description: "Automatically get the most up-to-date content and recommendations on what to follow and join."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  recommendations:
     description: "Automatically get the most up-to-date content and recommendations on what to follow and join."
     valueType: BOOLEAN
     defaultValue: true
@@ -249,7 +238,12 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  customizableProfilesAndPageLayouts:
+  customizableProfiles:
+    description: "Manage read/write permissions for different user profiles, and control which fields different users see on every record."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  customizablePageLayouts:
     description: "Manage read/write permissions for different user profiles, and control which fields different users see on every record."
     valueType: BOOLEAN
     defaultValue: false
@@ -295,16 +289,6 @@ features:
     defaultValue: false
     type: AUTOMATION
     automationType: TASK_AUTOMATION
-  premiumActivityCapture:
-    description: "Eliminate manual activity logging. Automatically capture every Salesforce touchpoint, prioritize customer communications, track engagement activity, and more. "
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-  salesCadences:
-    description: "Program best practices into structured, scheduled sequences of sales activities."
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
   emailIntegrationWithOutlook:
     description: ""
     valueType: BOOLEAN
@@ -321,6 +305,14 @@ features:
     integrationType: WEB_SAAS
     pricingsUrls:
       - https://workspace.google.com/pricing.html?hl=en
+  lightningSync:
+    description: "Sync contacts and calendar events between any Microsoft Exchange-connected device and Salesforce."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: INTEGRATION
+    integrationType: WEB_SAAS
+    pricingsUrls:
+      - https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products
   webServicesAPI:
     description: "Connect external systems and data to Salesforce using web services APIs, including REST, SOAP, and more."
     valueType: BOOLEAN
@@ -359,7 +351,8 @@ usageLimits:
     unit: profile/org
     type: NON_RENEWABLE
     linkedFeatures:
-      - customizableProfilesAndPageLayouts
+      - customizableProfiles
+      - customizablePageLayouts
   numberOfRoles:
     description: ""
     valueType: NUMERIC
@@ -395,21 +388,17 @@ usageLimits:
 plans:
   STARTER:
     description: "Start fast with sales, service, and email outreach tools"
-    monthlyPrice: 25.0
-    annualPrice: 300.0
+    annualPrice: 25.0
     unit: user/month
-    features:
-      inbox:
-        value: true
-      premiumActivityCapture:
-        value: true
+    features: null
     usageLimits: null
   PROFESSIONAL:
     description: "Complete sales solution for any size team"
-    monthlyPrice: 80.0
-    annualPrice: 960.0
+    annualPrice: 75.0
     unit: user/month
     features:
+      rulesBasedLeadScoring:
+        value: true
       leadRegistration:
         value: true
       campaignInfluence:
@@ -422,17 +411,21 @@ plans:
         value: true
       forecastingMobileApp:
         value: true
-      contacts:
+      contracts:
         value: true
       salesOrders:
         value: true
-      productAndPriceBooks:
+      productBooks:
+        value: true
+      priceBooks:
         value: true
       quotes:
         value: true
       unlimitedCustomApplications:
         value: true
-      customizableProfilesAndPageLayouts:
+      customizableProfiles:
+        value: true
+      customizablePageLayouts:
         value: true
       rolesAndPermissions:
         value: true
@@ -440,13 +433,16 @@ plans:
         value: true
       developerSandbox:
         value: true
+      lightningSync:
+        value: true
     usageLimits: null
   ENTERPRISE:
     description: "Deeply customizable sales CRM for your business"
-    monthlyPrice: 165.0
-    annualPrice: 1980.0
+    annualPrice: 150.0
     unit: user/month
     features:
+      rulesBasedLeadScoring:
+        value: true
       leadRegistration:
         value: true
       campaignInfluence:
@@ -469,21 +465,23 @@ plans:
         value: true
       enterpriseTerritoryManagement:
         value: true
-      contacts:
+      contracts:
         value: true
       salesOrders:
         value: true
-      productAndPriceBooks:
+      productBooks:
+        value: true
+      priceBooks:
         value: true
       quotes:
         value: true
       advancedReportingFeatures:
         value: true
-      opportunityScoring:
-        value: true
       unlimitedCustomApplications:
         value: true
-      customizableProfilesAndPageLayouts:
+      customizableProfiles:
+        value: true
+      customizablePageLayouts:
         value: true
       rolesAndPermissions:
         value: true
@@ -496,6 +494,8 @@ plans:
       platform:
         value: true
       workflowAndApproval:
+        value: true
+      lightningSync:
         value: true
       webServicesAPI:
         value: true
@@ -514,10 +514,11 @@ plans:
         value: .inf
   UNLIMITED:
     description: "The ultimate platform for growth"
-    monthlyPrice: 330.0
-    annualPrice: 3960.0
+    annualPrice: 300.0
     unit: user/month
     features:
+      rulesBasedLeadScoring:
+        value: true
       leadRegistration:
         value: true
       campaignInfluence:
@@ -530,10 +531,6 @@ plans:
         value: true
       calendarAll:
         value: true
-      inbox:
-        value: true
-      workQueue:
-        value: true
       collaborativeForecasting:
         value: true
       forecastingMobileApp:
@@ -544,29 +541,23 @@ plans:
         value: true
       enterpriseTerritoryManagement:
         value: true
-      predictiveForeCasting:
-        value: true
-      contacts:
+      contracts:
         value: true
       salesOrders:
         value: true
-      productAndPriceBooks:
+      productBooks:
+        value: true
+      priceBooks:
         value: true
       quotes:
         value: true
       advancedReportingFeatures:
         value: true
-      opportunityScoring:
-        value: true
-      leadScoring:
-        value: true
-      pipelineInspection:
-        value: true
-      conversationInsights:
-        value: true
       unlimitedCustomApplications:
         value: true
-      customizableProfilesAndPageLayouts:
+      customizableProfiles:
+        value: true
+      customizablePageLayouts:
         value: true
       rolesAndPermissions:
         value: true
@@ -584,9 +575,7 @@ plans:
         value: true
       workflowAndApproval:
         value: true
-      premiumActivityCapture:
-        value: true
-      salesCadences:
+      lightningSync:
         value: true
       webServicesAPI:
         value: true
@@ -603,72 +592,9 @@ plans:
         value: .inf
       numberOfRecordTypes:
         value: .inf
-      numberOfPartialSandbox:
-        value: 1
       numberOfFullSanbox:
         value: 1
 addOns:
-  inbox:
-    availableFor:
-      - PROFESSIONAL
-      - ENTERPRISE
-    price: Contact sales
-    unit: user/month
-    features:
-      inbox:
-        value: true
-    usageLimits: null
-    usageLimitsExtensions: null
-  workQueue:
-    availableFor:
-      - ENTERPRISE
-    price: Contact sales
-    unit: user/month
-    features:
-      workQueue:
-        value: true
-    usageLimits: null
-    usageLimitsExtensions: null
-  predictiveForeCasting:
-    availableFor:
-      - ENTERPRISE
-    price: Contact sales
-    unit: user/month
-    features:
-      predictiveForeCasting:
-        value: true
-    usageLimits: null
-    usageLimitsExtensions: null
-  leadScoring:
-    availableFor:
-      - ENTERPRISE
-    price: Contact sales
-    unit: user/month
-    features:
-      leadScoring:
-        value: true
-    usageLimits: null
-    usageLimitsExtensions: null
-  pipelineInspection:
-    availableFor:
-      - ENTERPRISE
-    price: Contact sales
-    unit: user/month
-    features:
-      pipelineInspection:
-        value: true
-    usageLimits: null
-    usageLimitsExtensions: null
-  conversationInsights:
-    availableFor:
-      - ENTERPRISE
-    price: Contact sales
-    unit: user/month
-    features:
-      conversationInsights:
-        value: true
-    usageLimits: null
-    usageLimitsExtensions: null
   developerProSandbox:
     availableFor:
       - PROFESSIONAL
@@ -680,24 +606,23 @@ addOns:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
-  premiumActivityCapture:
+  fullSandbox:
     availableFor:
-      - PROFESSIONAL
       - ENTERPRISE
     price: Contact sales
     unit: user/month
     features:
-      premiumActivityCapture:
+      fullSandbox:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
-  salesCadences:
+  webServicesAPI:
     availableFor:
-      - ENTERPRISE
-    price: Contact sales
+      - PROFESSIONAL
+    price: 25.0
     unit: user/month
     features:
-      salesCadences:
+      webServicesAPI:
         value: true
     usageLimits: null
     usageLimitsExtensions: null

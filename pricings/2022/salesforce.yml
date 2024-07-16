@@ -1,8 +1,8 @@
 saasName: Salesforce - SalesCloud
-day: 3
-month: 12
-year: 2023
-currency: EUR
+day: 27
+month: 11
+year: 2022
+currency: USD
 hasAnnualPayment: true
 features:
   leadManagement:
@@ -65,7 +65,12 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  taskManagementActivityFeed:
+  taskManagement:
+    description: "Get the complete view of all customer engagement in one place."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  activityFeed:
     description: "Get the complete view of all customer engagement in one place."
     valueType: BOOLEAN
     defaultValue: true
@@ -153,7 +158,12 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  productAndPriceBooks:
+  productBooks:
+    description: "Save your product catalog and assign prices for every scenario."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  priceBooks:
     description: "Save your product catalog and assign prices for every scenario."
     valueType: BOOLEAN
     defaultValue: false
@@ -163,7 +173,12 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  configurableReportsAndDashboards:
+  customizableReports:
+    description: "Make more informed, consistent decisions with real-time configurable reports and dashboards."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  customizableDashboards:
     description: "Make more informed, consistent decisions with real-time configurable reports and dashboards."
     valueType: BOOLEAN
     defaultValue: true
@@ -198,7 +213,12 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  topicsAndRecommendations:
+  topics:
+    description: "Automatically get the most up-to-date content and recommendations on what to follow and join."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  recommendations:
     description: "Automatically get the most up-to-date content and recommendations on what to follow and join."
     valueType: BOOLEAN
     defaultValue: true
@@ -249,7 +269,12 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  customizableProfilesAndPageLayouts:
+  customizableProfiles:
+    description: "Manage read/write permissions for different user profiles, and control which fields different users see on every record."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  customizablePageLayouts:
     description: "Manage read/write permissions for different user profiles, and control which fields different users see on every record."
     valueType: BOOLEAN
     defaultValue: false
@@ -359,7 +384,8 @@ usageLimits:
     unit: profile/org
     type: NON_RENEWABLE
     linkedFeatures:
-      - customizableProfilesAndPageLayouts
+      - customizableProfiles
+      - customizablePageLayouts
   numberOfRoles:
     description: ""
     valueType: NUMERIC
@@ -395,8 +421,7 @@ usageLimits:
 plans:
   STARTER:
     description: "Start fast with sales, service, and email outreach tools"
-    monthlyPrice: 25.0
-    annualPrice: 300.0
+    annualPrice: 25.0
     unit: user/month
     features:
       inbox:
@@ -406,8 +431,7 @@ plans:
     usageLimits: null
   PROFESSIONAL:
     description: "Complete sales solution for any size team"
-    monthlyPrice: 80.0
-    annualPrice: 960.0
+    annualPrice: 75.0
     unit: user/month
     features:
       leadRegistration:
@@ -426,13 +450,17 @@ plans:
         value: true
       salesOrders:
         value: true
-      productAndPriceBooks:
+      productBooks:
+        value: true
+      priceBooks:
         value: true
       quotes:
         value: true
       unlimitedCustomApplications:
         value: true
-      customizableProfilesAndPageLayouts:
+      customizableProfiles:
+        value: true
+      customizablePageLayouts:
         value: true
       rolesAndPermissions:
         value: true
@@ -443,8 +471,7 @@ plans:
     usageLimits: null
   ENTERPRISE:
     description: "Deeply customizable sales CRM for your business"
-    monthlyPrice: 165.0
-    annualPrice: 1980.0
+    annualPrice: 150.0
     unit: user/month
     features:
       leadRegistration:
@@ -473,7 +500,9 @@ plans:
         value: true
       salesOrders:
         value: true
-      productAndPriceBooks:
+      productBooks:
+        value: true
+      priceBooks:
         value: true
       quotes:
         value: true
@@ -483,7 +512,9 @@ plans:
         value: true
       unlimitedCustomApplications:
         value: true
-      customizableProfilesAndPageLayouts:
+      customizableProfiles:
+        value: true
+      customizablePageLayouts:
         value: true
       rolesAndPermissions:
         value: true
@@ -514,8 +545,7 @@ plans:
         value: .inf
   UNLIMITED:
     description: "The ultimate platform for growth"
-    monthlyPrice: 330.0
-    annualPrice: 3960.0
+    annualPrice: 300.0
     unit: user/month
     features:
       leadRegistration:
@@ -550,7 +580,9 @@ plans:
         value: true
       salesOrders:
         value: true
-      productAndPriceBooks:
+      productBooks:
+        value: true
+      priceBooks:
         value: true
       quotes:
         value: true
@@ -566,7 +598,9 @@ plans:
         value: true
       unlimitedCustomApplications:
         value: true
-      customizableProfilesAndPageLayouts:
+      customizableProfiles:
+        value: true
+      customizablePageLayouts:
         value: true
       rolesAndPermissions:
         value: true
@@ -698,6 +732,26 @@ addOns:
     unit: user/month
     features:
       salesCadences:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions: null
+  fullSandbox:
+    availableFor:
+      - ENTERPRISE
+    price: Contact sales
+    unit: user/month
+    features:
+      fullSandbox:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions: null
+  webServicesAPI:
+    availableFor:
+      - PROFESSIONAL
+    price: 25.0
+    unit: user/month
+    features:
+      webServicesAPI:
         value: true
     usageLimits: null
     usageLimitsExtensions: null

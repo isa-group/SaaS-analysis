@@ -17,7 +17,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | ------------- | :--: | :--: | :--: | :--: | :--: | :--: |
 | ClickUp       |  ✖️   |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | HubSpot       |  ❌  |  ❌  |      |      |      |      |
-| Salesforce    |  🔄  |  🔄  |  🔄  |  🔄  |  ✅  |  🔄  |
+| Salesforce    |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Slack         |  ✅  |  ✅  |  ❌  |  ❌  |  ✅  |  ✅  |
 | Buffer        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Hypercontext  |  ❌  |  ❌  |  ✅  |      |      |      |
