@@ -1,7 +1,7 @@
 saasName: HyperContext
-day: 10
+day: 25
 month: 10
-year: 2021
+year: 2023
 currency: USD
 hasAnnualPayment: true
 features:
@@ -71,7 +71,7 @@ features:
     integrationType: WEB_SAAS
     pricingURLs: 
       - https://workspace.google.com/pricing
-  personalicedHomepage:
+  guestUsers:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
@@ -166,11 +166,6 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  guestUsers:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: DOMAIN
   teamTraining:
     description: ""
     valueType: BOOLEAN
@@ -192,7 +187,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: IDENTITY_PROVIDER
-  slackSOO:
+  slackSSO:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
@@ -308,13 +303,6 @@ usageLimits:
     linkedFeatures: 
       - fileAttachments
       - cloudLinkIntegrations
-  payForGuestUsers:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: true
-    type: NON_RENEWABLE
-    linkedFeatures: 
-      - guestUsers
 plans:
   BASIC:
     description: "Best for people who want to take Hypercontext for a spin."
@@ -347,7 +335,7 @@ plans:
         value: true
     usageLimits:
       meetingSearchThreshold:
-        value: 1000000000
+        value: .inf
       storageLimit:
         value: 250
   BUSINESS:
@@ -363,6 +351,8 @@ plans:
       nextSteps:
         value: true
       favoriteItems:
+        value: true
+      meetingInsights:
         value: true
       itemVoting:
         value: true
@@ -398,12 +388,10 @@ plans:
         value: true
     usageLimits:
       meetingSearchThreshold:
-        value: 1000000000
+        value: .inf
       storageLimit:
-        value: 1000000000
-      payForGuestUsers:
-        value: false
-addOns: 
+        value: .inf
+addOns:
   customSSO:
     availableFor:
       - BUSINESS
