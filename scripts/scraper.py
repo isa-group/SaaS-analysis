@@ -241,14 +241,23 @@ saas_list = [
         "product": ""
     },
     {
-        "name": "Microsoft 365",
-        "url": "https://www.microsoft.com/en-us/microsoft-365/enterprise/office365-plans-and-pricing",
+        "name": "Dropbox",
+        "url": "https://www.dropbox.com/en/plans",
         "extended_pricing_button_text": "",
-        "feature_elem": "tr",
-        "feature_selector": {"class": "collapse material-surface text-left align-top"},
-        "category": "Productivity",
-        "product": "Enterprise"
+        "feature_elem": "",
+        "feature_selector": {},
+        "category": "Cloud Storage",
+        "product": "Business"
     },
+    # {
+    #     "name": "Microsoft 365",
+    #     "url": "https://www.microsoft.com/en-us/microsoft-365/enterprise/office365-plans-and-pricing",
+    #     "extended_pricing_button_text": "",
+    #     "feature_elem": "tr",
+    #     "feature_selector": {"class": "collapse material-surface text-left align-top"},
+    #     "category": "Productivity",
+    #     "product": "Enterprise"
+    # },
     # {
     #     "name": "Monday",
     #     "url": "https://monday.com/pricing",
@@ -285,14 +294,23 @@ saas_list = [
         "category": "Task Automation",
         "product": ""
     },
+    # {
+    #     "name": "Rippling",
+    #     "url": "https://www.rippling.com/es-ES/rippling-unity-tiers",
+    #     "extended_pricing_button_text": "",
+    #     "feature_elem": "div",
+    #     "feature_selector": {"class": "row flex border-b-1 border-black border-opacity-20 flex-row compare-table-row"},
+    #     "category": "HR Management",
+    #     "product": "Unity"
+    # },
     {
-        "name": "Rippling",
-        "url": "https://www.rippling.com/es-ES/rippling-unity-tiers",
+        "name": "Box",
+        "url": "https://www.box.com/pricing",
         "extended_pricing_button_text": "",
-        "feature_elem": "div",
-        "feature_selector": {"class": "row flex border-b-1 border-black border-opacity-20 flex-row compare-table-row"},
-        "category": "HR Management",
-        "product": "Unity"
+        "feature_elem": "",
+        "feature_selector": {},
+        "category": "Cloud Storage",
+        "product": ""
     },
     {
         "name": "Wrike",
