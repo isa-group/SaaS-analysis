@@ -27,7 +27,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Tableau       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Quip          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | MailChimp     |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Deskera       |  ❌  |  ❌  |      |      |      |      |
+| Deskera       |  ❌  |  ❌  |  🔄  |  🔄  |  🔄  |  🔄  |
 | UserGuiding   |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Crowdcast     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Planable      |  ✖️  |  ✖️  |  ✖️  |  ✅   |      |      |
