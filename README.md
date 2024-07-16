@@ -43,7 +43,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Overleaf      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Postman       |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Zapier        |  ✅  |  ✅  |  ❌  |  ✅  |  ✅  |  ✅  |
-| Box           |  🔄  |  🔄  |  🔄  |  🔄  |  🔄  |  🔄  |
+| Box           |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Wrike         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 
 ## Research Questions
