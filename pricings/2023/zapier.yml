@@ -270,7 +270,7 @@ features:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
-    type: MANAGEMENT
+    type: GUARANTEE
   accountConsolidation:
     description: ""
     valueType: BOOLEAN

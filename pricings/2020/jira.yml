@@ -137,7 +137,7 @@ features:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
-    type: DOMAIN
+    type: GUARANTEE
   storage:
     description: ""
     valueType: BOOLEAN

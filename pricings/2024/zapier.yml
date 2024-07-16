@@ -76,7 +76,7 @@ features:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
-    type: MANAGEMENT
+    type: GUARANTEE
   observabilityAPI:
     description: ""
     valueType: BOOLEAN

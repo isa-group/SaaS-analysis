@@ -117,7 +117,7 @@ features:
     description: "Data residence."
     valueType: BOOLEAN
     defaultValue: false
-    type: DOMAIN
+    type: GUARANTEE
   adminSlackEnterpriseKeys:
     description: "Slack's encryption key management (EKM) administration."
     valueType: BOOLEAN

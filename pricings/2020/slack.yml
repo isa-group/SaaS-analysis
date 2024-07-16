@@ -106,7 +106,7 @@ features:
     description: "Data residency"
     defaultValue: false
     valueType: BOOLEAN
-    type: DOMAIN
+    type: GUARANTEE
   privilegesGeneralChannelManagement:
     description: "Manage posting permissions in the #general channel."
     defaultValue: true

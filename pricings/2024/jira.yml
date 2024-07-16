@@ -261,7 +261,7 @@ features:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
-    type: DOMAIN
+    type: GUARANTEE
   issueLevelsecurity:
     description: ""
     valueType: BOOLEAN
