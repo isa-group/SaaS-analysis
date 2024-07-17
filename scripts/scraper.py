@@ -79,12 +79,12 @@ saas_list = [
     #     "product": ""
     # },
     {
-        "name": "Pipedrive",
-        "url": "https://www.pipedrive.com/en/pricing",
+        "name": "Notion",
+        "url": "https://www.notion.so/pricing",
         "extended_pricing_button_text": "",
         "feature_elem": "",
         "feature_selector": {},
-        "category": "CRM",
+        "category": "Project Management",
         "product": ""
     },
     {
