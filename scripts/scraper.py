@@ -69,13 +69,22 @@ saas_list = [
         "category": "Employee Engagement",
         "product": ""
     },
+    # {
+    #     "name": "DocuSign",
+    #     "url": "https://ecom.docusign.com/plans-and-pricing/esignature",
+    #     "extended_pricing_button_text": "",
+    #     "feature_elem": "button",
+    #     "feature_selector": {"data-context": "show-features"},
+    #     "category": "Digital Signature",
+    #     "product": ""
+    # },
     {
-        "name": "DocuSign",
-        "url": "https://ecom.docusign.com/plans-and-pricing/esignature",
+        "name": "Pipedrive",
+        "url": "https://www.pipedrive.com/en/pricing",
         "extended_pricing_button_text": "",
-        "feature_elem": "button",
-        "feature_selector": {"data-context": "show-features"},
-        "category": "Digital Signature",
+        "feature_elem": "",
+        "feature_selector": {},
+        "category": "CRM",
         "product": ""
     },
     {

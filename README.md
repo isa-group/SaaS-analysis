@@ -21,7 +21,7 @@ Empty cells indicate that the SaaS has not been modeled yet.
 | Slack         |  ✅  |  ✅  |  ❌  |  ❌  |  ✅  |  ✅  |
 | Buffer        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Hypercontext  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |
-| DocuSign      |  ❌  |  ❌  |  ❌  |  ❌  |      |      |
+| Pipedrive     |  🔄  |  🔄  |  🔄  |  🔄  |  ✅  |  🔄  |
 | OpenPhone     |  ❌  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |
 | Pumble        |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Tableau       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
