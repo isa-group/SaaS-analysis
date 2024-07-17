@@ -114,14 +114,14 @@ features:
 usageLimits:
   users:
     description: "The number of users who can use Pumble."
-    valueType: NUMBER
+    valueType: NUMERIC
     defaultValue: 1000000000
     unit: user
     type: NON_RENEWABLE
     linkedFeatures: null
   useMessageHistory:
     description: "The number of days that can be searched for the messageHistory."
-    valueType: NUMBER
+    valueType: NUMERIC
     defaultValue: 1000000000
     unit: day
     type: NON_RENEWABLE
@@ -129,7 +129,7 @@ usageLimits:
       - messageHistory
   useFileStoragePerAccount:
     description: "The amount of storage that can be used per account."
-    valueType: NUMBER
+    valueType: NUMERIC
     defaultValue: 10
     unit: GB/account
     type: NON_RENEWABLE
@@ -137,7 +137,7 @@ usageLimits:
       - fileStoragePerAccount
   useFileStoragePerUser:
     description: "The amount of storage that can be used per user or team member."
-    valueType: NUMBER
+    valueType: NUMERIC
     defaultValue: 10
     unit: GB/user
     type: NON_RENEWABLE
