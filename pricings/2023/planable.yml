@@ -1,7 +1,7 @@
 saasName: Planable
-day: 30
+day: 21
 month: 10
-year: 2022
+year: 2023
 currency: USD
 hasAnnualPayment: true
 features:
@@ -10,8 +10,13 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN  
-  socialMediaPages:
+  pages:
     description: "Number of social media pages allowed in each workspace. It can be multiple pages from the same platform."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  publishTweets:
+    description: ""
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
@@ -20,6 +25,12 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
+  aiAssistant:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: AUTOMATION
+    automationType: BOT
   workspaces:
     description: ""
     valueType: BOOLEAN
@@ -62,6 +73,16 @@ features:
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingURLs: null
+  publishedPostsStorage:
+    description: "Published posts are archived after 1 year. Then permanently deleted."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  archivedPostsStorage:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
   noneApprovalWorkflows:
     description: "Set workflows that do not require approval for publishing."
     valueType: BOOLEAN
@@ -102,7 +123,7 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: SUPPORT
-  liveChat:
+  chatSupport:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
@@ -147,7 +168,15 @@ usageLimits:
     unit: pages/workspace
     type: NON_RENEWABLE
     linkedFeatures:
-      - socialMediaPages
+      - pages
+  tweetsLimit:
+    description: ""
+    valueType: NUMERIC
+    defaultValue: 1
+    unit: tweet/page/day
+    type: RENEWABLE
+    linkedFeatures:
+      - publishTweets
   workspacesLimit:
     description: ""
     valueType: NUMERIC
@@ -172,6 +201,22 @@ usageLimits:
     type: NON_RENEWABLE
     linkedFeatures:
       - mediaStorage
+  publishedPostsStorageLimit:
+    description: ""
+    valueType: NUMERIC
+    defaultValue: 13
+    unit: month
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - publishedPostsStorage
+  archivedPostsStorageLimit:
+    description: ""
+    valueType: NUMERIC
+    defaultValue: 30
+    unit: day
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - archivedPostsStorage
   versionHistoryThreshold:
     description: ""
     valueType: NUMERIC
@@ -219,7 +264,9 @@ plans:
     monthlyPrice: 13.0
     annualPrice: 11.0
     unit: user/month
-    features: null
+    features:
+      publishTweets:
+        value: false
     usageLimits: null
   PRO:
     description: "For growing social media teams"
@@ -237,11 +284,11 @@ plans:
         value: true
       internalAndExternalCollaboration:
         value: true
-      prioritySupport:
-        value: true
-      liveChat:
+      chatSupport:
         value: true
     usageLimits:
+      tweetsLimit:
+        value: 1000000000000
       socialMediaPagesLimit:
         value: 10
       numberOfLabels:
@@ -272,7 +319,7 @@ plans:
         value: true
       prioritySupport:
         value: true
-      liveChat:
+      chatSupport:
         value: true
       personalizedOnboarding:
         value: true
@@ -285,12 +332,18 @@ plans:
           - WIRE_TRANSFER
           - GATEWAY
     usageLimits:
+      tweetsLimit:
+        value: 1000000000000
       socialMediaPagesLimit:
         value: 10
       numberOfLabels:
         value: 10000000
       mediaStorageCapacity:
         value: 1000000
+      publishedPostsStorageLimit:
+        value: 24
+      archivedPostsStorageLimit:
+        value: 365
       versionHistoryThreshold:
         value: 1000000
 addOns:
