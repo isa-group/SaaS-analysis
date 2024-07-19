@@ -1,7 +1,7 @@
 saasName: Planable
-day: 30
-month: 10
-year: 2022
+day: 19
+month: 7
+year: 2024
 currency: USD
 hasAnnualPayment: true
 features:
@@ -10,15 +10,48 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN  
-  socialMediaPages:
+  pages:
     description: "Number of social media pages allowed in each workspace. It can be multiple pages from the same platform."
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  saveAsAnAd:
-    description: "The option to send your Facebook drafts as a dark post to your Ads Manager."
+  publishTweets:
+    description: ""
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
+    type: DOMAIN
+  aiPostRewrite:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: AUTOMATION
+    automationType: BOT
+  aiPostGenerate:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: AUTOMATION
+    automationType: BOT
+  firstCommentScheduling:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: AUTOMATION
+    automationType: TASK_AUTOMATION
+  recurringPosts:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  omnichannelPlanning:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  builtInMediaEditor:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
     type: DOMAIN
   workspaces:
     description: ""
@@ -62,6 +95,21 @@ features:
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingURLs: null
+  publishedPostsStorage:
+    description: "Published posts are archived after 1 year. Then permanently deleted."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  archivedPostsStorage:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  sharedContentPlanning:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
   noneApprovalWorkflows:
     description: "Set workflows that do not require approval for publishing."
     valueType: BOOLEAN
@@ -82,7 +130,7 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  internalAndExternalCollaboration:
+  teamOnlyDraftPosts:
     description: "Have the option to hold conversations and posts behind the scenes, out of approver’s sight."
     valueType: BOOLEAN
     defaultValue: false
@@ -92,7 +140,52 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  helpCenter:
+  teamOnlyNotes:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  bulkApproval:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  bulkRequestForApproval:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  textAnnotations:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  suggestEdits:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+  pageLevelInsights:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  postLevelMetrics:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  customReports:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INFORMATION
+  audienceInsights:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  selfServeKnowledgeBase:
     description: ""
     valueType: BOOLEAN
     defaultValue: true
@@ -102,7 +195,7 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: SUPPORT
-  liveChat:
+  chatSupport:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
@@ -135,7 +228,7 @@ usageLimits:
   postsPerMonthLimit:
     description: ""
     valueType: NUMERIC
-    defaultValue: 10000000
+    defaultValue: 60
     unit: posts/month
     type: RENEWABLE
     linkedFeatures:
@@ -147,7 +240,15 @@ usageLimits:
     unit: pages/workspace
     type: NON_RENEWABLE
     linkedFeatures:
-      - socialMediaPages
+      - pages
+  tweetsLimit:
+    description: ""
+    valueType: NUMERIC
+    defaultValue: 1
+    unit: tweet/page/day
+    type: RENEWABLE
+    linkedFeatures:
+      - publishTweets
   workspacesLimit:
     description: ""
     valueType: NUMERIC
@@ -172,6 +273,22 @@ usageLimits:
     type: NON_RENEWABLE
     linkedFeatures:
       - mediaStorage
+  publishedPostsStorageLimit:
+    description: ""
+    valueType: NUMERIC
+    defaultValue: 13
+    unit: month
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - publishedPostsStorage
+  archivedPostsStorageLimit:
+    description: ""
+    valueType: NUMERIC
+    defaultValue: 30
+    unit: day
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - archivedPostsStorage
   versionHistoryThreshold:
     description: ""
     valueType: NUMERIC
@@ -187,8 +304,6 @@ plans:
     annualPrice: 0.0
     unit: /month
     features:
-      saveAsAnAd:
-        value: true
       gridView:
         value: true
       listView:
@@ -199,7 +314,7 @@ plans:
         value: true
       multiLevelApprovalWorkflows:
         value: true
-      internalAndExternalCollaboration:
+      teamOnlyDraftPosts:
         value: true
     usageLimits:
       postsLimit:
@@ -219,7 +334,9 @@ plans:
     monthlyPrice: 13.0
     annualPrice: 11.0
     unit: user/month
-    features: null
+    features:
+      publishTweets:
+        value: false
     usageLimits: null
   PRO:
     description: "For growing social media teams"
@@ -227,21 +344,23 @@ plans:
     annualPrice: 22.0
     unit: user/month
     features:
-      saveAsAnAd:
-        value: true
       gridView:
         value: true
       syncPreviousContent:
         value: true
       requiredApprovalWorkflows:
         value: true
-      internalAndExternalCollaboration:
+      teamOnlyDraftPosts:
         value: true
-      prioritySupport:
+      teamOnlyNotes:
         value: true
-      liveChat:
+      chatSupport:
         value: true
     usageLimits:
+      postsPerMonthLimit:
+        value: 150
+      tweetsLimit:
+        value: 1000000000000
       socialMediaPagesLimit:
         value: 10
       numberOfLabels:
@@ -256,8 +375,6 @@ plans:
     annualPrice: Custom
     unit: user/month
     features:
-      saveAsAnAd:
-        value: true
       gridView:
         value: true
       listView:
@@ -268,11 +385,17 @@ plans:
         value: true
       multiLevelApprovalWorkflows:
         value: true
-      internalAndExternalCollaboration:
+      teamOnlyDraftPosts:
+        value: true
+      teamOnlyNotes:
+        value: true
+      bulkApproval:
+        value: true
+      bulkRequestForApproval:
         value: true
       prioritySupport:
         value: true
-      liveChat:
+      chatSupport:
         value: true
       personalizedOnboarding:
         value: true
@@ -285,12 +408,20 @@ plans:
           - WIRE_TRANSFER
           - GATEWAY
     usageLimits:
+      postsPerMonthLimit:
+        value: 1000000000000
+      tweetsLimit:
+        value: 1000000000000
       socialMediaPagesLimit:
         value: 10
       numberOfLabels:
         value: 10000000
       mediaStorageCapacity:
         value: 1000000
+      publishedPostsStorageLimit:
+        value: 24
+      archivedPostsStorageLimit:
+        value: 365
       versionHistoryThreshold:
         value: 1000000
 addOns:
@@ -299,6 +430,7 @@ addOns:
     availableFor:
       - BASIC
       - PRO
+      - ENTERPRISE
     monthlyPrice: 20
     annualPrice: 17
     unit: workspace/month
@@ -307,3 +439,22 @@ addOns:
     usageLimitsExtensions:
       workspacesLimit:
         value: 1
+  analyticsAndReporting:
+    description: "Unlock advanced analytics and reporting features."
+    availableFor:
+      - BASIC
+      - PRO
+      - ENTERPRISE
+    price: 9
+    unit: user/month/workspace
+    features:
+      pageLevelInsights:
+        value: true
+      postLevelMetrics:
+        value: true
+      customReports:
+        value: true
+      audienceInsights:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions: null
