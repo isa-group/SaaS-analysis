@@ -144,7 +144,7 @@ usageLimits:
     description: ""
     valueType: BOOLEAN
     defaultValue: false
-    type: DOMAIN
+    type: NON_RENEWABLE
 plans:
   FREE:
     description: "Everything you need to be productive"
