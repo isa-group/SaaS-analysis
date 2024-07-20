@@ -1,31 +1,34 @@
-name,extraction_date,number_of_features,category,url,product
-ClickUp,2024-07-01,121,Project Management,https://clickup.com/pricing,
-HubSpot,2024-07-01,71,CRM,https://www.hubspot.com/pricing/marketing/starter,Marketing - Individuals
-Salesforce,2024-07-01,83,CRM,https://www.salesforce.com/products/sales-cloud/pricing/,Sales
-Slack,2024-07-01,43,Team Management,https://slack.com/intl/es-es/pricing,
-Buffer,2024-07-01,67,Social Media Management,https://buffer.com/pricing,
-Hypercontext,2024-07-01,54,Employee Engagement,https://hypercontext.com/pricing,
-Notion,2024-07-01,,Project Management,https://www.notion.so/pricing,
-OpenPhone,2024-07-01,46,Business Phone System,https://www.openphone.com/pricing,
-Pumble,2024-07-01,28,Team Communication,https://pumble.com/pricing,
-Tableau,2024-07-01,33,End-to-end Analytics,https://www.tableau.com/pricing/teams-orgs,Teams-orgs
-Quip,2024-07-01,10,Document Management,https://quip.com/about/pricing,
-MailChimp,2024-07-01,77,Marketing,https://mailchimp.com/pricing/,
-Deskera,2024-07-01,92,CRM,https://www.deskera.com/pricing,ERP
-UserGuiding,2024-07-01,56,User Onboarding,https://userguiding.com/pricing,
-Crowdcast,2024-07-01,,Online Streaming,https://www.crowdcast.io/pricing,
-Planable,2024-07-01,47,Social Media Management,https://planable.io/pricing/,
-Databox,2024-07-01,61,Dashboard and Reporting,https://databox.com/pricing,
-Trustmary,2024-07-01,28,Surveys,https://trustmary.com/pricing/,Display
-Evernote,2024-07-01,29,Productivity,https://evernote.com/compare-plans,
-Canva,2024-07-01,88,Graphic Design,https://www.canva.com/pricing/,
-Clockify,2024-07-01,71,Time Tracking,https://clockify.me/pricing,
-Figma,2024-07-01,90,Web Desing,https://www.figma.com/pricing/,
-GitHub,2024-07-01,52,Version Control System,https://github.com/pricing,
-Jira,2024-07-01,58,Project Management,https://www.atlassian.com/software/jira/pricing,
-Dropbox,2024-07-01,,Cloud Storage,https://www.dropbox.com/en/plans,Business
-Overleaf,2024-07-01,,Productivity,https://www.overleaf.com/user/subscription/plans,Individual
-Postman,2024-07-01,90,REST Client,https://www.postman.com/pricing/,
-Box,2024-07-01,,Cloud Storage,https://www.box.com/pricing,
-Wrike,2024-07-01,76,Productivity,https://www.wrike.com/comparison-table/,
-Zapier,2024-07-01,,Task Automation,https://zapier.com/pricing,
+name,years,category,url,product
+ClickUp,2024;2023;2022;2021;2020;2019,Project Management,https://clickup.com/pricing,
+Microsoft365,2024;2023;2022;2021,Productivity,https://www.microsoft.com/en-us/microsoft-365/enterprise/office365-plans-and-pricing,Enrerprise
+Microsoft365,2020;2019,Productivity,https://www.products.office.com/en-us/compare-all-microsoft-office-products,Enrerprise
+Salesforce,2024;2023;2020;2019,CRM,https://www.salesforce.com/products/sales-cloud/pricing/,Sales
+Slack,2024;2023;2022;2021;2020;2019,Team Management,https://slack.com/intl/es-es/pricing,
+Buffer,2024;2023;2022;2021;2020;2019,Social Media Management,https://buffer.com/pricing,Publish
+Hypercontext,2024;2023;2022;2021,Employee Engagement,https://hypercontext.com/pricing,
+Notion,2024;2023;2022;2021,Project Management,https://www.notion.so/pricing,
+OpenPhone,2024;2023;2022,Business Phone System,https://www.openphone.com/pricing,
+OpenPhone,2021;2020,Business Phone System,https://www.openphone.co/pricing,
+Pumble,2024;2023;2022;2021,Team Communication,https://pumble.com/pricing,
+Tableau,2024;2023;2022;2021;2020;2019,End-to-end Analytics,https://www.tableau.com/pricing/teams-orgs,Teams-orgs
+Quip,2024;2023;2022;2021;2020;2019,Document Management,https://quip.com/about/pricing,
+MailChimp,2024;2023;2022;2021;2020;2019,Marketing,https://mailchimp.com/pricing/,
+Deskera,2024;2023;2022;2021,CRM,https://www.deskera.com/pricing,ERP
+UserGuiding,2024;2023;2022;2021;2020,User Onboarding,https://userguiding.com/pricing,
+Crowdcast,2024;2023;2022;2021;2020,Online Streaming,https://www.crowdcast.io/pricing,
+Planable,2024;2023;2022;2021;2020;2019,Social Media Management,https://planable.io/pricing/,
+Databox,2024;2023;2022;2021;2020;2019,Dashboard and Reporting,https://databox.com/pricing,
+Trustmary,2024;2023;2022;2021;2020,Surveys,https://trustmary.com/pricing/,Display
+Evernote,2024;2023;2022;2021;2020;2019,Productivity,https://evernote.com/compare-plans,
+Canva,2024;2023;2022;2021;2020;2019,Graphic Design,https://www.canva.com/pricing/,
+Clockify,2024;2023;2022,Time Tracking,https://clockify.me/pricing,
+Clockify,2021;2020;2019,Time Tracking,https://clockify.me/extra-features,
+Figma,2024;2023;2022;2021;2020;2019,Web Desing,https://www.figma.com/pricing/,
+GitHub,2024;2023;2022;2021;2020;2019,Version Control System,https://github.com/pricing,
+Jira,2024;2023;2022;2021;2020;2019,Project Management,https://www.atlassian.com/software/jira/pricing,
+Dropbox,2024;2023;2022;2021,Cloud Storage,https://www.dropbox.com/en/plans,Business
+Overleaf,2024;2023;2022;2021;2020;2019,Productivity,https://www.overleaf.com/user/subscription/plans,Individual
+Postman,2024;2023;2022;2021;2020,REST Client,https://www.postman.com/pricing/,
+Box,2024;2023;2022;2021;2020;2019,Cloud Storage,https://www.box.com/pricing,
+Wrike,2024;2023;2022;2021;2020;2019,Productivity,https://www.wrike.com/comparison-table/,
+Zapier,2024;2023;2022;2020;2019,Task Automation,https://zapier.com/pricing,
