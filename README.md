@@ -1,7 +1,7 @@
 [![CC BY 4.0][cc-by-shield]][cc-by]
-# "Industry Support Analysis for Pricing-Driven DevOp in SaaS": The Laboratory Package
+# "Racing the Market: An Industry Support Analysis for Pricing-Driven DevOps in SaaS": The Laboratory Package
 
-The aim of this repository is to centralize the work performed by the authors to write the paper: "Industry Support Analysis for Pricing-Driven DevOp in SaaS" for ICSOC 2024 about the current status of SaaS pricings.
+The aim of this repository is to centralize the work performed by the authors to write the paper: "Racing the Market: An Industry Support Analysis for Pricing-Driven DevOps in SaaS" for ICSOC 2024 about the current status of SaaS pricings.
 
 ## Available SaaS
 
