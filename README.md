@@ -1,4 +1,4 @@
-[![CC BY 4.0][cc-by-shield]][cc-by]
+[![CC BY 4.0][cc-by-shield]][cc-by] [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.13857484.svg)](https://doi.org/10.5281/zenodo.13857484)
 # "Racing the Market: An Industry Support Analysis for Pricing-Driven DevOps in SaaS": The Laboratory Package
 
 The aim of this repository is to centralize the work performed by the authors to write the paper: "Racing the Market: An Industry Support Analysis for Pricing-Driven DevOps in SaaS" for ICSOC 2024 about the current status of SaaS pricings.
