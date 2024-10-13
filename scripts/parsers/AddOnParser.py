@@ -35,6 +35,11 @@ class AddOnParser:
         AddOnParser.parse_addon_usage_limits(addon_map, addon, pricing_manager, True)
 
         return addon
+    
+    @staticmethod
+    def populate_addons_dependencies(pricingManager: 'PricingManager', addons_map: Dict[str, 'AddOn']):
+        for name in pricingManager.add_ons.keys():
+            AddOnParser.set_depends_on(name, addons_map[name], pricingManager)
 
     @staticmethod
     def set_available_for(addon_map: Dict[str, Any], pricing_manager: 'PricingManager', addon: 'AddOn'):
@@ -44,6 +49,21 @@ class AddOnParser:
                 if plan_name not in pricing_manager.plans:
                     raise InvalidPlanException(f"The plan {plan_name} does not exist in the pricing manager")
             addon.available_for = plans
+        else:
+            addon.available_for = list(pricing_manager.plans.keys())
+
+    @staticmethod
+    def set_depends_on(addon_name: str, addon_map: Dict[str, Any], pricing_manager: 'PricingManager'):
+        if "dependsOn" in addon_map.keys():
+            required_addons = addon_map["dependsOn"]
+            for required_addon in required_addons:
+                if required_addon not in pricing_manager.add_ons:
+                    raise InvalidPlanException(f"The addon {required_addon} does not exist in the pricing manager")
+                if required_addon == addon_name:
+                    raise InvalidPlanException(f"The addon {required_addon} cannot depend on itself")
+            pricing_manager.add_ons[addon_name].depends_on = required_addons
+        else:
+            pricing_manager.add_ons[addon_name].depends_on = []
 
     @staticmethod
     def parse_addon_features(addon_map: Dict[str, Any], addon: 'AddOn', pricing_manager: 'PricingManager'):

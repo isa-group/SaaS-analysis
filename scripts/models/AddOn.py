@@ -2,12 +2,13 @@ from typing import List, Dict, Optional, Any
 from scripts.models import Feature, UsageLimit
 
 class AddOn:
-    def __init__(self, name: str = None, available_for: List[str] = None, price: Optional[Any] = None,
+    def __init__(self, name: str = None, available_for: List[str] = None, depends_on: List[str] = None, price: Optional[Any] = None,
                  monthly_price: Optional[Any] = None, annual_price: Optional[Any] = None, unit: str = None,
                  features: Optional[Dict[str, 'Feature']] = None, usage_limits: Optional[Dict[str, 'UsageLimit']] = None,
                  usage_limits_extensions: Optional[Dict[str, 'UsageLimit']] = None):
         self.name = name
         self.available_for = available_for
+        self.depends_on = depends_on
         self.price = price
         self.monthly_price = monthly_price
         self.annual_price = annual_price
@@ -94,3 +95,8 @@ class AddOn:
             return None
 
         return serialized_usage_limit_extensions
+
+    def __str__(self):
+        return f"AddOn(name={self.name}, available_for={self.available_for}, depends_on={self.depends_on}, price={self.price}, " \
+               f"monthly_price={self.monthly_price}, annual_price={self.annual_price}, unit={self.unit}, features={self.features}, " \
+               f"usage_limits={self.usage_limits}, usage_limits_extensions={self.usage_limits_extensions})"

@@ -60,3 +60,5 @@ class PricingManagerParser:
         add_ons_map = yaml_config_map.get("addOns", {})
         add_ons = {name: AddOnParser.parse_map_to_addon(name, ao_map, pricing_manager) for name, ao_map in add_ons_map.items()}
         pricing_manager.add_ons = add_ons
+        # Parece que no se están actualizando los addons con las dependencias
+        AddOnParser.populate_addons_dependencies(pricing_manager, add_ons_map)
