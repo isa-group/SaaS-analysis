@@ -1,20 +1,25 @@
-FEATURES = {notes,notebooks,syncAcrossDevices,appForIOS,appForAndroid,appForWindows,appForMac,appForWeb,tasks,evernoteCalendar,externalCalendars,attachFilesToNotes,advancedSearch,advancedOrganization,offlineNotes,easySharing,aiPoweredSearch,aiEdit,googleIntegration,microsoftIntegration,slackIntegration,twoStepVerification,applyInNoteEncryption,helpAndLearningCenter,communityForum,supportTickets,spaces,maintainBusinessDataOwnership,centralizedAccountAdministration,centralizedUserManagement,userActivityLogs,singleSignOn};
-USAGE_LIMITS = {notesLimit,notebooksLimit,maximumNoteSize,globalMonthlyUploadLimit,monthlyUploadLimitByUser,syncAccrossDevicesLimit,externalCalendarsLimit};
-PLANS = {FREE,PERSONAL,PROFESIONAL,TEAMS};
-ADDONS = {};
+num_features = 26;
+num_usage_limits = 7;
+num_plans = 4;
+num_addons = 0;
+
+features = ["notes", "notebooks", "syncAcrossDevices", "appForIOS", "appForAndroid", "appForWindows", "appForMac", "appForWeb", "tasks", "evernoteCalendar", "externalCalendars", "attachFilesToNotes", "advancedSearch", "advancedOrganization", "offlineNotes", "easySharing", "aiPoweredSearch", "aiEdit", "googleIntegration", "microsoftIntegration", "slackIntegration", "twoStepVerification", "applyInNoteEncryption", "helpAndLearningCenter", "communityForum", "supportTickets", "spaces", "maintainBusinessDataOwnership", "centralizedAccountAdministration", "centralizedUserManagement", "userActivityLogs", "singleSignOn"];
+usage_limits = ["notesLimit", "notebooksLimit", "maximumNoteSize", "globalMonthlyUploadLimit", "monthlyUploadLimitByUser", "syncAccrossDevicesLimit", "externalCalendarsLimit"];
+plans = ["FREE", "PERSONAL", "PROFESIONAL", "TEAMS"];
+addons = [];
 
 plans_prices = [0.0,12.99,16.99,24.99];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % FREE
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,0,1,0,1,1,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,0,1,0,1,1,0,0,0,0,0,0,0,
     % PERSONAL
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,0,1,1,1,1,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,0,1,0,1,1,1,0,0,0,0,0,0,
     % PROFESIONAL
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,
     % TEAMS
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % FREE
@@ -29,19 +34,19 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % notesLimit
-    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % notebooksLimit
-    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % maximumNoteSize
-    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % globalMonthlyUploadLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % monthlyUploadLimitByUser
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % syncAccrossDevicesLimit
-    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % externalCalendarsLimit
-    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

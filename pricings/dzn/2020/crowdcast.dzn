@@ -1,7 +1,12 @@
-FEATURES = {liveStreaming,transactionFee,hdLiveVideoWithRecording,multiSessionEvents,rtmpSudio,emailSupport,chatSupport,patreonIntegration,stripeIntegration,eventAnalytics,sessionAnalytics,zapierIntegration,convertKitIntegration,dripIntegration,exportEmailAddresses,exportChat,exportData,multistreaming,presentOnManyScreens,customRegistrationFields};
-USAGE_LIMITS = {liveAttendeesLimit,liveHoursPerMonthLimit,sessionsLimit,multistreamLocationsLimit,screensLimit};
-PLANS = {STARTER,LITE,PRO,BUSINESS};
-ADDONS = {};
+num_features = 18;
+num_usage_limits = 5;
+num_plans = 4;
+num_addons = 0;
+
+features = ["liveStreaming", "transactionFee", "hdLiveVideoWithRecording", "multiSessionEvents", "rtmpSudio", "emailSupport", "chatSupport", "patreonIntegration", "stripeIntegration", "eventAnalytics", "sessionAnalytics", "zapierIntegration", "convertKitIntegration", "dripIntegration", "exportEmailAddresses", "exportChat", "exportData", "multistreaming", "presentOnManyScreens", "customRegistrationFields"];
+usage_limits = ["liveAttendeesLimit", "liveHoursPerMonthLimit", "sessionsLimit", "multistreamLocationsLimit", "screensLimit"];
+plans = ["STARTER", "LITE", "PRO", "BUSINESS"];
+addons = [];
 
 plans_prices = [29.0,49.0,89.0,199.0];
 addons_prices = [];

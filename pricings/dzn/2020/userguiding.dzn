@@ -1,41 +1,46 @@
-FEATURES = {users, userGuidingBranding, teams, guides, hotspots, onboardingChecklist, customization, npsSurveys, personalization, segmentation, userIdentification, userGuidingAPI, usageAnalytics, usageReporting, integrations, emailSupport, chatSupport, successCoaching, customCSS, sla, singleSignOn};
-USAGE_LIMITS = {activeUsersLimit, teamMembersLimit, activeGuidesLimit, activeHotspotsLimit, activeOnboardingChecklistsLimit, limitedCustomization};
-PLANS = {STARTUP, GROWTH, ENTERPRISE};
-ADDONS = {};
+num_features = 19;
+num_usage_limits = 6;
+num_plans = 3;
+num_addons = 0;
+
+features = ["users", "userGuidingBranding", "teams", "guides", "hotspots", "onboardingChecklist", "customization", "npsSurveys", "personalization", "segmentation", "userIdentification", "userGuidingAPI", "usageAnalytics", "usageReporting", "integrations", "emailSupport", "chatSupport", "successCoaching", "customCSS"];
+usage_limits = ["activeUsersLimit", "teamMembersLimit", "activeGuidesLimit", "activeHotspotsLimit", "activeOnboardingChecklistsLimit", "limitedCustomization"];
+plans = ["STARTUP", "GROWTH", "ENTERPRISE"];
+addons = [];
 
 plans_prices = [199.0,399.0,999.0];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % STARTUP
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
     % GROWTH
-    1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0,
+    1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,
     % ENTERPRISE
-    1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+    1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % STARTUP
     20000,1,10,10,1,1,
     % GROWTH
-    30000,5,1000000000,1000000000,1000000000,0,
+    30000,5,10000000,10000000,10000000,0,
     % ENTERPRISE
-    50000,1000000000,1000000000,1000000000,1000000000,0
+    50000,10000000,10000000,10000000,10000000,0
 ]);
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % activeUsersLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % teamMembersLimit
-    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % activeGuidesLimit
-    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % activeHotspotsLimit
-    0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % activeOnboardingChecklistsLimit
-    0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % limitedCustomization
-    0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

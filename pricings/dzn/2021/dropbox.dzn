@@ -1,22 +1,27 @@
-FEATURES = {storage,bestInClassSyncTechnology,anytimeAccess,anywhereAccess,computerBackup,easyAndSecureSharing,256BitAES,SSL_TLSEncryption,fileRecovery,versionHistory,dropboxRewind,remoteDeviceWipe,enableTwoFactorAuthentication,dropboxPasswords,dropboxVault,documentWatermarking,sharedLinkControls,accountTransferTool,enableHIPAACompliance,deviceApprovals,familyRoom,dropboxPaper,dropboxTransfer,eSignatures,fileLocking,integratedCloudContent,brandedSharing,traffic,insights,webPreviews,webComments,plusButton,fileRequests,smartSync,automaticSpaceSaving,fullTextSearch,viewerHistory,adminConsole,multiTeamAdminLogin,centralizedBilling,companyManagedGroups,apiAccessToSecurityPlatformPartners,apiAccessToProductivityPlatformPartners,apiAccessToDataTransportPlatformPartners,tieredAdminRoles,signInAsUser,auditLogsWithFileEventTracking,singleSignOn,inviteEnforcement,priorityEmailSupport,liveChatSupport,phoneSupportDuringBusinessHours};
-USAGE_LIMITS = {storageLimit,usersLimit,fileRecoveryAndVersionHistoryThreshold,dropboxRewindThreshold,dropboxTransferLimit,includeCustomizationOptionsInDropboxTransfer,eSignaturesLimit,apiAccessToDataTransportPlatformPartnersLimit};
-PLANS = {PLUS,FAMILY,PROFESSIONAL,STANDARD,ADVANCED};
-ADDONS = {};
+num_features = 36;
+num_usage_limits = 8;
+num_plans = 5;
+num_addons = 0;
+
+features = ["storage", "bestInClassSyncTechnology", "anytimeAccess", "anywhereAccess", "computerBackup", "easyAndSecureSharing", "256BitAES", "SSL/TLSEncryption", "fileRecovery", "versionHistory", "dropboxRewind", "remoteDeviceWipe", "enableTwoFactorAuthentication", "dropboxPasswords", "dropboxVault", "documentWatermarking", "sharedLinkControls", "accountTransferTool", "enableHIPAACompliance", "deviceApprovals", "familyRoom", "dropboxPaper", "dropboxTransfer", "eSignatures", "fileLocking", "integratedCloudContent", "brandedSharing", "traffic", "insights", "webPreviews", "webComments", "plusButton", "fileRequests", "smartSync", "automaticSpaceSaving", "fullTextSearch", "viewerHistory", "adminConsole", "multiTeamAdminLogin", "centralizedBilling", "companyManagedGroups", "apiAccessToSecurityPlatformPartners", "apiAccessToProductivityPlatformPartners", "apiAccessToDataTransportPlatformPartners", "tieredAdminRoles", "signInAsUser", "auditLogsWithFileEventTracking", "singleSignOn", "inviteEnforcement", "priorityEmailSupport", "liveChatSupport", "phoneSupportDuringBusinessHours"];
+usage_limits = ["storageLimit", "usersLimit", "fileRecoveryAndVersionHistoryThreshold", "dropboxRewindThreshold", "dropboxTransferLimit", "includeCustomizationOptionsInDropboxTransfer", "eSignaturesLimit", "apiAccessToDataTransportPlatformPartnersLimit"];
+plans = ["PLUS", "FAMILY", "PROFESSIONAL", "STANDARD", "ADVANCED"];
+addons = [];
 
 plans_prices = [9.99,16.99,16.58,12.5,20.0];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % PLUS
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,0,1,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,0,1,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,
     % FAMILY
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,0,1,1,1,0,1,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,0,1,0,0,0,0,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,
     % PROFESSIONAL
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,0,1,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,
     % STANDARD
-    1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,0,1,1,1,0,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,0,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,
     % ADVANCED
-    1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,0,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % PLUS
@@ -26,28 +31,28 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % PROFESSIONAL
     3000,1,180,180,100,1,3,1000000000,
     % STANDARD
-    5000,.inf,180,180,2,0,3,1000000000,
+    5000,10000000,180,180,2,0,3,1000000000,
     % ADVANCED
-    .inf,.inf,180,180,100,1,3,1000000000,
+    10000000,10000000,180,180,100,1,3,1000000000
 ]);
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % storageLimit
-    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % usersLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % fileRecoveryAndVersionHistoryThreshold
-    0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % dropboxRewindThreshold
-    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % dropboxTransferLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % includeCustomizationOptionsInDropboxTransfer
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % eSignaturesLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % apiAccessToDataTransportPlatformPartnersLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

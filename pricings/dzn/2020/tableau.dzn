@@ -1,18 +1,23 @@
-FEATURES = {webAccess,mobileAccess,embeddedContent,interactWithVisualizations,interactWithDashboards,createCustomViews,shareCustomViews,downloadVisualizationAsImages,downloadSummaryData,downloadFullData,seeDataQualityWarnings,commentOnDashboard,commentOnVisualization,createASubscriptionForYourself,receiveDataDrivenAlerts,createSubscriptionsForOthers,createDataDrivenAlerts,editExistingWorkbooks,editExistingVisualizations,createAndPublishNewWorkbookFromExistingDataSource,askData,createAndPublishNewWorkbookFromNewDataSources,createAndPublishNewDataSources,createNewWorkbooksBasedOnPreBuiltDashboardStarters,createNewDataFlows,editDataFlow,exportData,publishFlows,runFlows,scheduleFlows,monitorFlowPerformance,monitorFlowHealth,manageUserPermissions,manageContent,certifyDataSources,viewLineageAndImpact,setDataQualityWarnings};
-USAGE_LIMITS = {flowsLimit};
-PLANS = {VIEWER,EXPLORER,CREATOR};
-ADDONS = {dataManagementViewer,dataManagementExplorer,dataManagementCreator,resourceBlocks};
+num_features = 27;
+num_usage_limits = 1;
+num_plans = 3;
+num_addons = 4;
+
+features = ["webAccess", "mobileAccess", "embeddedContent", "interactWithVisualizations", "interactWithDashboards", "createCustomViews", "shareCustomViews", "downloadVisualizationAsImages", "downloadSummaryData", "downloadFullData", "seeDataQualityWarnings", "commentOnDashboard", "commentOnVisualization", "createASubscriptionForYourself", "receiveDataDrivenAlerts", "createSubscriptionsForOthers", "createDataDrivenAlerts", "editExistingWorkbooks", "editExistingVisualizations", "createAndPublishNewWorkbookFromExistingDataSource", "askData", "createAndPublishNewWorkbookFromNewDataSources", "createAndPublishNewDataSources", "createNewWorkbooksBasedOnPreBuiltDashboardStarters", "createNewDataFlows", "editDataFlow", "exportData"];
+usage_limits = ["flowsLimit"];
+plans = ["VIEWER", "EXPLORER", "CREATOR"];
+addons = ["dataManagementViewer", "dataManagementExplorer", "dataManagementCreator", "resourceBlocks"];
 
 plans_prices = [15.0,42.0,70.0];
 addons_prices = [5.50,5.50,5.50,250.0];
 
 plans_features = array2d(PLANS, FEATURES, [
     % VIEWER
-    1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,
     % EXPLORER
-    1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,
     % CREATOR
-    1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0
+    1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % VIEWER
@@ -25,18 +30,18 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % flowsLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [
     % dataManagementViewer
-    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,
+    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % dataManagementExplorer
-    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,1,0,
+    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,
     % dataManagementCreator
-    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,1,0,
+    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,
     % resourceBlocks
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
     % dataManagementViewer

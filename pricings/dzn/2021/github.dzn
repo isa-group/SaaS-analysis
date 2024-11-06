@@ -1,0 +1,152 @@
+num_features = 32;
+num_usage_limits = 4;
+num_plans = 3;
+num_addons = 10;
+
+features = ["publicRepositories", "privateRepositories", "githubCodespaces", "githubActions", "githubPackages", "codeReviews", "pullRequests", "protectedBranches", "codeOwners", "draftPullRequests", "multiplePullRequestsAssignees", "repositoryInsights", "scheduledReminders", "automaticCodeReviewAssigment", "collaboratorsForPublicRepositories", "collaboratorsForPrivateRepositories", "issues", "projects", "milestones", "teamDiscussions", "organizationAndTeamManagement", "pagesAndWikis", "multipleIssueAssignees", "codeScanning", "secretScanning", "dependencyReview", "dependabotAlerts", "dependabotSecurityUpdates", "dependabotVersionUpdates", "requiredReviews", "requiredStatusChecks", "githubSecurityAdvisories", "roleBasedAccessControl", "required2FA", "auditLog", "auditLogAPI", "githubConnect", "singleSignOn", "ldap", "ipAllowList", "githubApps", "statusChecks", "preReceiveHooks", "communitySupport", "standardSupport", "premiumAndPremiumPlusSupport", "phoneSupport", "invoiceBilling", "selfHostedDeployment"];
+usage_limits = ["githubOnlyForPublicRepositoriesFreeTier", "githubOnlyForPublicRepositoriesTeamTier", "githubActionsQuota", "diskSpaceForGithubPackages"];
+plans = ["FREE", "TEAM", "ENTERPRISE"];
+addons = ["githubCodespaces2Core", "githubCodespaces4Core", "githubCodespaces8Core", "githubCodespaces16Core", "githubCodespaces32Core", "githubCodespacesStorage", "githubAdvancedSecurity", "premiumSupport", "enterpriseServer", "enterpriseCloud"];
+
+plans_prices = [0.0,4.0,21.0];
+addons_prices = [0.18,0.36,0.72,1.44,2.88,0.07,49.0,10.0,100.0,1000.0];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % TEAM
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    1,0,2000,0.5,
+    % TEAM
+    0,1,3000,2,
+    % ENTERPRISE
+    0,0,50000,50
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % githubOnlyForPublicRepositoriesFreeTier
+    0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % githubOnlyForPublicRepositoriesTeamTier
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % githubActionsQuota
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % diskSpaceForGithubPackages
+    0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % githubCodespaces2Core
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % githubCodespaces4Core
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % githubCodespaces8Core
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % githubCodespaces16Core
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % githubCodespaces32Core
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % githubCodespacesStorage
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % githubAdvancedSecurity
+    0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % premiumSupport
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,
+    % enterpriseServer
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,
+    % enterpriseCloud
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % githubCodespaces2Core
+    0,0,0,0,
+    % githubCodespaces4Core
+    0,0,0,0,
+    % githubCodespaces8Core
+    0,0,0,0,
+    % githubCodespaces16Core
+    0,0,0,0,
+    % githubCodespaces32Core
+    0,0,0,0,
+    % githubCodespacesStorage
+    0,0,0,0,
+    % githubAdvancedSecurity
+    0,0,0,0,
+    % premiumSupport
+    0,0,0,0,
+    % enterpriseServer
+    0,0,0,0,
+    % enterpriseCloud
+    0,0,0,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % githubCodespaces2Core
+    0,0,0,0,
+    % githubCodespaces4Core
+    0,0,0,0,
+    % githubCodespaces8Core
+    0,0,0,0,
+    % githubCodespaces16Core
+    0,0,0,0,
+    % githubCodespaces32Core
+    0,0,0,0,
+    % githubCodespacesStorage
+    0,0,0,0,
+    % githubAdvancedSecurity
+    0,0,0,0,
+    % premiumSupport
+    0,0,0,0,
+    % enterpriseServer
+    0,0,0,0,
+    % enterpriseCloud
+    0,0,0,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % githubCodespaces2Core
+    1,1,1,
+    % githubCodespaces4Core
+    1,1,1,
+    % githubCodespaces8Core
+    1,1,1,
+    % githubCodespaces16Core
+    1,1,1,
+    % githubCodespaces32Core
+    1,1,1,
+    % githubCodespacesStorage
+    1,1,1,
+    % githubAdvancedSecurity
+    0,0,1,
+    % premiumSupport
+    0,0,1,
+    % enterpriseServer
+    0,0,1,
+    % enterpriseCloud
+    0,0,1
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % githubCodespaces2Core
+    0,0,0,0,0,0,0,0,0,0,
+    % githubCodespaces4Core
+    0,0,0,0,0,0,0,0,0,0,
+    % githubCodespaces8Core
+    0,0,0,0,0,0,0,0,0,0,
+    % githubCodespaces16Core
+    0,0,0,0,0,0,0,0,0,0,
+    % githubCodespaces32Core
+    0,0,0,0,0,0,0,0,0,0,
+    % githubCodespacesStorage
+    0,0,0,0,0,0,0,0,0,0,
+    % githubAdvancedSecurity
+    0,0,0,0,0,0,0,0,0,0,
+    % premiumSupport
+    0,0,0,0,0,0,0,0,0,0,
+    % enterpriseServer
+    0,0,0,0,0,0,0,0,0,0,
+    % enterpriseCloud
+    0,0,0,0,0,0,0,0,0,0
+]);

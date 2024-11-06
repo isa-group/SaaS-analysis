@@ -1,20 +1,25 @@
-FEATURES = {responses,apiAccess,requestsViaEmail,automations,zapierIntegration,hubspotIntegration,pipedriveIntegration,domains,widgets,reviews,removeTrustmaryBranding,views,reviewPlatform,manageReviews,tagReviews,syncReviewsAutomatically,addReviewsManually,importReviewsFromSpreadsheets,reviewSchema_orgMarkup,trustMaryAiScore,publicReviewProfilePage,goalTracking,reviewWidgets,formWidgets,badgeWidgets,popupWidgets,ctaWidgets,reviewFiltering,freeWidgetInstallationHelp,chatSupport,phoneSupport,dedicatedAccountManager};
-USAGE_LIMITS = {responsesLimit,requestsViaEmailLimit,viewsLimit,reviewPlatformConnectionsLimit};
-PLANS = {SOLO,STARTER,BUSINESS,SCALE};
-ADDONS = {};
+num_features = 26;
+num_usage_limits = 4;
+num_plans = 4;
+num_addons = 0;
+
+features = ["responses", "apiAccess", "requestsViaEmail", "automations", "zapierIntegration", "hubspotIntegration", "pipedriveIntegration", "domains", "widgets", "reviews", "removeTrustmaryBranding", "views", "reviewPlatform", "manageReviews", "tagReviews", "syncReviewsAutomatically", "addReviewsManually", "importReviewsFromSpreadsheets", "reviewSchema.orgMarkup", "trustMaryAiScore", "publicReviewProfilePage", "goalTracking", "reviewWidgets", "formWidgets", "badgeWidgets", "popupWidgets", "ctaWidgets", "reviewFiltering", "freeWidgetInstallationHelp", "chatSupport", "phoneSupport", "dedicatedAccountManager"];
+usage_limits = ["responsesLimit", "requestsViaEmailLimit", "viewsLimit", "reviewPlatformConnectionsLimit"];
+plans = ["SOLO", "STARTER", "BUSINESS", "SCALE"];
+addons = [];
 
 plans_prices = [0.0,29.0,79.0,189.0];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % SOLO
-    1,1,0,0,0,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+    1,1,1,1,0,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
     % STARTER
-    1,1,0,1,1,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,
+    1,1,1,1,1,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
     % BUSINESS
-    1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
     % SCALE
-    1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % SOLO
@@ -29,13 +34,13 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % responsesLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % requestsViaEmailLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % viewsLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % reviewPlatformConnectionsLimit
-    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

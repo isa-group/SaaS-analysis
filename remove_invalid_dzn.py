@@ -5,7 +5,7 @@ import os
 dataset = PricingsLoader('./pricings/yaml')
 
 if __name__ == '__main__':
-    test = 0
+    removed_files = 0
     for i in tqdm(range(len(dataset))):
         path = dataset.get_path(i)
         
@@ -16,4 +16,7 @@ if __name__ == '__main__':
             
             # If content doesn't containt "addons_depends_on", remove de file
             if 'addons_depends_on' not in content:
+                removed_files += 1
                 os.remove(dzn_path)
+    
+    print(f'Removed {removed_files} files')

@@ -1,20 +1,25 @@
-FEATURES = {dataSources,databoards,dataRefresh,oneClickInteractions,dashboardTemplates,datablockLibrary,databoardDesigner,goalTracking,alerts,singleUrlDashboardCarousel,scheduleEmailSnapshots,nativeMobileApps,tvDisplay,slackIntegration,annotations,pushDataViaAPI,queryBuilder,dataCalculations,sqlDatabaseIntegrations,companyBranding,additionalSecurity};
-USAGE_LIMITS = {dataSourcesLimit,usersLimit,databoardsLimit};
-PLANS = {FREE,BASIC,PLUS,BUSINESS};
-ADDONS = {};
+num_features = 19;
+num_usage_limits = 3;
+num_plans = 4;
+num_addons = 0;
+
+features = ["dataSources", "databoards", "dataRefresh", "oneClickInteractions", "dashboardTemplates", "datablockLibrary", "databoardDesigner", "goalTracking", "alerts", "singleUrlDashboardCarousel", "scheduleEmailSnapshots", "nativeMobileApps", "tvDisplay", "slackIntegration", "annotations", "pushDataViaAPI", "queryBuilder", "dataCalculations", "sqlDatabaseIntegrations"];
+usage_limits = ["dataSourcesLimit", "usersLimit", "databoardsLimit"];
+plans = ["FREE", "BASIC", "PLUS", "BUSINESS"];
+addons = [];
 
 plans_prices = [0.0,59.0,119.0,299.0];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % FREE
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,
     % BASIC
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,
     % PLUS
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
     % BUSINESS
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % FREE
@@ -29,11 +34,11 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % dataSourcesLimit
-    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % usersLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % databoardsLimit
-    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

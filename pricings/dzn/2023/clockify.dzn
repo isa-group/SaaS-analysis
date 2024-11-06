@@ -1,0 +1,96 @@
+num_features = 38;
+num_usage_limits = 0;
+num_plans = 5;
+num_addons = 4;
+
+features = ["unlimitedTracking", "timeTracker", "timesheet", "kiosk", "autotracker", "calendar", "apps", "pomodoroTimer", "idleDetectionAndReminders", "trackingIntegrations", "importTime", "breaks", "requiredFields", "addTimeForOthers", "timeOff", "targetsAndReminders", "lockTimesheets", "customFields", "forceTimer", "gpsTracking", "screenshots", "teamActivity", "reports", "exportAndShare", "billableRates", "projectStatus", "projectExport", "apiAndWebhooks", "decimalFormat", "timeAudit", "customizeExports", "historicalRates", "rounding", "attendanceAndOvertime", "quickBooksIntegration", "taskRates", "laborCostAndProfit", "budgetAndEstimates", "multipleCurrencies", "forecasting", "alerts", "userFields", "assigmentReport", "expenseReport", "emailReports", "unlimitedUsers", "unlimitedProjects", "importProjects", "projectAccess", "languages", "teamChat", "hideTimeAndPages", "bulkEdit", "projectTemplates", "editProfiles", "kioskPIN", "customizeKiosk", "invoicing", "approval", "managerRole", "force2FA", "scheduling", "expenses", "dataRegion", "singleSignOn", "customSubdomain", "controlAccounts", "auditLog"];
+usage_limits = [];
+plans = ["FREE", "BASIC", "STANDARD", "PRO", "ENTERPRISE"];
+addons = ["kioskBasic", "kioskStandard", "kioskPro", "kioskEnterprise"];
+
+plans_prices = [0.0, 4.99, 6.99, 9.99, 14.99];
+addons_prices = [0.99, 1.49, 1.99, 2.99];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % BASIC
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % STANDARD
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % PRO
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    ,
+    % BASIC
+    ,
+    % STANDARD
+    ,
+    % PRO
+    ,
+    % ENTERPRISE
+    ,
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % 
+    ,
+    % 
+    ,
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % kioskBasic
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % kioskStandard
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % kioskPro
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % kioskEnterprise
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % kioskBasic
+    ,
+    % kioskStandard
+    ,
+    % kioskPro
+    ,
+    % kioskEnterprise
+    ,
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % kioskBasic
+    ,
+    % kioskStandard
+    ,
+    % kioskPro
+    ,
+    % kioskEnterprise
+    ,
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % kioskBasic
+    0,1,0,0,0,
+    % kioskStandard
+    0,0,1,0,0,
+    % kioskPro
+    0,0,0,1,0,
+    % kioskEnterprise
+    0,0,0,0,1,
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % kioskBasic
+    0,0,0,0,
+    % kioskStandard
+    0,0,0,0,
+    % kioskPro
+    0,0,0,0,
+    % kioskEnterprise
+    0,0,0,0,
+]);

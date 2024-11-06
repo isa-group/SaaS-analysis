@@ -1,18 +1,23 @@
-FEATURES = {dataSources,dataSyncFrequency,historicalData,warehouseDataStorage,databoxInteractions,sqlIntegrations,googleSheetsIntegration,thirdPartyIntegrations,pushCustomDataToAPI,databoards,databoardDesigner,queryBuilder,dataCalculations,customDateRanges,databoardTemplates,customAccountDataboardTemplates,fiscalCalendars,goals,scorecards,alerts,shareableDataboardLinks,slackIntegration,streamToTv,mobileAppAccess,removeDataboxBrandingOnDataboards,whiteLabeling,databoardLoops,scheduleDataboardSnapshots,databoardEmbedding,reports,reportsEditor,simpleSlideTypes,advancedSlideTypes,downloadAsPDF,upcommingReports,upcommingArchiveReports,sendToEmail,automatedSends,automatedReminders,dataStories,removableBrandingOnReports,singleSignOn,prioritySupport};
-USAGE_LIMITS = {dataSourcesLimit,historicalDataThreshold,warehouseStorageLimit,databoardsLimit,queryBuilderLimit,usersLimit};
-PLANS = {STARTER,PROFESSIONAL,PERFORMER};
-ADDONS = {brandingAndWhiteLabelling};
+num_features = 32;
+num_usage_limits = 6;
+num_plans = 3;
+num_addons = 1;
+
+features = ["dataSources", "dataSyncFrequency", "historicalData", "warehouseDataStorage", "databoxInteractions", "sqlIntegrations", "googleSheetsIntegration", "thirdPartyIntegrations", "pushCustomDataToAPI", "databoards", "databoardDesigner", "queryBuilder", "dataCalculations", "customDateRanges", "databoardTemplates", "customAccountDataboardTemplates", "fiscalCalendars", "goals", "scorecards", "alerts", "shareableDataboardLinks", "slackIntegration", "streamToTv", "mobileAppAccess", "removeDataboxBrandingOnDataboards", "whiteLabeling", "databoardLoops", "scheduleDataboardSnapshots", "databoardEmbedding", "reports", "reportsEditor", "simpleSlideTypes", "advancedSlideTypes", "downloadAsPDF", "upcommingReports", "upcommingArchiveReports", "sendToEmail", "automatedSends", "automatedReminders", "dataStories", "removableBrandingOnReports", "singleSignOn", "prioritySupport"];
+usage_limits = ["dataSourcesLimit", "historicalDataThreshold", "warehouseStorageLimit", "databoardsLimit", "queryBuilderLimit", "usersLimit"];
+plans = ["STARTER", "PROFESSIONAL", "PERFORMER"];
+addons = ["brandingAndWhiteLabelling"];
 
 plans_prices = [0.0,169.0,289.0];
 addons_prices = [250.0];
 
 plans_features = array2d(PLANS, FEATURES, [
     % STARTER
-    1,1,1,1,1,0,0,1,1,1,1,0,0,0,1,1,0,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,
+    1,1,1,1,1,0,0,1,1,1,1,0,0,0,1,1,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,1,1,1,1,1,0,0,0,0,0,
     % PROFESSIONAL
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,
     % PERFORMER
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % STARTER
@@ -25,22 +30,22 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % dataSourcesLimit
-    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % historicalDataThreshold
-    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % warehouseStorageLimit
-    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % databoardsLimit
-    0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % queryBuilderLimit
-    0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % usersLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [
     % brandingAndWhiteLabelling
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
     % brandingAndWhiteLabelling
@@ -57,5 +62,5 @@ addons_available_for = array2d(ADDONS, PLANS, [
 
 addons_depends_on = array2d(ADDONS, ADDONS, [
     % brandingAndWhiteLabelling
-    0,0
+    0
 ]);

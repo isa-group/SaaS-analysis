@@ -1,20 +1,25 @@
-FEATURES = {publicRepositories,privateRepositories,githubActions,githubPackages,codeReviews,pullRequests,draftPullRequests,codeOwners,issues,projects,milestones,pagesAndWikis,repositoryInsights,teamDiscussions,advancedVulnerabilityScanning,automatedSecurityUpdates,githubSecurityAdvisories,securityAlerts,publicTokenScanning,collaboratorsForPublicRepositories,collaboratorsForPrivateRepositories,organizationAndTeamManagement,roleBasedAccessControl,auditLog,githubConnect,singleSignOn,ldap,protectedBranches,requiredReviews,requiredStatusChecks,githubApps,statusChecks,preReceiveHooks,githubCloud,selfHostedDeployment,emailSupport,phoneSupport,invoiceBilling};
-USAGE_LIMITS = {githubOnlyForPublicRepositoriesFreeTier,githubOnlyForPublicRepositoriesProTier,githubOnlyForPublicRepositoriesTeamTier,githubOnlyForPublicRepositoriesEnterpriseTier,githubActionsQuota,diskSpaceForGithubPackages,collaboratorsForPrivateRepositoriesLimit};
-PLANS = {FREE,PRO,TEAM,ENTERPRISE};
-ADDONS = {premiumSupport,enterpriseServer,enterpriseCloud};
+num_features = 34;
+num_usage_limits = 7;
+num_plans = 4;
+num_addons = 3;
+
+features = ["publicRepositories", "privateRepositories", "githubActions", "githubPackages", "codeReviews", "pullRequests", "draftPullRequests", "codeOwners", "issues", "projects", "milestones", "pagesAndWikis", "repositoryInsights", "teamDiscussions", "advancedVulnerabilityScanning", "automatedSecurityUpdates", "githubSecurityAdvisories", "securityAlerts", "publicTokenScanning", "collaboratorsForPublicRepositories", "collaboratorsForPrivateRepositories", "organizationAndTeamManagement", "roleBasedAccessControl", "auditLog", "githubConnect", "singleSignOn", "ldap", "protectedBranches", "requiredReviews", "requiredStatusChecks", "githubApps", "statusChecks", "preReceiveHooks", "githubCloud", "selfHostedDeployment", "emailSupport", "phoneSupport"];
+usage_limits = ["githubOnlyForPublicRepositoriesFreeTier", "githubOnlyForPublicRepositoriesProTier", "githubOnlyForPublicRepositoriesTeamTier", "githubOnlyForPublicRepositoriesEnterpriseTier", "githubActionsQuota", "diskSpaceForGithubPackages", "collaboratorsForPrivateRepositoriesLimit"];
+plans = ["FREE", "PRO", "TEAM", "ENTERPRISE"];
+addons = ["premiumSupport", "enterpriseServer", "enterpriseCloud"];
 
 plans_prices = [0.0,7.0,9.0,21.0];
-addons_prices = [0.0,0.0,0.0];
+addons_prices = [10.0,100.0,1000.0];
 
 plans_features = array2d(PLANS, FEATURES, [
     % FREE
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,0,0,0,1,1,1,1,1,0,1,0,1,0,
     % PRO
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,1,0,0,0,1,1,1,1,1,0,1,0,1,0,
     % TEAM
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,0,1,0,1,0,
     % ENTERPRISE
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % FREE
@@ -29,28 +34,28 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % githubOnlyForPublicRepositoriesFreeTier
-    0,0,0,0,0,0,1,1,0,0,0,1,1,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,1,1,0,0,0,1,1,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % githubOnlyForPublicRepositoriesProTier
-    0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % githubOnlyForPublicRepositoriesTeamTier
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % githubOnlyForPublicRepositoriesEnterpriseTier
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % githubActionsQuota
-    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % diskSpaceForGithubPackages
-    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % collaboratorsForPrivateRepositoriesLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [
     % premiumSupport
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,
     % enterpriseServer
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,
     % enterpriseCloud
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
     % premiumSupport

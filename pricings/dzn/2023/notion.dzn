@@ -1,43 +1,48 @@
-FEATURES = {pages,blocks,fileUploads,pageHistory,basicPageAnalytics,advancedPageAnalytics,collaborativeWorkspace,guests,notionSiteDomain,permissionGroups,openTeamSpaces,closeTeamSpaces,privateTeamSpaces,advancedTeamSpacePermissions,syncDatabases,dynamicLinkPreviews,slackIntegration,zapierIntegration,publicApi,basicAutomations,customDatasetAutomations,exportEntireWorkspaceAsHTML,exportEntireWorkspaceAsMarkdown,exportEntireWorkspaceAsCSV,exportEntireWorkspaceAsPDF,samlSso,userProvisioning,advancedWorkspaceSecurityControls,advancedTeamspaceSecurityControls,workspaceAnalytics,granularAdminRoles,auditLog,adminContentSearch,domainManagement,workspaceConsolidation,managedUsersDashboard,managedUsersControls,securityIntegrations,complianceIntegrations,hipaaCompliance,guestInviteRequests,prioritySupport,customerSuccessManager};
-USAGE_LIMITS = {guestsLimit,fileUploadsLimit,pageHistoryThreshold,syncDatabasesLimit,rowLimitPerSyncedDatabase};
-PLANS = {FREE,PLUS,BUSINESS,ENTERPRISE};
-ADDONS = {};
+num_features = 28;
+num_usage_limits = 5;
+num_plans = 4;
+num_addons = 0;
 
-plans_prices = [0.0,8.0,18.0,0.0];
+features = ["pages", "blocks", "fileUploads", "pageHistory", "basicPageAnalytics", "advancedPageAnalytics", "collaborativeWorkspace", "guests", "notionSiteDomain", "permissionGroups", "openTeamSpaces", "closeTeamSpaces", "privateTeamSpaces", "advancedTeamSpacePermissions", "syncDatabases", "dynamicLinkPreviews", "slackIntegration", "zapierIntegration", "publicApi", "basicAutomations", "customDatasetAutomations", "exportEntireWorkspaceAsHTML", "exportEntireWorkspaceAsMarkdown", "exportEntireWorkspaceAsCSV", "exportEntireWorkspaceAsPDF", "samlSso", "userProvisioning", "advancedWorkspaceSecurityControls", "advancedTeamspaceSecurityControls", "workspaceAnalytics", "granularAdminRoles", "auditLog", "adminContentSearch", "domainManagement", "workspaceConsolidation", "managedUsersDashboard", "managedUsersControls", "securityIntegrations", "complianceIntegrations", "hipaaCompliance", "guestInviteRequests", "prioritySupport", "customerSuccessManager"];
+usage_limits = ["guestsLimit", "fileUploadsLimit", "pageHistoryThreshold", "syncDatabasesLimit", "rowLimitPerSyncedDatabase"];
+plans = ["FREE", "PLUS", "BUSINESS", "ENTERPRISE"];
+addons = [];
+
+plans_prices = [0.0,8.0,18.0,10000000000.0];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % FREE
-    1,1,1,0,1,0,1,1,0,1,1,1,0,0,1,1,1,1,1,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,1,1,0,1,0,1,1,0,1,1,1,0,0,1,1,1,1,1,1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % PLUS
-    1,1,1,1,1,0,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,1,1,0,1,0,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % BUSINESS
-    1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % ENTERPRISE
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % FREE
     10,5,7,1,100,
     % PLUS
-    100,.inf,30,.inf,20000,
+    100,10000000,30,10000000,20000,
     % BUSINESS
-    250,.inf,90,.inf,20000,
+    250,10000000,90,10000000,20000,
     % ENTERPRISE
-    250,.inf,.inf,.inf,20000
+    250,10000000,10000000,10000000,20000
 ]);
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % guestsLimit
-    0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % fileUploadsLimit
-    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % pageHistoryThreshold
-    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % syncDatabasesLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % rowLimitPerSyncedDatabase
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

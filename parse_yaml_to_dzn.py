@@ -11,7 +11,7 @@ def _make_request(prompt:str) -> str:
     
     genai.configure(api_key=os.getenv('GOOGLE_AI_STUDIO'))
     model = 'gemini-1.5-flash'
-    config = GenerationConfig(temperature=0.0)
+    config = GenerationConfig(temperature=0.0, max_output_tokens=50000)
     response = genai.GenerativeModel(model, generation_config=config).generate_content(contents=[prompt])
     
     return response.text
@@ -126,10 +126,15 @@ def _generate_prompt(pricing: str):
     Tu tarea, por tanto, consiste en trasformar de este tipo de YAMLs a esta estructura de archivo .dzn, que debes devolver como respuesta:
 
     ```
-    FEATURES = {{feature1, feature2, feature3, feature4}};
-    USAGE_LIMITS = {{limitOfFeature1,limitOfFeature4}};
-    PLANS = {{BASIC, PRO}};
-    ADDONS = {{feature3Addon,feature4addon}};
+    num_features = 4;
+    num_usage_limits = 2;
+    num_plans = 2;
+    num_addons = 2;
+
+    features = ["feature1", "feature2", "feature3", "feature4"];
+    usage_limits = ["limitOfFeature1", "limitOfFeature4"];
+    plans = ["BASIC", "PRO"];
+    addons = ["feature3Addon", "feature4addon"];
 
     plans_prices = [0.0,35.0];
     addons_prices = [15.95,20.95];
@@ -185,24 +190,33 @@ def _generate_prompt(pricing: str):
         % feature4Addon
         1,0
     ]);
+    ```
 
     Te explico a continuación a qué corresponde cada campo para que sepas como construir la salida:
 
-    - FEATURES: Listado de nombres de features, escritos sin comillas y entre llaves separados por comas.
+    - num_features: Número entero que indica el número de features que tiene el pricing.
 
-    - USAGE_LIMITS: Listado de nombres de límites de uso, escritos sin comillas y entre llaves separados por comas.
+    - num_usage_limits: Número entero que indica el número de usage limits que tiene el pricing.
 
-    - PLANS: Listado de nombres de planes, escritos sin comillas y entre llaves separados por comas.
+    - num_plans: Número entero que indica el número de planes que tiene el pricing.
 
-    - ADDONS: Listado de nombres de addons, escritos sin comillas y entre llaves separados por comas.
+    - num_addons: Número entero que indica el número de add-ons que tiene el pricing.
 
-    - plan_prices: listado de precios de cada plan, escritos entre corchetes y como floats. Cada elemento debe estar en la posición correspondiente a su plan en el listado PLANS.
+    - features: Listado de strings con los nombres de features, escritos con comillas dobles y entre corchetes separados por comas.
+
+    - usage_limits: Listado de strings con los nombres de usage_limits, escritos con comillas dobles y entre corchetes separados por comas.
+
+    - plans: Listado de strings con los nombres de planes, escritos con comillas dobles y entre corchetes separados por comas.
+
+    - addons: Listado de strings con los nombres de add-ons, escritos con comillas dobles y entre corchetes separados por comas.
+
+    - plan_prices: listado de precios de cada plan, escritos entre corchetes y como floats. Cada elemento debe estar en la posición correspondiente a su plan en el listado PLANS. IMPORTANTE: tanto para los precios de planes como de addons, si el precio que aparece en Pricing2Yaml es una cadena, el valor del precio i del array debe ser 10 veces superior al precio i-1.
 
     - addons_prices: listado de precios de cada add-on, escritos entre corchetes y como floats. Cada elemento debe estar en la posición correspondiente a su plan en el listado ADDONS.
 
     - plans_features: array bidimensional con dimensiones PLANSxFEATURES donde la posición (i,j) indica con 0 o 1 si la feature j está disponible en el plan i. Para facilitar la lectura, debes indicar con comentarios el nombre de un plan antes de poner sus features permitidas. IMPORTANTE: de ahora en adelante, debes considerar que una feature esta incluida en un plan (i.e. su valor en el array es 1) si su value, o defaultValue en ausencia de éste, es true, o si su valueType es TEXT. En caso contrario, el valor del array debe ser 0.
 
-    - plans_usage_limits: array bidimensional con dimensiones PLANSxUSAGE_LIMITS donde la posición (i,j) indica con un número natural o 0 el valor del usage-limit j en el plan i. Para facilitar la lectura, debes indicar con comentarios el nombre de un plan antes de poner los valores de los usage limits.
+    - plans_usage_limits: array bidimensional con dimensiones PLANSxUSAGE_LIMITS donde la posición (i,j) indica con un número natural o 0 el valor del usage-limit j en el plan i. Para facilitar la lectura, debes indicar con comentarios el nombre de un plan antes de poner los valores de los usage limits. IMPORTANTE: de ahora en adelante, si el valor de un límite de uso es `.inf`, el valor que debes poner en el array para ese límite de uso deber ser: 10000000.
 
     - linked_features: array bidimensional con dimensiones USAGE_LIMITSxFEATURES donde la posición (i,j) indica con 0 o 1 si la feature j está vinculada al usage limit i. Para facilitar la lectura, debes indicar con comentarios el nombre de un usage limit antes de poner los valores para cada feature.
 

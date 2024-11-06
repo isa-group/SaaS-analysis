@@ -1,18 +1,23 @@
-FEATURES = {socialAccounts, instagram, facebook, twitter, linkedin, pinterest, pinterestBoards, schedulePosts, tailoredPostComposer, calendarView, customVideoThumpnails, instagramFirstComment, instagramHashtagManager, instagramStories, instagramShopGrid, draftPosts, postsReport, inviteAdditionalUsers, assignAccessAndPermissions, approvalWorkflow, browserExtension, mobileApps, thirdPartyIntegrations, twoFactorAuthentication, selfServiceKnowledgeBase, socialMediaSupport, emailSupport, bufferCommunity};
-USAGE_LIMITS = {socialAccountsLimit,postsPerScheduledQueuePerSocialAccountLimit,usersLimit,postsReportTemporalThreshold};
-PLANS = {PRO, PREMIUM, BUSINESS};
-ADDONS = {};
+num_features = 19;
+num_usage_limits = 4;
+num_plans = 3;
+num_addons = 0;
+
+features = ["socialAccounts", "instagram", "facebook", "twitter", "linkedin", "pinterest", "pinterestBoards", "schedulePosts", "tailoredPostComposer", "calendarView", "customVideoThumpnails", "instagramFirstComment", "instagramHashtagManager", "instagramStories", "instagramShopGrid", "draftPosts", "postsReport", "inviteAdditionalUsers", "assignAccessAndPermissions"];
+usage_limits = ["socialAccountsLimit", "postsPerScheduledQueuePerSocialAccountLimit", "usersLimit", "postsReportTemporalThreshold"];
+plans = ["PRO", "PREMIUM", "BUSINESS"];
+addons = [];
 
 plans_prices = [15.0,65.0,99.0];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % PRO
-    1,1,1,1,1,1,0,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,0,1,1,1,1,1,0,0,0,0,0,0,0,
     % PREMIUM
-    1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,1,
     % BUSINESS
-    1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % PRO
@@ -25,13 +30,13 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % socialAccountsLimit
-    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % postsPerScheduledQueuePerSocialAccountLimit
-    0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,
     % usersLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % postsReportTemporalThreshold
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

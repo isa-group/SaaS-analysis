@@ -1,18 +1,23 @@
-FEATURES = {freeTemplates,freeLogos,freeFonts,freePhotos,freeGraphics,premiumStockImages,createDesignsWithCustomDimesions,exportDesignsAsPDF,exportDesignsAsPNG,exportDesignsAsJPG,builtInSocialSharing,presentationMode,oneClickDesignResizing,createCustomTemplates,uploadYourPhotosAndFonts,downloadDesignsWithTransparentBackground,customizeDownloadQuality,exportDesignsAsAnimatedGIF,exportDesignsAsMP4,teamSharing,shareView,editAccessToDesigns,addCommentsToDesigns,bluitInCommenting,approvalsWorkflow,brandKit,brandControls,advancedTemplateLocking,cloudStorage,folders,twoFactorAuthentication,singleSignOn,24_7support};
-USAGE_LIMITS = {brandKitUnits,cloudStorageLimit,foldersLimit};
-PLANS = {FREE,PRO,ENTERPRISE};
-ADDONS = {};
+num_features = 25;
+num_usage_limits = 3;
+num_plans = 3;
+num_addons = 0;
 
-plans_prices = [0.0,12.95,"Contact Sales"];
+features = ["freeTemplates", "freeLogos", "freeFonts", "freePhotos", "freeGraphics", "premiumStockImages", "createDesignsWithCustomDimesions", "exportDesignsAsPDF", "exportDesignsAsPNG", "exportDesignsAsJPG", "builtInSocialSharing", "presentationMode", "oneClickDesignResizing", "createCustomTemplates", "uploadYourPhotosAndFonts", "downloadDesignsWithTransparentBackground", "customizeDownloadQuality", "exportDesignsAsAnimatedGIF", "exportDesignsAsMP4", "teamSharing", "shareView", "editAccessToDesigns", "addCommentsToDesigns", "bluitInCommenting", "approvalsWorkflow", "brandKit", "brandControls", "advancedTemplateLocking", "cloudStorage", "folders", "24/7support", "twoFactorAuthentication", "singleSignOn"];
+usage_limits = ["brandKitUnits", "cloudStorageLimit", "foldersLimit"];
+plans = ["FREE", "PRO", "ENTERPRISE"];
+addons = [];
+
+plans_prices = [0.0,12.95,10.0];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % FREE
-    1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,0,0,0,1,1,1,0,
+    1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,1,1,0,1,0,
     % PRO
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,
     % ENTERPRISE
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % FREE
@@ -25,11 +30,11 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % brandKitUnits
-    0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,
     % cloudStorageLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,
     % foldersLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

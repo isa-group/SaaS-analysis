@@ -1,18 +1,23 @@
-FEATURES = {guides, hotspots, onboardingChecklist, resourceCenters, npsSurveys, engagementAnalytics, userIdentification, userTracking, adoptionTracker, audienceSegmentation, customAttributes, userSpecificAnalytics, customEvents, weeklyReports, errorLogging, customizableThemes, dynamicMaterialPersonalization, removeUserGuidingBranding, customCSS, materialScheduling, appearanceCustomization, googleAnalytics, webhooks, segment, mixpanel, zapier, hubspot, intercom, slack, woopra, knowledBaseIntegrations, roleManagement, permissionManagement, teams, domains, employeeOnboardingModule, troubleShooterAccess, helpCenter, userGuidingUniversity, emailSupport, liveChatSupport, dedicatedCustomerSuccessManager, implementationSupport};
-USAGE_LIMITS = {activeGuidesLimit, activeHotspotsLimit, activeOnboardingChecklistsLimit, activeResourceCentersLimit, activeUsersLimit, teamMembersLimit, domainsLimit};
-PLANS = {BASIC, PROFESSIONAL, CORPORATE};
-ADDONS = {};
+num_features = 28;
+num_usage_limits = 7;
+num_plans = 3;
+num_addons = 0;
+
+features = ["guides", "hotspots", "onboardingChecklist", "resourceCenters", "npsSurveys", "engagementAnalytics", "userIdentification", "userTracking", "adoptionTracker", "audienceSegmentation", "customAttributes", "userSpecificAnalytics", "customEvents", "weeklyReports", "errorLogging", "customizableThemes", "dynamicMaterialPersonalization", "removeUserGuidingBranding", "customCSS", "materialScheduling", "appearanceCustomization", "googleAnalytics", "webhooks", "segment", "mixpanel", "zapier", "hubspot", "intercom"];
+usage_limits = ["activeGuidesLimit", "activeHotspotsLimit", "activeOnboardingChecklistsLimit", "activeResourceCentersLimit", "activeUsersLimit", "teamMembersLimit", "domainsLimit"];
+plans = ["BASIC", "PROFESSIONAL", "CORPORATE"];
+addons = [];
 
 plans_prices = [99.0,399.0,699.0];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % BASIC
-    1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0,
+    1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,1,1,0,1,0,0,1,1,1,1,0,0,1,
     % PROFESSIONAL
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
     % CORPORATE
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % BASIC
@@ -25,19 +30,19 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % activeGuidesLimit
-    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % activeHotspotsLimit
-    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % activeOnboardingChecklistsLimit
-    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % activeResourceCentersLimit
-    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % activeUsersLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % teamMembersLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % domainsLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

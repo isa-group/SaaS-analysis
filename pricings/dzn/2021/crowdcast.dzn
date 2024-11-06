@@ -1,43 +1,50 @@
-FEATURES = {liveStreaming,transactionFee,hdLiveVideoWithRecording,multiSessionEvents,rtmpSudio,presentOnManyScreens,emailSupport,chatSupport,patreonIntegration,stripeIntegration,eventAnalytics,sessionAnalytics,zapierIntegration,convertKitIntegration,dripIntegration,exportEmailAddresses,exportChat,exportData,multistreaming,customRegistrationFields};
-USAGE_LIMITS = {liveAttendeesLimit,liveHoursPerMonthLimit,sessionsLimit,multistreamLocationsLimit,screensLimit};
-PLANS = {STARTER,LITE,PRO,BUSINESS};
-ADDONS = {};
+num_features = 17;
+num_usage_limits = 6;
+num_plans = 4;
+num_addons = 0;
+
+features = ["liveStreaming", "transactionFee", "hdLiveVideoWithRecording", "multiSessionEvents", "rtmpSudio", "presentOnManyScreens", "emailSupport", "chatSupport", "patreonIntegration", "stripeIntegration", "eventAnalytics", "sessionAnalytics", "zapierIntegration", "convertKitIntegration", "dripIntegration", "exportEmailAddresses", "exportChat"];
+usage_limits = ["liveAttendeesLimit", "liveHoursPerMonthLimit", "sessionsLimit", "multistreamLocationsLimit", "screensLimit", "exportData"];
+plans = ["STARTER", "LITE", "PRO", "BUSINESS"];
+addons = [];
 
 plans_prices = [29.0,49.0,89.0,199.0];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % STARTER
-    1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,
     % LITE
-    1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,0,0,
+    1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,
     % PRO
-    1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,
     % BUSINESS
-    1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1
+    1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % STARTER
-    50,5,2,1,4,
+    50,5,2,1,4,0,
     % LITE
-    100,10,2,1,4,
+    100,10,2,1,4,0,
     % PRO
-    250,20,2,1,6,
+    250,20,2,1,6,0,
     % BUSINESS
-    1000,40,6,3,6
+    1000,40,6,3,6,0
 ]);
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % liveAttendeesLimit
-    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % liveHoursPerMonthLimit
-    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % sessionsLimit
-    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % multistreamLocationsLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
     % screensLimit
-    1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,
+    % exportData
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

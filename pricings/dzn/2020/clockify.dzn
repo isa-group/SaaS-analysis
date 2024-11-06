@@ -1,20 +1,25 @@
-FEATURES = {unlimitedTracking,unlimitedProjects,unlimitedReports,apps,integrations,emailSupport,chatSupport,api,hideTimeFromUsers,lockTimesheets,requiredFields,timeRounding,timeAudit,brandedReports,targetsAndReminders,addTimeForOthers,projectTemplates,alerts,bulkEdit,hidePages,automaticLock,phoneSupport,singleSignOn,customSubdomain,controlAccounts,customFields,laborCostAndProfit,timeApproval,managerRole,forceTimer,scheduledReports};
-USAGE_LIMITS = {trackingLimit,projectsLimit,reportsLimit};
-PLANS = {FREE,PLUS,PREMIUM,ENTERPRISE};
-ADDONS = {};
+num_features = 24;
+num_usage_limits = 3;
+num_plans = 4;
+num_addons = 0;
+
+features = ["unlimitedTracking", "unlimitedProjects", "unlimitedReports", "apps", "integrations", "emailSupport", "chatSupport", "api", "hideTimeFromUsers", "lockTimesheets", "requiredFields", "timeRounding", "timeAudit", "brandedReports", "targetsAndReminders", "addTimeForOthers", "projectTemplates", "alerts", "bulkEdit", "hidePages", "automaticLock", "phoneSupport", "singleSignOn", "customSubdomain", "controlAccounts", "customFields", "laborCostAndProfit", "timeApproval", "managerRole", "forceTimer", "scheduledReports"];
+usage_limits = ["trackingLimit", "projectsLimit", "reportsLimit"];
+plans = ["FREE", "PLUS", "PREMIUM", "ENTERPRISE"];
+addons = [];
 
 plans_prices = [0.0,9.99,29.99,9.99];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % FREE
-    1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % PLUS
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % PREMIUM
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,
     % ENTERPRISE
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % FREE
@@ -29,11 +34,11 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % trackingLimit
-    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % projectsLimit
-    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % reportsLimit
-    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

@@ -1,0 +1,58 @@
+num_features = 34;
+num_usage_limits = 5;
+num_plans = 4;
+num_addons = 0;
+
+features = ["contacts", "audiences", "basicSegmentation", "advancedSegmentation", "tags", "contactProfiles", "mailchipMobileApp", "audienceDashboard", "surveys", "behavioralTargeting", "campainEngagement", "purchaseBehavior", "appEngagement", "siteViewsWebsiteEngagement", "pageViewsWebsiteEngagement", "behaviorBasedAutomationSeries", "predictedDemographics", "customerLifetimeValue", "purchaseLikelihood", "lookalikeAudienceFinder", "addressFinder", "contentStudio", "basicTemplates", "allPrebuiltTemplates", "removeMailchimpFooter", "customCodedTemplates", "publishDesignsFromMailchimp", "downloadDesigns", "buildAndPublishWebsite", "buyButton", "siteAnalytics", "freeMailchimpDomain", "buyCustomDomain", "connectAnExistingDomain", "emailMarketing", "landingPages", "shoppableLandingPages"];
+usage_limits = ["contactsLimit", "audiencesLimit", "seatsLimit", "appEngagementThreshold", "monthlyEmailSends"];
+plans = ["FREE", "ESSENTIALS", "STANDARD", "PREMIUM"];
+addons = [];
+
+plans_prices = [0.0,9.99,14.99,299.0];
+addons_prices = [];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,1,0,1,1,1,0,0,0,1,1,1,
+    % ESSENTIALS
+    1,1,1,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,1,0,0,1,0,1,1,1,0,0,0,1,1,1,
+    % STANDARD
+    1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1,
+    % PREMIUM
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    2000,1,1,1,10000,
+    % ESSENTIALS
+    50000,3,3,1,500000,
+    % STANDARD
+    100000,5,5,3,1200000,
+    % PREMIUM
+    200000,10000000,10000000,18,3000000
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % contactsLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % audiencesLimit
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % seatsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % appEngagementThreshold
+    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % monthlyEmailSends
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);

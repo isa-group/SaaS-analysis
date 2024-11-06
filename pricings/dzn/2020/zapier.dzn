@@ -1,22 +1,27 @@
-FEATURES = {tasks, zaps, singleStepZaps, multiStepZaps, premiumApps, filters, formatters, connectionsViaWebhooks, paths, autoReplay, folderPermissions, premierSupport, sharedAppConnections, sharedWorkspace, advancedAdminPermissions, userProvisioning, appsRestrictions, samlSingleSignOn, customDataRetention, accountConsolidation, liveTrainingWithCustomerSuccess};
-USAGE_LIMITS = {usersLimit, tasksLimit, zapsLimit, updateTimeThreshold, premiumAppsLimit};
-PLANS = {FREE, STARTER, PROFESSIONAL, TEAM, COMPANY};
-ADDONS = {};
+num_features = 18;
+num_usage_limits = 5;
+num_plans = 5;
+num_addons = 0;
+
+features = ["tasks", "zaps", "singleStepZaps", "multiStepZaps", "premiumApps", "filters", "formatters", "connectionsViaWebhooks", "paths", "autoReplay", "folderPermissions", "premierSupport", "sharedAppConnections", "sharedWorkspace", "advancedAdminPermissions", "userProvisioning", "appsRestrictions", "samlSingleSignOn"];
+usage_limits = ["usersLimit", "tasksLimit", "zapsLimit", "updateTimeThreshold", "premiumAppsLimit"];
+plans = ["FREE", "STARTER", "PROFESSIONAL", "TEAM", "COMPANY"];
+addons = [];
 
 plans_prices = [0.0,24.99,61.25,373.75,748.75];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % FREE
-    1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % STARTER
-    1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,
     % PROFESSIONAL
-    1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,
     % TEAM
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,
     % COMPANY
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % FREE
@@ -24,24 +29,24 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % STARTER
     1,750,20,15,3,
     % PROFESSIONAL
-    1,2000,inf,2,inf,
+    1,2000,10000000,2,10000000,
     % TEAM
-    inf,50000,inf,1,inf,
+    10000000,50000,10000000,1,10000000,
     % COMPANY
-    inf,100000,inf,1,inf
+    10000000,100000,10000000,1,10000000
 ]);
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % usersLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % tasksLimit
-    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % zapsLimit
-    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % updateTimeThreshold
-    1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % premiumAppsLimit
-    0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

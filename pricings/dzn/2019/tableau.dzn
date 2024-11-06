@@ -1,18 +1,23 @@
-FEATURES = {webAccess,mobileAccess,embeddedContent,interactWithVisualizations,interactWithDashboards,createCustomViews,shareCustomViews,downloadVisualizationAsImages,downloadSummaryData,downloadFullData,commentOnDashboard,commentOnVisualization,createASubscriptionForYourself,receiveDataDrivenAlerts,createSubscriptionsForOthers,createDataDrivenAlerts,editExistingWorkbooks,editExistingVisualizations,createAndPublishNewWorkbookFromExistingDataSource,askData,createAndPublishNewWorkbookFromNewDataSources,createAndPublishNewDataSources,createNewWorkbooksBasedOnPreBuiltDashboardStarters,createNewDataFlows,editDataFlow,exportData,publishFlows,runFlows,scheduleFlows,monitorFlowPerformance,monitorFlowHealth,manageUserPermissions,manageContent,certifyDataSources,serverAdministration};
-USAGE_LIMITS = {};
-PLANS = {VIEWER,EXPLORER,CREATOR};
-ADDONS = {};
+num_features = 24;
+num_usage_limits = 0;
+num_plans = 3;
+num_addons = 0;
+
+features = ["webAccess", "mobileAccess", "embeddedContent", "interactWithVisualizations", "interactWithDashboards", "createCustomViews", "shareCustomViews", "downloadVisualizationAsImages", "downloadSummaryData", "downloadFullData", "commentOnDashboard", "commentOnVisualization", "createASubscriptionForYourself", "receiveDataDrivenAlerts", "createSubscriptionsForOthers", "createDataDrivenAlerts", "editExistingWorkbooks", "editExistingVisualizations", "createAndPublishNewWorkbookFromExistingDataSource", "askData", "createAndPublishNewWorkbookFromNewDataSources", "createAndPublishNewDataSources", "createNewWorkbooksBasedOnPreBuiltDashboardStarters", "createNewDataFlows"];
+usage_limits = [];
+plans = ["VIEWER", "EXPLORER", "CREATOR"];
+addons = [];
 
 plans_prices = [15.0,42.0,70.0];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % VIEWER
-    1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,
     % EXPLORER
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,
     % CREATOR
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % VIEWER
@@ -20,32 +25,26 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % EXPLORER
     ,
     % CREATOR
-    ,
+    
 ]);
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
-    % 
-    ,
+    
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [
-    % 
-    ,
+    
 ]);
 addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
-    % 
-    ,
+    
 ]);
 addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
-    % 
-    ,
+    
 ]);
 addons_available_for = array2d(ADDONS, PLANS, [
-    % 
-    ,
+    
 ]);
 
 addons_depends_on = array2d(ADDONS, ADDONS, [
-    % 
-    ,
+    
 ]);

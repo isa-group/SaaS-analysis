@@ -1,9 +1,14 @@
-FEATURES = {posts,pages,workspaces,advancedFeatures,realTimeCustomerSupport};
-USAGE_LIMITS = {usersLimit,postsLimit,pagesLimit,workspacesLimit};
-PLANS = {STARTER,PREMIUM,ENTERPRISE};
-ADDONS = {};
+num_features = 5;
+num_usage_limits = 4;
+num_plans = 3;
+num_addons = 0;
 
-plans_prices = [24.0,99.0,0.0];
+features = ["posts", "pages", "workspaces", "advancedFeatures", "realTimeCustomerSupport"];
+usage_limits = ["usersLimit", "postsLimit", "pagesLimit", "workspacesLimit"];
+plans = ["STARTER", "PREMIUM", "ENTERPRISE"];
+addons = [];
+
+plans_prices = [24.0,99.0,1000000000000.0];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [

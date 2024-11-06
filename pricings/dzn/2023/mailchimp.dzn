@@ -1,0 +1,106 @@
+num_features = 46;
+num_usage_limits = 9;
+num_plans = 4;
+num_addons = 4;
+
+features = ["ownerRole", "adminRole", "authorRole", "viewerRole", "managerRole", "contacts", "audiences", "basicSegmentation", "advancedSegmentation", "contactProfiles", "tags", "inbox", "mailchipMobileApp", "audienceDashboard", "surveys", "predictedDemographics", "customerLifetimeValue", "purchaseLikelihood", "addressFinder", "campainEngagement", "purchaseBehavior", "appEngagement", "siteViewsWebsiteEngagement", "pageViewsWebsiteEngagement", "contentStudio", "basicTemplates", "prebuiltTemplates", "customCodedTemplates", "removeMailchimpFooter", "publishDesignsFromMailchimp", "downloadDesigns", "emailMarketing", "emailScheduling", "landingPages", "socialPosting", "socialPostScheduling", "campaignManager", "postCards", "popupForms", "retargetingAds", "marketingCalendar", "singleStepAutomations", "multiStepAutomations", "customerJourneyBuilder", "multipleStartingPoints", "branchingPoints", "smsMarketing", "mmsMarketing", "autoVetting", "standardVetting", "sendSmsFromCustomerJourneyBuiler", "sendMmsFromCustomerJourneyBuiler"];
+usage_limits = ["contactsLimit", "audiencesLimit", "seatsLimit", "appEngagementThreshold", "monthlyEmailSends", "dailyEmailSends", "standardVettingIncludedCredits", "personalizedOnboardingSessionsLimit", "transactionalEmailsLimit"];
+plans = ["FREE", "ESSENTIALS", "STANDARD", "PREMIUM"];
+addons = ["transactionalEmailsAddOn", "smsAndMmsMarketingAddOnForEssentialsTier", "smsAndMmsMarketingAddOnForStandardTier", "smsAndMmsMarketingAddOnForPremiumTier"];
+
+plans_prices = [0.0,9.99,14.99,299.0];
+addons_prices = [10.0,100.0,1000.0,10000.0];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,0,0,0,0,1,1,1,0,1,1,1,1,1,1,0,0,0,0,1,1,1,1,0,1,1,0,0,0,1,0,1,0,1,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,
+    % ESSENTIALS
+    1,1,0,0,0,1,1,1,0,1,1,1,1,1,1,0,0,0,0,1,1,1,1,0,1,1,1,0,0,1,0,1,1,1,1,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,
+    % STANDARD
+    1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,
+    % PREMIUM
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    500,1,1,1,2500,500,5000,0,0,
+    % ESSENTIALS
+    50000,3,3,1,500000,10000000,5000,0,0,
+    % STANDARD
+    100000,5,5,3,1200000,10000000,5000,1,0,
+    % PREMIUM
+    10000000,10000000,10000000,18,10000000,10000000,10000000,4,0
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % contactsLimit
+    1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % audiencesLimit
+    0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % seatsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % appEngagementThreshold
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % monthlyEmailSends
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % dailyEmailSends
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % standardVettingIncludedCredits
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,
+    % personalizedOnboardingSessionsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % transactionalEmailsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % transactionalEmailsAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+    % smsAndMmsMarketingAddOnForEssentialsTier
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,
+    % smsAndMmsMarketingAddOnForStandardTier
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,0,0,
+    % smsAndMmsMarketingAddOnForPremiumTier
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,1,0
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % transactionalEmailsAddOn
+    0,0,0,0,0,0,0,0,0,
+    % smsAndMmsMarketingAddOnForEssentialsTier
+    0,0,0,0,0,0,0,0,0,
+    % smsAndMmsMarketingAddOnForStandardTier
+    0,0,0,0,0,0,0,0,0,
+    % smsAndMmsMarketingAddOnForPremiumTier
+    0,0,0,0,0,0,10000000,0,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % transactionalEmailsAddOn
+    0,0,0,0,0,0,0,0,0,
+    % smsAndMmsMarketingAddOnForEssentialsTier
+    0,0,0,0,0,0,0,0,0,
+    % smsAndMmsMarketingAddOnForStandardTier
+    0,0,0,0,0,0,0,0,0,
+    % smsAndMmsMarketingAddOnForPremiumTier
+    0,0,0,0,0,0,0,0,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % transactionalEmailsAddOn
+    0,0,1,1,
+    % smsAndMmsMarketingAddOnForEssentialsTier
+    0,1,0,0,
+    % smsAndMmsMarketingAddOnForStandardTier
+    0,0,1,0,
+    % smsAndMmsMarketingAddOnForPremiumTier
+    0,0,0,1
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % transactionalEmailsAddOn
+    0,0,0,0,
+    % smsAndMmsMarketingAddOnForEssentialsTier
+    0,0,0,0,
+    % smsAndMmsMarketingAddOnForStandardTier
+    0,0,0,0,
+    % smsAndMmsMarketingAddOnForPremiumTier
+    0,0,0,0
+]);

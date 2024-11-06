@@ -1,0 +1,192 @@
+num_features = 57;
+num_usage_limits = 15;
+num_plans = 4;
+num_addons = 13;
+
+features = ["apiClientHTTP", "apiClientGraphQL", "apiClientGRPC", "apiClientWebSocket", "apiClientSocket.io", "apiClientMQTT", "postmanApi", "collectionCommenting", "collectionAnnotations", "collectionRecovery", "publicApiDocumentation", "privateApiDocumentation", "slackIntegration", "microsoftTeamsIntegration", "teamWorkspaces", "personalWorkspaces", "publicWorkspaces", "privateWorkspaces", "singlePartnerWorkspaces", "multiPartnerWorkspaces", "workspaceUpdates", "workspaceThemes", "publicApiNetwork", "privateApiNetwork", "packagelibrary", "packages", "mockServers", "monitoring", "collectionRunner", "testDataStorage", "postmanCLI", "newmanCLI", "localPerformanceTesting", "desktopApp", "webApp", "ideExtension", "postmanApiSupport", "auditLogs", "deploymentControl", "userLevelReportingAndAnalytics", "postmanVault", "customDomains", "publicElements", "githubAndGitlabPublicRepos", "customAlerts", "secretScanner", "singleSignOn", "userProvisioning", "SAML", "userGroups", "superAdminRole", "adminRole", "billingRole", "developerRole", "communityManagerRole", "externalPartnerRole", "partnerManagerRole", "apiGovernanceManagerRole", "apiNetworkManagerRole", "workspaceAdminRole", "workspaceEditorRole", "workspaceViewerRole", "partnerViewerRole", "partnerEditorRole", "collectionViewerRole", "collectionGuestViewerRole", "collectionEditorRole", "apiAdminRole", "apiEditorRole", "apiViewerRole", "environmentEditorRole", "environmentViewerRole", "mockServerEditorRole", "mockServerViewerRole", "monitoringEditorRole", "monitoringViewerRole", "apiNetworkFolderManagerRole", "communitySupport", "emailSupport", "priorityEmailSupport", "customerSuccessManager", "trainingContent", "postmanProxy", "postmanInterceptor", "postmanPublicDocs", "paymentMethod", "termsOfService", "postbot", "postbotWriteTestsForAPIs", "postbotAutomatesDocumentation", "postbotDebugsRequests", "postbotVisualizesApiResponses", "postbotExpertSupport", "postbotEnterpriseGradeAvailability", "postbotEnhancedPrivacy", "postmanFlows", "flowsRoleManagement", "flowsSupportForAI", "advancedSecurity", "apiBuilder"];
+usage_limits = ["callsToPostmanApi", "collectionRecoveryLimit", "packagesLimit", "mockServerCallsLimit", "monitoringCallsLimit", "collectionRunsLimit", "localPerformanceTestingUserLimit", "localPerformanceTestingRunsLimit", "customDomainsLimit", "collectionGuestViewerLimit", "flowCredits", "flowsPayloadSize"];
+plans = ["FREE", "BASIC", "PROFESSIONAL", "ENTERPRISE"];
+addons = ["extraMonitoringCalls", "extraMockServerCalls", "customDomains", "postmanFlowsBasic", "postmanFlowsProfessional", "postbotBasicTier", "postbotEnterpriseTier", "unlimitedCollectionRunsAddOn", "partnerManagerRoleProfessionalTierAddOn", "partnerManagerRoleEnterpriseTierAddOn", "advancedSecurityAdministration", "apiBuilderAddOn"];
+
+plans_prices = [0.0,19.0,39.0,49.0];
+addons_prices = [0.75,0.75,10.0,15.0,25.0,9.0,19.0,49.0,29.0,49.0,29.0,49.0];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,0,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % BASIC
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % PROFESSIONAL
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    10000,30,3,1000,1000,25,100,25,1,5,0,0,
+    % BASIC
+    10000,30,3,10000,10000,25,100,25,50,10,0,0,
+    % PROFESSIONAL
+    100000,90,25,10000,10000,25,500,250,50,25,0,0,
+    % ENTERPRISE
+    1000000,90,100,100000,10000,25,100,25,50,10000000,0,0
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % callsToPostmanApi
+    1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % collectionRecoveryLimit
+    0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % packagesLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % mockServerCallsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % monitoringCallsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % collectionRunsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % localPerformanceTestingUserLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % localPerformanceTestingRunsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % customDomainsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % collectionGuestViewerLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % flowCredits
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
+    % flowsPayloadSize
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % extraMonitoringCalls
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % extraMockServerCalls
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % customDomains
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % postmanFlowsBasic
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,
+    % postmanFlowsProfessional
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,
+    % postbotBasicTier
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,
+    % postbotEnterpriseTier
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,
+    % unlimitedCollectionRunsAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % partnerManagerRoleProfessionalTierAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % partnerManagerRoleEnterpriseTierAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % advancedSecurityAdministration
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
+    % apiBuilderAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % extraMonitoringCalls
+    0,0,0,0,1000,0,0,0,0,0,0,0,
+    % extraMockServerCalls
+    0,0,0,1000,0,0,0,0,0,0,0,0,
+    % customDomains
+    0,0,0,0,0,0,0,0,1,0,0,0,
+    % postmanFlowsBasic
+    0,0,0,0,0,0,0,0,0,0,25000,1,
+    % postmanFlowsProfessional
+    0,0,0,0,0,0,0,0,0,0,100000,5,
+    % postbotBasicTier
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % postbotEnterpriseTier
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % unlimitedCollectionRunsAddOn
+    0,0,0,0,0,10000000,0,0,0,0,0,0,
+    % partnerManagerRoleProfessionalTierAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % partnerManagerRoleEnterpriseTierAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % advancedSecurityAdministration
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % apiBuilderAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % extraMonitoringCalls
+    0,0,0,0,1000,0,0,0,0,0,0,0,
+    % extraMockServerCalls
+    0,0,0,1000,0,0,0,0,0,0,0,0,
+    % customDomains
+    0,0,0,0,0,0,0,0,1,0,0,0,
+    % postmanFlowsBasic
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % postmanFlowsProfessional
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % postbotBasicTier
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % postbotEnterpriseTier
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % unlimitedCollectionRunsAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % partnerManagerRoleProfessionalTierAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % partnerManagerRoleEnterpriseTierAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % advancedSecurityAdministration
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % apiBuilderAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % extraMonitoringCalls
+    0,1,1,1,
+    % extraMockServerCalls
+    0,1,1,1,
+    % customDomains
+    0,1,1,1,
+    % postmanFlowsBasic
+    0,1,1,1,
+    % postmanFlowsProfessional
+    0,1,1,1,
+    % postbotBasicTier
+    1,1,1,0,
+    % postbotEnterpriseTier
+    0,0,0,1,
+    % unlimitedCollectionRunsAddOn
+    1,1,1,1,
+    % partnerManagerRoleProfessionalTierAddOn
+    0,0,1,0,
+    % partnerManagerRoleEnterpriseTierAddOn
+    0,0,0,1,
+    % advancedSecurityAdministration
+    0,0,0,1,
+    % apiBuilderAddOn
+    0,0,0,1
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % extraMonitoringCalls
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % extraMockServerCalls
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % customDomains
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % postmanFlowsBasic
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % postmanFlowsProfessional
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % postbotBasicTier
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % postbotEnterpriseTier
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % unlimitedCollectionRunsAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % partnerManagerRoleProfessionalTierAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % partnerManagerRoleEnterpriseTierAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % advancedSecurityAdministration
+    0,0,0,0,0,0,0,0,0,0,0,0,
+    % apiBuilderAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0
+]);

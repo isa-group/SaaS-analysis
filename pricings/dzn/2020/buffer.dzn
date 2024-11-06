@@ -1,24 +1,29 @@
-FEATURES = {socialChannels,schedulePosts,instagram,facebook,twitter,linkedin,pinterest,pinterestBoards,tailoredPostComposer,calendarView,customVideoThumpnails,instagramFirstComment,instagramHashtagManager,instagramStories,instagramShopGrid,draftPosts,postsReport,inviteAdditionalUsers,assignAccessAndPermissions,approvalWorkflow,browserExtension,mobileApps,thirdPartyIntegrations,twoFactorAuthentication,selfServiceKnowledgeBase,socialMediaSupport,emailSupport,bufferCommunity,engagementGridView,commentSentiment,hotkeys};
-USAGE_LIMITS = {socialChannelsLimit,postsPerScheduledQueuePerSocialAccountLimit,usersLimit};
-PLANS = {PRO,PREMIUM,BUSINESS,MEDIUM_BUSINESS,LARGE_BUSINESS,ENTERPRISE};
-ADDONS = {};
+num_features = 19;
+num_usage_limits = 3;
+num_plans = 6;
+num_addons = 0;
 
-plans_prices = [15.0,65.0,99.0,199.0,399.0,0.0];
+features = ["socialChannels", "schedulePosts", "instagram", "facebook", "twitter", "linkedin", "pinterest", "pinterestBoards", "tailoredPostComposer", "calendarView", "customVideoThumpnails", "instagramFirstComment", "instagramHashtagManager", "instagramStories", "instagramShopGrid", "draftPosts", "postsReport", "inviteAdditionalUsers", "assignAccessAndPermissions"];
+usage_limits = ["socialChannelsLimit", "postsPerScheduledQueuePerSocialAccountLimit", "usersLimit"];
+plans = ["PRO", "PREMIUM", "BUSINESS", "MEDIUM_BUSINESS", "LARGE_BUSINESS", "ENTERPRISE"];
+addons = [];
+
+plans_prices = [15.0,65.0,99.0,199.0,399.0,100000000.0];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % PRO
-    1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,
+    1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,1,1,1,1,
     % PREMIUM
-    1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,
+    1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,
     % BUSINESS
-    1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,
+    1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,
     % MEDIUM_BUSINESS
-    1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,
+    1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,1,1,1,1,
     % LARGE_BUSINESS
-    1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,
+    1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,1,1,1,1,
     % ENTERPRISE
-    1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+    1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % PRO
@@ -37,11 +42,11 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % socialChannelsLimit
-    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % postsPerScheduledQueuePerSocialAccountLimit
-    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % usersLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

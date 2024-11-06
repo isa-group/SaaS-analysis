@@ -1,18 +1,23 @@
-FEATURES = {surveys,testimonials,reviews,shareableLinks,feedbackRequestInEmail,abTesting,analytics,videoTestimonials,surveyEditor,feedbackRequestViaEmail,feedbackRequestViaQR,feedbackRequestViaWebsite,automations,integrations};
-USAGE_LIMITS = {surveysLimit,testimonialsOrReviewsAtTheSameTime,feedbackRequestViaEmailLimit};
-PLANS = {STARTER,BUSINESS,PRO};
-ADDONS = {};
+num_features = 15;
+num_usage_limits = 3;
+num_plans = 3;
+num_addons = 0;
+
+features = ["surveys", "testimonials", "reviews", "shareableLinks", "feedbackRequestInEmail", "abTesting", "analytics", "videoTestimonials", "surveyEditor", "feedbackRequestViaEmail", "feedbackRequestViaQR", "feedbackRequestViaWebsite", "automations", "integrations", "feedbackRequestViaEmail"];
+usage_limits = ["surveysLimit", "testimonialsOrReviewsAtTheSameTime", "feedbackRequestViaEmailLimit"];
+plans = ["STARTER", "BUSINESS", "PRO"];
+addons = [];
 
 plans_prices = [290.0,390.0,590.0];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % STARTER
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
     % BUSINESS
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
     % PRO
-    1,1,1,1,1,1,1,1,1,1,1,1,1,1
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % STARTER
@@ -25,11 +30,11 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % surveysLimit
-    1,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % testimonialsOrReviewsAtTheSameTime
-    0,1,1,0,0,0,0,0,0,0,0,0,0,0,
+    0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,
     % feedbackRequestViaEmailLimit
-    0,0,0,0,1,0,0,0,0,1,0,0,0,0
+    0,0,0,0,0,0,0,0,0,1,0,0,0,0,1
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

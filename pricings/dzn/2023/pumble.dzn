@@ -1,37 +1,44 @@
-FEATURES = {privateChannels, publicChannels, directMessages, threads, mentions, reactions, pin, messageHistory, shareFilesAndLinks, voiceMessages, messageFormatting, messageSchedule, fileStoragePerAccount, fileStoragePerUser, customizableSections, voiceCalls, videoCalls, screenSharing, userGroups, guestAccess, manageUserAccounts, permissions, importFromSlack, dataEncryption, phoneSupport, chatSupport, emailSupport, priorityCustomerSupport};
-USAGE_LIMITS = {users, useMessageHistory, useFileStoragePerAccount, useFileStoragePerUser, useVoiceCalls, useVideoCalls};
-PLANS = {FREE, PRO};
-ADDONS = {};
+num_features = 21;
+num_usage_limits = 7;
+num_plans = 2;
+num_addons = 0;
+
+features = ["privateChannels", "publicChannels", "directMessages", "threads", "mentions", "reactions", "pin", "messageHistory", "shareFilesAndLinks", "voiceMessages", "messageFormatting", "messageSchedule", "fileStoragePerAccount", "fileStoragePerUser", "customizableSections", "voiceCalls", "videoCalls", "screenSharing", "userGroups", "guestAccess", "manageUserAccounts"];
+usage_limits = ["users", "useMessageHistory", "useFileStoragePerAccount", "useFileStoragePerUser", "useVoiceCalls", "useVideoCalls", "permissions"];
+plans = ["FREE", "PRO"];
+addons = [];
 
 plans_prices = [0.0,1.99];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % FREE
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0,
+    1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,0,0,0,0,
     % PRO
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+    1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % FREE
-    1000000000,1000000000,10,10,1,1,
+    1000000000,1000000000,10,0,1,1,0,
     % PRO
-    1000000000,1000000000,10,10,1000000000,1000000000
+    1000000000,1000000000,10,10,1000000000,1000000000,1
 ]);
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % users
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % useMessageHistory
-    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % useFileStoragePerAccount
-    0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,
     % useFileStoragePerUser
-    0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,
     % useVoiceCalls
-    0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,
     % useVideoCalls
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,
+    % permissions
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

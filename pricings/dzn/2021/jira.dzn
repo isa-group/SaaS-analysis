@@ -1,16 +1,21 @@
-FEATURES = {sites,scrumAndKanbanBoards,backlog,agileReporting,customizableWorkflows,appsAndIntegrations,automation,basicRoadmaps,advancedRoadmaps,basicDependencyManagement,advancedDependencyManagement,capacityPlanning,projectArchiving,domainVerification,accountCapture,sessionDurationManagement,projectRoles,advancedPermissions,adminInsights,sandbox,releaseTracks,atlassianAccess,passwordPolicies,encryptionInTransitAndAtRest,businessContinuityAndDisasterRecovery,mobileDeviceManagement,auditLogs,anonymousAccess,ipAllowlisting,dataResidency,storage,communitySupport,localBusinessHoursSupport,24x7Support,enterpriseSupport,uptimeSLA,centralizedUserSubscriptions};
-USAGE_LIMITS = {usersLimit,sitesLimit,storageLimit,projectWithAutomationsLimit};
-PLANS = {FREE,STANDARD,PREMIUM,ENTERPRISE};
-ADDONS = {atlassianAccessAddOn};
+num_features = 30;
+num_usage_limits = 4;
+num_plans = 4;
+num_addons = 1;
 
-plans_prices = [0.0,7.0,14.0,0.0];
-addons_prices = [0.0];
+features = ["sites", "scrumAndKanbanBoards", "backlog", "agileReporting", "customizableWorkflows", "appsAndIntegrations", "automation", "basicRoadmaps", "advancedRoadmaps", "basicDependencyManagement", "advancedDependencyManagement", "capacityPlanning", "projectArchiving", "domainVerification", "accountCapture", "sessionDurationManagement", "projectRoles", "advancedPermissions", "adminInsights", "sandbox", "releaseTracks", "atlassianAccess", "passwordPolicies", "encryptionInTransitAndAtRest", "businessContinuityAndDisasterRecovery", "mobileDeviceManagement", "auditLogs", "anonymousAccess", "ipAllowlisting", "dataResidency", "storage", "communitySupport", "localBusinessHoursSupport", "24x7Support", "enterpriseSupport", "uptimeSLA", "centralizedUserSubscriptions"];
+usage_limits = ["usersLimit", "sitesLimit", "storageLimit", "projectWithAutomationsLimit"];
+plans = ["FREE", "STANDARD", "PREMIUM", "ENTERPRISE"];
+addons = ["atlassianAccessAddOn"];
+
+plans_prices = [0.0,7.0,14.0,10000000000.0];
+addons_prices = [10000000000.0];
 
 plans_features = array2d(PLANS, FEATURES, [
     % FREE
-    1,1,1,1,1,1,1,1,0,1,0,0,0,1,1,1,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,1,1,0,0,0,0,
+    1,1,1,1,1,1,1,1,0,1,0,0,0,1,1,1,0,0,0,0,0,0,1,1,1,1,0,0,0,0,1,1,0,0,0,0,0,
     % STANDARD
-    1,1,1,1,1,1,1,1,0,1,0,0,0,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,0,0,1,1,1,0,0,0,
+    1,1,1,1,1,1,1,1,0,1,0,0,0,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,
     % PREMIUM
     1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
     % ENTERPRISE
@@ -22,9 +27,9 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % STANDARD
     20000,1,250,1,
     % PREMIUM
-    20000,.inf,.inf,.inf,
+    20000,1,10000000,10000000,
     % ENTERPRISE
-    20000,.inf,.inf,.inf
+    20000,10000000,10000000,10000000
 ]);
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
@@ -33,14 +38,14 @@ linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % sitesLimit
     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % storageLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,
     % projectWithAutomationsLimit
-    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [
     % atlassianAccessAddOn
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 ]);
 addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
     % atlassianAccessAddOn
@@ -52,7 +57,7 @@ addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
 ]);
 addons_available_for = array2d(ADDONS, PLANS, [
     % atlassianAccessAddOn
-    1,1,1,0
+    1,1,1,1
 ]);
 
 addons_depends_on = array2d(ADDONS, ADDONS, [

@@ -1,18 +1,23 @@
-FEATURES = {privateProjects, realTimeCollaboration, templates, latexEditor, realTimeTrackChanges, advancedReferenceSearch, referenceManagerSync, fullDocumentHistory, dropboxIntegration, githubIntegration, prioritySupport};
-USAGE_LIMITS = {maxCollaboratorsPerProject};
-PLANS = {PERSONAL, COLLABORATOR, PROFESSIONAL};
-ADDONS = {};
+num_features = 10;
+num_usage_limits = 1;
+num_plans = 3;
+num_addons = 0;
+
+features = ["privateProjects", "realTimeCollaboration", "templates", "latexEditor", "realTimeTrackChanges", "advancedReferenceSearch", "referenceManagerSync", "fullDocumentHistory", "dropboxIntegration", "githubIntegration"];
+usage_limits = ["maxCollaboratorsPerProject"];
+plans = ["PERSONAL", "COLLABORATOR", "PROFESSIONAL"];
+addons = [];
 
 plans_prices = [0.0,15.0,30.0];
 addons_prices = [];
 
 plans_features = array2d(PLANS, FEATURES, [
     % PERSONAL
-    1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0,
+    1,1,1,1,0,0,0,0,0,0,
     % COLLABORATOR
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    1,1,1,1,1,1,1,1,1,1,
     % PROFESSIONAL
-    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+    1,1,1,1,1,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % PERSONAL
@@ -20,12 +25,12 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % COLLABORATOR
     10,
     % PROFESSIONAL
-    inf
+    10000000
 ]);
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % maxCollaboratorsPerProject
-    0,1,0,0,0,0,0,0,0,0,0
+    0,1,0,0,0,0,0,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

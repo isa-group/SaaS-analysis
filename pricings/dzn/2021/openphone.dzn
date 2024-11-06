@@ -1,18 +1,23 @@
-FEATURES = {usAndCanadaCalling,usAndCanadaMessaging,internationalCalling,internationalMessaging,groupMessaging,voicemailToText,phoneNumbers,portPhoneNumbersFromOtherCarriers,callRecording,sharedPhoneNumbers,snippets,autoReplies,standardAutoAtendant,advancedAutoAtendant,callTransfers,emailIntegration,slackIntegration,zapierIntegration,smsViaZapier,hubSpotCRMIntegration,adminDashboard,analytics,reporting,auditLog,emailSupport,smsSupport,prioritySupport,dedicatedAccountManager};
-USAGE_LIMITS = {phoneNumbersLimit,usAndCanadCallsLimit,usAndCanadaMessagesLimit,smsViaZapierAddonLimit};
-PLANS = {STANDARD,PREMIUM,ENTERPRISE};
-ADDONS = {aditionalPhoneNumbers,internationalCallingAndMessaging,smsViaZapierAddon};
+num_features = 24;
+num_usage_limits = 4;
+num_plans = 3;
+num_addons = 3;
 
-plans_prices = [10.0,25.0,0.0];
-addons_prices = [5.0,0.0,0.01];
+features = ["usAndCanadaCalling", "usAndCanadaMessaging", "internationalCalling", "internationalMessaging", "groupMessaging", "voicemailToText", "phoneNumbers", "portPhoneNumbersFromOtherCarriers", "callRecording", "sharedPhoneNumbers", "snippets", "autoReplies", "standardAutoAtendant", "advancedAutoAtendant", "callTransfers", "emailIntegration", "slackIntegration", "zapierIntegration", "smsViaZapier", "hubSpotCRMIntegration", "adminDashboard", "analytics", "reporting", "auditLog"];
+usage_limits = ["phoneNumbersLimit", "usAndCanadCallsLimit", "usAndCanadaMessagesLimit", "smsViaZapierAddonLimit"];
+plans = ["STANDARD", "PREMIUM", "ENTERPRISE"];
+addons = ["aditionalPhoneNumbers", "internationalCallingAndMessaging", "smsViaZapierAddon"];
+
+plans_prices = [10.0,25.0,10.0];
+addons_prices = [5.0,10.0,0.01];
 
 plans_features = array2d(PLANS, FEATURES, [
     % STANDARD
-    1,1,0,0,1,1,1,1,1,1,1,1,1,1,0,1,1,1,0,0,1,0,0,0,1,1,0,0,
+    1,1,0,0,1,1,1,1,1,1,1,1,1,0,0,1,1,1,0,0,1,0,0,0,
     % PREMIUM
-    1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,1,1,1,0,
+    1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,
     % ENTERPRISE
-    1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,0
+    1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1
 ]);
 plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % STANDARD
@@ -25,22 +30,22 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % phoneNumbersLimit
-    0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % usAndCanadCallsLimit
-    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % usAndCanadaMessagesLimit
-    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % smsViaZapierAddonLimit
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [
     % aditionalPhoneNumbers
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % internationalCallingAndMessaging
-    0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
     % smsViaZapierAddon
-    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
 ]);
 addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
     % aditionalPhoneNumbers

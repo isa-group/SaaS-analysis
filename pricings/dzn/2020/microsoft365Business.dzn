@@ -1,0 +1,74 @@
+num_features = 38;
+num_usage_limits = 8;
+num_plans = 4;
+num_addons = 1;
+
+features = ["cloudStorage", "customBusinessEmail", "mailbox", "businessClassEmail", "sharedCalendars", "calendar", "manageEmail", "realTimeCollaboration", "multiplatformFileAccess", "fileStoring", "fileSharing", "sharingManagement", "chat", "onlineMeetings", "microsoftSharePoint", "audioConferencing", "emailSpamFilter", "securityStandardsAndPrivacyControls", "passwordPolicies", "securityGroups", "microsoftLists", "milelQReporting", "microsoftBookings", "phoneAndOnlineSupport", "uptimeGuarantee", "license", "microsoftWordWebApp", "microsoftExcelWebApp", "microsoftPowerPointWebApp", "microsoftOneNoteWebApp", "microsoftOutlookWebApp", "microsoftWordMobileApp", "microsoftExcelMobileApp", "microsoftPowerPointMobileApp", "microsoftOneNoteMobileApp", "microsoftOutlookMobileApp", "microsoftTeams", "microsoftWordDesktopApp", "microsoftExcelDesktopApp", "microsoftPowerPointDesktopApp", "microsoftOneNoteDesktopApp", "microsoftOutlookDesktopApp", "microsoftPublisher", "microsoftAccess", "webinars", "webinarInvitationManagement", "emailThreatsProtection", "informationRightsManagement", "securityPoliciesApplication", "dataEnvironmentManagement", "microsoftDefenderAntivirus", "preBreachThreatResistance", "helpEmployeesSecurelyAccessBusinessApps", "configureAndDeployAppsAndConfigsForWindows10And11", "remoteInformationRemoval"];
+usage_limits = ["maxUsers", "maxMobileDevices", "maxTabletDevices", "maxDesktopDevices", "cloudStorageLimit", "slaMaxUptime", "mailboxMaxCapacity", "webinarsMaxLimit"];
+plans = ["APPS", "BUSINESS_BASIC", "BUSINESS_STANDARD", "BUSINESS_PREMIUM"];
+addons = ["teamsAudioConferencing"];
+
+plans_prices = [10.0, 6.0, 15.0, 20.0];
+addons_prices = [4.0];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % APPS
+    1,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,1,1,1,0,0,0,1,1,1,1,1,1,1,0,1,1,1,1,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % BUSINESS_BASIC
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % BUSINESS_STANDARD
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % BUSINESS_PREMIUM
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % APPS
+    300,5,5,10,1000,99.9,50,300,
+    % BUSINESS_BASIC
+    300,5,5,10,1000,99.9,50,300,
+    % BUSINESS_STANDARD
+    300,5,5,10,1000,99.9,50,300,
+    % BUSINESS_PREMIUM
+    300,5,5,10,1000,99.9,50,300,
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % maxUsers
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % maxMobileDevices
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % maxTabletDevices
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % maxDesktopDevices
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % cloudStorageLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % slaMaxUptime
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % mailboxMaxCapacity
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % webinarsMaxLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % teamsAudioConferencing
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % teamsAudioConferencing
+    0,0,0,0,0,0,0,0,
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % teamsAudioConferencing
+    0,0,0,0,0,0,0,0,
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % teamsAudioConferencing
+    1,1,1,1,
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % teamsAudioConferencing
+    0,
+]);

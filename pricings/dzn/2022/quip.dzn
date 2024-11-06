@@ -1,7 +1,12 @@
-FEATURES = {documents,spreadsheets,groupChat,1to1messages,desktopAccess,tabletAccess,mobileAccess,customAndAdvancedLiveApps,singleSignOn,enterpriseAPI,customization,integratedChatWithinSalesforce,spreadsheetsWithLiveSalesforceData,twoWaySyncWithLiveSalesforceData,embedDocumentsInAllSalesforceObjects};
-USAGE_LIMITS = {};
-PLANS = {STARTER,PLUS,ADVANCED};
-ADDONS = {};
+num_features = 16;
+num_usage_limits = 0;
+num_plans = 3;
+num_addons = 0;
+
+features = ["documents", "spreadsheets", "groupChat", "1to1messages", "desktopAccess", "tabletAccess", "mobileAccess", "customAndAdvancedLiveApps", "singleSignOn", "enterpriseAPI", "customization", "integratedChatWithinSalesforce", "spreadsheetsWithLiveSalesforceData", "twoWaySyncWithLiveSalesforceData", "embedDocumentsInAllSalesforceObjects"];
+usage_limits = [];
+plans = ["STARTER", "PLUS", "ADVANCED"];
+addons = [];
 
 plans_prices = [12.0,25.0,100.0];
 addons_prices = [];
@@ -26,26 +31,38 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
     % 
     ,
+    % 
+    ,
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [
+    % 
+    ,
     % 
     ,
 ]);
 addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
     % 
     ,
+    % 
+    ,
 ]);
 addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % 
+    ,
     % 
     ,
 ]);
 addons_available_for = array2d(ADDONS, PLANS, [
     % 
     ,
+    % 
+    ,
 ]);
 
 addons_depends_on = array2d(ADDONS, ADDONS, [
+    % 
+    ,
     % 
     ,
 ]);
