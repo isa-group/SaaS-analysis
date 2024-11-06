@@ -1,0 +1,49 @@
+FEATURES = {nps, csat, forms, collectingFeedback, standardForms, customForms, collectWithEmail, shareablelink, qrCode, thirteenQuestionTypes, importingContacts, smartContactLists, embedSurbeysToWebsite, textReviews, videoReviews, importReviewsFromGoogle, importReviewsFromFacebook, requestGoogleReviews, embedReviewsToWebsite, embedTestimonialsToWebsite, customizeEmbeds, socialMediaShare, popupNotifications, measureConversions, emailSupport, phoneSupport, designatedExpert};
+USAGE_LIMITS = {formsLimit, textReviewsLimit, embedsLimit, usersLimit, emailsLimit};
+PLANS = {LIGHT, PLUS, ENTERPRISE};
+ADDONS = {};
+
+plans_prices = [0.0,0.0,0.0];
+addons_prices = [];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % LIGHT
+    1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
+    % PLUS
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+    % ENTERPRISE
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % LIGHT
+    2,50,2,2,1000,
+    % PLUS
+    10,.inf,5,5,1000,
+    % ENTERPRISE
+    .inf,.inf,.inf,.inf,.inf
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % formsLimit
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % textReviewsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % embedsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % usersLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % emailsLimit
+    0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);

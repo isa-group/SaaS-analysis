@@ -1,0 +1,49 @@
+FEATURES = {messagesAccess,appsAndServices,sharedChannels,monocanalGuests,multicanalGuests,twoFactorAuthentication,oAuthGoogle,singleSignOn,customRules,exportMessages,dataResidence,privilegesGeneralChannelManagement,privilegesPrivateChannelManagement,customUserGroups,usersManagement,activeDirectorySync,voiceAndVideoCalls,screenSharing,peopleChannelsFilesSearch,channelRecommendations,outlinedMessages,storageByAccount,storageByTeamMember,support,availability};
+USAGE_LIMITS = {useMessagesAccess,useAppsAndServices,useVoiceAndVideoCalls,useStorageByAccount,useStorageByTeamMember};
+PLANS = {FREE,STANDARD,PLUS};
+ADDONS = {};
+
+plans_prices = [0.0,8.0,15.0];
+addons_prices = [];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,0,0,0,1,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1,0,Standard Support,0,
+    % STANDARD
+    1,1,1,1,1,1,1,0,1,0,0,1,0,1,0,0,1,1,1,1,1,0,1,Priority Support,0,
+    % PLUS
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,24/7 support with a four-hour response time,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    10000,10,1,5,10,
+    % STANDARD
+    100000000000000000,100000000000000000,15,0,20,
+    % PLUS
+    100000000000000000,100000000000000000,15,0,20
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % useMessagesAccess
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useAppsAndServices
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useVoiceAndVideoCalls
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,
+    % useStorageByAccount
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,
+    % useStorageByTeamMember
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);

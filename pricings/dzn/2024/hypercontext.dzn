@@ -1,0 +1,55 @@
+FEATURES = {agendaSharing,coEditing,nextSteps,embeddedMedia,fileAttachment,linkIntegrations,largeGroupDiscussions,1to1Meeting,teamMeeting,collaborativeAgenda,customPersonalMeetingTemplates,shareableNotes,privateNotes,exportableNotes,searchableNotes,commentsOnAgendaItems,embeddedMediaInMeetings,boardViewForMeetingItems,aiManagerCopilot,reportingOnMeetingMetrics,customOrgWideMeetingTemplates,goalTemplates,individualGoals,teamGoals,companyGoals,goalRelationships,meetingIntegration,reportsOnGoals,analyticsOnGoals,shareableLiveReports,goalProgressNotifications,performanceReviewIntegration,360PerformanceReviews,cutomQuestionTemplates,competencyBasedReviewQuestions,aiWritingCoPilot,aiConsolidatedReview,employeePraiseIntegration,employeeRecognisionIntegration,reviewCycleAutomation,dynamiReviewAsignments,9BoxReporting,calibrationReporting,aiInsightsOnPerformanceTrends,exportToExcelForReporting,crossCycleAnalytics,basicCollaborationToolsIntegration,mediaToolsIntegration,designToolsIntegration,personalProductivityToolsIntegration,projectManagementToolsIntegration,productManagementToolsIntegration,directorySync,hrisIntegration,customApiAccess,inAppSupport,prioritySupport,sso,advancedSecurityFeatures,dedicatedAccountManager,customizableDataRetentionPolicies,auditLogs,complianceReports};
+USAGE_LIMITS = {};
+PLANS = {FREE,PRO,BUSINESS,ENTERPRISE};
+ADDONS = {};
+
+plans_prices = [0.0,7.0,11.0,0.0];
+addons_prices = [];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % PRO
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % BUSINESS
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    ,
+    % PRO
+    ,
+    % BUSINESS
+    ,
+    % ENTERPRISE
+    ,
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % 
+    ,
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % 
+    ,
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % 
+    ,
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % 
+    ,
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % 
+    ,
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % 
+    ,
+]);

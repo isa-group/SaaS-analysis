@@ -1,0 +1,123 @@
+FEATURES = {boardView, taskManagement, fileSharing, realTimeActivityStream, spreadsheetView, wrikeForWindowsAndMac, wrikeIOSAndAndroidApps, basicIntegrations, cloudStoragePlatforms, storageSpace, subtaskManagement, ganttChart, advancedIntegrations, shareableDashboards, collaborators, videoUploads, customFields, customWorkflows, sharedRealTimeReportsWithScheduledNotifications, reportTemplates, graphicalAnalytics, calendars, requestForms, taskAndProjectApproval, timeTracking, userGroupsAndPermissions, salesForceIntegration, brandedWorkspace, automationEngine, activeDirectoryIntegration, singleSignOn, twoFactorVerification, passwordPolicies, itControlAdminPermissions, userAuditReports, networkAccess&CompliancePolicies, businessIntelligenceIntegration, advancedUserAccessControls};
+USAGE_LIMITS = {minNumberOfUsers, maxNumberOfUsers, useStorage, useStorageAccount, useAutomations};
+PLANS = {FREE, PROFESSIONAL, BUSINESS, ENTERPRISE};
+ADDONS = {wrikeResource, wrikeProof, wrikePublish, wrikeAnalyze, wrikeIntegrate, wrikeTwoWaySync, wrikeLock};
+
+plans_prices = [0.0,9.8,24.8,0.0];
+addons_prices = [0.0,0.0,0.0,0.0,0.0,0.0,0.0];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    % PROFESSIONAL
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    % BUSINESS
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    % ENTERPRISE
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    5,5,2,15,10000000000,
+    % PROFESSIONAL
+    15,15,5,15,10000000000,
+    % BUSINESS
+    200,200,50,15,10000000000,
+    % ENTERPRISE
+    10000000000,10000000000,100,15,10000000000
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % minNumberOfUsers
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % maxNumberOfUsers
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useStorage
+    0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useStorageAccount
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useAutomations
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % wrikeResource
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % wrikeProof
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % wrikePublish
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % wrikeAnalyze
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % wrikeIntegrate
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % wrikeTwoWaySync
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % wrikeLock
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % wrikeResource
+    0,0,0,0,0,
+    % wrikeProof
+    0,0,0,0,0,
+    % wrikePublish
+    0,0,0,0,0,
+    % wrikeAnalyze
+    0,0,0,0,0,
+    % wrikeIntegrate
+    0,0,0,0,0,
+    % wrikeTwoWaySync
+    0,0,0,0,0,
+    % wrikeLock
+    0,0,0,0,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % wrikeResource
+    0,0,0,0,0,
+    % wrikeProof
+    0,0,0,0,0,
+    % wrikePublish
+    0,0,0,0,0,
+    % wrikeAnalyze
+    0,0,0,0,0,
+    % wrikeIntegrate
+    0,0,0,0,0,
+    % wrikeTwoWaySync
+    0,0,0,0,0,
+    % wrikeLock
+    0,0,0,0,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % wrikeResource
+    0,0,1,1,
+    % wrikeProof
+    0,0,1,1,
+    % wrikePublish
+    0,0,1,1,
+    % wrikeAnalyze
+    0,0,1,1,
+    % wrikeIntegrate
+    0,0,1,1,
+    % wrikeTwoWaySync
+    0,0,1,1,
+    % wrikeLock
+    0,0,0,1
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % wrikeResource
+    0,0,0,0,0,0,0,
+    % wrikeProof
+    0,0,0,0,0,0,0,
+    % wrikePublish
+    0,0,0,0,0,0,0,
+    % wrikeAnalyze
+    0,0,0,0,0,0,0,
+    % wrikeIntegrate
+    0,0,0,0,0,0,0,
+    % wrikeTwoWaySync
+    0,0,0,0,0,0,0,
+    % wrikeLock
+    0,0,0,0,0,0,0
+]);

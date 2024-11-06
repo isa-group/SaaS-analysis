@@ -1,0 +1,43 @@
+FEATURES = {fastCompileServers, fastestCompileServers, realTimeTrackChanges, fullDocumentHistory, advancedReferenceSearch, gitIntegration, latexEditor, realTimeCollaboration, projects, templates, symbolPalette, githubIntegration, dropboxIntegration, mendeleyIntegration, zoteroIntegration, prioritySupport};
+USAGE_LIMITS = {maxCollaboratorsPerProject,compileTimeoutLimit};
+PLANS = {FREE, STANDARD, PROFESSIONAL};
+ADDONS = {};
+
+plans_prices = [0.0,21.0,42.0];
+addons_prices = [];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,0,0,1,0,0,1,1,1,1,0,0,0,0,0,0,
+    % STANDARD
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    % PROFESSIONAL
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    1,1,
+    % STANDARD
+    11,4,
+    % PROFESSIONAL
+    inf,4
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % maxCollaboratorsPerProject
+    1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,
+    % compileTimeoutLimit
+    1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);

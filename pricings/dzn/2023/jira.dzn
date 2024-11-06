@@ -1,0 +1,63 @@
+FEATURES = {sites,automation,basicPlanning,advancedPlanning,basicDependencyManagement,advancedDependencyManagement,projectBoards,jiraWorkManagment,backlog,reportingAndInsights,customizableWorkflows,appsAndIntegrations,capacityManagement,projectArchiving,atlassianAnalytics,atlassianDataLake,dataConnectors,domainVerification,accountCapture,sessionDurationManagement,userRolesAndPermissions,advancedPermissions,adminInsights,sandbox,releaseTracks,userCounts,productRequests,atlassianAccess,passwordPolicies,encryptionInTransitAndAtRest,businessContinuityAndDisasterRecovery,mobileDeviceManagement,auditLogs,anonymousAccess,dataResidency,ipAllowlisting,multipleIdp,auditLogsForUsersActivity,byokEncryption,storage,communitySupport,localBusinessHoursSupport,24x7Support,enterpriseSupport,uptimeSLA,centralizedUserSubscriptions};
+USAGE_LIMITS = {usersLimit,sitesLimit,totalAutomationLimit,perUserAutomationLimit,storageLimit};
+PLANS = {FREE,STANDARD,PREMIUM,ENTERPRISE};
+ADDONS = {atlassianAccessAddOn};
+
+plans_prices = [0.0,7.16,12.48,inf];
+addons_prices = [inf];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,1,0,1,0,1,1,1,1,1,1,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,0,0,
+    % STANDARD
+    1,1,1,0,1,0,1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,0,0,
+    % PREMIUM
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,0,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    10,1,100,0,2,
+    % STANDARD
+    35000,1,1700,0,250,
+    % PREMIUM
+    35000,1,inf,1000,inf,
+    % ENTERPRISE
+    35000,150,inf,inf,inf
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % usersLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % sitesLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % totalAutomationLimit
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % perUserAutomationLimit
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % storageLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % atlassianAccessAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % atlassianAccessAddOn
+    0,0,0,0,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % atlassianAccessAddOn
+    0,0,0,0,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % atlassianAccessAddOn
+    1,1,1,1
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % atlassianAccessAddOn
+    0
+]);

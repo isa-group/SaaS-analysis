@@ -1,0 +1,67 @@
+FEATURES = {posts,socialMediaPages,saveAsAnAd,workspaces,feedView,calendarView,gridView,listView,labels,mediaStorage,syncPreviousContent,noneApprovalWorkflows,optionalApprovalWorkflows,requiredApprovalWorkflows,multiLevelApprovalWorkflows,internalAndExternalCollaboration,versionHistory,helpCenter,prioritySupport,liveChat,personalizedOnboarding,dedicatedAccountManager,paymentOptions};
+USAGE_LIMITS = {postsLimit,postsPerMonthLimit,socialMediaPagesLimit,workspacesLimit,numberOfLabels,mediaStorageCapacity,versionHistoryThreshold};
+PLANS = {FREE,BASIC,PRO,ENTERPRISE};
+ADDONS = {extraWorkspace};
+
+plans_prices = [0.0,13.0,26.0,0.0];
+addons_prices = [20.0];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,
+    % BASIC
+    1,1,0,1,1,1,0,0,1,1,0,1,1,0,0,0,1,1,0,0,0,0,
+    % PRO
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    50,50,10,1,10000000,1000000,1000000,
+    % BASIC
+    1000000000000,10000000,4,1,5,10,7,
+    % PRO
+    1000000000000,10000000,10,1,10,50,30,
+    % ENTERPRISE
+    1000000000000,10000000,10,1,10000000,1000000,1000000
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % postsLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % postsPerMonthLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % socialMediaPagesLimit
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % workspacesLimit
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % numberOfLabels
+    0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % mediaStorageCapacity
+    0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,
+    % versionHistoryThreshold
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % extraWorkspace
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % extraWorkspace
+    0,0,0,0,0,0,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % extraWorkspace
+    0,0,0,1,0,0,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % extraWorkspace
+    0,1,1,0
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % extraWorkspace
+    0
+]);

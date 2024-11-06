@@ -13,6 +13,10 @@ class PricingsLoader():
         if dataset_entry.empty:
             return None
         return self._get_pricing(dataset_entry.index[0])
+    
+    def get_path(self, idx):
+        dataset_entry = self.dataset.iloc[idx]
+        return dataset_entry['path']
 
     def __len__(self):
         return len(self.dataset)

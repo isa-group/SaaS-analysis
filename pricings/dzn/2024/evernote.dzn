@@ -1,0 +1,57 @@
+FEATURES = {notes,notebooks,syncAcrossDevices,appForIOS,appForAndroid,appForWindows,appForMac,appForWeb,tasks,evernoteCalendar,externalCalendars,attachFilesToNotes,advancedSearch,advancedOrganization,offlineNotes,easySharing,aiPoweredSearch,aiEdit,googleIntegration,microsoftIntegration,slackIntegration,twoStepVerification,applyInNoteEncryption,helpAndLearningCenter,communityForum,supportTickets,spaces,maintainBusinessDataOwnership,centralizedAccountAdministration,centralizedUserManagement,userActivityLogs,singleSignOn};
+USAGE_LIMITS = {notesLimit,notebooksLimit,maximumNoteSize,globalMonthlyUploadLimit,monthlyUploadLimitByUser,syncAccrossDevicesLimit,externalCalendarsLimit};
+PLANS = {FREE,PERSONAL,PROFESIONAL,TEAMS};
+ADDONS = {};
+
+plans_prices = [0.0,12.99,16.99,24.99];
+addons_prices = [];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,0,1,0,1,1,0,0,0,0,0,
+    % PERSONAL
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,0,1,1,1,1,0,0,0,0,0,
+    % PROFESIONAL
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,
+    % TEAMS
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    50,1,25,60,0,2,1,
+    % PERSONAL
+    150000,2000,200,10240,0,1000000000,1,
+    % PROFESIONAL
+    150000,2000,200,20480,0,1000000000,5,
+    % TEAMS
+    500000,10000,200,20480,2048,1000000000,5
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % notesLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % notebooksLimit
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % maximumNoteSize
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % globalMonthlyUploadLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % monthlyUploadLimitByUser
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % syncAccrossDevicesLimit
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % externalCalendarsLimit
+    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);

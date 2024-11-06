@@ -1,0 +1,63 @@
+FEATURES = {3in1Surveys, teams, surveys, responses, requestsViaEmail, reviewPlatform, combinedReview, feedbackCollection, surveyLogic, customTheme, quickPreview, multilanguage, emailNotificationsForNewResponses, surveyTemplateLibrary, surveyStatus, progressBar, urlResponses, emailResponses, htmlEmbeds, popupSurvey, emailSignature, qrCode, smsRequests, npsForms, csatForms, customizableForms, eighteenQuestionTypes, anonymizedResponses, analyzeFeedback, manageReviews, tagReviews, autotagReviews, createReviewsManually, importReviewsFromSpreadsheets, publicReviewProfilePage, syncReviewsAutomatically, zapierIntegration, makeIntegration, hubspotIntegration, pipedriveIntegration, freeSurveyHelp, chatSupport, phoneSupport, dedicatedAccountManager, onboardingPackage};
+USAGE_LIMITS = {unlimitedTeamMembers, unlimitedSuveys, surveyResponsesLimit, requestsViaEmailLimit, reviewPlatformConnectionsLimit};
+PLANS = {SOLO, STARTER, BUSINESS, SCALE};
+ADDONS = {onboardingPackageAddOn};
+
+plans_prices = [0.0,29.0,79.0,159.0];
+addons_prices = [990.0];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % SOLO
+    1,0,0,1,0,1,1,1,1,1,1,1,1,0,0,0,1,1,0,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,0,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,
+    % STARTER
+    1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    % BUSINESS
+    1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    % SCALE
+    1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % SOLO
+    0,0,5,5,1,
+    % STARTER
+    1,1,20,200,3,
+    % BUSINESS
+    1,1,50,600,10,
+    % SCALE
+    1,1,500,6000,25
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % unlimitedTeamMembers
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % unlimitedSuveys
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % surveyResponsesLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % requestsViaEmailLimit
+    0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % reviewPlatformConnectionsLimit
+    0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % onboardingPackageAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % onboardingPackageAddOn
+    0,0,0,0,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % onboardingPackageAddOn
+    0,0,0,0,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % onboardingPackageAddOn
+    1,1,1,1
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % onboardingPackageAddOn
+    0
+]);

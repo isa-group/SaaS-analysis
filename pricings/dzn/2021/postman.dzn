@@ -1,0 +1,107 @@
+FEATURES = {collaboration,singleSignOn,rolesAndPermissions,userGroups,privateWorkspaces,apis,integrations,postmanAPI,publicApiDocumentation,apiMockServer,apiMonitoringCalls,recoverDeletedCollections,customDomains,staticIpAddresses,auditLogs,reporting,userProvisioning,domainCapture,trainingAndOnboarding,emailSupport,priorityEmailSupport,paymentOptions,standardEULA,customEULA};
+USAGE_LIMITS = {teamMembersLimit,maxNumberOfIntegrations,callsToPostmanApi,apiMockServerCallsLimit,apiMonitoringCallsLimit,customDomainsLimit,recoverDeletedCollectionsThreshold};
+PLANS = {FREE,TEAM,BUSINESS,ENTERPRISE};
+ADDONS = {monitoringPayAsYouGo,monitoringMonthly,mockServersPayAsYouGo,mockServersMonthly,customDomains};
+
+plans_prices = [0.0,15.0,30.0,null];
+addons_prices = [0.75,20.0,0.75,20.0,10.0];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,0,1,1,0,
+    % TEAM
+    1,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,0,1,1,0,
+    % BUSINESS
+    1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,0,0,1,0,1,0,1,1,0,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    3,2,1000,1000,1000,0,1,
+    % TEAM
+    inf,10,10000,10000,10000,1,30,
+    % BUSINESS
+    inf,50,100000,10000,10000,5,90,
+    % ENTERPRISE
+    inf,100,1000000,10000,10000,25,90
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % teamMembersLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % maxNumberOfIntegrations
+    0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % callsToPostmanApi
+    0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % apiMockServerCallsLimit
+    0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % apiMonitoringCallsLimit
+    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % customDomainsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,
+    % recoverDeletedCollectionsThreshold
+    0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % monitoringPayAsYouGo
+    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % monitoringMonthly
+    0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % mockServersPayAsYouGo
+    0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % mockServersMonthly
+    0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % customDomains
+    0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % monitoringPayAsYouGo
+    0,0,0,0,1000,0,0,
+    % monitoringMonthly
+    0,0,0,0,50000,0,0,
+    % mockServersPayAsYouGo
+    0,0,0,1000,0,0,0,
+    % mockServersMonthly
+    0,0,0,50000,0,0,0,
+    % customDomains
+    0,0,0,0,0,1,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % monitoringPayAsYouGo
+    0,0,0,0,1000,0,0,
+    % monitoringMonthly
+    0,0,0,0,50000,0,0,
+    % mockServersPayAsYouGo
+    0,0,0,1000,0,0,0,
+    % mockServersMonthly
+    0,0,0,50000,0,0,0,
+    % customDomains
+    0,0,0,0,0,1,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % monitoringPayAsYouGo
+    1,1,1,1,
+    % monitoringMonthly
+    1,1,1,1,
+    % mockServersPayAsYouGo
+    1,1,1,1,
+    % mockServersMonthly
+    1,1,1,1,
+    % customDomains
+    0,1,1,1
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % monitoringPayAsYouGo
+    0,0,0,0,0,
+    % monitoringMonthly
+    0,0,0,0,0,
+    % mockServersPayAsYouGo
+    0,0,0,0,0,
+    % mockServersMonthly
+    0,0,0,0,0,
+    % customDomains
+    0,0,0,0,0
+]);

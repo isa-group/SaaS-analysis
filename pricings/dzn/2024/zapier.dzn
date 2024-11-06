@@ -1,0 +1,89 @@
+FEATURES = {tasks,twoFactorAuthentication,payPerTaskForOverageTasks,auditLogs,staticIp,ownerAccess,samlSingleSignOn,userProvisioning,domainCapture,superAdmin,advancedAdminPermissions,appRestrictions,actionRestrictions,customDataRetention,observabilityAPI,analytics,annualTaskLimits,sharedAppConnections,sharedWorkspace,folderPermissions,approvalRequests,emailSupport,liveChat,premierSupport,designatedTechnicalSupport,zapierInterfaces,zapierTables,zapierChatbots,zaps,twoStepsZaps,multiStepZaps,visualEditor,aiPowerUps,customTestRecords,filters,paths,formatter,drafts,autoReplay,customizedErrorSettings,customizedPollingTime,floodProtectionSetting,versions,compareVersions,alerts,customActions,premiumApps,connectionsViaWebhooks,tablesPremium,interfacesPremium,chatBotsPremium};
+USAGE_LIMITS = {usersLimit,tasksLimit,pollingTimeThreshold};
+PLANS = {FREE,PROFESSIONAL,TEAM,ENTERPRISE};
+ADDONS = {samlSingleSignOnAddOn,tablesPremiumAddOn,interfacesPremiumAddOn,chatBotsPremiumAddOn};
+
+plans_prices = [0.0,61.25,446.27,0.0];
+addons_prices = [0.0,0.0,0.0,0.0];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % PROFESSIONAL
+    1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    % TEAM
+    1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    1,100,15,
+    % PROFESSIONAL
+    1,2000,2,
+    % TEAM
+    .inf,50000,1,
+    % ENTERPRISE
+    .inf,.inf,1
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % usersLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % tasksLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % pollingTimeThreshold
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % samlSingleSignOnAddOn
+    0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % tablesPremiumAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,
+    % interfacesPremiumAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
+    % chatBotsPremiumAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % samlSingleSignOnAddOn
+    0,0,0,
+    % tablesPremiumAddOn
+    0,0,0,
+    % interfacesPremiumAddOn
+    0,0,0,
+    % chatBotsPremiumAddOn
+    0,0,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % samlSingleSignOnAddOn
+    0,0,0,
+    % tablesPremiumAddOn
+    0,0,0,
+    % interfacesPremiumAddOn
+    0,0,0,
+    % chatBotsPremiumAddOn
+    0,0,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % samlSingleSignOnAddOn
+    0,0,1,0,
+    % tablesPremiumAddOn
+    1,1,1,1,
+    % interfacesPremiumAddOn
+    1,1,1,1,
+    % chatBotsPremiumAddOn
+    1,1,1,1
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % samlSingleSignOnAddOn
+    0,0,0,0,
+    % tablesPremiumAddOn
+    0,0,0,0,
+    % interfacesPremiumAddOn
+    0,0,0,0,
+    % chatBotsPremiumAddOn
+    0,0,0,0
+]);

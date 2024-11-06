@@ -1,0 +1,51 @@
+FEATURES = {reviews,reviewForms,widgets,importTestimonials,embedReviews,qrReviews,urlReviews,widgetWhiteLabeling,abTesting,zapierIntegrations,hubspotIntegration,pipedriveIntegration,automations,emailSending,smsSending,customerSuccess,comprehensiveSurveyTool,surveyTemplateLibrary,npsForms,csatForms,cesForms,customizableSurveys,conditionalSurveyQuestions,customerFeedbackConvertedIntoReviews,crmIntegrations};
+USAGE_LIMITS = {publishedReviewsLimit,reviewFormsLimit,activeWidgetsLimit,usersLimit};
+PLANS = {SOLO,BUSINESS,AUTOMATE,PRO};
+ADDONS = {};
+
+plans_prices = [0.0,90.0,290.0,590.0];
+addons_prices = [];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % SOLO
+    1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % BUSINESS
+    1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % AUTOMATE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,
+    % PRO
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % SOLO
+    20,1,1,1,
+    % BUSINESS
+    inf,1,inf,1,
+    % AUTOMATE
+    inf,1,inf,inf,
+    % PRO
+    inf,1,inf,inf
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % publishedReviewsLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % reviewFormsLimit
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % activeWidgetsLimit
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % usersLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);

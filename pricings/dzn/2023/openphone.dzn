@@ -1,0 +1,107 @@
+FEATURES = {usAndCanadaCalling,usAndCanadaMessaging,internationalCalling,internationalMessaging,phoneNumbers,portPhoneNumbersFromOtherCarriers,sharedPhoneNumbers,snippets,aiMessageResponses,internalThreads,sharedContacts,contactNotes,businessHours,voicemailTranscripts,manualCallRecording,automaticCallRecording,autoReplies,scheduledMessages,userGroups,groupMessaging,phoneMenus,aiCallSummaries,aiCallTranscripts,groupCalling,callHold,callTransfers,ringOrder,emailIntegration,slackIntegration,zapierIntegration,smsViaZapier,googleContactsIntegration,webhooksIntegration,hubSpotCRMIntegration,salesforceIntegration,gongIntegration,userRoles,userManagement,analytics,reporting,auditLog,SOC2Report,standardSupport,prioritySupport,dedicatedAccountManager};
+USAGE_LIMITS = {useCanadaMessagingFeePayed,phoneNumbersLimit,sharedPhoneNumbersLimit,smsViaZapierAddonLimit};
+PLANS = {STARTER,BUSINESS,ENTERPRISE};
+ADDONS = {carrierReviewAndSetupFeesForUsCanadaMessaging,useCanadaMessagingFee,aditionalPhoneNumbers,internationalCallingAndMessaging,smsViaZapierAddon,soc2ReportAddOn};
+
+plans_prices = [19.0,33.0,0.0];
+addons_prices = [19.0,3.0,5.0,0.0,0.01,0.0];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % STARTER
+    1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,1,0,0,
+    % BUSINESS
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % STARTER
+    0,1,10,0,
+    % BUSINESS
+    0,1,inf,0,
+    % ENTERPRISE
+    0,1,inf,0
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % useCanadaMessagingFeePayed
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % phoneNumbersLimit
+    0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % sharedPhoneNumbersLimit
+    0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % smsViaZapierAddonLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % carrierReviewAndSetupFeesForUsCanadaMessaging
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useCanadaMessagingFee
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % aditionalPhoneNumbers
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % internationalCallingAndMessaging
+    0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % smsViaZapierAddon
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % soc2ReportAddOn
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % carrierReviewAndSetupFeesForUsCanadaMessaging
+    0,0,0,0,
+    % useCanadaMessagingFee
+    1,0,0,0,
+    % aditionalPhoneNumbers
+    0,0,0,0,
+    % internationalCallingAndMessaging
+    0,0,0,0,
+    % smsViaZapierAddon
+    0,0,0,0,
+    % soc2ReportAddOn
+    0,0,0,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % carrierReviewAndSetupFeesForUsCanadaMessaging
+    0,0,0,0,
+    % useCanadaMessagingFee
+    0,0,0,0,
+    % aditionalPhoneNumbers
+    0,1,0,0,
+    % internationalCallingAndMessaging
+    0,0,0,0,
+    % smsViaZapierAddon
+    0,0,0,1,
+    % soc2ReportAddOn
+    0,0,0,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % carrierReviewAndSetupFeesForUsCanadaMessaging
+    1,1,1,
+    % useCanadaMessagingFee
+    1,1,1,
+    % aditionalPhoneNumbers
+    1,1,1,
+    % internationalCallingAndMessaging
+    1,1,1,
+    % smsViaZapierAddon
+    1,1,1,
+    % soc2ReportAddOn
+    1,1,1
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % carrierReviewAndSetupFeesForUsCanadaMessaging
+    0,0,0,0,0,0,
+    % useCanadaMessagingFee
+    0,0,0,0,0,0,
+    % aditionalPhoneNumbers
+    0,0,0,0,0,0,
+    % internationalCallingAndMessaging
+    0,0,0,0,0,0,
+    % smsViaZapierAddon
+    0,0,0,0,0,0,
+    % soc2ReportAddOn
+    0,0,0,0,0,0
+]);

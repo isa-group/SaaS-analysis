@@ -1,0 +1,65 @@
+FEATURES = {secureStorage,industryAppsIntegration,versionHistory,unlimitedExternalCollaborators,boxApi,boxSign,boxSignViaWebApp,boxSignVia3rdPartyAndCustomApps,granularSharedPermissions,accessControls,microsoft365Integration,googleWorkspaceIntegration,slackIntegration,desktopAccess,mobileAccess,sslEncryption,atRestEncryption,twoFactorAuthentication,standardBusinessSupport,userManagement,dataLossProtection,advancedSecurityReporting,advancedUserReporting,singleSignOn,activeDirectoryIntegration,customBranding,mobileSecurityControls,boxRelay,advancedAdmin,advancedControls,fullContentVisibility,fullContentManagement,userActivityTracking,adminRoleDelegation,metadata,customTemplates,customTermsOfService,pciDssCompliance,boxGovernance,boxZones,boxKeySafe,boxShield,hipaaCompliance,hitechCompliance,fedrampCompliance,deviceTrust,passwordPolicyEnforcement,documentWatermark,boxSignBatchSend,boxSignReadySignLinks};
+USAGE_LIMITS = {storageLimit,uploadSizeLimit,industryAppsIntegrationLimit,versionHistoryThreshold,minUsers,maxUsers,apiCallsLimit,boxSignLimit,includedDocumentsFor3rdPartyAndCustomApps};
+PLANS = {BUSINESS_STARTER,BUSINESS,BUSINESS_PLUS,ENTERPRISE,ENTERPRISE_PLUS};
+ADDONS = {};
+
+plans_prices = [8.0,18.0,30.0,42.0,0.0];
+addons_prices = [];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % BUSINESS_STARTER
+    1,0,1,0,1,1,1,0,1,1,1,1,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % BUSINESS
+    1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % BUSINESS_PLUS
+    1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % ENTERPRISE_PLUS
+    1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % BUSINESS_STARTER
+    100,2,1,25,3,10,25000,10,100,
+    % BUSINESS
+    inf,5,1,50,3,inf,50000,inf,100,
+    % BUSINESS_PLUS
+    inf,15,10,50,3,inf,50000,inf,150,
+    % ENTERPRISE
+    inf,50,inf,100,3,inf,100000,inf,250,
+    % ENTERPRISE_PLUS
+    inf,150,inf,inf,3,inf,100000,inf,1000
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % storageLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % uploadSizeLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % industryAppsIntegrationLimit
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % versionHistoryThreshold
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % minUsers
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % maxUsers
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % apiCallsLimit
+    0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % boxSignLimit
+    0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % includedDocumentsFor3rdPartyAndCustomApps
+    0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);

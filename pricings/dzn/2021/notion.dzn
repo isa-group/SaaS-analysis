@@ -1,0 +1,51 @@
+FEATURES = {pages,blocks,guests,fileUploads,versionHistory,realTimeCollaboration,linkSharing,collaborativeWorkspace,webApp,desktopApp,mobileApp,blockContentTypes,starterTemplates,wikis,docs,notes,databases,tableView,listView,calendarView,kanbanBoardView,galleryView,timelineView,api,bulkExport,adminTools,permissionGroups,advancedPermissions,advancedSecurityControls,samlSso,userProvisioning,bulkPdfExport,prioritySupport,dedicatedCustomerManager,customContract,invoicing,accessFeaturesEarly};
+USAGE_LIMITS = {membersLimit,guestsLimit,fileUploadsLimit,versionHistoryThreshold};
+PLANS = {PERSONAL,PERSONAL_PRO,TEAM,ENTERPRISE};
+ADDONS = {};
+
+plans_prices = [0.0,5.0,10.0,0.0];
+addons_prices = [];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % PERSONAL
+    1,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,
+    % PERSONAL_PRO
+    1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,0,0,0,0,0,0,
+    % TEAM
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % PERSONAL
+    1,5,5,30,
+    % PERSONAL_PRO
+    1,inf,inf,30,
+    % TEAM
+    inf,inf,inf,30,
+    % ENTERPRISE
+    inf,inf,inf,inf
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % membersLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % guestsLimit
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % fileUploadsLimit
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % versionHistoryThreshold
+    0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);

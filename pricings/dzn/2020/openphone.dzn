@@ -1,0 +1,51 @@
+FEATURES = {usAndCanadaCalling,usAndCanadaMessaging,voicemailToText,phoneNumbers,portPhoneNumbersFromOtherCarriers,callRecording,sharedPhoneNumbers,ivrAutoAtendant,emailIntegration,slackIntegration,crmIntegration,analytics,reporting,auditLog,emailSupport,smsSupport,phoneSupport,dedicatedAccountManager};
+USAGE_LIMITS = {phoneNumbersLimit,usAndCanadCallsLimit,usAndCanadaMessagesLimit};
+PLANS = {STANDARD,ENTERPRISE};
+ADDONS = {aditionalPhoneNumbers};
+
+plans_prices = [10.0,0.0];
+addons_prices = [5.0];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % STANDARD
+    1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,1,0,0,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % STANDARD
+    1,10000000000000,10000000000000,
+    % ENTERPRISE
+    1,10000000000000,10000000000000
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % phoneNumbersLimit
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % usAndCanadCallsLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % usAndCanadaMessagesLimit
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % aditionalPhoneNumbers
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % aditionalPhoneNumbers
+    0,0,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % aditionalPhoneNumbers
+    1,0,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % aditionalPhoneNumbers
+    1,1
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % aditionalPhoneNumbers
+    0
+]);

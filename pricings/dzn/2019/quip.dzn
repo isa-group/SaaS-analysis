@@ -1,0 +1,51 @@
+FEATURES = {documents,spreadsheets,slides,basicLiveApps,groupChat,1to1messages,desktopAccess,tabletAccess,mobileAccess,teamManagement,secureProductivity,customAndAdvancedLiveApps,singleSignOn,enterpriseAPI,quipComponent,spreadsheetsWithLiveSalesforceData,salesforceRecordLiveApp,embedQuipDocumentComponentsInAllObjectsInSalesforce};
+USAGE_LIMITS = {};
+PLANS = {STARTER,ENTERPRISE,CUSTOMER360};
+ADDONS = {};
+
+plans_prices = [12.0,25.0,0.0];
+addons_prices = [];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % STARTER
+    1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,
+    % CUSTOMER360
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % STARTER
+    ,
+    % ENTERPRISE
+    ,
+    % CUSTOMER360
+    ,
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % 
+    ,
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % 
+    ,
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % 
+    ,
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % 
+    ,
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % 
+    ,
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % 
+    ,
+]);

@@ -1,0 +1,53 @@
+FEATURES = {oneToOneMeetings, teamMeetings, meetingNotes, calendarIntegrationAndSync, meetingArchives, meetingSearch, realTimeCollaboration, realTimeEmployeesFeedback, conversationStarters, fileAttachments, cloudLinkIntegrations, googleMeetAgendaOverlay, guestUsers, markdownEditor, privateMeetingScratchpad, publicMeetingScratchpad, nextSteps, favoriteItems, meetingInsights, itemVoting, customPersonalAgendaTemplates, customOrgWideAgendaTemplates, goalSetting, milestones, okrExampleLibrary, largeGroupDiscussions, 99%uptimeSLA, adminReporting, engagementInsights, dedicatedCSM, dedicatedQBR, teamTraining, teamOnboarding, prioritySupport, googleSSO, slackSSO, microsoftSSO, azureSSO, emailSSO, customSSO, googleWorkspace, googleCalendar, googleMeet, chromeMeetingExtension, slackbot, microsoftTeams, outlookCalendar, mobileApps, zapier};
+USAGE_LIMITS = {meetingSearchThreshold,storageLimit};
+PLANS = {BASIC, PRO, BUSINESS};
+ADDONS = {customSSO};
+
+plans_prices = [0.0,7.0,11.0];
+addons_prices = [0.0];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % BASIC
+    1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+    % PRO
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    % BUSINESS
+    1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % BASIC
+    30,2,
+    % PRO
+    inf,250,
+    % BUSINESS
+    inf,inf
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % meetingSearchThreshold
+    0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % storageLimit
+    0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % customSSO
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % customSSO
+    0,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % customSSO
+    0,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % customSSO
+    0,0,1
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % customSSO
+    0,0
+]);

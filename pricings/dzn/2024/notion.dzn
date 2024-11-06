@@ -1,0 +1,67 @@
+FEATURES = {pages,blocks,fileUploads,pageHistory,basicPageAnalytics,advancedPageAnalytics,collaborativeWorkspace,guests,permissionGroups,openTeamSpaces,closeTeamSpaces,privateTeamSpaces,advancedTeamSpacePermissions,notionCalendar,views,subtasks,tasksDependency,customProperties,filtering,formulas,basicAutomations,customDatabaseAutomations,publishedPages,notionSiteDomain,basicSEO,advancedSEO,siteCustomization,googleAnalyticsIntegration,customDomainAndBranding,syncDatabases,dynamicLinkPreviews,slackIntegration,zapierIntegration,publicApi,exportEntireWorkspaceAsHTML,exportEntireWorkspaceAsMarkdown,exportEntireWorkspaceAsCSV,twoStepVerification,exportEntireWorkspaceAsPDF,samlSso,userProvisioning,advancedWorkspaceSecurityControls,advancedTeamspaceSecurityControls,workspaceAnalytics,granularAdminRoles,auditLog,adminContentSearch,domainManagement,workspaceConsolidation,managedUsersDashboard,managedUsersControls,securityIntegrations,complianceIntegrations,hipaaCompliance,guestInviteRequests,customDataRetentionPolicies,prioritySupport,customerSuccessManager};
+USAGE_LIMITS = {fileUploadsLimit,pageHistoryThreshold,notionSiteDomainLimit,guestsLimit,customDomainsLimit,syncDatabasesLimit,rowLimitPerSyncedDatabase};
+PLANS = {FREE,PLUS,BUSINESS,ENTERPRISE};
+ADDONS = {customDomain};
+
+plans_prices = [0.0,12.0,18.0,0.0];
+addons_prices = [0.0];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,1,0,1,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,0,1,1,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % PLUS
+    1,1,1,0,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % BUSINESS
+    1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % ENTERPRISE
+    1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    5,7,1,10,0,1,100,
+    % PLUS
+    .inf,30,5,100,.inf,.inf,20000,
+    % BUSINESS
+    .inf,90,5,250,.inf,.inf,20000,
+    % ENTERPRISE
+    .inf,.inf,5,250,.inf,.inf,20000
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % fileUploadsLimit
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % pageHistoryThreshold
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % notionSiteDomainLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % guestsLimit
+    0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % customDomainsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % syncDatabasesLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % rowLimitPerSyncedDatabase
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % customDomain
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % customDomain
+    0,0,0,0,1,0,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % customDomain
+    0,0,0,0,1,0,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % customDomain
+    0,1,1,1
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % customDomain
+    0,0
+]);

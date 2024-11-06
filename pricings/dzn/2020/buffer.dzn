@@ -1,0 +1,57 @@
+FEATURES = {socialChannels,schedulePosts,instagram,facebook,twitter,linkedin,pinterest,pinterestBoards,tailoredPostComposer,calendarView,customVideoThumpnails,instagramFirstComment,instagramHashtagManager,instagramStories,instagramShopGrid,draftPosts,postsReport,inviteAdditionalUsers,assignAccessAndPermissions,approvalWorkflow,browserExtension,mobileApps,thirdPartyIntegrations,twoFactorAuthentication,selfServiceKnowledgeBase,socialMediaSupport,emailSupport,bufferCommunity,engagementGridView,commentSentiment,hotkeys};
+USAGE_LIMITS = {socialChannelsLimit,postsPerScheduledQueuePerSocialAccountLimit,usersLimit};
+PLANS = {PRO,PREMIUM,BUSINESS,MEDIUM_BUSINESS,LARGE_BUSINESS,ENTERPRISE};
+ADDONS = {};
+
+plans_prices = [15.0,65.0,99.0,199.0,399.0,0.0];
+addons_prices = [];
+
+plans_features = array2d(PLANS, FEATURES, [
+    % PRO
+    1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,
+    % PREMIUM
+    1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,
+    % BUSINESS
+    1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,
+    % MEDIUM_BUSINESS
+    1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,
+    % LARGE_BUSINESS
+    1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % PRO
+    8,10000000,1,
+    % PREMIUM
+    8,2000,2,
+    % BUSINESS
+    25,2000,6,
+    % MEDIUM_BUSINESS
+    8,10000000,1,
+    % LARGE_BUSINESS
+    8,10000000,1,
+    % ENTERPRISE
+    8,10000000,1
+]);
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % socialChannelsLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % postsPerScheduledQueuePerSocialAccountLimit
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % usersLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);
