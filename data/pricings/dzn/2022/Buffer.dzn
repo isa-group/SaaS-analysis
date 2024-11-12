@@ -1,0 +1,99 @@
+num_features = 71;
+num_usage_limits = 11;
+num_plans = 4;
+num_addons = 3;
+
+features = ["socialChannels","scheduledPostsPerChannel","users","additionalUsers","instagram","tiktok","facebook","twitter","linkedin","google","pinterest","startPage","shopGrid","postSchedule","draftPosts","tailoredPosts","calendarView","instagramReelsAndCarousels","buffLyLinkShortening","bitLyLinkShortening","customLinkShortening","customVideoThumpnails","multiChannelCampaigns","instagramFirstComment","instagramTagging","instagramHashtagManager","instagramStoriesScheduling","twitterHashtagSuggestions","facebookPageMentions","twitterMentions","shuffleQueue","googleBusinessProfiles","ideas","twitterThreads","performanceOverview","individualPostAnalytics","instagramHistoricalDataAccess","tiktokHistoricalDataAccess","facebookHistoricalDataAccess","twitterHistoricalDataAccess","linkedinHistoricalDataAccess","pinterestHistoricalDataAccess","dataStorage","campaignAnalysis","boostedPostInsights","hashtagPerformance","audienceDemographics","machineLearningInsights","instagramStoriesAnalytics","shopifyPerformance","customReports","exportableReports","brandedReports","coverPage","gridView","importantCommentDetection","hotkeys","easyAccountSwitching","draftPostManagement","customAccessAndPermissions","approvalWorkflow","browserExtension","contentInIntegrations","mobileApps","thirdPartyIntegrations","twoFactorAuthentication","googleAnalyticsIntegration","customUTMParameters","selfServiceKnowledgeBase","socialMediaSupport","emailSupport"];
+usage_limits = ["socialChannelsLimit","postsPerScheduledQueuePerSocialAccountLimit","usersLimit","ideasLimit","useInstagramHistoricalDataAccess","useTiktokHistoricalDataAccess","useFacebookHistoricalDataAccess","useTwitterHistoricalDataAccess","useLinkedinHistoricalDataAccess","usePinterestHistoricalDataAccess","useDataStorage"];
+plans = ["FREE","ESSENTIALS","TEAM","AGENCY"];
+addons = ["essentialsExtraChannels","teamExtraChannels","agencyExtraChannels"];
+
+plans_prices = [0,6,12,120];
+addons_prices = [5,10,5];
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % socialChannelsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % postsPerScheduledQueuePerSocialAccountLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % usersLimit
+    0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % ideasLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useInstagramHistoricalDataAccess
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useTiktokHistoricalDataAccess
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useFacebookHistoricalDataAccess
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useTwitterHistoricalDataAccess
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useLinkedinHistoricalDataAccess
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % usePinterestHistoricalDataAccess
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useDataStorage
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,1,1,1,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,0,1,1,1,
+    % ESSENTIALS
+    1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,1,
+    % TEAM
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    % AGENCY
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    3,10,1,100,6,6,6,28,6,6,2,
+    % ESSENTIALS
+    1,2000,1,2000,6,6,6,28,6,6,2,
+    % TEAM
+    1,2000,10000000000,2000,6,6,6,28,6,6,2,
+    % AGENCY
+    10,2000,10000000000,2000,6,6,6,28,6,6,2
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % essentialsExtraChannels
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % teamExtraChannels
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % agencyExtraChannels
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % essentialsExtraChannels
+    0,0,0,0,0,0,0,0,0,0,0,
+    % teamExtraChannels
+    0,0,0,0,0,0,0,0,0,0,0,
+    % agencyExtraChannels
+    0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % essentialsExtraChannels
+    1,0,0,0,0,0,0,0,0,0,0,
+    % teamExtraChannels
+    1,0,0,0,0,0,0,0,0,0,0,
+    % agencyExtraChannels
+    1,0,0,0,0,0,0,0,0,0,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % essentialsExtraChannels
+    0,1,0,0,
+    % teamExtraChannels
+    0,0,1,0,
+    % agencyExtraChannels
+    0,0,0,1
+]);
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % essentialsExtraChannels
+    0,0,0,
+    % teamExtraChannels
+    0,0,0,
+    % agencyExtraChannels
+    0,0,0
+]);

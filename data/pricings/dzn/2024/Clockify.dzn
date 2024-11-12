@@ -1,0 +1,67 @@
+num_features = 72;
+num_usage_limits = 0;
+num_plans = 6;
+num_addons = 4;
+
+features = ["unlimitedTracking","timeTracker","timesheet","kiosk","autotracker","calendar","apps","pomodoroTimer","idleDetectionAndReminders","trackingIntegrations","favoriteEntries","importTime","splitTime","breaks","requiredFields","addTimeForOthers","timeOff","targetsAndReminders","lockTimesheets","customFields","forceTimer","gpsTracking","screenshots","teamActivity","reports","exportAndShare","billableRates","projectStatus","projectExport","apiAndWebhooks","multiYearRange","decimalFormat","timeAudit","customizeExports","historicalRates","rounding","attendanceAndOvertime","quickBooksIntegration","taskRates","laborCostAndProfit","budgetAndEstimates","multipleCurrencies","forecasting","alerts","userFields","assigmentReport","expenseReport","emailReports","unlimitedUsers","unlimitedProjects","importProjects","projectAccess","languages","teamChat","hideTimeAndPages","bulkEdit","projectTemplates","editProfiles","kioskPIN","customizeKiosk","invoicing","approval","managerRole","force2FA","scheduling","expenses","dataRegion","singleSignOn","customSubdomain","controlAccounts","auditLog","accessToAllCake.comProducts"];
+usage_limits = [];
+plans = ["FREE","BASIC","STANDARD","PRO","ENTERPRISE","CAKE_BUNDLE"];
+addons = ["kioskBasic","kioskStandard","kioskPro","kioskEnterprise"];
+
+plans_prices = [0,4.99,6.99,9.99,14.99,15.99];
+addons_prices = [0.99,1.49,1.99,2.99];
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+]);
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
+    % BASIC
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,
+    % STANDARD
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,
+    % PRO
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,1,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    % CAKE_BUNDLE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % kioskBasic
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % kioskStandard
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % kioskPro
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % kioskEnterprise
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % kioskBasic
+    0,1,0,0,0,0,
+    % kioskStandard
+    0,0,1,0,0,0,
+    % kioskPro
+    0,0,0,1,0,0,
+    % kioskEnterprise
+    0,0,0,0,1,0
+]);
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % kioskBasic
+    0,0,0,0,
+    % kioskStandard
+    0,0,0,0,
+    % kioskPro
+    0,0,0,0,
+    % kioskEnterprise
+    0,0,0,0
+]);

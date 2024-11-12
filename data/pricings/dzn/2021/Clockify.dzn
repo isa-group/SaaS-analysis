@@ -1,0 +1,57 @@
+num_features = 38;
+num_usage_limits = 3;
+num_plans = 5;
+num_addons = 0;
+
+features = ["unlimitedTracking","unlimitedProjects","unlimitedReports","apps","integrations","support","apiAndWebhooks","addTimeForOthers","hideTimeAndPages","requiredFields","bulkEdit","decimalFormat","timeAudit","customizeExports","projectTemplates","historicalRates","importTimesheets","lockTimesheets","timeApproval","timeOff","managerRole","targetsAndReminders","taskRates","timeRounding","invoicing","quickBooksIntegration","expenses","laborCostAndProfit","scheduledReports","budgetAndEstimates","alerts","customFields","forceTimer","gpsTracking","screenshots","singleSignOn","customSubdomain","controlAccounts"];
+usage_limits = ["trackingLimit","projectsLimit","reportsLimit"];
+plans = ["FREE","BASIC","STANDARD","PRO","ENTERPRISE"];
+addons = [];
+
+plans_prices = [0,4.99,6.99,9.99,14.99];
+addons_prices = [];
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % trackingLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % projectsLimit
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % reportsLimit
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % BASIC
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % STANDARD
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,
+    % PRO
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    1000000000000,1000000000000,1000000000000,
+    % BASIC
+    1000000000000,1000000000000,1000000000000,
+    % STANDARD
+    1000000000000,1000000000000,1000000000000,
+    % PRO
+    1000000000000,1000000000000,1000000000000,
+    % ENTERPRISE
+    1000000000000,1000000000000,1000000000000
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);

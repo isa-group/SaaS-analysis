@@ -1,7 +1,0 @@
-from enum import Enum
-
-class UsageLimitType(Enum):
-    NON_RENEWABLE = "NON_RENEWABLE"
-    RENEWABLE = "RENEWABLE"
-    RESPONSE_DRIVEN = "RESPONSE_DRIVEN"
-    TIME_DRIVEN = "TIME_DRIVEN"

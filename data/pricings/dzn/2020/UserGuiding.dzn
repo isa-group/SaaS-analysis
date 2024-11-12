@@ -1,0 +1,55 @@
+num_features = 21;
+num_usage_limits = 6;
+num_plans = 3;
+num_addons = 0;
+
+features = ["users","userGuidingBranding","teams","guides","hotspots","onboardingChecklist","customization","npsSurveys","personalization","segmentation","userIdentification","userGuidingAPI","usageAnalytics","usageReporting","integrations","emailSupport","chatSupport","successCoaching","customCSS","sla","singleSignOn"];
+usage_limits = ["activeUsersLimit","teamMembersLimit","activeGuidesLimit","activeHotspotsLimit","activeOnboardingChecklistsLimit","limitedCustomization"];
+plans = ["STARTUP","GROWTH","ENTERPRISE"];
+addons = [];
+
+plans_prices = [199,399,999];
+addons_prices = [];
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % activeUsersLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % teamMembersLimit
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % activeGuidesLimit
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % activeHotspotsLimit
+    0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % activeOnboardingChecklistsLimit
+    0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % limitedCustomization
+    0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+plans_features = array2d(PLANS, FEATURES, [
+    % STARTUP
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,
+    % GROWTH
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % STARTUP
+    20000,1,10,10,1,1,
+    % GROWTH
+    20000,1,10,10,1,1,
+    % ENTERPRISE
+    50000,1000000000,1000000000,1000000000,1000000000,1
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);

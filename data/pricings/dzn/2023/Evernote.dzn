@@ -1,0 +1,47 @@
+num_features = 76;
+num_usage_limits = 2;
+num_plans = 3;
+num_addons = 0;
+
+features = ["appForIOS","appForAndroid","appForWindows","appForMac","appForLinux","appForWeb","syncAcrossDevices","notes","ad-free","tasks","addDueDatesToTasks","addRemindersToTasks","addNotificationsToTasks","createAndEditRecurringTasks","tasksManagementView","customizeHomeWithTasksWidget","customizeHomeWithFilteredNotesWidget","connectWithPrimaryGoogleCalendar","getNotifiedWhenItsTimeToTakeNotes","openNotesForCalendarEvents","connectWithMultipleGoogleCalendarAccounts","assignTasksToOthers","trackOthersProgressOnTasks","customizeHomeWithPinnedNotesWidget","customizeHomeWithScratchPadWidget","useBooleanTermsToRefineSearch","findContentByLocation","exportNotebooksAsPDFs","homeDashboard","richFormatting","webClipper","attachFilesToNotes","scanHadWrittenNotes","scanWhiteboards","scanReceipts","scanMore","recordAudioNotes","playAudioNotes","annotateImages","annotatePdfs","forwardEmailsIntoEvernote","createCustomTemplates","saveCustomTemplates","scanAndDigitalizeBusinessCardsToCreateContacts","addRemindersToNotes","searchNotes","getSearchSugestionsAsYourType","saveSearches","createOwnFilingSystem","connectWithGmail","customizeHomeWithMoreWidgets","customizeHomeWithBackgroundImages","accessNotesOffline","connectWithGoogleDrive","searchTextInsideImages","searchTextInsideHandwrittenNotes","searchTextInsideDocuments","searchTextInsidePDFs","versionHistoryOfNotes","restoreNotesFromOlderVersions","quicklySwitchBetweenAccounts","shareNotesWithPeople","shareNotebooksWithPeople","setPermissionsForEdittingNotes","setPermissionsForEdittingNotebooks","setPermissionsForViewingNotes","setPermissionsForViewingNotebooks","sendEmailsWithNotesCopies","advancedPdfExportControls","connectWithSlack","connectWithTeams","dataNotForSale","twoStepVerification","forumSupport","applyInNoteEncryption","supportTickets"];
+usage_limits = ["maximumNoteSize","globalMonthlyUploadLimit"];
+plans = ["FREE","PERSONAL","PROFESIONAL"];
+addons = [];
+
+plans_prices = [0,12.99,16.99];
+addons_prices = [];
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % maximumNoteSize
+    0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % globalMonthlyUploadLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,1,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,1,1,1,0,0,
+    % PERSONAL
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1,1,
+    % PROFESIONAL
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    25,60,
+    % PERSONAL
+    200,10240,
+    % PROFESIONAL
+    200,20480
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);

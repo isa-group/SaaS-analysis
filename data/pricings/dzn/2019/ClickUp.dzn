@@ -1,0 +1,49 @@
+num_features = 26;
+num_usage_limits = 1;
+num_plans = 4;
+num_addons = 0;
+
+features = ["storage","tasks","views","integrations","reporting","guests","permissions","goals","portfolio","customFields","twoFactorAuthentication","googleSingleSignOn","goalFolders","customExporting","privateViews","protectedViews","defaultViews","workload","extraGuests","singleSignOn","contractReview","hipaaCompliance","api","customOnboarding","dedicatedSuccessManager","advancedPermissions"];
+usage_limits = ["increasedApiLimit"];
+plans = ["FREE","UNLIMITED","BUSINESS","ENTERPRISE"];
+addons = [];
+
+plans_prices = [0,9,19,190];
+addons_prices = [];
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % increasedApiLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+    % UNLIMITED
+    1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+    % BUSINESS
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,0,0,0,
+    % ENTERPRISE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    0,
+    % UNLIMITED
+    0,
+    % BUSINESS
+    0,
+    % ENTERPRISE
+    1
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);

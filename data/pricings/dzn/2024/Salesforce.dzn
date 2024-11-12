@@ -1,0 +1,209 @@
+num_features = 111;
+num_usage_limits = 13;
+num_plans = 3;
+num_addons = 14;
+
+features = ["einsteinActivityCapture","einsteinRelationshipInsights","buyerAssistant","conversationInsights","emailInsights","leadScoring","opportunityScoring","dealInsights","einsteinForecasting","einsteinCopilot","leadManagement","leadAssigmentAndRouting","duplicateBlocking","webToLeadCapture","massEmail","emailProductivity","campaignManagement","emailTemplates","toDoList","campaignInfluence","accountAndContactManagement","opportunityManagement","customizableSalesProcess","taskManagement","activityFeed","personAccounts","salesConsoleApps","salesTeams","salesforceMeetings","salesforceMobileApp","salesCloudEverywhere","fullOfflineMobileFunctionality","customizableReports","customizableDashboards","advancedReportingFeatures","forecasting","embeddedForecastCharts","forecastingMobileApp","opportunitySplits","salesTerritories","pipelineInspection","waterfallChart","contracts","orders","productBooks","priceBooks","quotes","files","topics","recommendations","chatter","caseManagement","readOnlyKnowledge","readAndWriteKnowledge","slackSalesElevate","slackIntegration","flowBuilder","flowOrchestration","approvalProcesses","lightningAppBuilder","appExchange","dataStoragePerUser","fileStoragePerUser","unlimitedCustomApplications","customizableProfiles","customizablePageLayouts","rolesAndPermissions","recordTypes","developerSandbox","developerProSandbox","partialSandbox","fullSandbox","lightningPlatform","emailIntegrationWithOutlook","emailIntegrationWithGmail","webServicesAPI","dataSynchronization","dataHarmonization","revenueMilestones","guidanceCenter","enablementAnalytics","bestPracticeTemplates","inAppCoaching","inAppGuidance","inAppWalkthroughs","einsteinOpportunityScoring","einsteinDealHealthInsights","collaborativeForecasting","predictiveForecasting","revenueInsightsDashboards","einsteinAccountManagement","crmANalyticsPlusLicense","industryDashboardTemplates","tableauexplorerLicense","productCatalog","productPriceBook","usagePricing","quoting","guidedSelling","advancedApprovals","advancedOrderManagement","documentGeneration","omniStudio","personalizedPartnerExperiences","dealManagement","unifiedMarketing","partnerAI","partnerAnalytics","customObjects","partnerRelationshipDataStorage","partnerRelationshipApi"];
+usage_limits = ["numberOfCampaignsPerOportunity","numberOfCustomAppsPerOrg","numberOfProcessesAndFlows","numberOfCustomizableProfiles","numberOfRoles","numberOfRecordTypes","numberOfPartialSandbox","numberOfFullSanbox","customObjectsLimit","partnerRelationshipDataStorageLimitMember","partnerRelationshipDataStorageLimitLogin","partnerRelationshipApiCallsLimitMember","partnerRelationshipApiCallsLimitLogin"];
+plans = ["STARTER_SUITE","PRO_SUITE","ENTERPRISE"];
+addons = ["einsteinForProSuite","einsteinForEnterprise","slackSalesElevate","slackIntegration","flowOrchestration","salesProgram","revenueIntelligence","revenueIntelligenceWithTableau","cpq","cpqPlus","partnerRelationshipManagement","partnerRelationshipManagementWithExternalApps","developerProSandbox","fullSandbox"];
+
+plans_prices = [25,100,165];
+addons_prices = [75,75,60,100,100,100,220,250,75,150,25,35,100,100];
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % numberOfCampaignsPerOportunity
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % numberOfCustomAppsPerOrg
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % numberOfProcessesAndFlows
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % numberOfCustomizableProfiles
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % numberOfRoles
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % numberOfRecordTypes
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % numberOfPartialSandbox
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % numberOfFullSanbox
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % customObjectsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,
+    % partnerRelationshipDataStorageLimitMember
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,
+    % partnerRelationshipDataStorageLimitLogin
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,
+    % partnerRelationshipApiCallsLimitMember
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,
+    % partnerRelationshipApiCallsLimitLogin
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+]);
+
+plans_features = array2d(PLANS, FEATURES, [
+    % STARTER_SUITE
+    1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % PRO_SUITE
+    1,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,1,0,1,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,0,0,1,1,1,1,1,0,0,0,0,1,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % ENTERPRISE
+    1,0,0,1,0,0,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,1,0,1,1,1,1,1,1,0,0,0,0,1,0,1,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % STARTER_SUITE
+    3,1,5,2,2,3,1,1,10,5,1,200,10,
+    % PRO_SUITE
+    3,1,5,2,2,3,1,1,10,5,1,200,10,
+    % ENTERPRISE
+    5,Infinity,Infinity,2,2,3,1,1,10,5,1,200,10
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % einsteinForProSuite
+    0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % einsteinForEnterprise
+    0,1,1,0,1,1,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % slackSalesElevate
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % slackIntegration
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % flowOrchestration
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % salesProgram
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % revenueIntelligence
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % revenueIntelligenceWithTableau
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % cpq
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,
+    % cpqPlus
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,
+    % partnerRelationshipManagement
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,
+    % partnerRelationshipManagementWithExternalApps
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,
+    % developerProSandbox
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % fullSandbox
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % einsteinForProSuite
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % einsteinForEnterprise
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % slackSalesElevate
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % slackIntegration
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % flowOrchestration
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % salesProgram
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % revenueIntelligence
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % revenueIntelligenceWithTableau
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % cpq
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % cpqPlus
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % partnerRelationshipManagement
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % partnerRelationshipManagementWithExternalApps
+    0,0,0,0,0,0,0,0,100,45,20,1000,400,
+    % developerProSandbox
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % fullSandbox
+    0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % einsteinForProSuite
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % einsteinForEnterprise
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % slackSalesElevate
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % slackIntegration
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % flowOrchestration
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % salesProgram
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % revenueIntelligence
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % revenueIntelligenceWithTableau
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % cpq
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % cpqPlus
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % partnerRelationshipManagement
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % partnerRelationshipManagementWithExternalApps
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % developerProSandbox
+    0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % fullSandbox
+    0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % einsteinForProSuite
+    0,1,0,
+    % einsteinForEnterprise
+    0,0,1,
+    % slackSalesElevate
+    0,1,1,
+    % slackIntegration
+    1,1,1,
+    % flowOrchestration
+    0,1,1,
+    % salesProgram
+    1,1,1,
+    % revenueIntelligence
+    1,1,1,
+    % revenueIntelligenceWithTableau
+    1,1,1,
+    % cpq
+    1,1,1,
+    % cpqPlus
+    1,1,1,
+    % partnerRelationshipManagement
+    1,1,1,
+    % partnerRelationshipManagementWithExternalApps
+    1,1,1,
+    % developerProSandbox
+    0,1,1,
+    % fullSandbox
+    0,0,1
+]);
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % einsteinForProSuite
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % einsteinForEnterprise
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % slackSalesElevate
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % slackIntegration
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % flowOrchestration
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % salesProgram
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % revenueIntelligence
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % revenueIntelligenceWithTableau
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % cpq
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % cpqPlus
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % partnerRelationshipManagement
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % partnerRelationshipManagementWithExternalApps
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % developerProSandbox
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % fullSandbox
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);

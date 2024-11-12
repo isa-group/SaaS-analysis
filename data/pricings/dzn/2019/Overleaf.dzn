@@ -1,0 +1,45 @@
+num_features = 11;
+num_usage_limits = 1;
+num_plans = 3;
+num_addons = 0;
+
+features = ["privateProjects","realTimeCollaboration","templates","latexEditor","realTimeTrackChanges","advancedReferenceSearch","referenceManagerSync","fullDocumentHistory","dropboxIntegration","githubIntegration","prioritySupport"];
+usage_limits = ["maxCollaboratorsPerProject"];
+plans = ["PERSONAL","COLLABORATOR","PROFESSIONAL"];
+addons = [];
+
+plans_prices = [0,15,30];
+addons_prices = [];
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % maxCollaboratorsPerProject
+    0,1,0,0,0,0,0,0,0,0,0
+]);
+
+plans_features = array2d(PLANS, FEATURES, [
+    % PERSONAL
+    1,1,1,1,0,0,0,0,0,0,0,
+    % COLLABORATOR
+    1,1,1,1,1,1,1,1,1,1,1,
+    % PROFESSIONAL
+    1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % PERSONAL
+    1,
+    % COLLABORATOR
+    10,
+    % PROFESSIONAL
+    Infinity
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);

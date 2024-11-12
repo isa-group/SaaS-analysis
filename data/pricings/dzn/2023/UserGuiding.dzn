@@ -1,0 +1,59 @@
+num_features = 45;
+num_usage_limits = 8;
+num_plans = 3;
+num_addons = 0;
+
+features = ["guides","hotspots","onboardingChecklist","resourceCenters","npsSurveys","engagementAnalytics","userIdentification","userTracking","adoptionTracker","audienceSegmentation","customAttributes","userDetails","userActivityFeed","customEvents","weeklyReports","errorLogging","customizableThemes","languageLocalization","dynamicMaterialPersonalization","removeUserGuidingBranding","customCSS","materialScheduling","appearanceCustomization","googleAnalytics","webhooks","segment","mixpanel","zapier","hubspot","intercom","slack","woopra","knowledBaseIntegrations","liveChatSoftwareIntegrations","roleManagement","permissionManagement","teams","domains","employeeOnboardingModule","troubleShooterAccess","helpCenter","userGuidingUniversity","emailSupport","liveChatSupport","dedicatedCustomerSuccessManager"];
+usage_limits = ["activeGuidesLimit","activeHotspotsLimit","activeOnboardingChecklistsLimit","activeResourceCentersLimit","customizableThemesLimit","activeUsersLimit","teamMembersLimit","domainsLimit"];
+plans = ["BASIC","PROFESSIONAL","CORPORATE"];
+addons = [];
+
+plans_prices = [129,499,999];
+addons_prices = [];
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % activeGuidesLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % activeHotspotsLimit
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % activeOnboardingChecklistsLimit
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % activeResourceCentersLimit
+    0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % customizableThemesLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % activeUsersLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % teamMembersLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,
+    % domainsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
+]);
+
+plans_features = array2d(PLANS, FEATURES, [
+    % BASIC
+    1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,1,0,1,0,1,0,1,1,1,1,1,0,1,1,1,1,1,1,0,0,1,1,0,1,1,1,1,1,0,
+    % PROFESSIONAL
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    % CORPORATE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % BASIC
+    20,20,2,1,1,2500,1,2,
+    % PROFESSIONAL
+    20,20,2,1,1,2500,1,2,
+    % CORPORATE
+    20,20,2,1,1,2500,1,2
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);

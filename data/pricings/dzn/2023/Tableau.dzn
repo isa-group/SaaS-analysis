@@ -1,0 +1,95 @@
+num_features = 40;
+num_usage_limits = 1;
+num_plans = 3;
+num_addons = 5;
+
+features = ["manageUserPermissions","curateDataSources","shareDataSources","manageContent","certifyDataSources","authorFromCuratedData","viewLineageAndImpact","setDataQualityWarnings","advancedDeploymentMonitoring","programmaticContentMigration","interactWithVisualizations","interactWithDashboards","createCustomViews","shareCustomViews","downloadVisualizationAsImages","downloadSummaryData","downloadFullData","seeDataQualityWarnings","consumePredictiveModels","commentOnDashboard","commentOnVisualization","createASubscriptionForYourself","receiveDataDrivenAlerts","createSubscriptionsForOthers","createDataDrivenAlerts","editExistingWorkbooks","editExistingVisualizations","createAndPublishNewWorkbookFromExistingDataSource","askData","createAndPublishNewWorkbookFromNewDataSources","createAndPublishNewDataSources","createNewWorkbooksBasedOnPreBuiltDashboardStarters","createNewDataFlows","editDataFlow","exportData","publishFlows","runFlows","scheduleFlows","monitorFlowPerformance","monitorFlowHealth"];
+usage_limits = ["flowsLimit"];
+plans = ["VIEWER","EXPLORER","CREATOR"];
+addons = ["dataManagementViewer","dataManagementExplorer","dataManagementCreator","advancedManagement","einsteinDiscovery"];
+
+plans_prices = [15,42,75];
+addons_prices = [100,100,100,100,100];
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % flowsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0
+]);
+
+plans_features = array2d(PLANS, FEATURES, [
+    % VIEWER
+    0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,1,0,0,0,1,1,1,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,
+    % EXPLORER
+    1,0,0,1,1,1,0,0,0,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,
+    % CREATOR
+    1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % VIEWER
+    0,
+    % EXPLORER
+    0,
+    % CREATOR
+    1
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % dataManagementViewer
+    0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % dataManagementExplorer
+    0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,
+    % dataManagementCreator
+    0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,
+    % advancedManagement
+    0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % einsteinDiscovery
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % dataManagementViewer
+    0,
+    % dataManagementExplorer
+    0,
+    % dataManagementCreator
+    0,
+    % advancedManagement
+    0,
+    % einsteinDiscovery
+    0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % dataManagementViewer
+    0,
+    % dataManagementExplorer
+    0,
+    % dataManagementCreator
+    0,
+    % advancedManagement
+    0,
+    % einsteinDiscovery
+    0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % dataManagementViewer
+    1,0,0,
+    % dataManagementExplorer
+    0,1,0,
+    % dataManagementCreator
+    0,0,1,
+    % advancedManagement
+    0,0,1,
+    % einsteinDiscovery
+    1,1,1
+]);
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % dataManagementViewer
+    0,0,0,0,0,
+    % dataManagementExplorer
+    0,0,0,0,0,
+    % dataManagementCreator
+    0,0,0,0,0,
+    % advancedManagement
+    0,0,0,0,0,
+    % einsteinDiscovery
+    0,0,0,0,0
+]);

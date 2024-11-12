@@ -1,0 +1,61 @@
+num_features = 42;
+num_usage_limits = 7;
+num_plans = 4;
+num_addons = 0;
+
+features = ["secureStorage","industryAppsIntegration","versionHistory","unlimitedExternalCollaborators","sharedPermissions","specificAccessControls","standardIntegrations","desktopAccessToBoxFiles","mobileAccess","sslEncryption","atRestEncryption","twoFactorAuthentication","standardEnterpriseSupport","userManagement","dataLossPrevention","advancedSecurityReporting","advancedUserReporting","singleSignOn","activeDirectoryIntegration","customBranding","mobileSecurityControls","advancedManagement","advancedControls","completeContentVisibility","completeContentManagement","userActivityTracking","adminRoleDelegation","customMetadata","customTemplates","customTermsOfService","pciDssCompliance","boxGovernance","boxKeySafe","boxZones","relayLite","hipaaCompliance","hitechCompliance","fedrampCompliance","deviceTrust","passwordPolicy","documentWatermark","boxApi"];
+usage_limits = ["secureStorageLimit","uploadSizeLimit","industryAppsIntegrationLimit","versionHistoryThreshold","minUsers","maxUsers","apiCallsLimit"];
+plans = ["STARTER","BUSINESS","BUSINESS_PLUS","ENTERPRISE"];
+addons = [];
+
+plans_prices = [5,15,25,250];
+addons_prices = [];
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % secureStorageLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % uploadSizeLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % industryAppsIntegrationLimit
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % versionHistoryThreshold
+    0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % minUsers
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % maxUsers
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % apiCallsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1
+]);
+
+plans_features = array2d(PLANS, FEATURES, [
+    % STARTER
+    1,0,1,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
+    % BUSINESS
+    1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,
+    % BUSINESS_PLUS
+    1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,1,
+    % ENTERPRISE
+    1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % STARTER
+    100,2,1,25,3,10,25000,
+    % BUSINESS
+    Infinity,5,1,50,3,Infinity,50000,
+    % BUSINESS_PLUS
+    Infinity,5,3,50,3,Infinity,50000,
+    % ENTERPRISE
+    Infinity,5,Infinity,100,3,Infinity,100000
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+]);
+addons_depends_on = array2d(ADDONS, ADDONS, [
+]);

@@ -1,0 +1,21 @@
+{
+  "name": "caise25-saas-analysis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "generate-dzn-files": "ts-node src/scripts/pricings2dzn.ts",
+    "add-versions-to-pricings": "ts-node src/scripts/add-version-fields-to-pricings.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^29.5.13",
+    "@types/node": "^22.7.8",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

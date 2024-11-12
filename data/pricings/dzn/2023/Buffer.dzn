@@ -1,0 +1,109 @@
+num_features = 76;
+num_usage_limits = 16;
+num_plans = 4;
+num_addons = 3;
+
+features = ["channels","schedulePosts","facebookPages","facebookGroups","instagramCreatorAccounts","instagramBusinessAccounts","twitterProfiles","linkedinPages","linkedinProfiles","pinterestBoards","tiktokBusinessAccounts","googleBusinessProfiles","mastodonProfiles","youtubeShorts","startPage","bufferAIAssistant","ideas","drafts","canva","googleOneDriveDropboxIntegrations","postPreviews","browserExtension","contentScheduling","customSchedules","tailoredPosts","queueOrCalendarView","mentions","twitterThreads","customVideoThumpnails","hashtagManager","instagramFirstComment","shuffleQueue","linkShorteners","videoScheduling","tags","landingPage","performanceOverview","individualPostAnalytics","instagramHistoricalDataAccess","tiktokHistoricalDataAccess","facebookHistoricalDataAccess","twitterHistoricalDataAccess","linkedinHistoricalDataAccess","pinterestHistoricalDataAccess","googleHistoricalDataAccess","mastodonHistoricalDataAccess","youtubeHistoricalDataAccess","dataStorage","tagAnalysis","boostedPostInsights","hashtagPerformance","audienceDemographics","machineLearningInsights","instagramStoriesAnalytics","shopifyPerformance","customReports","exportableReports","brandedReports","coverPage","gridView","importantCommentDetection","hotkeys","easyAccountSwitching","includedUsers","draftPostManagement","customAccessAndPermissions","approvalWorkflow","notes","mobileApps","thirdPartyIntegrations","twoFactorAuthentication","googleAnalyticsIntegration","customUTMParameters","selfServiceKnowledgeBase","socialMediaSupport","emailSupport"];
+usage_limits = ["socialChannelsLimit","postsPerScheduledQueuePerSocialAccountLimit","ideasLimit","useInstagramHistoricalDataAccess","useTiktokHistoricalDataAccess","useFacebookHistoricalDataAccess","useTwitterHistoricalDataAccess","useLinkedinHistoricalDataAccess","usePinterestHistoricalDataAccess","useGoogleHistoricalDataAccess","useMastodonHistoricalDataAccess","useYoutubeHistoricalDataAccess","useDataStorage","useTagsLimit","useIncludedUsersLimit","useTwitterThreadsLimit"];
+plans = ["FREE","ESSENTIALS","TEAM","AGENCY"];
+addons = ["essentialsExtraChannels","teamExtraChannels","agencyExtraChannels"];
+
+plans_prices = [0,6,12,120];
+addons_prices = [6,12,6];
+
+linked_features = array2d(USAGE_LIMITS, FEATURES, [
+    % socialChannelsLimit
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % postsPerScheduledQueuePerSocialAccountLimit
+    0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % ideasLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useInstagramHistoricalDataAccess
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useTiktokHistoricalDataAccess
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useFacebookHistoricalDataAccess
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useTwitterHistoricalDataAccess
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useLinkedinHistoricalDataAccess
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % usePinterestHistoricalDataAccess
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useGoogleHistoricalDataAccess
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useMastodonHistoricalDataAccess
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useYoutubeHistoricalDataAccess
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useDataStorage
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useTagsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useIncludedUsersLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,
+    % useTwitterThreadsLimit
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+
+plans_features = array2d(PLANS, FEATURES, [
+    % FREE
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,1,1,1,0,0,1,1,1,
+    % ESSENTIALS
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,1,1,0,0,0,1,1,1,1,1,1,1,1,1,
+    % TEAM
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+    % AGENCY
+    1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+]);
+plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
+    % FREE
+    3,10,100,6,6,6,28,6,6,6,6,6,2,3,1,1,
+    % ESSENTIALS
+    1,10000000,2000,6,6,6,28,6,6,6,6,6,2,250,1,10000000,
+    % TEAM
+    1,10000000,2000,6,6,6,28,6,6,6,6,6,2,250,10000000,10000000,
+    % AGENCY
+    10,10000000,2000,6,6,6,28,6,6,6,6,6,2,250,10000000,10000000
+]);
+
+addons_features = array2d(ADDONS, FEATURES, [
+    % essentialsExtraChannels
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % teamExtraChannels
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % agencyExtraChannels
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
+    % essentialsExtraChannels
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % teamExtraChannels
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % agencyExtraChannels
+    0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
+    % essentialsExtraChannels
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % teamExtraChannels
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+    % agencyExtraChannels
+    1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+]);
+addons_available_for = array2d(ADDONS, PLANS, [
+    % essentialsExtraChannels
+    0,1,0,0,
+    % teamExtraChannels
+    0,0,1,0,
+    % agencyExtraChannels
+    0,0,0,1
+]);
+addons_depends_on = array2d(ADDONS, ADDONS, [
+    % essentialsExtraChannels
+    0,0,0,
+    % teamExtraChannels
+    0,0,0,
+    % agencyExtraChannels
+    0,0,0
+]);
