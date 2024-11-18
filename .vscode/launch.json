@@ -1,0 +1,34 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Extract analytics for all pricings",
+            "runtimeExecutable": "ts-node",
+            "args": [
+                "${workspaceFolder}/src/scripts/extract-analytics.ts"
+            ],
+            "port": 9229,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "skipFiles": ["<node_internals>/**"],
+            // "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Extract analytics for a single pricing",
+            "runtimeExecutable": "ts-node",
+            "args": [
+                "${workspaceFolder}/src/scripts/extract-analytics-from-file.ts",
+                "./data/pricings/yaml/2022/microsoft365business.yml"
+            ],
+            "port": 9229,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "skipFiles": ["<node_internals>/**"],
+            // "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+        }
+    ]
+}
