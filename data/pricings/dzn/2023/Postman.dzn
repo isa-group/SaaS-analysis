@@ -58,7 +58,7 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % ENTERPRISE_ESSENTIALS
     1000000,50,10,25,250,100,25,10000,10000,90,14,0,0,
     % ENTERPRISE_ULTIMATE
-    1000000,100,10,25,Infinity,100,25,100000,100000,90,14,0,0
+    1000000,100,10,25,1000000000,100,25,100000,100000,90,14,0,0
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [
@@ -87,7 +87,7 @@ addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
     % postmanForInternalApiManagement
     0,0,0,0,0,0,0,0,0,0,0,0,0,
     % postmanForApiTestAutomation
-    0,0,0,0,Infinity,0,0,0,0,0,0,0,0,
+    0,0,0,0,1000000000,0,0,0,0,0,0,0,0,
     % monitoringPayAsYouGo
     0,0,0,0,0,0,0,0,0,0,0,0,0,
     % monitoringMonthly

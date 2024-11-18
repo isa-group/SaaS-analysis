@@ -8,7 +8,7 @@ usage_limits = ["minNumberOfUsers","maxNumberOfUsers","useStorageAccount","useSt
 plans = ["FREE","PROFESSIONAL","BUSINESS","ENTERPRISE","PINNACLE"];
 addons = ["wrikeMarketingInsights","wrikeIntegrate","wrikeTwoWaySync","wrikeLock"];
 
-plans_prices = [0,9.8,24.8,null];
+plans_prices = [0,9.8,24.8,248,2480];
 addons_prices = [100,100,100,100];
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [

@@ -44,11 +44,11 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % FREE
     500,1,1,1,2500,500,5000,0,
     % ESSENTIALS
-    50000,3,3,1,500000,Infinity,5000,0,
+    50000,3,3,1,500000,1000000000,5000,0,
     % STANDARD
     100000,5,5,3,1200000,500,5000,1,
     % PREMIUM
-    Infinity,Infinity,Infinity,18,Infinity,500,5000,4
+    1000000000,1000000000,1000000000,18,1000000000,500,5000,4
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [
@@ -73,7 +73,7 @@ addons_usage_limits = array2d(ADDONS, USAGE_LIMITS, [
     % smsAndMmsMarketingAddOnForStandardTier
     0,0,0,0,0,0,0,0,
     % smsAndMmsMarketingAddOnForPremiumTier
-    0,0,0,0,0,0,Infinity,0
+    0,0,0,0,0,0,1000000000,0
 ]);
 addons_usage_limits_extensions = array2d(ADDONS, USAGE_LIMITS, [
     % premiumMigrationServicesAddOn

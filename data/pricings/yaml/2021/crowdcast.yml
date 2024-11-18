@@ -10,9 +10,8 @@ features:
     type: DOMAIN
   transactionFee:
     description: ''
-    valueType: NUMERIC
-    defaultValue: 5
-    unit: \%
+    valueType: TEXT
+    defaultValue: "5%"
     type: DOMAIN
   hdLiveVideoWithRecording:
     description: ''
@@ -248,7 +247,7 @@ plans:
       customRegistrationFields:
         value: true
       transactionFee:
-        value: 2
+        value: "5%"
     usageLimits:
       liveAttendeesLimit:
         value: 1000

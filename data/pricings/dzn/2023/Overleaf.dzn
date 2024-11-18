@@ -32,7 +32,7 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % STANDARD
     11,4,
     % PROFESSIONAL
-    Infinity,4
+    1000000000,4
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

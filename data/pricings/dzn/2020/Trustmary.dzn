@@ -8,7 +8,7 @@ usage_limits = ["formsLimit","textReviewsLimit","embedsLimit","usersLimit","emai
 plans = ["LIGHT","PLUS","ENTERPRISE"];
 addons = [];
 
-plans_prices = [null];
+plans_prices = [null,null,null];
 addons_prices = [];
 
 linked_features = array2d(USAGE_LIMITS, FEATURES, [
@@ -36,9 +36,9 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % LIGHT
     2,50,2,2,1000,
     % PLUS
-    10,Infinity,5,5,1000,
+    10,1000000000,5,5,1000,
     % ENTERPRISE
-    Infinity,Infinity,Infinity,Infinity,Infinity
+    1000000000,1000000000,1000000000,1000000000,1000000000
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

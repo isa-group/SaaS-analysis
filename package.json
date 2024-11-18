@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "experiment": "npm run add-versions-to-pricings && npm run generate-dzn-files",
     "generate-dzn-files": "ts-node src/scripts/pricings2dzn.ts",
     "add-versions-to-pricings": "ts-node src/scripts/add-version-fields-to-pricings.ts"
   },
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {},
+  "dependencies": {
+    "pricing4ts": "^0.3.0"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.13",
     "@types/node": "^22.7.8",

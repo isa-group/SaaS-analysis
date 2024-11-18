@@ -42,9 +42,9 @@ plans_usage_limits = array2d(PLANS, USAGE_LIMITS, [
     % BUSINESS_PLUS
     15,10,50,3,50000,100,
     % ENTERPRISE
-    50,Infinity,100,3,100000,250,
+    50,1000000000,100,3,100000,250,
     % ENTERPRISE_PLUS
-    150,Infinity,Infinity,3,100000,1000
+    150,1000000000,1000000000,3,100000,1000
 ]);
 
 addons_features = array2d(ADDONS, FEATURES, [

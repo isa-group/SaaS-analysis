@@ -1,7 +1,9 @@
 import fs from "fs";
 import path from "path";
+import { logExperimentHeader } from "../services/logging.service";
 
-const VERSION_FIELD = "version: '1.0'";
+const VERSION_FIELD = "version:";
+const VERSION_FIELD_VALUE = "version: '1.0'";
 
 // Define the directory path where the YAML files are located
 const directoryPath = path.join(__dirname, "../../data/pricings/yaml/");
@@ -20,7 +22,7 @@ function addVersionFieldToPricings(directoryPath: string) {
       const content = fs.readFileSync(filePath, "utf8");
       if (!content.includes(VERSION_FIELD)) {
         const lines = content.split("\n");
-        lines.splice(1, 0, VERSION_FIELD);
+        lines.splice(1, 0, VERSION_FIELD_VALUE);
         const updatedContent = lines.join("\n");
         fs.writeFileSync(filePath, updatedContent, "utf8");
       }
@@ -28,4 +30,8 @@ function addVersionFieldToPricings(directoryPath: string) {
   }
 }
 
+logExperimentHeader();
+
+console.log(`Adding version field (if missing) to pricings in dataset...`);
 addVersionFieldToPricings(directoryPath);
+console.log('Done!\n');
