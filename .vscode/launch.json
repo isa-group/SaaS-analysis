@@ -13,7 +13,7 @@
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
             "skipFiles": ["<node_internals>/**"],
-            // "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+            // "outFiles": ["${workspaceFolder}/dist/**/*.js"] - To see compiled files when debugging
         },
         {
             "type": "node",
@@ -22,7 +22,7 @@
             "runtimeExecutable": "ts-node",
             "args": [
                 "${workspaceFolder}/src/scripts/extract-analytics-from-file.ts",
-                "./data/pricings/yaml/2022/microsoft365business.yml"
+                "./data/pricings/yaml/2019/clockify.yml"
             ],
             "port": 9229,
             "console": "integratedTerminal",
