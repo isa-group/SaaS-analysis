@@ -1,3 +1,51 @@
+/**
+ * ------------ Overview ------------
+ * This script processes multiple Pricing2Yaml files to extract analytics and logs the results.
+ * 
+ * The script recursively scans the specified data directory (data/pricings/yaml/real/) for pricing files, processes each file
+ * using the `pricing4ts` library, and generates analytics for each SaaS pricing. The results
+ * and any errors encountered during the process are logged into separate files in a timestamped
+ * directory within the `logs` folder.
+ * 
+ * ------------ Features ------------
+ * - Recursively scans the `data/pricings/yaml/real/` directory to find all pricing files.
+ * - Uses a progress bar to display the processing status.
+ * - Analyzes each pricing file with the `PricingService` from the `pricing4ts` library.
+ * - Logs analytics and errors into separate files for clarity.
+ * - Organizes analytics by SaaS name and date for structured output.
+ * 
+ * ------------ Parameters ------------
+ * - **DATA_DIR**: Specifies the directory containing the pricing files to be processed.
+ * - **LOG_DIR**: Specifies the base directory for storing log files.
+ * - **LOG_FOLDER**: A subdirectory within `LOG_DIR`, timestamped to ensure uniqueness.
+ * 
+ * ------------ How to Run ------------
+ * 1. Place the pricing YAML files to be analyzed in the `data/pricings/yaml` directory.
+ * 2. Install the required dependencies, including `pricing4ts` and `cli-progress`.
+ * 3. Run the script using Node.js:
+ * 
+ *    ```bash
+ *    npm run analytics
+ *    ```
+ * 
+ * 4. The progress bar will display the processing status.
+ * 5. Results will be saved in a log file named `results.log`, and any errors will be saved in `errors.log`,
+ *    both located in a timestamped folder within the `logs` directory.
+ * 
+ * ------------ Example ------------
+ * If the `data/pricings/yaml/real` directory contains files like `example1.yml` and `example2.yml`,
+ * running the script will:
+ * - Process each file to extract analytics.
+ * - Generate a structured log file in a folder named `pricing-analytics-<timestamp>` within the `logs` directory.
+ * - Save errors (if any) in a separate file for debugging purposes.
+ * 
+ * ------------ Notes ------------
+ * - Ensure that the directory structure and file permissions are correctly configured.
+ * - The script assumes all files in the target directory are valid YAML files.
+ * - Large datasets may take longer to process, as all files are processed in parallel.
+ */
+
+
 import * as fs from 'fs';
 import * as path from 'path';
 import { PricingService, Pricing, retrievePricingFromPath } from 'pricing4ts';
@@ -9,7 +57,7 @@ import cliProgress from 'cli-progress';
  * that will be processed by the analytics extraction script.
  * @constant {string}
  */
-const DATA_DIR = 'data/pricings/yaml';
+const DATA_DIR = 'data/pricings/yaml/real';
 
 /**
  * Directory where log files are stored.

@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "analytics": "ts-node src/scripts/extract-analytics.ts",
-    "analytics-from-file": "ts-node src/scripts/extract-analytics-from-file.ts ./data/pticings/yaml/2022/microsoft365business",
+    "analytics-from-file": "ts-node src/scripts/extract-analytics-from-file.ts",
     "experiment": "npm run add-versions-to-pricings && npm run generate-dzn-files",
     "generate-dzn-files": "ts-node src/scripts/pricings2dzn.ts",
     "add-versions-to-pricings": "ts-node src/scripts/add-version-fields-to-pricings.ts"
