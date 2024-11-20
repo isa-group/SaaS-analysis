@@ -131,3 +131,7 @@ dist
 
 # Package build outsource
 npm/
+
+# Folders that do not need to be pushed
+test/
+data/pricings/dzn/

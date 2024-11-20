@@ -29,6 +29,21 @@
             "internalConsoleOptions": "neverOpen",
             "skipFiles": ["<node_internals>/**"],
             // "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Test pricing parsing",
+            "runtimeExecutable": "ts-node",
+            "args": [
+                "${workspaceFolder}/src/scripts/parse-pricing-to-new-file.ts",
+                "./data/pricings/yaml/real/github/2024.yml"
+            ],
+            "port": 9229,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "skipFiles": ["<node_internals>/**"],
+            // "outFiles": ["${workspaceFolder}/dist/**/*.js"]
         }
     ]
 }

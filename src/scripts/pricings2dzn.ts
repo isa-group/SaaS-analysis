@@ -3,7 +3,7 @@ import path from "path";
 import { saveDZNfile } from "pricing4ts";
 
 // Define the directory path where the YAML files are located
-const directoryPath = path.join(__dirname, "../../data/pricings/yaml/");
+const directoryPath = path.join(__dirname, "../../data/pricings/yaml/real/");
 
 function readYamlFiles(directoryPath: string) {
   
@@ -13,6 +13,7 @@ function readYamlFiles(directoryPath: string) {
   for (const file of files) {
     const filePath = path.join(directoryPath, file);
     const pathYear = path.basename(path.dirname(filePath));
+    const pathType = path.basename(path.dirname(path.dirname(filePath)));
     const stat = fs.statSync(filePath);
 
     if (stat.isDirectory()) {
@@ -20,7 +21,7 @@ function readYamlFiles(directoryPath: string) {
       numberOfParsedFiles = numberOfParsedFiles + readYamlFiles(filePath);
     } else if (filePath.endsWith(".yml")) {
       const fileName = path.basename(filePath, ".yml");
-      const outputFilePath = path.join(__dirname, `../../data/pricings/dzn/${pathYear}/${fileName}.dzn`);
+      const outputFilePath = path.join(__dirname, `../../data/pricings/dzn/${pathType}/${pathYear}/${fileName}.dzn`);
       
       if (fs.existsSync(outputFilePath)) {
         numberOfParsedFiles = numberOfParsedFiles + 1;
