@@ -67,6 +67,13 @@ const DATA_DIR = 'data/pricings/yaml/real';
 const LOG_DIR = 'logs';
 
 /**
+ * File where the JSON file with the anaylitics data will be stored.
+ * 
+ * @constant {string}
+ */
+const JSON_DIR = 'data/pricings/json';
+
+/**
  * The directory path where log files for pricing analytics will be stored.
  * The folder name includes a timestamp to ensure uniqueness and avoid conflicts.
  * The timestamp format replaces colons and periods with hyphens to create a valid folder name.
@@ -102,6 +109,13 @@ if (!fs.existsSync(LOG_DIR)) {
  */
 if (!fs.existsSync(LOG_FOLDER)) {
     fs.mkdirSync(LOG_FOLDER);
+}
+
+/**
+ * Create the JSON_DIR directory if it does not exist.
+ */
+if (!fs.existsSync(JSON_DIR)) {
+    fs.mkdirSync(JSON_DIR);
 }
 
 /**
@@ -146,12 +160,52 @@ async function processFile(filePath: string, progressBar: cliProgress.SingleBar,
         }
 
         const dateKey = createdAt.toISOString().split('T')[0];
-        analyticsData[saasName][dateKey] = analytics;
+        
+        if (!analyticsData[saasName][dateKey]) {
+            analyticsData[saasName][dateKey] = {};
+            analyticsData[saasName][dateKey].analytics = analytics;
+            analyticsData[saasName][dateKey].yaml_path = filePath;
+        }
     } catch (error) {
         errorsLogStream.write(`Error processing file ${filePath}: ${(error as Error).message}\n\n`);
     } finally {
         progressBar.increment();
     }
+}
+
+function generateJsonFileFromAnalytics(analyticsData: Record<string, any>): void {
+    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+    const jsonFilePath = path.join(JSON_DIR, `analytics-${timestamp}.json`);
+    
+    // Process analyticsData to add yaml_path and format SaaS names
+    for (const saasName in analyticsData) {
+        const [firstWord, ...rest] = saasName.split(' ');
+        const formattedSaasName = firstWord.charAt(0).toUpperCase() + firstWord.slice(1);
+        const product = rest.join(' ').replace(/^-/, '');
+
+        analyticsData[formattedSaasName] = analyticsData[saasName];
+        if (formattedSaasName !== saasName){
+            delete analyticsData[saasName];
+        }
+
+        for (const year in analyticsData[formattedSaasName]) {
+            if (product) {
+                analyticsData[formattedSaasName][year].product = product.trim();
+            }
+        }
+    }
+
+    for (const saasName in analyticsData) {
+        const sortedYears = Object.keys(analyticsData[saasName]).sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
+        const sortedAnalytics: any = {};
+        sortedYears.forEach(year => {
+            sortedAnalytics[year] = analyticsData[saasName][year];
+        });
+        analyticsData[saasName] = sortedAnalytics;
+    }
+
+    const jsonData = JSON.stringify(analyticsData, null, 2);
+    fs.writeFileSync(jsonFilePath, jsonData);
 }
 
 /**
@@ -175,13 +229,15 @@ async function main(): Promise<void> {
 
     progressBar.stop();
 
+    generateJsonFileFromAnalytics(analyticsData);
+
     const sortedSaasNames = Object.keys(analyticsData).sort();
     for (const saasName of sortedSaasNames) {
         resultsLogStream.write(`\t\t--------- ${saasName} ---------\n`);
         const years = Object.keys(analyticsData[saasName]).sort();
         years.forEach(year => {
             resultsLogStream.write(`\t\t------ ${year} ------\n`);
-            resultsLogStream.write(`${JSON.stringify(analyticsData[saasName][year], null, 2)}\n`);
+            resultsLogStream.write(`${JSON.stringify(analyticsData[saasName][year].analytics, null, 2)}\n`);
         });
         resultsLogStream.write('\n');
     }

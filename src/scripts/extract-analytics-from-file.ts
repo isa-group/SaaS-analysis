@@ -1,15 +1,18 @@
 /**
+ * ------------ Overview ------------
+ * 
  * This script processes a pricing file to extract analytics and logs the results.
  * 
  * The script uses the `pricing4ts` library to analyze a pricing model provided in the input file.
- * It logs both the analytics and any errors encountered during processing to a file in the `logs` directory.
+ * It logs both the analytics and any errors encountered during processing into a dedicated log folder
+ * within the `logs` directory, timestamped to ensure unique entries for each run.
  * 
  * ------------ Features ------------
  * 
- * - Creates a timestamped log file in the `logs` directory to ensure unique entries for each run.
+ * - Creates a timestamped log folder in the `logs` directory to organize results and errors.
  * - Reads and processes a pricing model file specified via a command-line argument.
  * - Uses the `PricingService` class from the `pricing4ts` library to calculate analytics for the pricing model.
- * - Logs the analytics or errors into a dedicated log file.
+ * - Logs the analytics into `results.log` and errors into `errors.log` within the log folder.
  * 
  * ------------ Parameters ------------
  * 
@@ -26,7 +29,7 @@
  * 
  * Replace `<path-to-pricing-file>` with the path to the pricing file to analyze.
  * 
- * 3. The results will be logged in the `logs` directory, with a file named `pricing-analytics-<timestamp>.log`.
+ * 3. The results and errors will be logged in a timestamped folder located in the `logs` directory.
  * 
  * ------------ Example ------------
  * 
@@ -36,8 +39,10 @@
  * 
  * In this example:
  * - The script processes `./data/pricings/yaml/real/microsoft365Business/2022.yml`.
- * - Analytics or errors will be saved to a log folder in the `logs` directory with the corresponding timestamp of the run.
+ * - Analytics will be saved in `results.log`, and any errors will be saved in `errors.log` within a log folder 
+ *   in the `logs` directory, named with the corresponding timestamp of the run.
  */
+
 
 
 import * as fs from 'fs';

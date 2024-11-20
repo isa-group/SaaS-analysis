@@ -7,7 +7,7 @@ features:
     description: >-
       Wrike supports multiple languages: German, English, French, Italian,
       Japanese, Portuguese, Spanish, and Russian.
-    valueType: NUMERIC
+    valueType: TEXT
     defaultValue: "German, English, French, Italian, Japanese, Portuguese, Spanish, and Russian"
     type: GUARANTEE
     docUrl: https://www.wrike.com/comparison-table/
