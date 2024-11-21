@@ -1,3 +1,5 @@
+[![CC BY 4.0][cc-by-shield]][cc-by]
+
 # 📊 CAISE'25: Laboratory Package
 
 This repository contains the laboratory package for the paper **CAISE’25**, which includes scripts and MiniZinc models to replicate the validation performed in the study. Driven by the paper's main contribution, the primary goal of this package is to leverage the proposed automated analysis formalization and operations, among others, to uncover latent information in SaaS pricing models.
@@ -82,7 +84,7 @@ saas-analysis
 │   │   │   │   │   └── valid-subscription.mzn
 │   │   │   └── PricingModel.mzn
 │   └── pricings
-│       ├── dzn          # Generated after running the experiment
+│       ├── dzn           # Generated after running the experiment
 │       │   └── ...
 │       ├── json          # Generated after running the experiment
 │       │   └── ...
@@ -136,10 +138,16 @@ By leveraging this service, more specifically its method `getAnalytics(pricing: 
 - **jest & ts-jest**: For testing.
 - **ts-node**: To run TypeScript files directly.
 
-## 📜 License
-
-This project is licensed under the MIT License. For more details, see the LICENSE file.
-
 ## ⚠️ Disclaimer
 
 This project is part of the research activities of the [ISA Group](https://www.isa.us.es/3.0/) and was specifically created as a laborratory package for the paper: CAISE'25. Please note that the project should be used with caution. We are not responsible for any damage caused by the use of this software. If you find any bugs or have any suggestions, please let us know by opening an issue in the [GitHub repository](https://github.com/isa-group/SaaS-analysis/issues) with the label: **CAISE'25**.
+
+## 📜 License
+
+This work is licensed under a [Creative Commons Attribution 4.0 International License] [cc-by].
+
+[![CC BY 4.0][cc-by-image]][cc-by]
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
