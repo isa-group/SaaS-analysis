@@ -65,6 +65,22 @@ When executing `npm run experiment`, the following steps are performed:
 saas-analysis
 ├── .vscode
 ├── data
+│   ├── models
+│   │   └── minizinc # Models utilized by Pricing4TS to get some analytics
+│   │   │   ├── operations
+│   │   │   │   ├── analysis
+│   │   │   │   │   ├── cheapest-subscription.mzn
+│   │   │   │   │   ├── configuration-space.mzn
+│   │   │   │   │   └── most-expensive-subscription.mzn
+│   │   │   │   ├── filter
+│   │   │   │   │   ├── cheapest-filtered-subscription.mzn
+│   │   │   │   │   ├── filter.mzn
+│   │   │   │   │   ├── filtered-configuration-space.mzn
+│   │   │   │   │   └── most-expensive-filtered-subscription.mzn
+│   │   │   │   ├── validation
+│   │   │   │   │   ├── valid-pricing.mzn
+│   │   │   │   │   └── valid-subscription.mzn
+│   │   │   └── PricingModel.mzn
 │   └── pricings
 │       ├── dzn          # Generated after running the experiment
 │       │   └── ...
