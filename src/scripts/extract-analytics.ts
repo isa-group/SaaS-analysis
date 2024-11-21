@@ -259,8 +259,6 @@ async function main(): Promise<void> {
 
   progressBar.stop();
 
-  generateJsonFileFromAnalytics(analyticsData);
-
   const sortedSaasNames = Object.keys(analyticsData).sort();
   for (const saasName of sortedSaasNames) {
     resultsLogStream.write(`\t\t--------- ${saasName} ---------\n`);
@@ -276,6 +274,8 @@ async function main(): Promise<void> {
 
   resultsLogStream.end();
   errorsLogStream.end();
+
+  generateJsonFileFromAnalytics(analyticsData);
 }
 
 main();
