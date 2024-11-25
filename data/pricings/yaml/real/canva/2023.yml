@@ -1,5 +1,6 @@
 saasName: Canva
 version: '2.0'
+createdAt: '2023-11-24'
 currency: EUR
 hasAnnualPayment: true
 features:
@@ -350,7 +351,7 @@ usageLimits:
     linkedFeatures:
       - cloudStorage
 plans:
-  - name: FREE
+  FREE:
     description: >-
       For anyone to design anything, on their own or with family, friends, or
       others. No experience required.
@@ -360,7 +361,7 @@ plans:
     features: null
     usageLimits: null
     price: 0
-  - name: PRO
+  PRO:
     description: >-
       For individuals, solopreneurs and freelance designers who want unlimited
       access to premium content, to create professional designs with ease and
@@ -441,7 +442,7 @@ plans:
       cloudStorageLimit:
         value: 1000
     price: 11.99
-  - name: TEAMS
+  TEAMS:
     description: >-
       All the great features of Canva Pro, plus we think you'll love these
       features designed to allow teams of all sizes to collaborate with ease.
@@ -537,5 +538,3 @@ plans:
       cloudStorageLimit:
         value: 1000
     price: 23
-addOns: null
-createdAt: '2023-11-24'

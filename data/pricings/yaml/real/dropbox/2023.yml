@@ -1,5 +1,6 @@
 saasName: Dropbox
 version: '2.0'
+createdAt: '2023-12-02'
 currency: USD
 hasAnnualPayment: false
 features:
@@ -517,14 +518,14 @@ usageLimits:
     linkedFeatures:
       - apiAccessToDataTransportPlatformPartners
 plans:
-  - name: PLUS
+  PLUS:
     description: ''
     monthlyPrice: 9.99
     unit: /month
     features: null
     usageLimits: null
     price: 9.99
-  - name: ESSENTIALS
+  ESSENTIALS:
     description: ''
     monthlyPrice: 16.58
     unit: /month
@@ -575,7 +576,7 @@ plans:
       advancedPdfEditing:
         value: true
     price: 16.58
-  - name: BUSINESS
+  BUSINESS:
     description: ''
     monthlyPrice: 15
     unit: user/month
@@ -666,7 +667,7 @@ plans:
       advancedPdfEditing:
         value: true
     price: 15
-  - name: BUSINESS_PLUS
+  BUSINESS_PLUS:
     description: ''
     monthlyPrice: 24
     unit: user/month
@@ -763,5 +764,3 @@ plans:
       advancedPdfEditing:
         value: true
     price: 24
-addOns: null
-createdAt: '2023-12-02'

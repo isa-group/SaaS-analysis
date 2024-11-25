@@ -1,5 +1,6 @@
 saasName: Figma
 version: '2.0'
+createdAt: '2022-11-29'
 currency: USD
 hasAnnualPayment: true
 features:
@@ -293,7 +294,7 @@ usageLimits:
     linkedFeatures:
       - teams
 plans:
-  - name: STARTER
+  STARTER:
     description: ''
     monthlyPrice: 0
     annualPrice: 0
@@ -301,7 +302,7 @@ plans:
     features: null
     usageLimits: null
     price: 0
-  - name: PROFESSIONAL
+  PROFESSIONAL:
     description: ''
     monthlyPrice: 15
     annualPrice: 12
@@ -321,7 +322,7 @@ plans:
       versionHistoryDepth:
         value: .inf
     price: 15
-  - name: ORGANIZATION
+  ORGANIZATION:
     description: ''
     monthlyPrice: null
     annualPrice: 45
@@ -369,7 +370,7 @@ plans:
       unlimitedTeamsPermitted:
         value: true
     price: 45
-  - name: ENTERPRISE
+  ENTERPRISE:
     description: ''
     monthlyPrice: null
     annualPrice: 75
@@ -433,5 +434,3 @@ plans:
       unlimitedTeamsPermitted:
         value: true
     price: 75
-addOns: null
-createdAt: '2022-11-29'

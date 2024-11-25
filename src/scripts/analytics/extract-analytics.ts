@@ -2,13 +2,13 @@
  * ------------ Overview ------------
  * This script processes multiple Pricing2Yaml files to extract analytics and logs the results.
  *
- * The script recursively scans the specified data directory (data/pricings/yaml/real/) for pricing files, processes each file
+ * The script recursively scans the specified data directory (../data/pricings/yaml/real/) for pricing files, processes each file
  * using the `pricing4ts` library, and generates analytics for each SaaS pricing. The results
  * and any errors encountered during the process are logged into separate files in a timestamped
  * directory within the `logs` folder.
  *
  * ------------ Features ------------
- * - Recursively scans the `data/pricings/yaml/real/` directory to find all pricing files.
+ * - Recursively scans the `../data/pricings/yaml/real/` directory to find all pricing files.
  * - Uses a progress bar to display the processing status.
  * - Analyzes each pricing file with the `PricingService` from the `pricing4ts` library.
  * - Logs analytics and errors into separate files for clarity.
@@ -253,9 +253,9 @@ async function main(): Promise<void> {
 
   const analyticsData: Record<string, any> = {};
 
-  await Promise.all(
-    files.map((file) => processFile(file, progressBar, analyticsData))
-  );
+  for (const file of files) {
+    await processFile(file, progressBar, analyticsData);
+  }
 
   progressBar.stop();
 

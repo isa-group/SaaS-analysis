@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "analytics": "ts-node src/scripts/extract-analytics.ts",
-    "analytics-from-file": "ts-node src/scripts/extract-analytics-from-file.ts",
+    "analytics": "ts-node src/scripts/analytics/extract-analytics.ts",
+    "analytics-from-file": "ts-node src/scripts/analytics/extract-analytics-from-file.ts",
     "experiment": "npm run add-versions-to-pricings && npm run generate-dzn-files && npm run analytics",
-    "generate-dzn-files": "ts-node src/scripts/pricings2dzn.ts",
-    "add-versions-to-pricings": "ts-node src/scripts/add-version-fields-to-pricings.ts"
+    "generate-dzn-files": "ts-node src/scripts/utils/pricings2dzn.ts",
+    "add-versions-to-pricings": "ts-node src/scripts/utils/add-version-fields-to-pricings.ts"
   },
   "author": "",
   "license": "ISC",

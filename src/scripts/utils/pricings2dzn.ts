@@ -3,7 +3,7 @@ import path from "path";
 import { saveDZNfile } from "pricing4ts";
 
 // Define the directory path where the YAML files are located
-const directoryPath = path.join(__dirname, "../../data/pricings/yaml/real/");
+const directoryPath = path.join(__dirname, "../../../data/pricings/yaml/real/");
 
 function readYamlFiles(directoryPath: string) {
   

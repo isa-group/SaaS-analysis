@@ -1,5 +1,6 @@
 saasName: Databox
 version: '2.0'
+createdAt: '2023-12-11'
 currency: USD
 hasAnnualPayment: true
 features:
@@ -450,7 +451,7 @@ usageLimits:
     linkedFeatures:
       - dataSyncFrequency
 plans:
-  - name: FREE
+  FREE:
     description: ''
     monthlyPrice: 0
     annualPrice: 0
@@ -458,7 +459,7 @@ plans:
     features: null
     usageLimits: null
     price: 0
-  - name: STARTER
+  STARTER:
     description: ''
     monthlyPrice: 59
     annualPrice: 47
@@ -498,7 +499,7 @@ plans:
       usersLimit:
         value: 5
     price: 59
-  - name: PROFESSIONAL
+  PROFESSIONAL:
     description: ''
     monthlyPrice: 169
     annualPrice: 135
@@ -556,7 +557,7 @@ plans:
       usersLimit:
         value: 15
     price: 169
-  - name: GROWTH
+  GROWTH:
     description: ''
     monthlyPrice: 399
     annualPrice: 319
@@ -632,7 +633,7 @@ plans:
       usersLimit:
         value: 1000000000
     price: 399
-  - name: PREMIUM
+  PREMIUM:
     description: ''
     monthlyPrice: 999
     annualPrice: 799
@@ -723,7 +724,7 @@ plans:
         value: 1000000000
     price: 999
 addOns:
-  - name: brandingAndWhiteLabelling
+  brandingAndWhiteLabelling:
     availableFor:
       - STARTER
       - PROFESSIONAL
@@ -736,7 +737,7 @@ addOns:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
-  - name: 15minSync
+  15minSync:
     availableFor:
       - FREE
       - STARTER
@@ -752,7 +753,7 @@ addOns:
       15minPriorityConnections:
         value: 5
     usageLimitsExtensions: null
-  - name: fiscalCalendar
+  fiscalCalendar:
     availableFor:
       - STARTER
       - PROFESSIONAL
@@ -764,7 +765,7 @@ addOns:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
-  - name: quickstartOnboarding
+  quickstartOnboarding:
     availableFor:
       - STARTER
       - PROFESSIONAL
@@ -774,7 +775,7 @@ addOns:
     features: null
     usageLimits: null
     usageLimitsExtensions: null
-  - name: guidedOnboarding
+  guidedOnboarding:
     availableFor:
       - STARTER
       - PROFESSIONAL
@@ -786,7 +787,7 @@ addOns:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
-  - name: dedicatedAnalyst
+  dedicatedAnalyst:
     availableFor:
       - STARTER
       - PROFESSIONAL
@@ -798,7 +799,7 @@ addOns:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
-  - name: outsourcedAnalyst
+  outsourcedAnalyst:
     availableFor:
       - STARTER
       - PROFESSIONAL
@@ -811,7 +812,7 @@ addOns:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
-  - name: prioritySupport
+  prioritySupport:
     availableFor:
       - STARTER
       - PROFESSIONAL
@@ -824,4 +825,3 @@ addOns:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
-createdAt: '2023-12-11'

@@ -34,11 +34,11 @@
  * ------------ Example ------------
  * 
  *    ```bash
- *    npm run analytics-from-file ./data/pricings/yaml/real/microsoft365Business/2022.yml
+ *    npm run analytics-from-file ../data/pricings/yaml/real/microsoft365Business/2022.yml
  *    ```
  * 
  * In this example:
- * - The script processes `./data/pricings/yaml/real/microsoft365Business/2022.yml`.
+ * - The script processes `../data/pricings/yaml/real/microsoft365Business/2022.yml`.
  * - Analytics will be saved in `results.log`, and any errors will be saved in `errors.log` within a log folder 
  *   in the `logs` directory, named with the corresponding timestamp of the run.
  */
@@ -57,13 +57,15 @@ import { PricingService, Pricing, retrievePricingFromPath } from 'pricing4ts';
 const LOG_DIR = 'logs';
 
 /**
- * The file path for the log file where pricing analytics will be stored.
- * The file name includes a timestamp to ensure uniqueness and avoid conflicts.
- * The timestamp format replaces colons and periods with hyphens to create a valid file name.
- * 
+ * The directory path where log files for pricing analytics will be stored.
+ * The folder name includes a timestamp to ensure uniqueness and avoid conflicts.
+ * The timestamp format replaces colons and periods with hyphens to create a valid folder name.
  * @constant {string}
  */
-const LOG_FILE = path.join(LOG_DIR, `pricing-analytics-${new Date().toISOString().replace(/[:.]/g, '-')}.log`);
+const LOG_FOLDER = path.join(
+    LOG_DIR,
+    `pricing-analytics-${new Date().toISOString().replace(/[:.]/g, "-")}`
+  );
 
 /**
  * A writable stream for logging results to a file named 'results.log' located in the LOG_FOLDER directory.
@@ -71,30 +73,35 @@ const LOG_FILE = path.join(LOG_DIR, `pricing-analytics-${new Date().toISOString(
  *
  * @constant {WriteStream} resultsLogStream - The writable stream for logging results.
  */
-const resultsLogStream = fs.createWriteStream(path.join(LOG_DIR, 'results.log'), { flags: 'a' });
-
-/**
- * A writable stream for logging results to a file named 'results.log' located in the LOG_FOLDER directory.
- * The stream is opened in append mode, meaning new data will be added to the end of the file.
- *
- * @constant {WriteStream} resultsLogStream - The writable stream for logging results.
- */
-const errorsLogStream = fs.createWriteStream(path.join(LOG_DIR, 'errors.log'), { flags: 'a' });
+const resultsLogStream = fs.createWriteStream(
+    path.join(LOG_FOLDER, "results.log"),
+    { flags: "a" }
+  );
+  
+  /**
+   * A writable stream for logging results to a file named 'results.log' located in the LOG_FOLDER directory.
+   * The stream is opened in append mode, meaning new data will be added to the end of the file.
+   *
+   * @constant {WriteStream} resultsLogStream - The writable stream for logging results.
+   */
+  const errorsLogStream = fs.createWriteStream(
+    path.join(LOG_FOLDER, "errors.log"),
+    { flags: "a" }
+  );
 
 /**
  * Create the LOG_DIR directory if it does not exist.
  */
 if (!fs.existsSync(LOG_DIR)) {
-    fs.mkdirSync(LOG_DIR);
+  fs.mkdirSync(LOG_DIR);
 }
 
 /**
- * A writable stream for logging results to a file located in the LOG_DIR directory.
- * The stream is opened in append mode, meaning new data will be added to the end of the file.
- * 
- * @constant {WriteStream} logStream - The writable stream for logging results.
+ * Create the LOG_FOLDER directory if it does not exist.
  */
-const logStream = fs.createWriteStream(LOG_FILE, { flags: 'a' });
+if (!fs.existsSync(LOG_FOLDER)) {
+  fs.mkdirSync(LOG_FOLDER);
+}
 
 /**
  * Processes a single pricing file, retrieves analytics data, and logs the results.
@@ -134,25 +141,17 @@ function main(): void {
             errorsLogStream.end();
 
             // Remove empty log files
-            if (fs.statSync(path.join(LOG_DIR, 'results.log')).size === 0) {
-                fs.unlinkSync(path.join(LOG_DIR, 'results.log'));
+            if (fs.statSync(path.join(LOG_FOLDER, 'results.log')).size === 0) {
+                fs.unlinkSync(path.join(LOG_FOLDER, 'results.log'));
             }
-            if (fs.statSync(path.join(LOG_DIR, 'errors.log')).size === 0) {
-                fs.unlinkSync(path.join(LOG_DIR, 'errors.log'));
+            if (fs.statSync(path.join(LOG_FOLDER, 'errors.log')).size === 0) {
+                fs.unlinkSync(path.join(LOG_FOLDER, 'errors.log'));
             }
         })
         .catch(error => {
             console.error('Error processing file:', error);
             resultsLogStream.end();
             errorsLogStream.end();
-        });
-    processFile(filePath)
-        .then(() => {
-            logStream.end();
-        })
-        .catch(error => {
-            console.error('Error processing file:', error);
-            logStream.end();
         });
 }
 

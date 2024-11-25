@@ -1,5 +1,6 @@
 saasName: Notion
 version: '2.0'
+createdAt: '2024-07-16'
 currency: USD
 hasAnnualPayment: true
 features:
@@ -368,7 +369,7 @@ usageLimits:
     linkedFeatures:
       - syncDatabases
 plans:
-  - name: FREE
+  FREE:
     description: ''
     monthlyPrice: 0
     annualPrice: 0
@@ -376,7 +377,7 @@ plans:
     features: null
     usageLimits: null
     price: 0
-  - name: PLUS
+  PLUS:
     description: ''
     monthlyPrice: 12
     annualPrice: 10
@@ -408,7 +409,7 @@ plans:
       rowLimitPerSyncedDatabase:
         value: 20000
     price: 12
-  - name: BUSINESS
+  BUSINESS:
     description: ''
     monthlyPrice: 18
     annualPrice: 15
@@ -446,7 +447,7 @@ plans:
       rowLimitPerSyncedDatabase:
         value: 20000
     price: 18
-  - name: ENTERPRISE
+  ENTERPRISE:
     description: ''
     monthlyPrice: Contact Sales
     annualPrice: Contact Sales
@@ -517,7 +518,7 @@ plans:
         value: 20000
     price: Contact Sales
 addOns:
-  - name: customDomain
+  customDomain:
     availableFor:
       - PLUS
       - BUSINESS
@@ -529,4 +530,3 @@ addOns:
     usageLimitsExtensions:
       customDomainsLimit:
         value: 1
-createdAt: '2024-07-16'

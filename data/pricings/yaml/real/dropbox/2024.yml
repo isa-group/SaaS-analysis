@@ -1,5 +1,6 @@
 saasName: Dropbox
 version: '2.0'
+createdAt: '2024-07-15'
 currency: EUR
 hasAnnualPayment: false
 features:
@@ -552,14 +553,14 @@ usageLimits:
     linkedFeatures:
       - apiAccessToDataTransportPlatformPartners
 plans:
-  - name: PLUS
+  PLUS:
     description: ''
     monthlyPrice: 9.99
     unit: /month
     features: null
     usageLimits: null
     price: 9.99
-  - name: ESSENTIALS
+  ESSENTIALS:
     description: ''
     monthlyPrice: 16.58
     unit: /month
@@ -620,7 +621,7 @@ plans:
       templatesLimit:
         value: 5
     price: 16.58
-  - name: BUSINESS
+  BUSINESS:
     description: ''
     monthlyPrice: 15
     unit: user/month
@@ -707,7 +708,7 @@ plans:
       templatesLimit:
         value: 15
     price: 15
-  - name: BUSINESS_PLUS
+  BUSINESS_PLUS:
     description: ''
     monthlyPrice: 24
     unit: user/month
@@ -814,5 +815,3 @@ plans:
       templatesLimit:
         value: .inf
     price: 24
-addOns: null
-createdAt: '2024-07-15'
