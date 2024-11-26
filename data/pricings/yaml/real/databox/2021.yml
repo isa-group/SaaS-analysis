@@ -14,6 +14,12 @@ features:
     valueType: TEXT
     defaultValue: daily
     type: GUARANTEE
+  15minPriorityConnections:
+    description: ''
+    valueType: BOOLEAN
+    defaultValue: false
+    type: INTEGRATION
+    integrationType: API
   historicalData:
     description: >-
       The maximum amount of historical data that you can access in your Databox
@@ -252,14 +258,14 @@ usageLimits:
     unit: user
     type: NON_RENEWABLE
     linkedFeatures: null
-  15minPriorityConnections:
+  15minPriorityConnectionsLimit:
     description: ''
     valueType: NUMERIC
     defaultValue: 0
     unit: connection
     type: RENEWABLE
     linkedFeatures:
-      - dataSyncFrequency
+      - 15minPriorityConnections
 plans:
   STARTER:
     description: ''
@@ -360,7 +366,9 @@ addOns:
         value: 15 mins
       prioritySupport:
         value: true
-    usageLimits:
       15minPriorityConnections:
+        value: true
+    usageLimits:
+      15minPriorityConnectionsLimit:
         value: 5
     usageLimitsExtensions: null

@@ -186,7 +186,7 @@ features:
   smsViaZapier:
     description: ''
     valueType: BOOLEAN
-    defaultValue: true
+    defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingURLs:
@@ -457,6 +457,22 @@ addOns:
       - STARTER
       - BUSINESS
       - ENTERPRISE
+    price: 0.01
+    unit: message
+    features:
+      smsViaZapier:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions:
+      smsViaZapierAddonLimit:
+        value: 1
+  extraSmsViaZapier:
+    availableFor:
+      - STARTER
+      - BUSINESS
+      - ENTERPRISE
+    dependsOn:
+      - smsViaZapierAddon
     price: 0.01
     unit: message
     features: null

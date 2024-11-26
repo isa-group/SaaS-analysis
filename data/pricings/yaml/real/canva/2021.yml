@@ -115,7 +115,13 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: INTEGRATION
-    integrationType: WEB_SAAS
+    integrationType: MARKETPLACE
+    pricingURLs: null
+  publishToSocialMediaOnlyAllowedToAdmins:
+    description: ''
+    valueType: BOOLEAN
+    defaultValue: false
+    type: MANAGEMENT
     pricingURLs: null
   teamSharing:
     description: ''
@@ -188,13 +194,6 @@ features:
     defaultValue: false
     type: MANAGEMENT
 usageLimits:
-  publishToSocialMediaOnlyAllowedToAdmins:
-    description: ''
-    valueType: BOOLEAN
-    defaultValue: false
-    type: NON_RENEWABLE
-    linkedFeatures:
-      - createAndPublishToSocialMediaFromCanva
   brandKitUnits:
     description: ''
     valueType: NUMERIC
@@ -288,6 +287,8 @@ plans:
         value: true
       createAndPublishToSocialMediaFromCanva:
         value: true
+      publishToSocialMediaOnlyAllowedToAdmins:
+        value: true
       approvalsWorkflow:
         value: true
       brandKit:
@@ -301,8 +302,6 @@ plans:
       singleSignOn:
         value: true
     usageLimits:
-      publishToSocialMediaOnlyAllowedToAdmins:
-        value: true
       brandKitUnits:
         value: 1000000000
       cloudStorageLimit:

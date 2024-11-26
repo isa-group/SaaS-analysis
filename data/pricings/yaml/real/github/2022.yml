@@ -383,7 +383,7 @@ usageLimits:
   githubOnlyForPublicRepositoriesFreeTier:
     description: Free tier usage limit for public repositories
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: NON_RENEWABLE
     linkedFeatures:
       - protectedBranches
@@ -406,7 +406,7 @@ usageLimits:
   githubOnlyForPublicRepositoriesTeamTier:
     description: Team tear usage limit for public repositories
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: NON_RENEWABLE
     linkedFeatures:
       - enviromentProtectionRules

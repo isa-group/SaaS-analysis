@@ -116,7 +116,6 @@ async function processFile(filePath: string): Promise<void> {
         const analytics = await pricingService.getAnalytics();
         resultsLogStream.write(`Analytics for ${filePath}:\n${JSON.stringify(analytics, null, 2)}\n\n`);
     } catch (error) {
-        console.error(`Error processing file ${filePath}:`, error);
         errorsLogStream.write(`Error processing file ${filePath}: ${(error as Error).message}\n\n`);
     }
 }

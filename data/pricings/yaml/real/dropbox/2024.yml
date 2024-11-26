@@ -222,6 +222,11 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
+  advancedPdfEditing:
+    description: ''
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
   annotatePDFs:
     description: ''
     valueType: BOOLEAN
@@ -537,13 +542,6 @@ usageLimits:
     type: NON_RENEWABLE
     linkedFeatures:
       - largeFileDelivery
-  advancedPdfEditing:
-    description: ''
-    valueType: BOOLEAN
-    defaultValue: false
-    type: NON_RENEWABLE
-    linkedFeatures:
-      - pdfEditing
   apiAccessToDataTransportPlatformPartnersLimit:
     description: ''
     valueType: NUMERIC
@@ -597,6 +595,8 @@ plans:
         value: true
       signatureTemplates:
         value: true
+      advancedPdfEditing:
+        value: true
     usageLimits:
       storageLimit:
         value: 3000
@@ -612,8 +612,6 @@ plans:
         value: true
       dropboxReplayFileUploadsLimit:
         value: 10
-      advancedPdfEditing:
-        value: true
       largeFileDeliveryLimit:
         value: 100
       signatureRequestLimit:
@@ -682,6 +680,8 @@ plans:
         value: true
       phoneSupportDuringBusinessHours:
         value: true
+      advancedPdfEditing:
+        value: true
     usageLimits:
       storageLimit:
         value: 9000
@@ -699,8 +699,6 @@ plans:
         value: true
       dropboxReplayFileUploadsLimit:
         value: 10
-      advancedPdfEditing:
-        value: true
       largeFileDeliveryLimit:
         value: 100
       signatureRequestLimit:
@@ -789,6 +787,8 @@ plans:
         value: true
       phoneSupportDuringBusinessHours:
         value: true
+      advancedPdfEditing:
+        value: true
     usageLimits:
       storageLimit:
         value: .inf
@@ -806,8 +806,6 @@ plans:
         value: true
       dropboxReplayFileUploadsLimit:
         value: 10
-      advancedPdfEditing:
-        value: true
       largeFileDeliveryLimit:
         value: 100
       signatureRequestLimit:

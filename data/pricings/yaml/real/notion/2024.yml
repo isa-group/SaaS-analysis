@@ -391,8 +391,6 @@ plans:
         value: true
       googleAnalyticsIntegration:
         value: true
-      customDomainAndBranding:
-        value: true
       prioritySupport:
         value: true
     usageLimits:
@@ -424,8 +422,6 @@ plans:
       siteCustomization:
         value: true
       googleAnalyticsIntegration:
-        value: true
-      customDomainAndBranding:
         value: true
       exportEntireWorkspaceAsPDF:
         value: true
@@ -462,8 +458,6 @@ plans:
       siteCustomization:
         value: true
       googleAnalyticsIntegration:
-        value: true
-      customDomainAndBranding:
         value: true
       exportEntireWorkspaceAsPDF:
         value: true
@@ -525,7 +519,23 @@ addOns:
       - ENTERPRISE
     price: Contact Sales
     unit: domain/month
-    features: null
+    features:
+      customDomainAndBranding:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions:
+      customDomainsLimit:
+        value: 1
+  extraCustomDomain:
+    availableFor:
+      - PLUS
+      - BUSINESS
+      - ENTERPRISE
+    dependsOn:
+      - customDomain
+    price: Contact Sales
+    unit: domain/month
+    features:
     usageLimits: null
     usageLimitsExtensions:
       customDomainsLimit:

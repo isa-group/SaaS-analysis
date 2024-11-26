@@ -121,6 +121,11 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: MANAGEMENT
+  unlimitedTeams:
+    description: ''
+    valueType: BOOLEAN
+    defaultValue: false
+    type: MANAGEMENT
   branchingAndMerging:
     description: ''
     valueType: BOOLEAN
@@ -286,13 +291,6 @@ usageLimits:
     type: NON_RENEWABLE
     linkedFeatures:
       - versionHistory
-  unlimitedTeamsPermitted:
-    description: ''
-    valueType: BOOLEAN
-    defaultValue: false
-    type: NON_RENEWABLE
-    linkedFeatures:
-      - teams
 plans:
   STARTER:
     description: ''
@@ -364,11 +362,11 @@ plans:
         value: true
       activityLogs:
         value: true
+      unlimitedTeams:
+        value: true
     usageLimits:
       versionHistoryDepth:
         value: .inf
-      unlimitedTeamsPermitted:
-        value: true
     price: 45
   ENTERPRISE:
     description: ''
@@ -428,9 +426,9 @@ plans:
         value: true
       dedicatedAccountManager:
         value: true
+      unlimitedTeams:
+        value: true
     usageLimits:
       versionHistoryDepth:
         value: .inf
-      unlimitedTeamsPermitted:
-        value: true
     price: 75

@@ -279,7 +279,7 @@ usageLimits:
   githubOnlyForPublicRepositoriesFreeTier:
     description: Free tier usage limit for public repositories
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: NON_RENEWABLE
     linkedFeatures:
       - draftPullRequests
@@ -294,7 +294,7 @@ usageLimits:
   githubOnlyForPublicRepositoriesProTier:
     description: Pro tear usage limit for public repositories
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: NON_RENEWABLE
     linkedFeatures:
       - draftPullRequests
@@ -304,7 +304,7 @@ usageLimits:
   githubOnlyForPublicRepositoriesTeamTier:
     description: Team tier usage limit for public repositories
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: NON_RENEWABLE
     linkedFeatures:
       - advancedVulnerabilityScanning
@@ -313,7 +313,7 @@ usageLimits:
   githubOnlyForPublicRepositoriesEnterpriseTier:
     description: Enterprise tier usage limit for public repositories
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: NON_RENEWABLE
     linkedFeatures:
       - githubSecurityAdvisories
