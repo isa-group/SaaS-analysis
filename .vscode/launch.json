@@ -7,7 +7,7 @@
             "name": "Extract analytics for all pricings",
             "runtimeExecutable": "ts-node",
             "args": [
-                "${workspaceFolder}/src/scripts/extract-analytics.ts"
+                "${workspaceFolder}/src/scripts/analytics/extract-analytics.ts"
             ],
             "port": 9229,
             "console": "integratedTerminal",
@@ -21,8 +21,8 @@
             "name": "Extract analytics for a single pricing",
             "runtimeExecutable": "ts-node",
             "args": [
-                "${workspaceFolder}/src/scripts/extract-analytics-from-file.ts",
-                "./data/pricings/yaml/2019/clockify.yml"
+                "${workspaceFolder}/src/scripts/analytics/extract-analytics-from-file.ts",
+                "./data/pricings/yaml/real/github/2024.yml"
             ],
             "port": 9229,
             "console": "integratedTerminal",

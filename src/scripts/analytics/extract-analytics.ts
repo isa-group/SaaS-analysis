@@ -164,7 +164,7 @@ async function processFile(
     const pricingService = new PricingService(pricing);
     const analytics = await pricingService.getAnalytics();
 
-    const saasName = pricing.saasName;
+    const saasName = _formatSaaSName(pricing.saasName);
     const createdAt = pricing.createdAt;
 
     if (!analyticsData[saasName]) {
@@ -195,9 +195,8 @@ function generateJsonFileFromAnalytics(
 
   // Process analyticsData to add yaml_path and format SaaS names
   for (const saasName in analyticsData) {
-    const [firstWord, ...rest] = saasName.split(" ");
-    const formattedSaasName =
-      firstWord.charAt(0).toUpperCase() + firstWord.slice(1);
+    const [_, ...rest] = saasName.split(" ");
+    const formattedSaasName = _formatSaaSName(saasName);
     const product = rest.join(" ").replace(/^-/, "");
 
     analyticsData[formattedSaasName] = analyticsData[saasName];
@@ -276,6 +275,17 @@ async function main(): Promise<void> {
   errorsLogStream.end();
 
   generateJsonFileFromAnalytics(analyticsData);
+}
+
+/**
+ * Formats the SaaS name by capitalizing the first letter of the first word.
+ *
+ * @param {string} saasName - The original SaaS name.
+ * @returns {string} The formatted SaaS name.
+ */
+function _formatSaaSName(saasName: string): string {
+  const [firstWord] = saasName.split(" ");
+  return firstWord.charAt(0).toUpperCase() + firstWord.slice(1).toLowerCase();
 }
 
 main();
