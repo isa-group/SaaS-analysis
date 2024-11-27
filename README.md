@@ -95,10 +95,12 @@ saas-analysis
 ├── node_modules          # Generated after running npm install
 ├── src
 │   ├── scripts
-│   │   ├── add-version-fields-to-pricings.ts
-│   │   ├── extract-analytics-from-file.ts
-│   │   ├── extract-analytics.ts
-│   │   └── pricings2dzn.ts
+│   │   ├── analytics
+│   │   │   ├── extract-analytics-from-file.ts
+│   │   │   └── extract-analytics.ts        
+│   │   └── utils
+│   │       ├── extract-analytics-from-file.ts
+│   │       └── extract-analytics.ts        
 │   └── services
 │       └── logging.service.ts
 ├── .gitignore
@@ -131,6 +133,7 @@ By leveraging this service, more specifically its method `getAnalytics(pricing: 
 
 - **cli-progress**: For progress visualization.
 - **@types/cli-progress**: Type definitions for cli-progress.
+- [**Pricing4TS**](https://github.com/Alex-GF/Pricing4TS): Our library for pricing-driven development and operations.
 
 **Development Dependencies**
 
