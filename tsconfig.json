@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "module": "nodenext",
     "declaration": true,        // Genera archivos de declaración .d.ts para cada archivo TypeScript.
     "declarationDir": "./dist", // Especifica el directorio donde se guardarán las declaraciones.
     "outDir": "./dist",          // Directorio de salida para los archivos compilados

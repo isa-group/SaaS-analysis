@@ -47,7 +47,8 @@
 
 import * as fs from "fs";
 import * as path from "path";
-import { PricingService, Pricing, retrievePricingFromPath } from "pricing4ts";
+import { Pricing, retrievePricingFromPath } from "pricing4ts";
+import { PricingService } from "pricing4ts/server";
 import cliProgress from "cli-progress";
 
 /**

@@ -1,8 +1,8 @@
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
-# 📊 CAISE'25: Laboratory Package
+# 📊 Taming Complexity: Automated Analysis of Intelligent Pricings - Supplementary Material
 
-This repository contains the laboratory package for the paper **CAISE’25**, which includes scripts and MiniZinc models to replicate the validation performed in the study. Driven by the paper's main contribution, the primary goal of this package is to leverage the proposed automated analysis formalization and operations, among others, to uncover latent information in SaaS pricing models.
+This repository contains the laboratory package for the paper **Taming Complexity: Automated Analysis of Intelligent Pricings**, which includes scripts and MiniZinc models to replicate the validation performed in the study. Driven by the paper's main contribution, the primary goal of this package is to leverage the proposed automated analysis formalization and operations, among others, to uncover latent information in SaaS pricing models.
 
 ## 📚 Table of Contents
 
@@ -27,12 +27,12 @@ To run this package, ensure you have the following:
 
 To replicate the experiment, follow these simple steps:
 
-1. **Clone the repository and checkout to the CAISE'25 tag**:
+1. **Clone the repository and checkout to the CAISE'25-Research-Track tag**:
 
 ```bash
 git clone https://github.com/isa-group/SaaS-analysis.git
 cd saas-analysis
-git checkout dataset/dzn
+git checkout CAISE\'25-Research-Track
 ```
 
 2. **Install the dependencies**:
@@ -143,7 +143,7 @@ By leveraging this service, more specifically its method `getAnalytics(pricing: 
 
 ## ⚠️ Disclaimer
 
-This project is part of the research activities of the [ISA Group](https://www.isa.us.es/3.0/) and was specifically created as a laborratory package for the paper: CAISE'25. Please note that the project should be used with caution. We are not responsible for any damage caused by the use of this software. If you find any bugs or have any suggestions, please let us know by opening an issue in the [GitHub repository](https://github.com/isa-group/SaaS-analysis/issues) with the label: **CAISE'25**.
+This project is part of the research activities of the [ISA Group](https://www.isa.us.es/3.0/) and was specifically created as a laborratory package for the paper: "Taming Complexity: Automated Analysis of Intelligent Pricings". Please note that the project should be used with caution. We are not responsible for any damage caused by the use of this software. If you find any bugs or have any suggestions, please let us know by opening an issue in the [GitHub repository](https://github.com/isa-group/SaaS-analysis/issues) with the label: **CAISE'25-Research-Track**.
 
 ## 📜 License
 

@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { saveDZNfile } from "pricing4ts";
+import { saveDZNfile } from "pricing4ts/server";
 
 // Define the directory path where the YAML files are located
 const directoryPath = path.join(__dirname, "../../../data/pricings/yaml/real/");

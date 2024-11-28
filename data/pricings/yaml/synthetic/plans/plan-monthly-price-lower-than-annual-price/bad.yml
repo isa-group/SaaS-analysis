@@ -1,6 +1,6 @@
 saasName: annual price higher than monthly price
-version: "1.1"
-createdAt: 2024-11-19
+version: '2.0'
+createdAt: '2024-11-19'
 currency: EUR
 hasAnnualPayment: true
 features:
@@ -17,6 +17,6 @@ features:
 plans:
   plan1:
     monthlyPrice: 10
-    annualPrice: 240 
+    annualPrice: 240
     features: null
-
+    price: 10

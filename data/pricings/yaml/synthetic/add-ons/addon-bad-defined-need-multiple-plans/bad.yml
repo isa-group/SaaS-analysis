@@ -35,7 +35,7 @@ plans:
       feature4:
         value: true
 addOns:
-  A:
+  addonA:
     price: 10
     unit: ''
     availableFor:
@@ -44,8 +44,8 @@ addOns:
       feature1:
         value: true
     dependsOn:
-      - B
-  B:
+      - addonB
+  addonB:
     price: 10
     unit: ''
     availableFor:

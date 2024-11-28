@@ -29,6 +29,21 @@
             "internalConsoleOptions": "neverOpen",
             "skipFiles": ["<node_internals>/**"],
             // "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run synthetic dataset validation script",
+            "runtimeExecutable": "ts-node",
+            "args": [
+                "${workspaceFolder}/src/scripts/validation/synthetic-dataset-experiment.ts",
+                "./data/pricings/yaml/real/github/2024.yml"
+            ],
+            "port": 9229,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "skipFiles": ["<node_internals>/**"],
+            // "outFiles": ["${workspaceFolder}/dist/**/*.js"]
         }
     ]
 }
