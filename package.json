@@ -9,7 +9,7 @@
     "validation-from-file": "ts-node src/scripts/validation/synthetic-pricing-validation.ts",
     "generate-dzn-files": "ts-node src/scripts/utils/pricings2dzn.ts",
     "add-versions-to-pricings": "ts-node src/scripts/utils/add-version-fields-to-pricings.ts",
-    "experiment": "npm run add-versions-to-pricings && npm run generate-dzn-files && npm run analytics",
+    "experiment": "npm run add-versions-to-pricings && npm run generate-dzn-files && npm run analytics && npm run validation",
     "experiment:analytics": "npm run add-versions-to-pricings && npm run generate-dzn-files && npm run analytics",
     "experiment:validation": "npm run add-versions-to-pricings && npm run generate-dzn-files && npm run validation"
   },

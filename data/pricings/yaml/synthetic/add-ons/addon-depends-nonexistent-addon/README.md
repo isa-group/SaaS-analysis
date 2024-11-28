@@ -1,5 +1,3 @@
-In this case we have 1 addon `foo` that in order to be purchased
-a nonexistent addon `bar` in the pricing has to be purchaed previosly
+In this case, we have one addon, `foo`, which requires a nonexistent addon, `bar`, to be purchased first.
 
-We can model this in `Pricing2Yaml` putting the key of the nonexistent addon `bar`
-inside the optional list field `dependsOn` on addon `foo`.
+We can model this in `Pricing2Yaml` by placing the key of the nonexistent addon `bar` inside the optional list field `dependsOn` of the addon `foo`.

@@ -1,3 +1,3 @@
-This pricing sets zero as the default value for the `feature2usageLimit` usage limit, which is linked to `feature2`. This feature is included in `PRO` plan, but doesn't modify the default value of the limit.
+This pricing sets zero as the default value for the `feature2usageLimit` usage limit, which is linked to `feature2`. This feature is included in the `PRO` plan but does not modify the default value of the limit.
 
-In a real-world example, if `feature2` availability depends on the value of its usage limit, a user subscribed to the plan `PRO` could access to `feature2`, but not being able to use it due to its limit restriction.
+In a real-world example, if the availability of `feature2` depends on the value of its usage limit, a user subscribed to the `PRO` plan could access `feature2` but would not be able to use it due to the limit restriction.

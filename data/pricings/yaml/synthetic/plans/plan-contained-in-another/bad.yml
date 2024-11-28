@@ -14,16 +14,28 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
+usageLimits:
+  feature2usageLimit:
+    valueType: NUMERIC
+    defaultValue: 10
+    type: NON_RENEWABLE
+    linkedFeatures:
+      - feature2
 plans:
   BASIC:
-    price: 30
-    features:
-      feature1:
-        value: true
-  PRO:
     price: 10
     features:
       feature1:
         value: true
       feature2:
         value: true
+  PRO:
+    price: 30
+    features:
+      feature1:
+        value: true
+      feature2:
+        value: true
+    usageLimits:
+      feature2usageLimit:
+        value: 5

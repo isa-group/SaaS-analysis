@@ -52,7 +52,7 @@
             "runtimeExecutable": "ts-node",
             "args": [
                 "${workspaceFolder}/src/scripts/validation/synthetic-pricing-validation.ts",
-                "data/pricings/yaml/synthetic/plans/plan-same-features-different-prices/bad.yml"
+                "data/pricings/yaml/synthetic/plans/plan-with-default-limit-but-no-feature/bad.yml"
             ],
             "port": 9229,
             "console": "integratedTerminal",

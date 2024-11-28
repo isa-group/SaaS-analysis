@@ -30,7 +30,7 @@ function readYamlFiles(directoryPath: string) {
         continue;
       }
     
-      saveDZNfile(filePath, isSynthetic ? `data/pricings/dzn/${pathTypeForSynthetic}/${pathTypeForRealWorld}/${pathName}/${fileName}.dzn` : `data/pricings/dzn/${pathTypeForRealWorld}/${pathName}/${fileName}.dzn`);
+      saveDZNfile(filePath, isSynthetic ? `data/pricings/dzn/${pathTypeForSynthetic}/${pathTypeForRealWorld}/${pathName}` : `data/pricings/dzn/${pathTypeForRealWorld}/${pathName}`);
       numberOfParsedFiles = numberOfParsedFiles + 1;
     }
   }

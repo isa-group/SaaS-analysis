@@ -1,2 +1,1 @@
-In this case, plan `foo` is overriding an usage limit `usageLimit2` which is not
-defined in your pricing.
+In this case, the plan `foo` is overriding a usage limit, `usageLimit2`, which is not defined in your pricing model.
