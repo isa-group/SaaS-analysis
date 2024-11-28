@@ -17,7 +17,11 @@ features:
 plans:
   BASIC:
     price: 10
-    features: null
+    features:
+      feature1:
+        value: true
+      feature2:
+        value: true
   PRO:
     price: 30
     features:

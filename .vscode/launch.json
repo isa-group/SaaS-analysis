@@ -44,6 +44,21 @@
             "internalConsoleOptions": "neverOpen",
             "skipFiles": ["<node_internals>/**"],
             // "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Run validation for synthetic pricing",
+            "runtimeExecutable": "ts-node",
+            "args": [
+                "${workspaceFolder}/src/scripts/validation/synthetic-pricing-validation.ts",
+                "data/pricings/yaml/synthetic/plans/plan-same-features-different-prices/bad.yml"
+            ],
+            "port": 9229,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "skipFiles": ["<node_internals>/**"],
+            // "outFiles": ["${workspaceFolder}/dist/**/*.js"]
         }
     ]
 }

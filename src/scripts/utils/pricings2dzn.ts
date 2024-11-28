@@ -3,7 +3,7 @@ import path from "path";
 import { saveDZNfile } from "pricing4ts/server";
 
 // Define the directory path where the YAML files are located
-const directoryPath = path.join(__dirname, "../../../data/pricings/yaml/real/");
+const directoryPath = path.join(__dirname, "../../../data/pricings/yaml/");
 
 function readYamlFiles(directoryPath: string) {
   
@@ -12,8 +12,10 @@ function readYamlFiles(directoryPath: string) {
   const files = fs.readdirSync(directoryPath);
   for (const file of files) {
     const filePath = path.join(directoryPath, file);
-    const pathYear = path.basename(path.dirname(filePath));
-    const pathType = path.basename(path.dirname(path.dirname(filePath)));
+    const pathName = path.basename(path.dirname(filePath));
+    const pathTypeForRealWorld = path.basename(path.dirname(path.dirname(filePath)));
+    const pathTypeForSynthetic = path.basename(path.dirname(path.dirname(path.dirname(filePath))));
+    const isSynthetic = pathTypeForSynthetic === "synthetic";
     const stat = fs.statSync(filePath);
 
     if (stat.isDirectory()) {
@@ -21,14 +23,14 @@ function readYamlFiles(directoryPath: string) {
       numberOfParsedFiles = numberOfParsedFiles + readYamlFiles(filePath);
     } else if (filePath.endsWith(".yml")) {
       const fileName = path.basename(filePath, ".yml");
-      const outputFilePath = path.join(__dirname, `../../data/pricings/dzn/${pathType}/${pathYear}/${fileName}.dzn`);
+      const outputFilePath = path.join(__dirname, isSynthetic ? `../../data/pricings/dzn/${pathTypeForSynthetic}/${pathTypeForRealWorld}/${pathName}/${fileName}.dzn` : `../../data/pricings/dzn/${pathTypeForRealWorld}/${pathName}/${fileName}.dzn`);
       
       if (fs.existsSync(outputFilePath)) {
         numberOfParsedFiles = numberOfParsedFiles + 1;
         continue;
       }
     
-      saveDZNfile(filePath, `data/pricings/dzn/${pathYear}`);
+      saveDZNfile(filePath, isSynthetic ? `data/pricings/dzn/${pathTypeForSynthetic}/${pathTypeForRealWorld}/${pathName}/${fileName}.dzn` : `data/pricings/dzn/${pathTypeForRealWorld}/${pathName}/${fileName}.dzn`);
       numberOfParsedFiles = numberOfParsedFiles + 1;
     }
   }

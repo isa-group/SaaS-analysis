@@ -5,17 +5,20 @@
   "scripts": {
     "analytics": "ts-node src/scripts/analytics/extract-analytics.ts",
     "analytics-from-file": "ts-node src/scripts/analytics/extract-analytics-from-file.ts",
-    "experiment": "npm run add-versions-to-pricings && npm run generate-dzn-files && npm run analytics",
+    "validation": "ts-node src/scripts/validation/synthetic-dataset-experiment.ts",
+    "validation-from-file": "ts-node src/scripts/validation/synthetic-pricing-validation.ts",
     "generate-dzn-files": "ts-node src/scripts/utils/pricings2dzn.ts",
-    "add-versions-to-pricings": "ts-node src/scripts/utils/add-version-fields-to-pricings.ts"
+    "add-versions-to-pricings": "ts-node src/scripts/utils/add-version-fields-to-pricings.ts",
+    "experiment": "npm run add-versions-to-pricings && npm run generate-dzn-files && npm run analytics",
+    "experiment:analytics": "npm run add-versions-to-pricings && npm run generate-dzn-files && npm run analytics",
+    "experiment:validation": "npm run add-versions-to-pricings && npm run generate-dzn-files && npm run validation"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "@types/cli-progress": "^3.11.6",
-    "cli-progress": "^3.12.0",
-    "pricing4ts": "^0.4.0"
+    "cli-progress": "^3.12.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.13",
