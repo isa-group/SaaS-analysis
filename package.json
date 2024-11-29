@@ -18,7 +18,8 @@
   "description": "",
   "dependencies": {
     "@types/cli-progress": "^3.11.6",
-    "cli-progress": "^3.12.0"
+    "cli-progress": "^3.12.0",
+    "pricing4ts": "^0.4.1"
   },
   "devDependencies": {
     "@types/jest": "^29.5.13",

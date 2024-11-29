@@ -53,11 +53,14 @@ When executing `npm run experiment`, the following steps are performed:
 
 1.	**Adding versioning information** to the pricing models if they don’t already have it.
 2.	**Generating .dzn files** for the MiniZinc models from the Pricing2Yaml specifications. These files are primarily to showcase the results of the mapping from each Pricing2Yaml specification to a DZN file. However, they are not used during the experiment.
-3.	**Extracting analytics** from the pricings of the dataset (*data/pricings/yaml/real*), generating:
+3.	**Extracting analytics** from the pricings of the real-world dataset (*data/pricings/yaml/real*), generating:
 
-    - A **JSON file** with the extracted analytics in **data/pricings/json/**.
-    - Detailed **logs** of results and errors in the **logs/** directory.
+    - A **JSON file** with the extracted analytics in **data/pricings/json/** (the file will be titled: `analytics-{timestamp}.json`).
+    - Detailed **logs** of results and errors in the **logs/** directory (in the folder: `pricing-analyitic-{timestamp}`).
 
+4.	**Validation** of the pricings included within the synthetic dataset (*data/pricings/yaml/synthetic*), generating:
+
+    - Summary and detailed **logs** of results in the **logs/** directory (in the folder: `validation-{timestamp}`).
 
 ## 📂 Further Explanation About the Package
 
@@ -69,27 +72,29 @@ saas-analysis
 ├── data
 │   ├── models
 │   │   └── minizinc # Models utilized by Pricing4TS to get some analytics
-│   │   │   ├── operations
-│   │   │   │   ├── analysis
-│   │   │   │   │   ├── cheapest-subscription.mzn
-│   │   │   │   │   ├── configuration-space.mzn
-│   │   │   │   │   └── most-expensive-subscription.mzn
-│   │   │   │   ├── filter
-│   │   │   │   │   ├── cheapest-filtered-subscription.mzn
-│   │   │   │   │   ├── filter.mzn
-│   │   │   │   │   ├── filtered-configuration-space.mzn
-│   │   │   │   │   └── most-expensive-filtered-subscription.mzn
-│   │   │   │   ├── validation
-│   │   │   │   │   ├── valid-pricing.mzn
-│   │   │   │   │   └── valid-subscription.mzn
-│   │   │   └── PricingModel.mzn
+│   │       ├── operations
+│   │       │   ├── analysis
+│   │       │   │   ├── cheapest-subscription.mzn
+│   │       │   │   ├── configuration-space.mzn
+│   │       │   │   └── most-expensive-subscription.mzn
+│   │       │   ├── filter
+│   │       │   │   ├── cheapest-filtered-subscription.mzn
+│   │       │   │   ├── filter.mzn
+│   │       │   │   ├── filtered-configuration-space.mzn
+│   │       │   │   └── most-expensive-filtered-subscription.mzn
+│   │       │   ├── validation
+│   │       │   │   ├── valid-pricing.mzn
+│   │       │   │   └── valid-subscription.mzn
+│   │       └── PricingModel.mzn
 │   └── pricings
 │       ├── dzn           # Generated after running the experiment
 │       │   └── ...
 │       ├── json          # Generated after running the experiment
 │       │   └── ...
 │       └── yaml
-│           └── real      # Input YAML pricing files
+│           ├── real      # Pricing2Yaml files from the real-world dataset
+│           │   └── ...
+│           └── synthetic # Pricing2Yaml files from the synthetic dataset
 │               └── ...
 ├── logs                  # Generated after running the experiment
 ├── node_modules          # Generated after running npm install
@@ -98,9 +103,12 @@ saas-analysis
 │   │   ├── analytics
 │   │   │   ├── extract-analytics-from-file.ts
 │   │   │   └── extract-analytics.ts        
-│   │   └── utils
-│   │       ├── extract-analytics-from-file.ts
-│   │       └── extract-analytics.ts        
+│   │   ├── utils
+│   │   │   ├── extract-analytics-from-file.ts
+│   │   │   └── extract-analytics.ts        
+│   │   └── validation
+│   │       ├── synthetic-dataset-experiment.ts
+│   │       └── synthetic-pricing-validation.ts        
 │   └── services
 │       └── logging.service.ts
 ├── .gitignore
@@ -118,14 +126,18 @@ The package includes the following scripts:
 | Script Name            | Description                                                   | Usage Command                       |
 |------------------------|---------------------------------------------------------------|-------------------------------------|
 | **Extract Analytics¹** | Extracts analytics for all SaaS pricings in the dataset.      | `npm run analytics`                 |
-| **File-Based Analytics** | Processes analytics from a specific file.                   | `npm run analytics-from-file <path-to-pricing-file>` |
+| **File-Based Analytics¹** | Processes analytics from a specific file.                   | `npm run analytics-from-file <path-to-pricing-file>` |
+| **Dataset Validation¹** | Runs the `valid subscription` operation over the whole synthetic dataset      | `npm run validation`                 |
+| **File-Based Validation¹** | Validates a specific Pricing2Yaml file.                   | `npm run validation-from-file <path-to-pricing-file>` |
 | **Add Versions**       | Adds missing versioning information to pricing models.        | `npm run add-versions-to-pricings`  |
 | **Generate DZN Files** | Converts pricing models into `.dzn` files for MiniZinc.       | `npm run generate-dzn-files`        |
-| **Experiment Workflow**| Executes the full pipeline of the experiment.                | `npm run experiment`                |
+| **Analytics Experiment Workflow**| Executes the full pipeline of the analytics experiment.                | `npm run experiment:analytics`                |
+| **Validation Experiment Workflow**| Executes the full pipeline of the validation experiment.                | `npm run experiment:validation`                |
+| **Experiment Workflow**| Executes the full pipeline of the experiment, including analytics extraction and validation.                | `npm run experiment`                |
 
-¹The **Extract Analytics** script leverages the [PricingService](https://github.com/Alex-GF/Pricing4TS/blob/v0.3.1/src/services/pricing.service.ts) from our library [Pricing4TS](https://github.com/Alex-GF/Pricing4TS). This library, developed as part of our Pricing-driven Development and Operation research initiatives, was specifically extended with the automated analysis formalization and operations presented in the paper.
+¹**Extract Analytics**, **File-Based Analytics**, **Dataset Validation** and **File-Based Validation** scripts leverages the [PricingService](https://github.com/Alex-GF/Pricing4TS/blob/v0.4.1/src/server/services/pricing.service.ts) from our library [Pricing4TS](https://github.com/Alex-GF/Pricing4TS). This library, developed as part of our Pricing-driven Development and Operation research initiatives, was specifically extended with the automated analysis formalization and operations presented in the paper.
 
-By leveraging this service, more specifically its method `getAnalytics(pricing: Pricing)`, the script processes all pricing files located in the *data/pricings/yaml/real* directory, applies the analytics extraction method to each file and generates the outputs described earlier: a JSON file containing the extracted analytics (*data/pricings/json/*) and detailed logs of results and errors (*logs/*).
+The script utilizes the `getAnalytics(pricing: Pricing)` method from the service to process all pricing files located in the *data/pricings/yaml/real* or *data/pricings/yaml/synthetic* directories, depending on the executed experiment. In the first case, the analytics extraction method is applied to each file, generating a JSON file with the extracted analytics in *data/pricings/json/* and detailed logs of results and errors in the *logs/* directory. In the second case, the validation method is applied to each file, generating summary and detailed logs of results in the *logs/* directory.
 
 ### 📦 Dependencies
 
