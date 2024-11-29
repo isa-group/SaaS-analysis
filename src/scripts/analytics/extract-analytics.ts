@@ -96,6 +96,17 @@ const resultsLogStream = fs.createWriteStream(
 );
 
 /**
+ * A writable stream for logging the summary of results to a file named 'summary.log' located in the LOG_FOLDER directory.
+ * The stream is opened in append mode, meaning new data will be added to the end of the file.
+ *
+ * @constant {WriteStream} summaryLogStream - The writable stream for logging the summary of the results.
+ */
+const summaryLogStream = fs.createWriteStream(
+  path.join(LOG_FOLDER, "summary.log"),
+  { flags: "a" }
+);
+
+/**
  * A writable stream for logging results to a file named 'results.log' located in the LOG_FOLDER directory.
  * The stream is opened in append mode, meaning new data will be added to the end of the file.
  *
@@ -128,6 +139,11 @@ if (!fs.existsSync(JSON_DIR)) {
 }
 
 /**
+ * The total number of pricing files found in the data directory.
+ */
+let numberOfFiles = 0;
+
+/**
  * Recursively retrieves all files from a given directory.
  *
  * @param {string} dir - The directory to search for files.
@@ -141,6 +157,7 @@ function getAllFiles(dir: string, fileList: string[] = []): string[] {
     if (fs.statSync(filePath).isDirectory()) {
       getAllFiles(filePath, fileList);
     } else {
+      numberOfFiles++;
       fileList.push(filePath);
     }
   });
@@ -161,6 +178,7 @@ async function processFile(
   analyticsData: Record<string, any>
 ): Promise<void> {
   try {
+    const startTime = Date.now();
     const pricing: Pricing = retrievePricingFromPath(filePath);
     const pricingService = new PricingService(pricing);
     const analytics = await pricingService.getAnalytics();
@@ -173,11 +191,13 @@ async function processFile(
     }
 
     const dateKey = createdAt.toISOString().split("T")[0];
+    const executionTime = Date.now() - startTime;
 
     if (!analyticsData[saasName][dateKey]) {
       analyticsData[saasName][dateKey] = {};
       analyticsData[saasName][dateKey].analytics = analytics;
       analyticsData[saasName][dateKey].yaml_path = filePath;
+      analyticsData[saasName][dateKey].executionTime = executionTime;
     }
   } catch (error) {
     errorsLogStream.write(
@@ -259,20 +279,64 @@ async function main(): Promise<void> {
 
   progressBar.stop();
 
+  // Build the results log
+
+  resultsLogStream.write(
+    `+---------------------+-----------+-----------+-----------+-----------+-----------+-----------+\n` +
+    `| SaaS Name           | 2019      | 2020      | 2021      | 2022      | 2023      | 2024      |\n` +
+    `+---------------------+-----------+-----------+-----------+-----------+-----------+-----------+\n`
+  );
+
   const sortedSaasNames = Object.keys(analyticsData).sort();
   for (const saasName of sortedSaasNames) {
-    resultsLogStream.write(`\t\t--------- ${saasName} ---------\n`);
-    const years = Object.keys(analyticsData[saasName]).sort();
-    years.forEach((year) => {
-      resultsLogStream.write(`\t\t------ ${year} ------\n`);
-      resultsLogStream.write(
-        `${JSON.stringify(analyticsData[saasName][year].analytics, null, 2)}\n`
-      );
-    });
-    resultsLogStream.write("\n");
+    const row = [saasName.padEnd(20)];
+    const dates = Object.keys(analyticsData[saasName]).sort();
+
+    const years = ['2019', '2020', '2021', '2022', '2023', '2024'];
+    for (const year of years) {
+      const dateEntry = dates.find(date => date.startsWith(year));
+      const value = (dateEntry ? analyticsData[saasName][dateEntry]?.executionTime : 'N/A').toString();
+      row.push(value.padEnd(8) + 'ms');
+    }
+
+    resultsLogStream.write(`| ${row.join('| ')}|\n`);
   }
 
+  resultsLogStream.write(
+    `+---------------------+-----------+-----------+-----------+-----------+-----------+-----------+\n`
+  );
+  
+  // Build the summary log
+
+  const executionTimes = Object.values(analyticsData).flatMap(saas =>
+    Object.values(saas).map(entry => (entry as any).executionTime)
+  );
+  
+  const numPricingsExtracted = Object.values(analyticsData).reduce(
+    (acc, saas) => acc + Object.keys(saas).length,
+    0
+  );
+  const avgExecutionTime = executionTimes.reduce((a, b) => a + b, 0) / executionTimes.length;
+  executionTimes.sort((a, b) => a - b);
+  const q1 = executionTimes[Math.floor((executionTimes.length / 4))];
+  const q3 = executionTimes[Math.ceil((executionTimes.length * (3 / 4))) - 1];
+  const iqr = q3 - q1;
+  const lowerBound = q1 - 1.5 * iqr;
+  const upperBound = q3 + 1.5 * iqr;
+  const filteredTimes = executionTimes.filter(time => time >= lowerBound && time <= upperBound);
+  const avgExecutionTimeNoOutliers = filteredTimes.reduce((a, b) => a + b, 0) / filteredTimes.length;
+
+  summaryLogStream.write(
+    `+----------------------------------+-------------------------+\n` +
+    `| Dataset Size                     | ${numberOfFiles.toString().padEnd(24)}|\n` +
+    `| Pricings extracted               | ${numPricingsExtracted.toString().padEnd(24)}|\n` +
+    `| Avg Execution Time               | ${avgExecutionTime.toFixed(2)} ms${''.padEnd(21-avgExecutionTime.toFixed(2).length)}|\n` +
+    `| Avg Execution Time (No Outliers) | ${avgExecutionTimeNoOutliers.toFixed(2)} ms${''.padEnd(21-avgExecutionTimeNoOutliers.toFixed(2).length)}|\n` +
+    `+----------------------------------+-------------------------+\n`
+  );
+
   resultsLogStream.end();
+  summaryLogStream.end();
   errorsLogStream.end();
 
   generateJsonFileFromAnalytics(analyticsData);

@@ -121,7 +121,7 @@ async function main(): Promise<void> {
         `| Inconsistencies Not Found          | ${results.noInconsistencies.toString().padEnd(24)}|\n` +
         `| Total Test Cases                   | ${totalCases.toString().padEnd(24)}|\n` +
         `+------------------------------------+-------------------------+\n` +
-        `| Avg Execution Time                 | ${avgExecutionTime.toFixed(2)} ms${''.padEnd(16)}|\n` +
+        `| Avg Execution Time                 | ${avgExecutionTime.toFixed(2)} ms${''.padEnd(21-avgExecutionTime.toFixed(2).length)}|\n` +
         `| Inconsistency Detection Rate (IDR) | ${inconsistencyPercentage} % ${''.padEnd(16)}|\n` +
         `+------------------------------------+-------------------------+\n`
     );
