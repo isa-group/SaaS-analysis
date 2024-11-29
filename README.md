@@ -66,6 +66,10 @@ When executing `npm run experiment`, the following steps are performed:
 Don't worry about the errors that are logged during the generation of the .dzn files. These errors are expected since most of inconsistencies from the synthetic dataset are detected by the Pricing4TS parser.
 :::
 
+### Are you using VSCode?
+
+We have configured some launch configurations to ease the launch of the experiments independently 😄.
+
 ## 📂 Further Explanation About the Package
 
 ### 🔍 Project’s Structure

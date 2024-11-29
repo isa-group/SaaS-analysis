@@ -195,7 +195,7 @@ async function processFile(
 
     if (!analyticsData[saasName][dateKey]) {
       analyticsData[saasName][dateKey] = {};
-      analyticsData[saasName][dateKey].analytics = analytics;
+      analyticsData[saasName][dateKey].analytics = analytics.configurationSpaceSize;
       analyticsData[saasName][dateKey].yaml_path = filePath;
       analyticsData[saasName][dateKey].executionTime = executionTime;
     }
