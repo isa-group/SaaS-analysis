@@ -1,7 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
-import { Pricing, retrievePricingFromPath } from "pricing4ts";
-import { PricingOperation, PricingService } from "pricing4ts/server";
+import { Pricing } from "pricing4ts";
+import { PricingOperation, PricingService, retrievePricingFromPath } from "pricing4ts/server";
 import cliProgress from "cli-progress";
 
 interface Results {

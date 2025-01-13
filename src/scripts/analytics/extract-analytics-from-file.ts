@@ -47,8 +47,8 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { Pricing, retrievePricingFromPath } from 'pricing4ts';
-import { PricingService } from 'pricing4ts/server';
+import { Pricing } from 'pricing4ts';
+import { PricingService, retrievePricingFromPath } from 'pricing4ts/server';
 
 /**
  * Directory where log files are stored.
