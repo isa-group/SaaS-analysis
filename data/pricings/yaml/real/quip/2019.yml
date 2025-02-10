@@ -63,7 +63,7 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: GUARANTEE
-    docURL: https://quip.com/security/governance-and-compliance
+    docUrl: https://quip.com/security/governance-and-compliance
   customAndAdvancedLiveApps:
     description: ''
     valueType: BOOLEAN
