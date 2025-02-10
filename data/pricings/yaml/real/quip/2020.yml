@@ -71,7 +71,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.salesforce.com/solutions/mobile/app-suite/anywhere/
   integratedChatWithinSalesforce:
     description: ''
@@ -90,7 +90,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.salesforce.com/eu/sales/pricing/
   embedDocumentsInAllSalesforceObjects:
     description: ''

@@ -545,7 +545,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.make.com/en/pricing
   googleDrive:
     description: ''
@@ -553,7 +553,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://one.google.com/about/plans
   dropbox:
     description: ''
@@ -561,7 +561,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.dropbox.com/plans
   boxCloudStorage:
     description: ''
@@ -569,7 +569,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.box.com/pricing
   oneDriveCloudStorage:
     description: ''
@@ -577,7 +577,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - >-
         https://www.microsoft.com/en-us/microsoft-365/onedrive/compare-onedrive-plans
   tableauWebConnector:

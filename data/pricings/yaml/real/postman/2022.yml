@@ -46,7 +46,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://github.com/pricing
   staticIpAddresses:
     description: ''

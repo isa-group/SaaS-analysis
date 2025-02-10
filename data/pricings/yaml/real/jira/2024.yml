@@ -91,7 +91,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs: null
+    pricingUrls: null
   userRolesAndPermissions:
     description: ''
     valueType: BOOLEAN

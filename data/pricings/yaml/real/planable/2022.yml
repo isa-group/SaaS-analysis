@@ -66,7 +66,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs: null
+    pricingUrls: null
   noneApprovalWorkflows:
     description: Set workflows that do not require approval for publishing.
     valueType: BOOLEAN

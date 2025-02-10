@@ -146,7 +146,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://slack.com/pricing
   zapierIntegration:
     description: ''
@@ -154,7 +154,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://zapier.com/pricing
   smsViaZapier:
     description: ''
@@ -162,7 +162,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://zapier.com/pricing
   googleContactsIntegration:
     description: ''
@@ -170,7 +170,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   hubSpotCRMIntegration:
     description: ''
@@ -178,7 +178,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.hubspot.com/pricing
   webhooksIntegration:
     description: Beta
@@ -192,7 +192,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.salesforce.com/products/sales-cloud/pricing/
   gongIntegration:
     description: ''
@@ -200,7 +200,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.gong.io/pricing/
   userRoles:
     description: ''

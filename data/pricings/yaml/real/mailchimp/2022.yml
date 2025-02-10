@@ -183,7 +183,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://facebook.com/business
   instagramAds:
     description: ''
@@ -191,7 +191,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://business.instagram.com/advertising
   socialPosting:
     description: ''

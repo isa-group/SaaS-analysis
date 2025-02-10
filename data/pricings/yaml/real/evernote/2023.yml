@@ -105,7 +105,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   getNotifiedWhenItsTimeToTakeNotes:
     description: Get notified when it's time to take notes
@@ -125,7 +125,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   assignTasksToOthers:
     description: ''
@@ -234,7 +234,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs: null
+    pricingUrls: null
   createCustomTemplates:
     description: ''
     valueType: BOOLEAN
@@ -282,7 +282,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   customizeHomeWithMoreWidgets:
     description: ''
@@ -306,7 +306,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://one.google.com/about/plans
   searchTextInsideImages:
     description: ''
@@ -379,7 +379,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs: null
+    pricingUrls: null
   advancedPdfExportControls:
     description: ''
     valueType: BOOLEAN

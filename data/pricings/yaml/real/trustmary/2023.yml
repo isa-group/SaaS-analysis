@@ -33,7 +33,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://zapier.com/pricing
   hubspotIntegration:
     description: ''
@@ -41,7 +41,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.hubspot.com/pricing/marketing/starter
   pipedriveIntegration:
     description: ''
@@ -49,7 +49,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.pipedrive.com/en/pricing
   domains:
     description: ''

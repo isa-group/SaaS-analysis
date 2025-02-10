@@ -576,7 +576,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.tableau.com/pricing
   productCatalog:
     description: ''

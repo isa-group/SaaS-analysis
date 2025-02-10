@@ -74,7 +74,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://slack.com/pricing
   microsoftTeamsIntegration:
     description: ''
@@ -82,7 +82,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - >-
         https://www.microsoft.com/en-us/microsoft-365/microsoft-teams/group-chat-software
   teamWorkspaces:

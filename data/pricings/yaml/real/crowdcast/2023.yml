@@ -62,7 +62,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://zapier.com/pricing
   exportEmailAddresses:
     description: ''

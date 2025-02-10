@@ -116,13 +116,13 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: MARKETPLACE
-    pricingURLs: null
+    pricingUrls: null
   publishToSocialMediaOnlyAllowedToAdmins:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
     type: MANAGEMENT
-    pricingURLs: null
+    pricingUrls: null
   teamSharing:
     description: ''
     valueType: BOOLEAN

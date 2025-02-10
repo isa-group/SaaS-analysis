@@ -94,7 +94,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://slack.com/pricing
   zapierIntegration:
     description: ''
@@ -102,7 +102,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://zapier.com/pricing
   smsViaZapier:
     description: ''
@@ -110,7 +110,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://zapier.com/pricing
   hubSpotCRMIntegration:
     description: ''
@@ -118,7 +118,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.hubspot.com/pricing
   adminDashboard:
     description: ''

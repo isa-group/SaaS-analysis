@@ -40,7 +40,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs: null
+    pricingUrls: null
   customTemplates:
     description: Custom templates
     valueType: BOOLEAN

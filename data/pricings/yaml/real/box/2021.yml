@@ -47,7 +47,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - >-
         https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products
   googleWorkspaceIntegration:
@@ -56,7 +56,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   slackIntegration:
     description: ''
@@ -64,7 +64,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://slack.com/pricing
   desktopAccess:
     valueType: BOOLEAN

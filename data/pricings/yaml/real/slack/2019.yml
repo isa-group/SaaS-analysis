@@ -97,7 +97,7 @@ features:
     valueType: BOOLEAN
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.onelogin.com/pages/active-directory-sso
       - https://www.okta.com/integrations/active-directory/
       - >-

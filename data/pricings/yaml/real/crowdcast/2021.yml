@@ -51,7 +51,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.patreon.com/pricing
   stripeIntegration:
     description: ''
@@ -75,7 +75,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://zapier.com/pricing
   convertKitIntegration:
     description: ''
@@ -83,7 +83,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://convertkit.com/pricing
   dripIntegration:
     description: ''
@@ -91,7 +91,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.drip.com/pricing
   exportEmailAddresses:
     description: ''

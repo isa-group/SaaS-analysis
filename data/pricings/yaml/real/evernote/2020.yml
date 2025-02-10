@@ -102,7 +102,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs: null
+    pricingUrls: null
   addRemindersToNotes:
     description: ''
     valueType: BOOLEAN
@@ -141,7 +141,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   searchTextInsideImages:
     description: ''
@@ -159,7 +159,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - >-
         https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook
   searchTextInsideOfficeDocs:

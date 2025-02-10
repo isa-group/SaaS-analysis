@@ -175,7 +175,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - >-
         https://docs.aws.amazon.com/en_us/kms/latest/developerguide/overview.html
   enterpriseMobilitySecurity:

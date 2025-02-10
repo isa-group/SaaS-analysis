@@ -77,7 +77,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs: null
+    pricingUrls: null
   publishedPostsStorage:
     description: Published posts are archived after 1 year. Then permanently deleted.
     valueType: BOOLEAN
