@@ -137,6 +137,10 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
+  defenderBusinessServer:
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
   microsoftDataProcessor:
     description: Microsoft acts as a processor for data
     valueType: BOOLEAN
@@ -597,7 +601,9 @@ addOns:
       - BUSINESS_PREMIUM
     price: 3
     unit: user/month
-    features: null
+    features:
+      defenderBusinessServer:
+        value: true
     usageLimits: null
     usageLimitsExtensions: null
   teamsAudioConferencing:

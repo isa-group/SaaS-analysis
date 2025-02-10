@@ -369,6 +369,10 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: IDENTITY_PROVIDER
+  quickstartOnboarding:
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
   auditLog:
     description: ''
     valueType: BOOLEAN
@@ -780,7 +784,9 @@ addOns:
       - GROWTH
     price: 1000
     unit: one time purchase
-    features: null
+    features:
+      quickstartOnboarding:
+        value: true
     usageLimits: null
     usageLimitsExtensions: null
   guidedOnboarding:

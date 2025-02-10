@@ -734,6 +734,11 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: SUPPORT
+  clickUpAI:
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: TASK_AUTOMATION
 usageLimits:
   useUsers:
     description: ''
@@ -1554,7 +1559,9 @@ addOns:
     monthlyPrice: 5
     annualPrice: 5
     unit: member/month
-    features: null
+    features:
+      clickUpAI:
+        value: true
     usageLimits: null
     usageLimitsExtensions: null
     price: 5

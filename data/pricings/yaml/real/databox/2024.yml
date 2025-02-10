@@ -368,6 +368,10 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: MANAGEMENT
+  quickstartOnboarding:
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
 usageLimits:
   includedDataSources:
     description: ''
@@ -751,7 +755,9 @@ addOns:
       - PREMIUM
     price: 1000
     unit: one time purchase
-    features: null
+    features:
+      quickstartOnboarding:
+        value: true
     usageLimits: null
     usageLimitsExtensions: null
   guidedOnboarding:
