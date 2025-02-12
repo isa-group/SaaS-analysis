@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: Figma
-createdAt: '2020-11-26'
-version: '2020-11-26'
+createdAt: '2020-11-27'
+version: '2020-11-27'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20201127181732/https://www.figma.com/pricing/
 features:
   versionHistory:
     description: ''
