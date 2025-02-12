@@ -5,6 +5,7 @@ version: '2023-11-29'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20231130035742/https://buffer.com/pricing
 features:
   channels:
     description: 'Example: 2 Twitter profiles, 2 Facebook pages, and 2 Start Pages

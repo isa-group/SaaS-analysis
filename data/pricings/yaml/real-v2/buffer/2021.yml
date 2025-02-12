@@ -5,6 +5,7 @@ version: '2021-11-29'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20211130063400/https://buffer.com/pricing
 features:
   socialChannels:
     description: 'The number of social channels/pages you can connect to Buffer. For

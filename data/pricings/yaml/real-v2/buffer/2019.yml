@@ -5,6 +5,7 @@ version: '2019-11-29'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20191130205438/https://buffer.com/pricing/publish#compare-features
 features:
   socialAccounts:
     description: 'The number of social accounts/pages you can connect to Buffer. For
