@@ -1,8 +1,9 @@
 syntaxVersion: '2.1'
 saasName: Deskera
-version: '2023-03-23'
-createdAt: '2023-03-23'
+version: '2023-03-24'
+createdAt: '2023-03-24'
 currency: USD
+url: https://web.archive.org/web/20230324182344/https://www.deskera.com/pricing/
 features:
   dedicatedSuccessManager:
     description: ''
