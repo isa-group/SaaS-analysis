@@ -1,8 +1,8 @@
+syntaxVersion: '2.1'
 saasName: Tableau
-version: '2.0'
+version: '2019-08-12'
 createdAt: '2019-08-12'
 currency: USD
-hasAnnualPayment: true
 features:
   webAccess:
     description: ''
@@ -202,18 +202,15 @@ plans:
     description: >-
       View and interact with dashboards and visualizations in a secure,
       easy-to-use platform.
-    monthlyPrice: null
-    annualPrice: 15
+    price: 15
     unit: user/month
     features: null
     usageLimits: null
-    price: 15
   EXPLORER:
     description: >-
       Explore trusted data and answer your own questions faster with full
       self-service analytics.
-    monthlyPrice: null
-    annualPrice: 42
+    price: 42
     unit: user/month
     features:
       downloadFullData:
@@ -237,13 +234,11 @@ plans:
       certifyDataSources:
         value: true
     usageLimits: null
-    price: 42
   CREATOR:
     description: >-
       Discover insights with a powerful suite of products that support your
       end-to-end analytics workflow.
-    monthlyPrice: null
-    annualPrice: 70
+    price: 70
     unit: user/month
     features:
       downloadFullData:
@@ -289,4 +284,3 @@ plans:
       serverAdministration:
         value: true
     usageLimits: null
-    price: 70

@@ -1,8 +1,8 @@
+syntaxVersion: '2.1'
 saasName: Deskera
-version: '2.0'
+version: '2024-07-15'
 createdAt: '2024-07-15'
 currency: USD
-hasAnnualPayment: true
 features:
   estimates:
     description: ''
@@ -543,14 +543,13 @@ features:
 plans:
   GROWTH:
     description: ''
-    annualPrice: 199
+    price: 199
     unit: user/month
     features: null
     usageLimits: null
-    price: 199
   ESSENTIAL:
     description: ''
-    annualPrice: 249
+    price: 249
     unit: user/month
     features:
       rowRackBin:
@@ -568,10 +567,9 @@ plans:
       customDashboards:
         value: true
     usageLimits: null
-    price: 249
   PROFESSIONAL:
     description: ''
-    annualPrice: Contact Sales
+    price: Contact Sales
     unit: user/month
     features:
       rowRackBin:
@@ -601,4 +599,3 @@ plans:
       customDashboards:
         value: true
     usageLimits: null
-    price: Contact Sales

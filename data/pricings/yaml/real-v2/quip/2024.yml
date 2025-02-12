@@ -1,8 +1,8 @@
+syntaxVersion: '2.1'
 saasName: Quip
-version: '2.0'
+version: '2024-07-01'
 createdAt: '2024-07-01'
 currency: USD
-hasAnnualPayment: true
 features:
   documents:
     description: ''
@@ -93,16 +93,13 @@ features:
 plans:
   STARTER:
     description: Powerful collaboration for your team or small business.
-    monthlyPrice: 12
-    annualPrice: 10
+    price: 12
     unit: user/month
     features: null
     usageLimits: null
-    price: 12
   PLUS:
     description: Secure productivity platform for large and complex teams.
-    monthlyPrice: null
-    annualPrice: 25
+    price: 25
     unit: user/month
     features:
       customAndAdvancedLiveApps:
@@ -114,13 +111,11 @@ plans:
       customization:
         value: true
     usageLimits: null
-    price: 25
   ADVANCED:
     description: >-
       Real-time alerts and collaboration inside Salesforce for sales and service
       teams.
-    monthlyPrice: null
-    annualPrice: 100
+    price: 100
     unit: user/month
     features:
       customAndAdvancedLiveApps:
@@ -140,4 +135,3 @@ plans:
       embedDocumentsInAllSalesforceObjects:
         value: true
     usageLimits: null
-    price: 100

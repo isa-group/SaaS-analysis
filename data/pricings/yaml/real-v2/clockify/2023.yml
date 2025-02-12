@@ -1,5 +1,6 @@
+syntaxVersion: '2.1'
 saasName: clockify
-version: '2.0'
+version: '2023-12-02'
 createdAt: '2023-12-02'
 currency: USD
 hasAnnualPayment: true
@@ -395,16 +396,13 @@ features:
 plans:
   FREE:
     description: ''
-    monthlyPrice: 0
-    annualPrice: 0
+    price: 0
     unit: user/month
     features: null
     usageLimits: null
-    price: 0
   BASIC:
     description: Administration
-    monthlyPrice: 4.99
-    annualPrice: 3.99
+    price: 4.99
     unit: user/month
     features:
       importTime:
@@ -434,11 +432,9 @@ plans:
       kioskPIN:
         value: true
     usageLimits: null
-    price: 4.99
   STANDARD:
     description: Timesheeting & billing
-    monthlyPrice: 6.99
-    annualPrice: 5.49
+    price: 6.99
     unit: user/month
     features:
       importTime:
@@ -492,11 +488,9 @@ plans:
       force2FA:
         value: true
     usageLimits: null
-    price: 6.99
   PRO:
     description: Profit & Productivity
-    monthlyPrice: 9.99
-    annualPrice: 7.99
+    price: 9.99
     unit: user/month
     features:
       importTime:
@@ -582,11 +576,9 @@ plans:
       dataRegion:
         value: true
     usageLimits: null
-    price: 9.99
   ENTERPRISE:
     description: ''
-    monthlyPrice: 14.99
-    annualPrice: 11.99
+    price: 14.99
     unit: user/month
     features:
       importTime:
@@ -680,7 +672,6 @@ plans:
       auditLog:
         value: true
     usageLimits: null
-    price: 14.99
 addOns:
   kioskBasic:
     availableFor:

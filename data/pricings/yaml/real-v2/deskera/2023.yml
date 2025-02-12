@@ -1,8 +1,8 @@
+syntaxVersion: '2.1'
 saasName: Deskera
-version: '2.0'
+version: '2023-03-23'
 createdAt: '2023-03-23'
 currency: USD
-hasAnnualPayment: false
 features:
   dedicatedSuccessManager:
     description: ''
@@ -335,14 +335,13 @@ features:
 plans:
   ALL_IN_ONE:
     description: ''
-    monthlyPrice: 200
+    price: 200
     unit: user/month
     features: null
     usageLimits: null
-    price: 200
   ESSENTIAL:
     description: ''
-    monthlyPrice: 300
+    price: 300
     unit: user/month
     features:
       dedicatedSuccessManager:
@@ -368,10 +367,9 @@ plans:
       substituteBOM:
         value: true
     usageLimits: null
-    price: 300
   PROFESSIONAL:
     description: ''
-    monthlyPrice: Contact Sales
+    price: Contact Sales
     unit: user/month
     features:
       dedicatedSuccessManager:
@@ -403,4 +401,3 @@ plans:
       customDashboards:
         value: true
     usageLimits: null
-    price: Contact Sales
