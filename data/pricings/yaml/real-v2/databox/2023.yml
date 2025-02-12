@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: Databox
-createdAt: '2023-12-11'
-version: '2023-12-11'
+createdAt: '2023-12-12'
+version: '2023-12-12'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20231212010418/https://databox.com/pricing
 features:
   dataSources:
     description: ''
