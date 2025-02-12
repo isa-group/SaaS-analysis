@@ -5,6 +5,7 @@ version: '2023-10-30'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20231031155120/https://trustmary.com/pricing/
 features:
   responses:
     description: ''

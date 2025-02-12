@@ -5,6 +5,7 @@ version: '2020-10-31'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20201101013956/https://trustmary.com/pricing/
 features:
   nps:
     description: ''
