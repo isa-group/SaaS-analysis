@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: MailChimp - Marketing
-createdAt: '2024-07-12'
-version: '2024-07-12'
+createdAt: '2024-07-13'
+version: '2024-07-13'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20240713054406/https://mailchimp.com/pricing/marketing/compare-plans/
 features:
   ownerRole:
     description: ''

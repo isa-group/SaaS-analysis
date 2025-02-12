@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: MailChimp
-createdAt: '2019-11-29'
-version: '2019-11-29'
+createdAt: '2019-11-30'
+version: '2019-11-30'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20191130031450/https://mailchimp.com/pricing/
 features:
   contacts:
     description: ''
