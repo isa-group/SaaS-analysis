@@ -5,6 +5,7 @@ version: '2023-11-24'
 billing:
   monthly: 1.0
 currency: EUR
+url: https://web.archive.org/web/20231128073734/https://www.canva.com/pricing/
 features:
   assets1:
     description: Free stock photos, graphics, videos and audio

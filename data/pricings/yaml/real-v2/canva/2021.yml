@@ -5,6 +5,7 @@ version: '2021-03-18'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20210319062841/https://www.canva.com/pricing/
 features:
   freeTemplates:
     description: ''
