@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: ClickUp
-createdAt: '2024-07-04'
-version: '2024-07-04'
+createdAt: '2024-07-05'
+version: '2024-07-05'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20240705193957/https://clickup.com/pricing
 features:
   tasks:
     description: ''
