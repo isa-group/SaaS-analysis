@@ -255,15 +255,15 @@ features:
 usageLimits:
   unlimitedTeamMembers:
     description: ''
-    valueType: BOOLEAN
-    defaultValue: false
+    valueType: NUMERIC
+    defaultValue: 0
     type: NON_RENEWABLE
     linkedFeatures:
     - teams
   unlimitedSuveys:
     description: ''
-    valueType: BOOLEAN
-    defaultValue: false
+    valueType: NUMERIC
+    defaultValue: 0
     type: NON_RENEWABLE
     linkedFeatures:
     - surveys
@@ -299,6 +299,10 @@ plans:
     price: 29
     unit: /month
     features:
+      teams:
+        value: true
+      surveys:
+        value: true
       surveyTemplateLibrary:
         value: true
       surveyStatus:
@@ -323,9 +327,9 @@ plans:
         value: true
     usageLimits:
       unlimitedTeamMembers:
-        value: true
+        value: .inf
       unlimitedSuveys:
-        value: true
+        value: .inf
       surveyResponsesLimit:
         value: 20
       requestsViaEmailLimit:
@@ -337,6 +341,10 @@ plans:
     price: 79
     unit: /month
     features:
+      teams:
+        value: true
+      surveys:
+        value: true
       surveyTemplateLibrary:
         value: true
       surveyStatus:
@@ -367,9 +375,9 @@ plans:
         value: true
     usageLimits:
       unlimitedTeamMembers:
-        value: true
+        value: .inf
       unlimitedSuveys:
-        value: true
+        value: .inf
       surveyResponsesLimit:
         value: 50
       requestsViaEmailLimit:
@@ -381,6 +389,10 @@ plans:
     price: 159
     unit: /month
     features:
+      teams:
+        value: true
+      surveys:
+        value: true
       surveyTemplateLibrary:
         value: true
       surveyStatus:
@@ -411,9 +423,9 @@ plans:
         value: true
     usageLimits:
       unlimitedTeamMembers:
-        value: true
+        value: .inf
       unlimitedSuveys:
-        value: true
+        value: .inf
       surveyResponsesLimit:
         value: 500
       requestsViaEmailLimit:
