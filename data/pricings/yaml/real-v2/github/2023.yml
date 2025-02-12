@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: github
-createdAt: '2023-11-20'
-version: '2023-11-20'
+createdAt: '2023-11-21'
+version: '2023-11-21'
 billing:
   monthly: 1.0
 currency: EUR
+url: http://web.archive.org/web/20231121024054/https://github.com/pricing
 features:
   publicRepositories:
     description: Host open source projects in public GitHub repositories, accessible
