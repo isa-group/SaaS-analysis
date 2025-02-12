@@ -1,9 +1,9 @@
 syntaxVersion: '2.1'
 saasName: clockify
-version: '2023-12-02'
-createdAt: '2023-12-02'
+version: '2023-12-03'
+createdAt: '2023-12-03'
 currency: USD
-hasAnnualPayment: true
+url: https://web.archive.org/web/20231203135722/https://clockify.me/pricing
 features:
   unlimitedTracking:
     description: Track as much time as you want, without any limits.

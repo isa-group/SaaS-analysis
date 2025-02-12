@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: Clockify
-createdAt: '2019-11-11'
-version: '2019-11-11'
+createdAt: '2019-11-12'
+version: '2019-11-12'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20191112192511/https://clockify.me/extra-features
 features:
   unlimitedTracking:
     description: Track as much time as you want, without any limits.
