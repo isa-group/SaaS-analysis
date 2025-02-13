@@ -5,6 +5,7 @@ version: '2023-11-04'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20231109225552/https://www.postman.com/pricing/
 features:
   apiClient:
     description: https://www.postman.com/api-platform/api-client/
