@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: Box
-createdAt: '2024-07-15'
-version: '2024-07-15'
+createdAt: '2024-07-16'
+version: '2024-07-16'
 billing:
   monthly: 1.0
 currency: EUR
+url: https://web.archive.org/web/20240716161914/https://www.box.com/pricing
 features:
   secureStorage:
     description: ''
