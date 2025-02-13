@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: Microsoft 365 - For Business
-createdAt: '2023-11-24'
-version: '2023-11-24'
+createdAt: '2023-11-25'
+version: '2023-11-25'
 billing:
   monthly: 1.0
 currency: USD
+url: http://web.archive.org/web/20231125172819/https://www.microsoft.com/en-US/microsoft-365/business/compare-all-microsoft-365-business-products
 features:
   cloudStorage:
     description: Store and access files securely in the cloud
@@ -323,7 +324,7 @@ usageLimits:
     type: NON_RENEWABLE
     linkedFeatures:
     - mailbox
-  webinarsMaxLimit:
+  maxAttendess:
     description: ''
     valueType: NUMERIC
     defaultValue: 0
@@ -382,6 +383,8 @@ plans:
     usageLimits:
       mailboxMaxCapacity:
         value: 50
+      maxAttendess:
+        value: 300
   BUSINESS_STANDARD:
     description: ''
     price: 15
@@ -430,7 +433,7 @@ plans:
     usageLimits:
       mailboxMaxCapacity:
         value: 50
-      webinarsMaxLimit:
+      maxAttendess:
         value: 300
   BUSINESS_PREMIUM:
     description: ''
@@ -494,6 +497,6 @@ plans:
     usageLimits:
       mailboxMaxCapacity:
         value: 50
-      webinarsMaxLimit:
+      maxAttendess:
         value: 300
 addOns: null

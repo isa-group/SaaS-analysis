@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: Microsoft 365 - For Business
-createdAt: '2020-11-11'
-version: '2020-11-11'
+createdAt: '2020-11-12'
+version: '2020-11-12'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20201112015145/https://www.microsoft.com/en-US/microsoft-365/business/compare-all-microsoft-365-business-products
 features:
   cloudStorage:
     description: Store and access files securely in the cloud
@@ -241,17 +242,6 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  webinars:
-    description: Schedule and host webinars for up to 300 people
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
-  webinarInvitationManagement:
-    description: Host webinars that include attendee registration pages and email
-      confirmations
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
   emailThreatsProtection:
     description: Help protect against email threats, such as phishing that’s hidden
       in email attachments and links
@@ -374,16 +364,14 @@ usageLimits:
     type: NON_RENEWABLE
     linkedFeatures:
     - mailbox
-  webinarsMaxLimit:
+  onlineMeetingCapacity:
     description: ''
     valueType: NUMERIC
     defaultValue: 0
     unit: people
     type: NON_RENEWABLE
     linkedFeatures:
-    - chat
     - onlineMeetings
-    - webinars
 plans:
   APPS:
     description: ''
@@ -429,6 +417,8 @@ plans:
     usageLimits:
       mailboxMaxCapacity:
         value: 50
+      onlineMeetingCapacity:
+        value: 300
   BUSINESS_STANDARD:
     description: ''
     price: 15
@@ -466,14 +456,10 @@ plans:
         value: true
       microsoftTeams:
         value: true
-      webinars:
-        value: true
-      webinarInvitationManagement:
-        value: true
     usageLimits:
       mailboxMaxCapacity:
         value: 50
-      webinarsMaxLimit:
+      onlineMeetingCapacity:
         value: 300
   BUSINESS_PREMIUM:
     description: ''
@@ -512,10 +498,6 @@ plans:
         value: true
       microsoftTeams:
         value: true
-      webinars:
-        value: true
-      webinarInvitationManagement:
-        value: true
       emailThreatsProtection:
         value: true
       informationRightsManagement:
@@ -537,7 +519,7 @@ plans:
     usageLimits:
       mailboxMaxCapacity:
         value: 50
-      webinarsMaxLimit:
+      onlineMeetingCapacity:
         value: 300
 addOns:
   teamsAudioConferencing:
