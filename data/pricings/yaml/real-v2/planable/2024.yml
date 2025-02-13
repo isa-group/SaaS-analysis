@@ -5,6 +5,7 @@ version: '2024-07-18'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20240702195004/https://planable.io/pricing/
 features:
   posts:
     description: ''

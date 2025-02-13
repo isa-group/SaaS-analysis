@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: Planable
-createdAt: '2021-11-18'
-version: '2021-11-18'
+createdAt: '2021-11-19'
+version: '2021-11-19'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20211119105131/https://planable.io/pricing/
 features:
   posts:
     description: ''
