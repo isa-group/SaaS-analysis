@@ -1,8 +1,9 @@
 syntaxVersion: '2.1'
 saasName: Tableau
-version: '2019-08-12'
-createdAt: '2019-08-12'
+version: '2019-08-13'
+createdAt: '2019-08-13'
 currency: USD
+url: http://web.archive.org/web/20190813233713/https://www.tableau.com/pricing/teams-orgs
 features:
   webAccess:
     description: ''
