@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: Wrike
-createdAt: '2020-11-23'
-version: '2020-11-23'
+createdAt: '2020-11-24'
+version: '2020-11-24'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20201124233041/https://www.wrike.com/price/
 features:
   boardView:
     description: ''

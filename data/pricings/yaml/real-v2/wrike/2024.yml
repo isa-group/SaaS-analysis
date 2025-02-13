@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: Wrike
-createdAt: '2024-07-09'
-version: '2024-07-09'
+createdAt: '2024-07-10'
+version: '2024-07-10'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20240710093853/https://www.wrike.com/comparison-table/
 features:
   multiLanguageSupport:
     description: 'Wrike supports multiple languages: German, English, French, Italian,
