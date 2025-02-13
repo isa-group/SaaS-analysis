@@ -5,6 +5,7 @@ version: '2024-07-16'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20240716134101/https://www.notion.so/pricing
 features:
   pages:
     description: ''
