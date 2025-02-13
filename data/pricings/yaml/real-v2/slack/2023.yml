@@ -5,6 +5,7 @@ version: '2023-10-23'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20231203054345/https://slack.com/pricing
 features:
   messagesAccess:
     description: 'Message and File History: The more you use Slack, the more valuable

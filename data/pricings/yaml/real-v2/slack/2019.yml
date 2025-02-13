@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: Slack
-createdAt: '2019-10-30'
-version: '2019-10-30'
+createdAt: '2019-10-31'
+version: '2019-10-31'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20191031074840/https://slack.com/pricing
 features:
   messagesAccess:
     description: Slack saves all your messages for you, but with the free plan, you

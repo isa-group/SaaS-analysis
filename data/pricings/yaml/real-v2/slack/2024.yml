@@ -5,6 +5,7 @@ version: '2024-07-02'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20240626115756/https://slack.com/pricing
 features:
   messagesAccess:
     description: '90-day message history: All messages sent in Slack are saved for
