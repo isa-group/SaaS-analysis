@@ -1,8 +1,9 @@
 syntaxVersion: '2.1'
 saasName: Quip
-version: '2022-11-28'
-createdAt: '2022-11-28'
+version: '2022-11-29'
+createdAt: '2022-11-29'
 currency: USD
+url: https://web.archive.org/web/20221129010323/https://quip.com/about/pricing
 features:
   documents:
     description: ''
