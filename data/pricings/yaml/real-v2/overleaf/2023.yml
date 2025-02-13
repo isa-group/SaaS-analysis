@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: Overleaf - Individual
-createdAt: '2023-11-27'
-version: '2023-11-27'
+createdAt: '2023-11-28'
+version: '2023-11-28'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20231128032035/https://www.overleaf.com/user/subscription/plans
 features:
   fastCompileServers:
     description: Compiles for users on premium plans always run on a dedicated pool
