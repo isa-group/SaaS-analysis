@@ -5,6 +5,7 @@ version: '2023-09-30'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20230925121037/https://pumble.com/pricing
 features:
   privateChannels:
     description: Only invited users can send messages in a private channel.
