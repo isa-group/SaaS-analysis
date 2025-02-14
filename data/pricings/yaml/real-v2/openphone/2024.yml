@@ -1,10 +1,11 @@
 syntaxVersion: '2.1'
 saasName: OpenPhone
-createdAt: '2024-07-16'
-version: '2024-07-16'
+createdAt: '2024-07-17'
+version: '2024-07-17'
 billing:
   monthly: 1.0
 currency: USD
+url: https://web.archive.org/web/20240717105154/https://www.openphone.com/pricing
 features:
   usAndCanadaCalling:
     description: ''
