@@ -5,6 +5,7 @@ version: '2023-12-02'
 billing:
   monthly: 1.0
 currency: EUR
+url: https://web.archive.org/web/20231202140357/https://www.salesforce.com/products/sales-pricing/?bc=WA
 features:
   leadManagement:
     description: Track, filter, and qualify new prospective customers.
