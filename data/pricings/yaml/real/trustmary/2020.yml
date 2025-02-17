@@ -1,8 +1,9 @@
 saasName: Trustmary - Full
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2020-10-31'
 createdAt: '2020-10-31'
 currency: USD
-hasAnnualPayment: false
+variables: {}
 features:
   nps:
     description: ''

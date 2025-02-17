@@ -1,8 +1,9 @@
 saasName: To purchase addOn A you have to purchase two plans
-version: '2.0'
-createdAt: 2024-11-19
+syntaxVersion: '2.1'
+version: '2024-11-19'
+createdAt: '2024-11-19'
 currency: EUR
-hasAnnualPayment: false
+variables: {}
 features:
   feature1:
     description: ''
@@ -28,7 +29,6 @@ plans:
   BASIC:
     price: 10
     features: null
-
   PRO:
     price: 20
     features:
