@@ -22,7 +22,7 @@
             "runtimeExecutable": "ts-node",
             "args": [
                 "${workspaceFolder}/src/scripts/analytics/extract-analytics-from-file.ts",
-                "./data/pricings/yaml/real/buffer/2024.yml"
+                "./data/pricings/yaml/real-v2/buffer/2024.yml"
             ],
             "port": 9229,
             "console": "integratedTerminal",
@@ -37,7 +37,7 @@
             "runtimeExecutable": "ts-node",
             "args": [
                 "${workspaceFolder}/src/scripts/validation/synthetic-dataset-experiment.ts",
-                "./data/pricings/yaml/real/github/2024.yml"
+                "./data/pricings/yaml/real-v2/github/2024.yml"
             ],
             "port": 9229,
             "console": "integratedTerminal",

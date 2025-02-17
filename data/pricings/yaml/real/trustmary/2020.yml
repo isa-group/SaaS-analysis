@@ -1,8 +1,9 @@
 saasName: Trustmary - Full
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2020-10-31'
 createdAt: '2020-10-31'
 currency: USD
-hasAnnualPayment: false
+variables: {}
 features:
   nps:
     description: ''
@@ -40,7 +41,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs: null
+    pricingUrls: null
   shareablelink:
     description: ''
     valueType: BOOLEAN
@@ -88,7 +89,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.google.com/
   importReviewsFromFacebook:
     description: ''
@@ -96,7 +97,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.facebook.com/
   requestGoogleReviews:
     description: ''

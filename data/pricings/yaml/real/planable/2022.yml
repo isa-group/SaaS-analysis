@@ -1,8 +1,9 @@
 saasName: Planable
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2022-10-29'
 createdAt: '2022-10-29'
 currency: USD
-hasAnnualPayment: true
+variables: {}
 features:
   posts:
     description: ''
@@ -66,7 +67,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs: null
+    pricingUrls: null
   noneApprovalWorkflows:
     description: Set workflows that do not require approval for publishing.
     valueType: BOOLEAN

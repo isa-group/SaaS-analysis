@@ -1,8 +1,9 @@
 saasName: Trustmary - Collect
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2023-10-30'
 createdAt: '2023-10-30'
 currency: USD
-hasAnnualPayment: true
+variables: {}
 features:
   responses:
     description: ''
@@ -33,7 +34,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://zapier.com/pricing
   hubspotIntegration:
     description: ''
@@ -41,7 +42,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.hubspot.com/pricing/marketing/starter
   pipedriveIntegration:
     description: ''
@@ -49,7 +50,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.pipedrive.com/en/pricing
   domains:
     description: ''

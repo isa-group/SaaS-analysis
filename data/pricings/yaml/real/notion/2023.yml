@@ -1,8 +1,9 @@
 saasName: Notion
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2023-11-28'
 createdAt: '2023-11-28'
 currency: USD
-hasAnnualPayment: true
+variables: {}
 features:
   pages:
     description: ''
@@ -91,7 +92,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://slack.com/pricing
   zapierIntegration:
     description: ''
@@ -99,7 +100,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://zapier.com/pricing
   publicApi:
     description: ''

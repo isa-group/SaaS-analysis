@@ -1,8 +1,9 @@
 saasName: OpenPhone
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2023-11-19'
 createdAt: '2023-11-19'
 currency: USD
-hasAnnualPayment: true
+variables: {}
 features:
   usAndCanadaCalling:
     description: ''
@@ -157,7 +158,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://slack.com/pricing
   zapierIntegration:
     description: ''
@@ -165,7 +166,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://zapier.com/pricing
   smsViaZapier:
     description: ''
@@ -173,7 +174,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://zapier.com/pricing
   googleContactsIntegration:
     description: ''
@@ -181,7 +182,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   webhooksIntegration:
     description: Beta
@@ -195,7 +196,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.hubspot.com/pricing
   salesforceIntegration:
     description: ''
@@ -203,7 +204,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.salesforce.com/products/sales-cloud/pricing/
   gongIntegration:
     description: ''
@@ -211,7 +212,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.gong.io/pricing/
   userRoles:
     description: ''

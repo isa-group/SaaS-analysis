@@ -1,8 +1,9 @@
 saasName: HyperContext
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2023-10-24'
 createdAt: '2023-10-24'
 currency: USD
-hasAnnualPayment: true
+variables: {}
 features:
   oneToOneMeetings:
     description: ''
@@ -25,7 +26,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs: null
+    pricingUrls: null
   meetingArchives:
     description: ''
     valueType: BOOLEAN
@@ -68,7 +69,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   guestUsers:
     description: ''
@@ -222,7 +223,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   googleCalendar:
     description: ''
@@ -230,7 +231,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   googleMeet:
     description: ''
@@ -238,7 +239,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   chromeMeetingExtension:
     description: ''
@@ -252,7 +253,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://slack.com/pricing
   microsoftTeams:
     description: ''
@@ -260,7 +261,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - >-
         https://www.microsoft.com/en-us/microsoft-teams/compare-microsoft-teams-business-options
   outlookCalendar:
@@ -269,7 +270,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - >-
         https://www.microsoft.com/en-us/microsoft-365/outlook/compare-microsoft-outlook-email-plans
   mobileApps:
@@ -284,7 +285,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://zapier.com/pricing
 usageLimits:
   meetingSearchThreshold:

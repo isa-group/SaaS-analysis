@@ -1,8 +1,9 @@
 saasName: MailChimp
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2020-11-29'
 createdAt: '2020-11-29'
 currency: USD
-hasAnnualPayment: false
+variables: {}
 features:
   contacts:
     description: ''
@@ -200,7 +201,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://facebook.com/business
   instagramAds:
     description: ''
@@ -208,7 +209,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://business.instagram.com/advertising
   socialPosting:
     description: ''

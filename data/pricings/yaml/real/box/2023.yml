@@ -1,8 +1,9 @@
 saasName: Box
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2023-11-19'
 createdAt: '2023-11-19'
 currency: EUR
-hasAnnualPayment: true
+variables: {}
 features:
   secureStorage:
     description: ''
@@ -62,7 +63,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - >-
         https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products
   googleWorkspaceIntegration:
@@ -71,7 +72,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   slackIntegration:
     description: ''
@@ -79,7 +80,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://slack.com/pricing
   desktopAccess:
     valueType: BOOLEAN

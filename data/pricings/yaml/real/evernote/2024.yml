@@ -1,8 +1,9 @@
 saasName: Evernote
-version: '2.0'
+syntaxVersion: '2.1'
+version: 2024-7-6
 createdAt: '2024-07-06'
 currency: USD
-hasAnnualPayment: true
+variables: {}
 features:
   notes:
     description: ''
@@ -66,7 +67,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
       - >-
         https://www.microsoft.com/en-us/microsoft-365/microsoft-outlook-email-and-calendar-software
@@ -119,7 +120,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   microsoftIntegration:
     description: ''
@@ -127,7 +128,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - >-
         https://www.microsoft.com/en-us/microsoft-365/microsoft-outlook-email-and-calendar-software
   slackIntegration:
@@ -136,7 +137,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://slack.com/pricing
   twoStepVerification:
     description: ''

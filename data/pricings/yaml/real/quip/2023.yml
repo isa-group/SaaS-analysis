@@ -1,8 +1,9 @@
 saasName: Quip
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2023-11-29'
 createdAt: '2023-11-29'
 currency: USD
-hasAnnualPayment: true
+variables: {}
 features:
   documents:
     description: ''
@@ -82,7 +83,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.salesforce.com/eu/sales/pricing/
   embedDocumentsInAllSalesforceObjects:
     description: ''

@@ -1,8 +1,9 @@
 saasName: Microsoft 365 - For Business
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2022-11-23'
 createdAt: '2022-11-23'
 currency: USD
-hasAnnualPayment: true
+variables: {}
 features:
   cloudStorage:
     description: Store and access files securely in the cloud
@@ -134,6 +135,10 @@ features:
     type: MANAGEMENT
   defender:
     description: Defender for Business
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+  defenderBusinessServer:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
@@ -597,7 +602,9 @@ addOns:
       - BUSINESS_PREMIUM
     price: 3
     unit: user/month
-    features: null
+    features:
+      defenderBusinessServer:
+        value: true
     usageLimits: null
     usageLimitsExtensions: null
   teamsAudioConferencing:

@@ -53,7 +53,7 @@ When executing `npm run experiment`, the following steps are performed:
 
 1.	**Adding versioning information** to the pricing models if they don’t already have it.
 2.	**Generating .dzn files** for the MiniZinc models from the Pricing2Yaml specifications. These files are primarily to showcase the results of the mapping from each Pricing2Yaml specification to a DZN file. However, they are not used during the experiment.
-3.	**Extracting analytics** from the pricings of the real-world dataset (*data/pricings/yaml/real*), generating:
+3.	**Extracting analytics** from the pricings of the real-world dataset (*data/pricings/yaml/real-v2*), generating:
 
     - A **JSON file** with the extracted analytics in **data/pricings/json/** (the file will be titled: `analytics-{timestamp}.json`).
     - Detailed **logs** of results and errors in the **logs/** directory (in the folder: `pricing-analyitic-{timestamp}`).
@@ -145,7 +145,7 @@ The package includes the following scripts:
 
 ¹**Extract Analytics**, **File-Based Analytics**, **Dataset Validation** and **File-Based Validation** scripts leverages the [PricingService](https://github.com/Alex-GF/Pricing4TS/blob/v0.4.1/src/server/services/pricing.service.ts) from our library [Pricing4TS](https://github.com/Alex-GF/Pricing4TS). This library, developed as part of our Pricing-driven Development and Operation research initiatives, was specifically extended with the automated analysis formalization and operations presented in the paper.
 
-The script utilizes the `getAnalytics(pricing: Pricing)` method from the service to process all pricing files located in the *data/pricings/yaml/real* or *data/pricings/yaml/synthetic* directories, depending on the executed experiment. In the first case, the analytics extraction method is applied to each file, generating a JSON file with the extracted analytics in *data/pricings/json/* and detailed logs of results and errors in the *logs/* directory. In the second case, the validation method is applied to each file, generating summary and detailed logs of results in the *logs/* directory.
+The script utilizes the `getAnalytics(pricing: Pricing)` method from the service to process all pricing files located in the *data/pricings/yaml/real-v2* or *data/pricings/yaml/synthetic* directories, depending on the executed experiment. In the first case, the analytics extraction method is applied to each file, generating a JSON file with the extracted analytics in *data/pricings/json/* and detailed logs of results and errors in the *logs/* directory. In the second case, the validation method is applied to each file, generating summary and detailed logs of results in the *logs/* directory.
 
 ### 📦 Dependencies
 

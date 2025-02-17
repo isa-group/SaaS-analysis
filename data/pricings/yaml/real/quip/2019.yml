@@ -1,8 +1,9 @@
 saasName: Quip
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2019-11-25'
 createdAt: '2019-11-25'
 currency: USD
-hasAnnualPayment: true
+variables: {}
 features:
   documents:
     description: ''
@@ -63,7 +64,7 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: GUARANTEE
-    docURL: https://quip.com/security/governance-and-compliance
+    docUrl: https://quip.com/security/governance-and-compliance
   customAndAdvancedLiveApps:
     description: ''
     valueType: BOOLEAN

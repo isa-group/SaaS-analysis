@@ -1,8 +1,9 @@
 saasName: addon1 not available for any plan
-version: "2.0"
-createdAt: 2024-11-19
+syntaxVersion: '2.1'
+version: '2024-11-19'
+createdAt: '2024-11-19'
 currency: EUR
-hasAnnualPayment: false
+variables: {}
 features:
   feature1:
     description: ''
@@ -24,7 +25,7 @@ usageLimits:
       - feature1
 plans:
   plan1:
-    price: 10.00
+    price: 10
     features: null
     usageLimits: null
   plan2:
@@ -36,8 +37,8 @@ plans:
 addOns:
   addOn1:
     price: 24.99
-    unit: ""
-    availableFor: 
+    unit: ''
+    availableFor:
       - plan3
     features:
       feature2:

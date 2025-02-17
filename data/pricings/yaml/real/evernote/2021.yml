@@ -1,8 +1,9 @@
 saasName: Evernote
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2021-11-28'
 createdAt: '2021-11-28'
 currency: USD
-hasAnnualPayment: true
+variables: {}
 features:
   appForIOS:
     description: ''
@@ -100,7 +101,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   assignTasksToOthers:
     description: ''
@@ -119,7 +120,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   customizeHomeWithPinnedNotesWidget:
     description: ''
@@ -217,7 +218,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs: null
+    pricingUrls: null
   createCustomTemplates:
     description: ''
     valueType: BOOLEAN
@@ -265,7 +266,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://workspace.google.com/pricing
   customizeHomeWithMoreWidgets:
     description: ''
@@ -289,7 +290,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://one.google.com/about/plans
   searchTextInsideImages:
     description: ''
@@ -362,7 +363,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs: null
+    pricingUrls: null
   advancedPdfExportControls:
     description: ''
     valueType: BOOLEAN
@@ -449,7 +450,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - >-
         https://www.microsoft.com/en-us/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook
 usageLimits:

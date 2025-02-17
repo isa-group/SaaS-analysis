@@ -1,8 +1,9 @@
 saasName: addon foo depends on nonexistent addon bar
-version: "2.0"
-createdAt: 2024-11-19
+syntaxVersion: '2.1'
+version: '2024-11-19'
+createdAt: '2024-11-19'
 currency: EUR
-hasAnnualPayment: false
+variables: {}
 features:
   feature1:
     description: ''
@@ -28,7 +29,7 @@ plans:
 addOns:
   addOn1:
     price: 10
-    unit: ""
+    unit: ''
     features:
       feature1:
         value: true
@@ -36,7 +37,7 @@ addOns:
       - addOn2
   addOn2:
     price: 10
-    unit: ""
+    unit: ''
     features:
       feature2:
         value: true

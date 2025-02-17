@@ -1,8 +1,9 @@
 saasName: UserGuiding
-version: '2.0'
+syntaxVersion: '2.1'
+version: 2023-12-9
 createdAt: '2023-12-09'
 currency: USD
-hasAnnualPayment: true
+variables: {}
 features:
   guides:
     description: ''
@@ -126,7 +127,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://marketingplatform.google.com/about/analytics/
   webhooks:
     description: ''
@@ -140,7 +141,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://segment.com/pricing/
   mixpanel:
     description: ''
@@ -148,7 +149,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://mixpanel.com/pricing/
   zapier:
     description: ''
@@ -156,7 +157,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: API
-    pricingURLs:
+    pricingUrls:
       - https://zapier.com/pricing/
   hubspot:
     description: ''
@@ -164,7 +165,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.hubspot.com/pricing/marketing/starter
   intercom:
     description: ''
@@ -172,7 +173,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.intercom.com/pricing
   slack:
     description: ''
@@ -180,7 +181,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://slack.com/pricing
   woopra:
     description: ''
@@ -188,7 +189,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.woopra.com/pricing/
   knowledBaseIntegrations:
     description: ''

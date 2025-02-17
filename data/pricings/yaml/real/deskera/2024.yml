@@ -1,8 +1,9 @@
 saasName: Deskera
-version: '2.0'
+syntaxVersion: '2.1'
+version: 2024-7-15
 createdAt: '2024-07-15'
 currency: USD
-hasAnnualPayment: true
+variables: {}
 features:
   estimates:
     description: ''
@@ -458,7 +459,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://amazon.com/
   paypalIntegration:
     description: ''
@@ -466,7 +467,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://paypal.com/
   shipstationIntegration:
     description: ''
@@ -474,7 +475,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://shipstation.com/
   shopifyIntegration:
     description: ''
@@ -482,7 +483,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://shopify.com/
   squareIntegration:
     description: ''
@@ -490,7 +491,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://square.com/
   stripeIntegration:
     description: ''
@@ -498,7 +499,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://stripe.com/
   wooCommerceIntegration:
     description: ''
@@ -506,7 +507,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://woocommerce.com/
   mobileApp:
     description: ''

@@ -1,8 +1,9 @@
 saasName: Slack
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2023-10-23'
 createdAt: '2023-10-23'
 currency: USD
-hasAnnualPayment: true
+variables: {}
 features:
   messagesAccess:
     description: >-
@@ -150,7 +151,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - >-
         https://docs.aws.amazon.com/en_us/kms/latest/developerguide/overview.html
   enterpriseMobilitySecurity:

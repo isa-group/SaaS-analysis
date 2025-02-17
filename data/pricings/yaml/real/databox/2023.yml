@@ -1,8 +1,9 @@
 saasName: Databox
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2023-12-11'
 createdAt: '2023-12-11'
 currency: USD
-hasAnnualPayment: true
+variables: {}
 features:
   dataSources:
     description: ''
@@ -369,6 +370,10 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: IDENTITY_PROVIDER
+  quickstartOnboarding:
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
   auditLog:
     description: ''
     valueType: BOOLEAN
@@ -780,7 +785,9 @@ addOns:
       - GROWTH
     price: 1000
     unit: one time purchase
-    features: null
+    features:
+      quickstartOnboarding:
+        value: true
     usageLimits: null
     usageLimitsExtensions: null
   guidedOnboarding:

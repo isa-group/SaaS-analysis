@@ -1,8 +1,9 @@
 saasName: ClickUp
-version: '2.0'
+syntaxVersion: '2.1'
+version: '2023-11-29'
 createdAt: '2023-11-29'
 currency: USD
-hasAnnualPayment: true
+variables: {}
 features:
   tasks:
     description: ''
@@ -550,7 +551,7 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.make.com/en/pricing
   googleDrive:
     description: ''
@@ -558,7 +559,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://one.google.com/about/plans
   dropbox:
     description: ''
@@ -566,7 +567,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.dropbox.com/plans
   boxCloudStorage:
     description: ''
@@ -574,7 +575,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - https://www.box.com/pricing
   oneDriveCloudStorage:
     description: ''
@@ -582,7 +583,7 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingURLs:
+    pricingUrls:
       - >-
         https://www.microsoft.com/en-us/microsoft-365/onedrive/compare-onedrive-plans
   tableauWebConnector:
@@ -734,6 +735,11 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: SUPPORT
+  clickUpAI:
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: TASK_AUTOMATION
 usageLimits:
   useUsers:
     description: ''
@@ -1554,7 +1560,9 @@ addOns:
     monthlyPrice: 5
     annualPrice: 5
     unit: member/month
-    features: null
+    features:
+      clickUpAI:
+        value: true
     usageLimits: null
     usageLimitsExtensions: null
     price: 5
