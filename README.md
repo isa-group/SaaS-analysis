@@ -1,6 +1,6 @@
 [![CC BY 4.0][cc-by-shield]][cc-by]
 
-# 📊 Taming Complexity: Automated Analysis of Intelligent Pricings - Supplementary Material
+# 📊 Automated Analysis of Intelligent Pricings - Supplementary Material
 
 This repository contains the laboratory package for the paper **Taming Complexity: Automated Analysis of Intelligent Pricings**, which includes scripts and MiniZinc models to replicate the validation performed in the study. Driven by the paper's main contribution, the primary goal of this package is to leverage the proposed automated analysis formalization and operations, among others, to uncover latent information in SaaS pricing models.
 
