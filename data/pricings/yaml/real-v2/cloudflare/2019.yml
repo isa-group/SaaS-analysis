@@ -1,0 +1,926 @@
+syntaxVersion: '2.1'
+saasName: Cloudflare
+createdAt: '2019-11-15'
+version: '2019-11-15'
+billing:
+  monthly: 1.0
+currency: USD
+url: https://web.archive.org/web/20191115213008/https://www.cloudflare.com/plans/
+tags:
+  - Performance
+  - Security
+features:
+  argoSmartRouting:
+    description: "Argo's smart routing algorithm uses real-time network intelligence to route traffic through the fastest Cloudflare network paths, while maintaining open, secure connections to eliminate latency imposed by connection-setup."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  tieredCatching:
+    description: "Argo’s tiered caching technology uses regional tier 1 Cloudflare data centers to propagate content to Cloudflare’s global network, minimizing static content requests to your server and reducing costs."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  globalLoadBalancingNetworkCDN:
+    description: "Our 194 data centers located across the globe provide visitors with location-based access to your website, while removing latency and improving performance."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Performance
+  prioritizedIPRanges:
+    description: "Enterprise Internet assets are placed on Cloudflare dedicated IP ranges, providing prioritized routing and protection to ensure maximum speed and availability."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  cloudflareStreamVideoView:
+    description: "Cloudflare Stream makes streaming high quality video at scale, easy and affordable."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  cloudflareStreamVideoStorage:
+    description: "Cloudflare Stream makes streaming high quality video at scale, easy and affordable."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  streamDelivery:
+    description: "Cloudflare’s Stream Delivery offers caching and delivery of video content through its 194 data centers around the globe."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  loadBalancing:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  loadBalancing60secsHealthcheks:
+    description: "Health checks continually ping origin servers to determine if it's online."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Performance
+  loadBalancing30secsHealthcheks:
+    description: "Health checks continually ping origin servers to determine if it's online."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  loadBalancing15secsHealthcheks:
+    description: "Health checks continually ping origin servers to determine if it's online."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  loadBalancing5secsHealthcheks:
+    description: "Health checks continually ping origin servers to determine if it's online."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  globalLoadBalancingGeoBasedRouting:
+    description: "Global Load Balancing ensures that visitors receive dynamic content from origin servers closest to them."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  loadBalancingEventLogs:
+    description: "Load Balancing event logs allow for the review and filtering of status changes of your Load Balancing origins and pools."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Performance
+  loadBalancingConfigurableWeighting:
+    description: "Configurable weighting offers fine-grained control of traffic hitting origin servers."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Performance
+  automaticStaticContentCatching:
+    description: "Cloudflare saves you CPU resources and bandwidth by serving your static content directly from our global data centers."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Performance
+  instantCachePurge:
+    description: "Purge the entire Cloudflare cache or just a single file without waiting."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Performance
+  railgunOriginNetworkOptimizer:
+    description: "Web optimization to ensure that the connection between your origin server and the Cloudflare network is as fast as possible. Railgun compresses previously unreachable web objects by leveraging techniques similar to those used in the compression of high-quality video. This can result in additional performance increase."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  purgeByCacheTag:
+    description: "Cache-Tags are assigned to cached content via a Cache-Tag response header,and are stored as metadata with cached objects so that global purges take only seconds, targeting a granular, finite set of cached objects."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  purgeByHost:
+    description: "Purge by host offers Cloudflare customers who manage multiple subdomains the ability to purge the cache on a per-host basis. For example, if the Cloudflare domain example.com wanted to purge everything on staging.example.com, purge by host enables this with a single API call."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  customCacheKeysCookieOnly:
+    description: "Custom Cache Keys allow caching to be extended to something more specific than just the URL, this allows you to extend caching beyond just static files."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  customCacheKeysAll:
+    description: "Custom Cache Keys allow caching to be extended to something more specific than just the URL, this allows you to extend caching beyond just static files."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  asynchronousJavascriptLoadingRocketLoader:
+    description: "Automatically optimizes your pages to minimize the number of network connections and ensure even third party resources won't slow down page rendering."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Performance
+  imageOptimizationWithPolish:
+    description: "Polish applies 'lossless' or optional 'lossy' image optimization to reduce your image sizes by 35% on average."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  mobileOptimizationWithMirage:
+    description: "Mirage automatically optimizes image loading through virtualized and lazyloaded images. It detects the browser type of a visitor and optimizes performance for the particular device, improving the performance of images on a mobile connection."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  imageManipulationwithImageResizing:
+    description: "Resize images for a variety of device types and connections from a single-source image master. Images can be manipulated by dimensions, compression ratios, and format (WebP conversion where supported). Included with Business and Enterprise plans (with limits)."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  ipv6CompatibilityAndGateway:
+    description: "Support both IPv4 and IPv6 connections to your site without a single change to your existing infrastructure."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Performance
+  http2:
+    description: "HTTP/2 is the latest update to the HTTP protocol. HTTP/2 brings advancements in efficiency, security, and speed, particularly on high-latency and mobile connections. Cloudflare provides automatic HTTP/2 and SPDY coverage for your visitors."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Performance
+  spdy:
+    description: "HTTP/2 is the latest update to the HTTP protocol. HTTP/2 brings advancements in efficiency, security, and speed, particularly on high-latency and mobile connections. Cloudflare provides automatic HTTP/2 and SPDY coverage for your visitors."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Performance
+  webSockets:
+    description: "A WebSocket is a persistent full-duplex protocol which provides low latency client-server communication without the overhead of HTTP."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Performance
+  pageRules:
+    description: "Set up forwarding, extend or exclude caching, require SSL connections, and generally exercise fine-grained control over how Cloudflare interacts with your site on a page-by-page basis."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: AUTOMATION
+    automationType: TRACKING
+    tag: Performance
+  restfulAPI:
+    description: "Cloudflare's API exposes the entire Cloudflare infrastructure via a standardized programmatic interface. Using Cloudflare's API, you can do just about anything you can do on cloudflare.com via the customer dashboard."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: INTEGRATION
+    integrationType: API
+    tag: Performance
+  headerRewrites:
+    description: "Used to rewrite headers if customers don’t have a way of controlling their headers. For example, if your Amazon S3 bucket requires a specific host header set in order to fetch assets."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+  edgeSideCode:
+    description: "Custom logic to alter HTTP requests and responses on the fly without added latency. Any part of a request or response can be altered according to rules, enabling a range of options to tightly integrate Cloudflare’s edge into applications resulting in performance improvements."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: FILTERING
+    tag: Performance
+  acceleratedMobileLinks:
+    description: "Cloudflare’s Accelerated Mobile Links, powered by AMP, loads AMP-enabled external links inside of a viewing window, within the same tab, at least 3 times faster than normal mobile pages."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Performance
+  unmeteredMitigationOfVolumetricDDoS:
+    description: "Cloudflare’s unmetered mitigation of DDoS stops illegitimate volumetric traffic at the Cloudflare edge. All Cloudflare plans include unmetered mitigation without fear of being dropped."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: AUTOMATION
+    automationType: FILTERING
+    tag: Security
+  enterpriseGradeMitigationOfDDoS:
+    description: "Cloudflare’s enterprise-grade mitigation of DDoS attacks against layers 3, 4, & 7 includes prioritized IP ranges and routing, ensuring maximum speed and availability."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: FILTERING
+    tag: Security
+  advancedDdosSupport:
+    description: "Backed by a full SLA, our DDoS experts will keep you online 24/7/365 no matter the size, type, or duration of the attack."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: SUPPORT
+    tag: Security
+  advancedDdosSupportSustainedSpeeds:
+    description: "Backed by a full SLA, our DDoS experts will keep you online 24/7/365 no matter the size, type, or duration of the attack."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: SUPPORT
+    tag: Security
+  advancedDdosSupportEmergencySupportEngineer:
+    description: "Backed by a full SLA, our DDoS experts will keep you online 24/7/365 no matter the size, type, or duration of the attack."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: SUPPORT
+    tag: Security
+  argoTunnel:
+    description: "Using a lightweight agent installed on origin infrastructure, including containers or virtual machines, Cloudflare creates an encrypted tunnel between its nearest data center and an application’s origin server without opening a public inbound port."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: FILTERING
+    tag: Security
+  spectrum:
+    description: "Spectrum protects TCP applications and ports from volumetric DDoS attacks and data theft by proxying non-web traffic through Cloudflare’s Anycast network."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: FILTERING
+    tag: Security
+  unviersalSslTlsEncription:
+    description: "Cloudflare is compatible with your existing SSL configuration. If you do not currently use SSL, Cloudflare can provide you with SSL capabilities — no configuration required."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: GUARANTEE
+    tag: Security
+  dedicatedSsl:
+    description: "Cloudflare is compatible with your existing SSL configuration. If you do not currently use SSL, Cloudflare can provide you with SSL capabilities — no configuration required."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Security
+  dedicatedSslWithCustomHostnames:
+    description: "Cloudflare is compatible with your existing SSL configuration. If you do not currently use SSL, Cloudflare can provide you with SSL capabilities — no configuration required."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Security
+  cloudFlareIssuedSSLCertificates:
+    description: "Choose between Cloudflare-issued wildcard SSL certificates (issued automatically) and your own dedicated SSL certificate (upload to our network; supports EV certificates)."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Security
+  customSSLCertificates:
+    description: "Choose between Cloudflare-issued wildcard SSL certificates (issued automatically) and your own dedicated SSL certificate (upload to our network; supports EV certificates)."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Security
+  opportunisticEncryption:
+    description: "Opportunistic Encryption provides HTTP-only domains that can't upgrade to HTTPS, due to mixed content or other legacy issues, with the benefits of encryption and web optimization features."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Security
+  automatichttpsRewrites:
+    description: "Automatic HTTPS Rewrites eliminate mixed content issues, while enhancing performance and security; it achieves this by rewriting insecure URLs dynamically from known (secure) hosts to their secure counterpart. Automatic HTTPS Rewrites forces a secure connection and enables the latest security standards and features only available over HTTPS."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Security
+  tlsOptimization:
+    description: "Cloudflare optimizes your websites SSL connection to ensure a fast HTTPS experience for your visitors."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Security
+  ssl24hActivationTime:
+    description: "SSL on all paid plans activate instantly. SSL on free plans take up to 24 hours for activation."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: GUARANTEE
+    tag: Security
+  sslInstantActivationTime:
+    description: "SSL on all paid plans activate instantly. SSL on free plans take up to 24 hours for activation."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: GUARANTEE
+    tag: Security
+  modernBrowserOnlySslSupport:
+    description: "Universal SSL on the Free plan works with most modern browsers and on paid plans with all browsers."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: GUARANTEE
+    tag: Security
+  allBrowsersSslSupport:
+    description: "Universal SSL on the Free plan works with most modern browsers and on paid plans with all browsers."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: GUARANTEE
+    tag: Security
+  keylessSsl:
+    description: "Keyless SSL lets you route encrypted traffic through Cloudflare's global network, while retaining on-premise custody of private keys. SSL private keys never leave your on-premise infrastructure, and are not shared with anyone."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Security
+  multipleCustomSslCertificates:
+    description: "Upload multiple custom SSL certificates within your Cloudflare dashboard."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Security
+  tlsClientAuth:
+    description: "Cloudflare’s Mutual Auth (TLS Client Auth) creates a secure connection between a client and its origin. When attempting to establish a connection to an origin server, Cloudflare validates the certificate, to check that it has authorized access to the endpoint."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Security
+  sslTlsForSaasProviders:
+    description: "Cloudflare’s SSL for SaaS solution allows the customers’ of SaaS providers to CNAME their custom domains to the SaaS provider’s subdomain. This offers SaaS customers the benefit of a branded and encrypted vanity domain. Cloudflare automatically handles certificate management and renewals. Learn more at cloudflare.com/saas/"
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Security
+  webApplicationFirewall:
+    description: "Cloudflare's cloudbased WAF runs in real-time preventing automated attacks, SQL injection, XSS javascript injections and other real-time POST actions. It contains rules to thwart attacks commonly seen in popular applications, including: WordPress, Magento, Drupal, PHP, Joomla, and more . No hardware or software required."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: FILTERING
+    tag: Security
+  owaspModSecurityCoreRuleSet:
+    description: "Includes OWASP ModSecurity Core Rule Set automatically to protect you against the Top 10 vulnerabilities identified by the Open Web Application Security Project (OWASP)."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: FILTERING
+    tag: Security
+  customWafRules:
+    description: "Import your own rules and write custom ones; global update will take effect in less than 30 seconds."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Security
+  firewallRules:
+    description: ""
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
+    tag: Security
+  regularExpressionsInFirewallRules:
+    description: "Regular Expressions (regex), sometimes called a pattern, is an expression used to specify a set of strings. Like wildcards, but more powerful, regex gives you the ability to pattern-match text strings occuring in supported fields to target specific traffic."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Security
+  collectiveIntelligence:
+    description: "Cloudflare gets smarter about security threats as more sites join. Protection from attacks on one site is extended to the entire Cloudflare community within seconds."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: AUTOMATION
+    automationType: FILTERING
+    tag: Security
+  reputationBasedThreatProtection:
+    description: "Block known malicious threats from accessing your site. Security levels are customizable site by site."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: AUTOMATION
+    automationType: FILTERING
+    tag: Security
+  commentSpamProtection:
+    description: "Stop spammers from posting to your website."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: AUTOMATION
+    automationType: FILTERING
+    tag: Security
+  contentScrapingProtection:
+    description: "Protect all of your content including text, images and email addresses from web scrapers with Cloudflare's ScrapeShield™ service."
+    valueType: BOOLEAN
+    defaultValue: true
+    type: AUTOMATION
+    automationType: FILTERING
+    tag: Security
+usageLimits:
+  argoSmartRoutingLimit:
+    description: ''
+    valueType: NUMERIC
+    defaultValue: 0
+    unit: GB
+    type: NON_RENEWABLE
+    linkedFeatures:
+    - argoSmartRouting
+  cloudflareStreamVideoViewLimit:
+    description: ''
+    valueType: NUMERIC
+    defaultValue: 0
+    unit: minutes/month
+    type: RENEWABLE
+    linkedFeatures:
+    - cloudflareStreamVideoView
+  cloudflareStreamVideoStorageLimit:
+    description: ''
+    valueType: NUMERIC
+    defaultValue: 0
+    unit: minutes/month
+    type: RENEWABLE
+    linkedFeatures:
+    - cloudflareStreamVideoStorage
+  loadBalancingDnsLimit:
+    description: ''
+    valueType: NUMERIC
+    defaultValue: 0
+    unit: DNS request
+    type: NON_RENEWABLE
+    linkedFeatures:
+    - loadBalancing
+  loadBalancingOriginsLimit:
+    description: ''
+    valueType: NUMERIC
+    defaultValue: 0
+    unit: origin server
+    type: NON_RENEWABLE
+    linkedFeatures:
+    - loadBalancing
+  numberOfHealthCheckLocations:
+    description: ''
+    valueType: NUMERIC
+    defaultValue: 1
+    unit: locations
+    type: NON_RENEWABLE
+    linkedFeatures:
+    - loadBalancing60secsHealthcheks
+    - loadBalancing30secsHealthcheks
+    - loadBalancing15secsHealthcheks
+    - loadBalancing5secsHealthcheks
+  minimumEdgeCacheExpireTTL:
+    description: 'Cloudflare respects all existing headers, unless you choose to overwrite them. The minimum edge cache expire TTL sets the refetch time for when Cloudflare checks the origin server for a new resource.'
+    valueType: NUMERIC
+    defaultValue: 120
+    unit: second
+    type: NON_RENEWABLE
+    linkedFeatures:
+    - automaticStaticContentCatching
+  clientMaximumCacheUploadSize:
+    description: 'The amount of data visitors can upload to your website in a single request.'
+    valueType: NUMERIC
+    defaultValue: 100
+    unit: MB
+    type: NON_RENEWABLE
+    linkedFeatures:
+    - automaticStaticContentCatching
+  resizedImagesLimit:
+    description: 'The number of images that can be served with resizer per month.'
+    valueType: NUMERIC
+    defaultValue: 0
+    unit: image/month
+    type: RENEWABLE
+    linkedFeatures:
+    - imageManipulationwithImageResizing
+  pageRulesLimit:
+    description: ""
+    valueType: NUMERIC
+    defaultValue: 3
+    unit: rule
+    type: NON_RENEWABLE
+    linkedFeatures:
+    - pageRules
+  customWafRulesLimit:
+    description: ""
+    valueType: NUMERIC
+    defaultValue: 0
+    unit: rule
+    type: NON_RENEWABLE
+    linkedFeatures:
+    - customWafRules
+  firewallRulesLimit:
+    description: ""
+    valueType: NUMERIC
+    defaultValue: 5
+    unit: rule
+    type: NON_RENEWABLE
+    linkedFeatures:
+    - firewallRules
+plans:
+  FREE:
+    description: For individuals with a personal website and anyone who wants to explore Cloudflare.
+    price: 0
+    unit: /month
+    features: null
+    usageLimits: null
+  PRO:
+    description: Professional websites, blogs, and portfolios requiring basic security and performance.
+    price: 20.00
+    unit: /month
+    features:
+      
+    usageLimits: null
+  BUSINESS:
+    description: Websites and businesses requiring advanced security, performance, and prioritized support.
+    price: 200.00
+    unit: /month
+    features:
+      privateTimeEntries:
+        value: true
+      lockTimesheets:
+        value: true
+      requiredFields:
+        value: true
+      timeRounding:
+        value: true
+      timeAudit:
+        value: true
+      brandedReports:
+        value: true
+      targetsAndReminders:
+        value: true
+      addTimeForOthers:
+        value: true
+      projectTemplates:
+        value: true
+      alerts:
+        value: true
+      bulkEditReports:
+        value: true
+      hidePages:
+        value: true
+      automaticLock:
+        value: true
+    usageLimits: null
+  ENTERPRISE:
+    description: For companies requiring enterprise-grade security, performance, & emergency support.
+    price: "Contact us"
+    unit: /month
+    features:
+      privateTimeEntries:
+        value: true
+      lockTimesheets:
+        value: true
+      requiredFields:
+        value: true
+      timeRounding:
+        value: true
+      timeAudit:
+        value: true
+      brandedReports:
+        value: true
+      targetsAndReminders:
+        value: true
+      addTimeForOthers:
+        value: true
+      projectTemplates:
+        value: true
+      alerts:
+        value: true
+      bulkEditReports:
+        value: true
+      hidePages:
+        value: true
+      automaticLock:
+        value: true
+      singleSignOn:
+        value: true
+      customSubdomain:
+        value: true
+      controlAccounts:
+        value: true
+    usageLimits: null
+addOns:
+  argoSmartRouting:
+    description: ""
+    availableFor:
+      - FREE
+      - PRO
+      - BUSINESS
+    price: 5.000
+    unit: /month
+    features:
+      argoSmartRouting:
+        value: true
+      argoTunnel:
+        value: true
+    usageLimits:
+      argoSmartRoutingLimit:
+        value: 1
+  argoSmartRoutingExtension:
+    description: ""
+    availableFor:
+      - FREE
+      - PRO
+      - BUSINESS
+    dependsOn:
+      - argoSmartRouting
+    price: 0.10
+    unit: GB/month
+    usageLimitsExtensions:
+      argoSmartRoutingLimit:
+        value: 1
+  argoSmartRoutingEnterprise:
+    description: ""
+    availableFor:
+      - ENTERPRISE
+    price: "Contact us"
+    unit: /month
+    features:
+      argoSmartRouting:
+        value: true
+      argoTunnel:
+        value: true
+    usageLimits:
+      argoSmartRoutingLimit:
+        value: .inf
+  cloudflareStreamVideoView:
+    description: "$1 per thousand minutes viewed per month"
+    availableFor:
+      - FREE
+      - PRO
+      - BUSINESS
+    price: 1.0
+    unit: 1000min/month
+    features:
+      cloudflareStreamVideoView:
+        value: true
+    usageLimitsExtensions:
+      cloudflareStreamVideoViewLimit:
+        value: 1000
+  cloudflareStreamVideoStorage:
+    description: "$1 per thousand minutes viewed per month"
+    availableFor:
+      - FREE
+      - PRO
+      - BUSINESS
+    price: 1.0
+    unit: min/month
+    features:
+      cloudflareStreamVideoStorage:
+        value: true
+    usageLimitsExtensions:
+      cloudflareStreamVideoStorageLimit:
+        value: 1000
+  cloudflareStreamVideoEnterprise:
+    description: ""
+    availableFor:
+      - ENTERPRISE
+    price: "Contact us"
+    unit: /month
+    features:
+      cloudflareStreamVideoView:
+        value: true
+      cloudflareStreamVideoStorage:
+        value: true
+    usageLimits:
+      cloudflareStreamVideoViewLimit:
+        value: .inf
+      cloudflareStreamVideoStorageLimit:
+        value: .inf
+  streamDelivery:
+    description: ""
+    availableFor:
+      - ENTERPRISE
+    price: "Contact us"
+    unit: /month
+    features:
+      streamDelivery:
+        value: true
+  loadBalancing:
+    description: ""
+    availableFor:
+      - FREE
+      - PRO
+      - BUSINESS
+    price: 5.00
+    unit: /month
+    features:
+      loadBalancing:
+        value: true
+    usageLimits:
+      loadBalancingDnsLimit:
+        value: 500000
+      loadBalancingOriginsLimit:
+        value: 2
+  loadBalancingEnterprise:
+    description: ""
+    availableFor:
+      - ENTERPRISE
+    price: "Contact us"
+    unit: /month
+    features:
+      loadBalancing:
+        value: true
+    usageLimits:
+      loadBalancingDnsLimit:
+        value: .inf
+      loadBalancingOriginsLimit:
+        value: .inf
+  extraLoadBalancingDnsLimit:
+    description: ""
+    availableFor:
+      - FREE
+      - PRO
+      - BUSINESS
+    dependsOn:
+      - loadBalancing
+    price: 0.50
+    unit: DNS request
+    usageLimitsExtensions:
+      loadBalancingDnsLimit:
+        value: 500000
+  extraLoadBalancingOrigin:
+    description: ""
+    availableFor:
+      - FREE
+      - PRO
+      - BUSINESS
+    dependsOn:
+      - loadBalancing
+    price: 5.00
+    unit: /month
+    usageLimitsExtensions:
+      loadBalancingOriginsLimit:
+        value: 1
+  loadBalancing30secsHealthcheks:
+    description: ""
+    availableFor:
+      - FREE
+      - PRO
+      - BUSINESS
+    dependsOn:
+      - loadBalancing
+    excludes:
+      - loadBalancing15secsHealthcheks
+    price: 10.00
+    unit: /month
+    features:
+      loadBalancing30secsHealthcheks:
+        value: true
+  loadBalancing15secsHealthcheks:
+    description: ""
+    availableFor:
+      - FREE
+      - PRO
+      - BUSINESS
+    dependsOn:
+      - loadBalancing
+    excludes:
+      - loadBalancing30secsHealthcheks
+    price: 10.00
+    unit: /month
+    features:
+      loadBalancing15secsHealthcheks:
+        value: true
+  extraHealthCheck3Locations:
+    description: ""
+    availableFor:
+      - FREE
+      - PRO
+      - BUSINESS
+    dependsOn:
+      - loadBalancing
+    excludes:
+      - extraHealthCheck5Locations
+    price: 10.00
+    unit: location
+    usageLimits:
+      numberOfHealthCheckLocations:
+        value: 3
+  extraHealthCheck5Locations:
+    description: ""
+    availableFor:
+      - FREE
+      - PRO
+      - BUSINESS
+    dependsOn:
+      - loadBalancing
+    excludes:
+      - extraHealthCheck3Locations
+    price: 15.00
+    unit: location
+    usageLimits:
+      numberOfHealthCheckLocations:
+        value: 5
+  globalLoadBalancingGeoBasedRouting:
+    description: ""
+    availableFor:
+      - FREE
+      - PRO
+      - BUSINESS
+    price: 10.00
+    unit: /month
+    features:
+      globalLoadBalancingGeoBasedRouting:
+        value: true
+  spectrum:
+    description: ""
+    availableFor:
+      - ENTERPRISE
+    price: "Contact us"
+    unit: /month
+    features:
+      spectrum:
+        value: true
+  dedicatedSsl:
+    description: ""
+    availableFor:
+      - FREE
+      - PRO
+      - BUSINESS
+    excludes:
+      - dedicatedSslWithCustomHostnames
+    price: 5.00
+    unit: /month
+    features:
+      dedicatedSsl:
+        value: true
+  dedicatedSslEnterprise:
+    description: ""
+    availableFor:
+      - ENTERPRISE
+    price: "Contact us"
+    unit: /month
+    features:
+      dedicatedSsl:
+        value: true
+  dedicatedSslWithCustomHostnames:
+    description: ""
+    availableFor:
+      - FREE
+      - PRO
+      - BUSINESS
+    excludes:
+      - dedicatedSsl
+    price: 10.00
+    unit: /month
+    features:
+      dedicatedSslWithCustomHostnames:
+        value: true
+  dedicatedSslWithCustomHostnamesEnterprise:
+    description: ""
+    availableFor:
+      - ENTERPRISE
+    excludes:
+      - dedicatedSsl
+    price: "Contact us"
+    unit: /month
+    features:
+      dedicatedSslWithCustomHostnames:
+        value: true
+  keylessSsl:
+    description: "Keyless SSL lets you route encrypted traffic through Cloudflare's global network, while retaining on-premise custody of private keys. SSL private keys never leave your on-premise infrastructure, and are not shared with anyone."
+    availableFor:
+      - ENTERPRISE
+    price: "Contact us"
+    unit: /month
+    features:
+      keylessSsl:
+        value: true
+  multipleCustomSslCertificates:
+    description: "Upload multiple custom SSL certificates within your Cloudflare dashboard."
+    availableFor:
+      - ENTERPRISE
+    price: "Contact us"
+    unit: /month
+    features:
+      multipleCustomSslCertificates:
+        value: true
+  tlsClientAuth:
+    description: "Cloudflare’s Mutual Auth (TLS Client Auth) creates a secure connection between a client and its origin. When attempting to establish a connection to an origin server, Cloudflare validates the certificate, to check that it has authorized access to the endpoint."
+    availableFor:
+      - ENTERPRISE
+    price: "Contact us"
+    unit: /month
+    features:
+      tlsClientAuth:
+        value: true
+  sslTlsForSaasProviders:
+    description: "Cloudflare’s SSL for SaaS solution allows the customers’ of SaaS providers to CNAME their custom domains to the SaaS provider’s subdomain. This offers SaaS customers the benefit of a branded and encrypted vanity domain. Cloudflare automatically handles certificate management and renewals. Learn more at cloudflare.com/saas/"
+    availableFor:
+      - ENTERPRISE
+    price: "Contact us"
+    unit: /month
+    features:
+      sslTlsForSaasProviders:
+        value: true
