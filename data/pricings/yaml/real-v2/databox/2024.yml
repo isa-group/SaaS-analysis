@@ -464,8 +464,8 @@ plans:
       archiveReports:
         value: true
     usageLimits:
-      dataSourcesLimit:
-        value: 1000000000
+      dataSourceLimit:
+        value: .inf
       warehouseStorageLimit:
         value: 20
       usersLimit:
@@ -520,6 +520,8 @@ plans:
       removableBrandingOnReports:
         value: true
     usageLimits:
+      dataSourceLimit:
+        value: .inf
       historicalDataThreshold:
         value: 24
       warehouseStorageLimit:
@@ -592,12 +594,14 @@ plans:
       singleSignOn:
         value: true
     usageLimits:
+      dataSourceLimit:
+        value: .inf
       historicalDataThreshold:
-        value: 1000000000
+        value: .inf
       warehouseStorageLimit:
         value: 20
       usersLimit:
-        value: 1000000000
+        value: .inf
   PREMIUM:
     description: ''
     price: 999
@@ -674,14 +678,16 @@ plans:
       advancedSecurity:
         value: true
     usageLimits:
+      dataSourceLimit:
+        value: .inf
       includedDataSources:
         value: 100
       historicalDataThreshold:
-        value: 1000000000
+        value: .inf
       warehouseStorageLimit:
-        value: 1000000000
+        value: .inf
       usersLimit:
-        value: 1000000000
+        value: .inf
       guidedOnboardingLimit:
         value: 6
       dedicatedAnalystLimit:
