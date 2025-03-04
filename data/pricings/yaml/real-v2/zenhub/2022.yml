@@ -1,0 +1,44 @@
+syntaxVersion: '2.1'
+saasName: Cloudflare
+createdAt: '2019-11-15'
+version: '2019-11-15'
+billing:
+  monthly: 1.0
+currency: USD
+url: https://web.archive.org/web/20221204160034/https://www.zenhub.com/pricing
+tags:
+  - Performance
+  - Security
+features:
+  argoSmartRouting:
+    description: "Argo's smart routing algorithm uses real-time network intelligence to route traffic through the fastest Cloudflare network paths, while maintaining open, secure connections to eliminate latency imposed by connection-setup."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
+    tag: Performance
+usageLimits:
+  argoSmartRoutingLimit:
+    description: ''
+    valueType: NUMERIC
+    defaultValue: 0
+    unit: GB
+    type: NON_RENEWABLE
+    linkedFeatures:
+    - argoSmartRouting
+plans:
+  FREE:
+    description: For individuals with a personal website and anyone who wants to explore Cloudflare.
+    price: 0
+    unit: /month
+    features: null
+    usageLimits: null
+addOns:
+  sslTlsForSaasProviders:
+    description: "Cloudflare’s SSL for SaaS solution allows the customers’ of SaaS providers to CNAME their custom domains to the SaaS provider’s subdomain. This offers SaaS customers the benefit of a branded and encrypted vanity domain. Cloudflare automatically handles certificate management and renewals. Learn more at cloudflare.com/saas/"
+    availableFor:
+      - ENTERPRISE
+    price: "Contact us"
+    unit: /month
+    features:
+      sslTlsForSaasProviders:
+        value: true
