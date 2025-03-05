@@ -22,7 +22,7 @@
             "runtimeExecutable": "ts-node",
             "args": [
                 "${workspaceFolder}/src/scripts/analytics/extract-analytics-from-file.ts",
-                "${fileBasenameNoExtension}"
+                "${file}"
             ],
             "port": 9229,
             "console": "integratedTerminal",
