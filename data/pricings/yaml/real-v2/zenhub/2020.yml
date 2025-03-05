@@ -68,7 +68,7 @@ features:
     type: SUPPORT
   billing:
     description: ""
-    valueType: BOOLEAN
+    valueType: TEXT
     defaultValue:
       - CARD
     type: PAYMENT

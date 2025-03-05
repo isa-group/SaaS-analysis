@@ -47,6 +47,7 @@ The SaaS of the following table are the ones that have been used in the original
 | Webflow       |      |      |      |      |      |      |
 | Okta          |      |      |      |      |      |      |
 | CircleCI      |      |      |      |      |      |      |
+| Zenhub        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 
 ## Structure
 
