@@ -527,6 +527,8 @@ plans:
         value: true
       cdn:
         value: true
+      advancedCdn:
+        value: true
       formSubmissions:
         value: true
       cmsItems:
