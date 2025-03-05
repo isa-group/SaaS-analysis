@@ -115,13 +115,7 @@ function main(): void {
 
     processFile(filePath)
         .then(() => {
-            // Remove empty log files
-            if (fs.statSync(path.join(LOG_FOLDER, 'results.log')).size === 0) {
-                fs.unlinkSync(path.join(LOG_FOLDER, 'results.log'));
-            }
-            if (fs.statSync(path.join(LOG_FOLDER, 'errors.log')).size === 0) {
-                fs.unlinkSync(path.join(LOG_FOLDER, 'errors.log'));
-            }
+            console.log("Analytics extraction completed successfully.");
         })
         .catch(error => {
             console.error('Error processing file:', error);
