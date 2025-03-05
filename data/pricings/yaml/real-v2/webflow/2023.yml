@@ -1,7 +1,7 @@
 syntaxVersion: '2.1'
 saasName: Webflow
-createdAt: '2022-11-14'
-version: '2022'
+createdAt: '2023-11-22'
+version: '2023'
 billing:
   monthly: 1.0
   annual: 0.85
