@@ -47,6 +47,11 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
+  boardView:
+    description: ''
+    valueType: BOOLEAN
+    defaultValue: true
+    type: DOMAIN
   timelineView:
     description: ''
     valueType: BOOLEAN
@@ -72,6 +77,12 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: INFORMATION
+  appsAndIntegrations:
+    description: ''
+    valueType: BOOLEAN
+    defaultValue: true
+    type: INTEGRATION
+    integrationType: MARKETPLACE
   iosAndAndroidApps:
     description: ''
     valueType: BOOLEAN
