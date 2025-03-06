@@ -1772,7 +1772,7 @@ plans:
         value: 30
       referencesPerCollection:
         value: 5
-  WORKSPACES_ FREELANCER:
+  WORKSPACES_FREELANCER:
     description: ""
     price: 24
     unit: user/month
@@ -1819,7 +1819,7 @@ plans:
         value: 60
       referencesPerCollection:
         value: 10
-  WORKSPACES_ AGENCY:
+  WORKSPACES_AGENCY:
     description: ""
     price: 42
     unit: user/month

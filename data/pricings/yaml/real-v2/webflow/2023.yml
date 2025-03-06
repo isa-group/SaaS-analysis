@@ -1985,7 +1985,7 @@ plans:
   #       value: 10
   #     webflowStagingPageLimit:
   #       value: 150
-  WORKSPACES_ AGENCY:
+  WORKSPACES_AGENCY:
     description: ""
     price: 42
     unit: user/month
