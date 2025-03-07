@@ -40,7 +40,7 @@ The SaaS of the following table are the ones that have been used in the original
 | Salesforce    |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Shopify       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Slack         |  ✅  |  ✅  |  ❌  |  ❌  |  ✅  |  ✅  |      |
-| Tableau       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| Tableau       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Trello        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
 | Trustmary     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
 | UserGuiding   |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
