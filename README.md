@@ -24,7 +24,7 @@ The SaaS of the following table are the ones that have been used in the original
 | Dropbox       |  ✖️   |  ✖️   |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Evernote      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Figma         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| GitHub        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| GitHub        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Hypercontext  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |
 | Jira          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | MailChimp     |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
