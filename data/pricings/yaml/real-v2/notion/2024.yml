@@ -2,152 +2,189 @@ syntaxVersion: '2.1'
 saasName: Notion
 createdAt: '2024-07-16'
 version: '2024-07-16'
+url: https://web.archive.org/web/20240716134101/https://www.notion.so/pricing
+tags:
+- Content
+- Sharing & collaboration
+- Manage work and time
+- Web publishing
+- API & integrations
+- Admin & security
+- Support
 billing:
   monthly: 1.0
+  annually: 0.8
 currency: USD
-url: https://web.archive.org/web/20240716134101/https://www.notion.so/pricing
 features:
   pages:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Content
     type: DOMAIN
   blocks:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Content
     type: DOMAIN
   fileUploads:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Content
     type: DOMAIN
   pageHistory:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
+    tag: Content
     type: DOMAIN
   basicPageAnalytics:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Content
     type: INFORMATION
   advancedPageAnalytics:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Content
     type: INFORMATION
   collaborativeWorkspace:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Sharing & collaboration
     type: DOMAIN
   guests:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Sharing & collaboration
     type: DOMAIN
   permissionGroups:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Sharing & collaboration
     type: MANAGEMENT
   openTeamSpaces:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Sharing & collaboration
     type: DOMAIN
   closeTeamSpaces:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Sharing & collaboration
     type: DOMAIN
   privateTeamSpaces:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Sharing & collaboration
     type: DOMAIN
   advancedTeamSpacePermissions:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Sharing & collaboration
     type: MANAGEMENT
   notionCalendar:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Manage work and time
     type: DOMAIN
   views:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Manage work and time
     type: DOMAIN
   subtasks:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Manage work and time
     type: DOMAIN
   tasksDependency:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Manage work and time
     type: DOMAIN
   customProperties:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Manage work and time
     type: DOMAIN
   filtering:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Manage work and time
     type: DOMAIN
   formulas:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Manage work and time
     type: DOMAIN
   basicAutomations:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Manage work and time
     type: AUTOMATION
     automationType: TASK_AUTOMATION
   customDatabaseAutomations:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Manage work and time
     type: AUTOMATION
     automationType: TASK_AUTOMATION
   publishedPages:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Web publishing
     type: DOMAIN
   notionSiteDomain:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Web publishing
     type: DOMAIN
   basicSEO:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Web publishing
     type: DOMAIN
   advancedSEO:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Web publishing
     type: DOMAIN
   siteCustomization:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Web publishing
     type: DOMAIN
   googleAnalyticsIntegration:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Web publishing
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
@@ -156,22 +193,26 @@ features:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Web publishing
     type: DOMAIN
   syncDatabases:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: API & integrations
     type: INTEGRATION
     integrationType: MARKETPLACE
   dynamicLinkPreviews:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: API & integrations
     type: DOMAIN
   slackIntegration:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: API & integrations
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
@@ -180,6 +221,7 @@ features:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: API & integrations
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
@@ -188,132 +230,162 @@ features:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: API & integrations
     type: INTEGRATION
     integrationType: API
   exportEntireWorkspaceAsHTML:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Admin & security
     type: DOMAIN
   exportEntireWorkspaceAsMarkdown:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Admin & security
     type: DOMAIN
   exportEntireWorkspaceAsCSV:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Admin & security
     type: DOMAIN
   twoStepVerification:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
+    tag: Admin & security
     type: MANAGEMENT
   exportEntireWorkspaceAsPDF:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: DOMAIN
   samlSso:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: INTEGRATION
     integrationType: IDENTITY_PROVIDER
   userProvisioning:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: INTEGRATION
     integrationType: IDENTITY_PROVIDER
   advancedWorkspaceSecurityControls:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: MANAGEMENT
   advancedTeamspaceSecurityControls:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: MANAGEMENT
   workspaceAnalytics:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: INFORMATION
   granularAdminRoles:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: MANAGEMENT
   auditLog:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: INFORMATION
   adminContentSearch:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: MANAGEMENT
   domainManagement:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: MANAGEMENT
   workspaceConsolidation:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: DOMAIN
   managedUsersDashboard:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: DOMAIN
   managedUsersControls:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: MANAGEMENT
   securityIntegrations:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: INTEGRATION
     integrationType: MARKETPLACE
   complianceIntegrations:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: INTEGRATION
     integrationType: MARKETPLACE
   hipaaCompliance:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: GUARANTEE
   guestInviteRequests:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: DOMAIN
   customDataRetentionPolicies:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Admin & security
     type: MANAGEMENT
   prioritySupport:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Support
     type: SUPPORT
   customerSuccessManager:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
+    tag: Support
     type: SUPPORT
+  notionAi:
+    valueType: BOOLEAN
+    defaultValue: false
+    type: AUTOMATION
+    automationType: TASK_AUTOMATION
 usageLimits:
   fileUploadsLimit:
     description: ''
@@ -326,8 +398,8 @@ usageLimits:
   pageHistoryThreshold:
     description: ''
     valueType: NUMERIC
-    defaultValue: 0
-    unit: days
+    defaultValue: 7
+    unit: day
     type: NON_RENEWABLE
     linkedFeatures:
     - pageHistory
@@ -396,6 +468,8 @@ plans:
     usageLimits:
       fileUploadsLimit:
         value: .inf
+      pageHistoryThreshold:
+        value: 30
       notionSiteDomainLimit:
         value: 5
       guestsLimit:
@@ -409,6 +483,8 @@ plans:
     price: 18
     unit: user/month
     features:
+      advancedPageAnalytics:
+        value: true
       privateTeamSpaces:
         value: true
       customDatabaseAutomations:
@@ -428,6 +504,8 @@ plans:
     usageLimits:
       fileUploadsLimit:
         value: .inf
+      pageHistoryThreshold:
+        value: 90
       notionSiteDomainLimit:
         value: 5
       guestsLimit:
@@ -441,7 +519,11 @@ plans:
     price: Contact Sales
     unit: user/month
     features:
+      advancedPageAnalytics:
+        value: true
       privateTeamSpaces:
+        value: true
+      advancedTeamSpacePermissions:
         value: true
       customDatabaseAutomations:
         value: true
@@ -494,6 +576,10 @@ plans:
     usageLimits:
       fileUploadsLimit:
         value: .inf
+      pageHistoryThreshold:
+        value: .inf
+      notionSiteDomainLimit:
+        value: 5
       guestsLimit:
         value: 250
       syncDatabasesLimit:
@@ -529,3 +615,16 @@ addOns:
     usageLimitsExtensions:
       customDomainsLimit:
         value: 1
+  notionAi:
+    availableFor:
+    - FREE
+    - PLUS
+    - BUSINESS
+    - ENTERPRISE
+    price: 10
+    unit: member/month
+    features:
+      notionAi:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions: null
