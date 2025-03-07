@@ -166,7 +166,7 @@ features:
   basicAnalytics:
     description: Basic engagement data on individual posts.
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     tag: Analytics
     type: INFORMATION
   performanceOverviewEngagements:

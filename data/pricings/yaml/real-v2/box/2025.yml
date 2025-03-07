@@ -326,7 +326,7 @@ usageLimits:
     type: NON_RENEWABLE
   apiCallsLimit:
     valueType: NUMERIC
-    defaultValue: 50_000
+    defaultValue: 50000
     unit: calls/month
     type: RENEWABLE
     linkedFeatures:
@@ -468,7 +468,7 @@ plans:
       versionHistoryThreshold:
         value: 100
       apiCallsLimit:
-        value: 100_000
+        value: 100000
       includedDocumentsFor3rdParty:
         value: 250
       includedDocumentsForCustomApps:
@@ -536,13 +536,13 @@ plans:
       versionHistoryThreshold:
         value: .inf
       apiCallsLimit:
-        value: 100_000
+        value: 100000
       includedDocumentsFor3rdParty:
         value: .inf
       includedDocumentsForCustomApps:
-        value: 1_000
+        value: 1000
       boxAIUnitsLimit:
-        value: 2_000
+        value: 2000
   ENTERPRISE_ADVANCED:
     price: Contact sales
     features:
@@ -620,15 +620,15 @@ plans:
       minUsers:
         value: 35
       apiCallsLimit:
-        value: 200_000
+        value: 200000
       includedDocumentsFor3rdParty:
         value: .inf
       includedDocumentsForCustomApps:
-        value: 2_000
+        value: 2000
       boxAIUnitsLimit:
-        value: 20_000
+        value: 20000
       documentsGenerationLimit:
-        value: 2_000
+        value: 2000
       customBoxAIAgentsLimit:
         value: 100
 addOns:
