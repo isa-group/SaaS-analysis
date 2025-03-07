@@ -10,44 +10,45 @@ The SaaS of the following table are the ones that have been used in the original
 - ✅: The SaaS is modeled for the indicated year.
 - ✖️: There is a snapshot, but a clear feature list cannot be extracted.
 - ❌: There isn't a snapshot for the SaaS in the indicated year.
-
 | SaaS          | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 | ------------- | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
-| ClickUp       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Microsoft 365 |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Salesforce    |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Slack         |  ✅  |  ✅  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |
-| Buffer        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Hypercontext  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Notion        |  ✖️   |  ✖️   |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| OpenPhone     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Pumble        |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Tableau       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Quip          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| MailChimp     |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Deskera       |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| UserGuiding   |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Crowdcast     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Planable      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Databox       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Trustmary     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Evernote      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Canva         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Clockify      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| GitHub        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Figma         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Jira          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Dropbox       |  ✖️   |  ✖️   |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Overleaf      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Postman       |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Zapier        |  ✅  |  ✅  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Box           |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Wrike         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Zoom          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Webflow       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Okta          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Buffer        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Canva         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | CircleCI      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| ClickUp       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Clockify      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Crowdcast     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Databox       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Deskera       |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Dropbox       |  ✖️   |  ✖️   |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Evernote      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Figma         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| GitHub        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| Hypercontext  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |
+| Jira          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| MailChimp     |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Microsoft 365 |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Notion        |  ✖️   |  ✖️   |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Okta          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| OpenPhone     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Overleaf      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| Planable      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| Postman       |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| Pumble        |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| Quip          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| Salesforce    |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| Shopify       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Slack         |  ✅  |  ✅  |  ❌  |  ❌  |  ✅  |  ✅  |      |
+| Tableau       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| Trello        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| Trustmary     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| UserGuiding   |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| Webflow       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Wrike         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
 | Zenhub        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Zoom          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Zapier        |  ✅  |  ✅  |  ❌  |  ✅  |  ✅  |  ✅  |      |
 
 ## Structure
 
