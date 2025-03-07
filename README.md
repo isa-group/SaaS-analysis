@@ -32,12 +32,12 @@ The SaaS of the following table are the ones that have been used in the original
 | Notion        |  ✖️   |  ✖️   |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Okta          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | OpenPhone     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Overleaf      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
-| Planable      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
-| Postman       |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
-| Pumble        |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |      |
-| Quip          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
-| Salesforce    |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| Overleaf      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Planable      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Postman       |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Pumble        |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Quip          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Salesforce    |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Shopify       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Slack         |  ✅  |  ✅  |  ❌  |  ❌  |  ✅  |  ✅  |      |
 | Tableau       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
