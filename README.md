@@ -45,10 +45,10 @@ The SaaS of the following table are the ones that have been used in the original
 | Trustmary     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | UserGuiding   |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Webflow       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Wrike         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| Wrike         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Zenhub        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Zoom          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Zapier        |  ✅  |  ✅  |  ❌  |  ✅  |  ✅  |  ✅  |      |
+| Zapier        |  ✅  |  ✅  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |
 
 ## Structure
 
