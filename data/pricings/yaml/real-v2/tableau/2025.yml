@@ -5,7 +5,7 @@ version: '2025'
 billing:
   annual: 1.0
 currency: USD
-url: https://web.archive.org/web/20240701101756/https://www.tableau.com/pricing/teams-orgs
+url: https://web.archive.org/web/20250220111437/https://www.tableau.com/pricing/
 tags:
   - Govern
   - Interact

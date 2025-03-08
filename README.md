@@ -39,11 +39,11 @@ The SaaS of the following table are the ones that have been used in the original
 | Quip          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Salesforce    |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Shopify       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Slack         |  ✅  |  ✅  |  ❌  |  ❌  |  ✅  |  ✅  |      |
+| Slack         |  ✅  |  ✅  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |
 | Tableau       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
-| Trello        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
-| Trustmary     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
-| UserGuiding   |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
+| Trello        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Trustmary     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| UserGuiding   |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Webflow       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Wrike         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |      |
 | Zenhub        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
