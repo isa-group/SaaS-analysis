@@ -50,6 +50,8 @@ The SaaS of the following table are the ones that have been used in the original
 | Zoom          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
 | Zapier        |  ✅  |  ✅  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |
 
+**TOTAL:** 240 pricings - 37 SaaS
+
 ## Structure
 
 The repository contains four main folders:
