@@ -57,7 +57,9 @@ import cliProgress from "cli-progress";
  * that will be processed by the analytics extraction script.
  * @constant {string}
  */
-const DATA_DIR = "data/pricings/yaml/TSC'25";
+const DATA_DIR = process.argv.includes("-d")
+  ? process.argv[process.argv.indexOf("-d") + 1]
+  : "data/pricings/yaml/TSC'25";
 
 /**
  * Directory where log files are stored.
