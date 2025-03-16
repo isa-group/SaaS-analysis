@@ -1,4 +1,4 @@
-[![CC BY 4.0][cc-by-shield]][cc-by]
+[![CC BY 4.0][cc-by-shield]][cc-by][![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.14254342.svg)](https://doi.org/10.5281/zenodo.14254342)
 
 # 📊 Automated Analysis of Intelligent Pricings - Supplementary Material
 
@@ -21,7 +21,9 @@ To run this package, ensure you have the following:
 
 - **Node.js**: Version 20.x or higher
 - **NPM**: Version 10.x or higher
+- **MiniZinc**
 
+> If you don't have MiniZinc installed on your machine, we provide a docker image to run the experiment with the repository.
 
 ## 🚀 How to Replicate the Experiment
 
