@@ -1,1 +1,0 @@
-In this case, `addOn1` offers a subset of the features provided by `addOn2`, yet `addOn2` is cheaper. Therefore, purchasing `addOn1` is not worth the price.
