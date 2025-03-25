@@ -213,8 +213,7 @@ async function processFile(
 function generateJsonFileFromAnalytics(
   analyticsData: Record<string, any>
 ): void {
-  const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
-  const jsonFilePath = path.join(JSON_DIR, `analytics-${timestamp}.json`);
+  const jsonFilePath = path.join(JSON_DIR, `analytics-${path.basename(DATA_DIR)}.json`);
 
   // Process analyticsData to add yaml_path and format SaaS names
   for (const saasName in analyticsData) {
