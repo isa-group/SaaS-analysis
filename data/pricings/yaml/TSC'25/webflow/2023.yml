@@ -607,14 +607,6 @@ usageLimits:
     linkedFeatures:
     - regionalCdn
     - globalCdn
-  cmsApiRequestsPerMinute:
-    description: ""
-    valueType: NUMERIC
-    defaultValue: 0
-    unit: request/min
-    type: NON_RENEWABLE
-    linkedFeatures:
-    - cmsApi
   formFileSizeLimit:
     description: ""
     valueType: NUMERIC

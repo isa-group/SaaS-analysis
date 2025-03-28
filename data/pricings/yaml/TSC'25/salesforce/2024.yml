@@ -1150,5 +1150,7 @@ addOns:
     features:
       fullSandbox:
         value: true
-    usageLimits: null
+    usageLimits:
+      numberOfFullSanbox:
+        value: 1
     usageLimitsExtensions: null

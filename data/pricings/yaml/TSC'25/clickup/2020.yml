@@ -657,6 +657,8 @@ plans:
         value: 1000000000
       teamsLimit:
         value: 1
+      readOnlyGuestsLimit:
+        value: .inf
   BUSINESS:
     description: Business class features and security
     price: 19
@@ -761,6 +763,8 @@ plans:
         value: 1000000000
       teamsLimit:
         value: 1000000000
+      readOnlyGuestsLimit:
+        value: .inf
   ENTERPRISE:
     description: ''
     price: Contact Sales
@@ -897,4 +901,6 @@ plans:
         value: 1000000000
       teamsLimit:
         value: 1000000000
+      readOnlyGuestsLimit:
+        value: .inf
 addOns: null
