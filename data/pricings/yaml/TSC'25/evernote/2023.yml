@@ -511,6 +511,8 @@ plans:
         value: true
       supportTickets:
         value: true
+      openNotesForCalendarEvents:
+        value: true
     usageLimits:
       maximumNoteSize:
         value: 200
@@ -600,6 +602,8 @@ plans:
       applyInNoteEncryption:
         value: true
       supportTickets:
+        value: true
+      openNotesForCalendarEvents:
         value: true
     usageLimits:
       maximumNoteSize:

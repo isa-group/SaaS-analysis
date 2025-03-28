@@ -433,16 +433,16 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  pageBuilding:
-    description: "Empower less technical teammates to build landing pages on their own using designer-approved building blocks."
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
   clientPayments:
     description: "Invite your clients to securely add their credit card on file to cover any new site plan or other site add-ons."
     valueType: BOOLEAN
     defaultValue: false
     type: PAYMENT
+  pageBuilding:
+    description: "Empower less technical teammates to build landing pages on their own using designer-approved building blocks."
+    valueType: BOOLEAN
+    defaultValue: false
+    type: DOMAIN
   contentEditingRole:
     description: "These users have limited access to safely edit copy, assets (images/videos), and links. They cannot change page design"
     valueType: BOOLEAN
@@ -1974,108 +1974,110 @@ plans:
   #       value: 2
   
   # This plan has been removed since it's the same as WORKSPACES_TEAMS_CORE
-  # WORKSPACES_FREELANCER:
-  #   description: ""
-  #   price: 24
-  #   unit: user/month
-  #   features:
-  #     teams:
-  #       value: true
-  #     freeAgencyOrFreelancerGuests:
-  #       value: true
-  #     clientPayments:
-  #       value: true
-  #     pageBuilding:
-  #       value: true
-  #     contentEditingRole:
-  #       value: true
-  #     siteSpecificAccess:
-  #       value: true
-  #     webflowStaging:
-  #       value: true
-  #     customCode:
-  #       value: true
-  #     siteTransfer:
-  #       value: true
-  #     codeExport:
-  #       value: true
-  #     twoFactorAuthentication:
-  #       value: true
-  #     helpCenterSupport:
-  #       value: true
-  #     supportPortalSupport:
-  #       value: true
-  #     billing:
-  #       value:
-  #         - CARD
-  #     webflowUniversityTraining:
-  #       value: true
-  #   usageLimits:
-  #     fullSeats:
-  #       value: 1
-  #     freeAgencyOrFreelancerGuestsLimit:
-  #       value: 2
-  #     webflowStagingLimit:
-  #       value: 10
-  #     webflowStagingPageLimit:
-  #       value: 300
+  WORKSPACES_FREELANCER:
+    description: ""
+    price: 24
+    unit: user/month
+    features:
+      teams:
+        value: true
+      freeAgencyOrFreelancerGuests:
+        value: true
+      clientPayments:
+        value: true
+      pageBuilding:
+        value: true
+      contentEditingRole:
+        value: true
+      siteSpecificAccess:
+        value: true
+      webflowStaging:
+        value: true
+      customCode:
+        value: true
+      siteTransfer:
+        value: true
+      codeExport:
+        value: true
+      twoFactorAuthentication:
+        value: true
+      helpCenterSupport:
+        value: true
+      supportPortalSupport:
+        value: true
+      billing:
+        value:
+          - CARD
+      webflowUniversityTraining:
+        value: true
+    usageLimits:
+      fullSeats:
+        value: 1
+      freeAgencyOrFreelancerGuestsLimit:
+        value: 2
+      webflowStagingLimit:
+        value: 10
+      webflowStagingPageLimit:
+        value: 300
 
   # Removed for being the same as WORKSPACES_TEAMS_GROWTH
-  # WORKSPACES_AGENCY:
-  #   description: ""
-  #   price: 42
-  #   unit: user/month
-  #   features:
-  #     teams:
-  #       value: true
-  #     freeAgencyOrFreelancerGuests:
-  #       value: true
-  #     pageBuilding:
-  #       value: true
-  #     contentEditingRole:
-  #       value: true
-  #     siteSpecificAccess:
-  #       value: true
-  #     siteLevelRoles:
-  #       value: true
-  #     publishingPermissions:
-  #       value: true
-  #     webflowStaging:
-  #       value: true
-  #     customCode:
-  #       value: true
-  #     sitePasswordProtection:
-  #       value: true
-  #     301Redirects:
-  #       value: true
-  #     removeWebflowBadge:
-  #       value: true
-  #     siteTransfer:
-  #       value: true
-  #     codeExport:
-  #       value: true
-  #     sharedLibraries:
-  #       value: true
-  #     twoFactorAuthentication:
-  #       value: true
-  #     helpCenterSupport:
-  #       value: true
-  #     supportPortalSupport:
-  #       value: true
-  #     billing:
-  #       value:
-  #         - CARD
-  #     webflowUniversityTraining:
-  #       value: true
-  #   usageLimits:
-  #     fullSeats:
-  #       value: 1
-  #     freeAgencyOrFreelancerGuestsLimit:
-  #       value: 2
-  #     webflowStagingLimit:
-  #       value: .inf
-  #     webflowStagingPageLimit:
-  #       value: 300
+  WORKSPACES_AGENCY:
+    description: ""
+    price: 42
+    unit: user/month
+    features:
+      teams:
+        value: true
+      freeAgencyOrFreelancerGuests:
+        value: true
+      pageBuilding:
+        value: true
+      clientPayments:
+        value: true
+      contentEditingRole:
+        value: true
+      siteSpecificAccess:
+        value: true
+      siteLevelRoles:
+        value: true
+      publishingPermissions:
+        value: true
+      webflowStaging:
+        value: true
+      customCode:
+        value: true
+      sitePasswordProtection:
+        value: true
+      301Redirects:
+        value: true
+      removeWebflowBadge:
+        value: true
+      siteTransfer:
+        value: true
+      codeExport:
+        value: true
+      sharedLibraries:
+        value: true
+      twoFactorAuthentication:
+        value: true
+      helpCenterSupport:
+        value: true
+      supportPortalSupport:
+        value: true
+      billing:
+        value:
+          - CARD
+      webflowUniversityTraining:
+        value: true
+    usageLimits:
+      fullSeats:
+        value: 1
+      freeAgencyOrFreelancerGuestsLimit:
+        value: 2
+      webflowStagingLimit:
+        value: .inf
+      webflowStagingPageLimit:
+        value: 300
 addOns:
   extraFileStorage:
     description: ""

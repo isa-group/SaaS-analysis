@@ -1963,7 +1963,11 @@ plans:
         value: true
       emailSupport:
         value: true
+      paidUserAccounts:
+        value: true
     usageLimits:
+      userAccountsLimit:
+        value: 20000
       teamSizeLimit:
         value: 1
       freeAgencyOrFreelancerGuestsLimit:
@@ -2007,10 +2011,14 @@ plans:
         value: true
       emailSupport:
         value: true
+      paidUserAccounts:
+        value: true
       billing:
         value:
           - CARD
     usageLimits:
+      userAccountsLimit:
+        value: 20000
       teamSizeLimit:
         value: 3
       freeAgencyOrFreelancerGuestsLimit:
@@ -2060,10 +2068,14 @@ plans:
         value: true
       emailSupport:
         value: true
+      paidUserAccounts:
+        value: true
       billing:
         value:
           - CARD
     usageLimits:
+      userAccountsLimit:
+        value: 20000
       teamSizeLimit:
         value: 9
       freeAgencyOrFreelancerGuestsLimit:

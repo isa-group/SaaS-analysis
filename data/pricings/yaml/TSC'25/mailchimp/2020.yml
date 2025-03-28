@@ -174,12 +174,12 @@ features:
   buyCustomDomain:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   connectAnExistingDomain:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: INTEGRATION
     integrationType: MARKETPLACE
   emailMarketing:

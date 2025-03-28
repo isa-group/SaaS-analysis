@@ -760,6 +760,8 @@ addOns:
         value: true
       copilotDataExcludedFromTrainingByDefault:
         value: true
+      copilotIpIndemnity:
+        value: true
       copilotContentExclusions:
         value: true
       copilotSSO:
@@ -824,6 +826,8 @@ addOns:
       copilotUserManagement:
         value: true
       copilotDataExcludedFromTrainingByDefault:
+        value: true
+      copilotIpIndemnity:
         value: true
       copilotContentExclusions:
         value: true

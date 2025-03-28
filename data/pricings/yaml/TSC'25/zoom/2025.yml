@@ -334,18 +334,6 @@ features:
     defaultValue: false
     type: DOMAIN
     tag: Meetings
-  executiveBusinessReviews:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: INFORMATION
-    tag: Meetings
-  webinar500:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
-    tag: Meetings
   directChat:
     description: ""
     valueType: BOOLEAN
@@ -896,22 +884,6 @@ features:
     defaultValue: false
     type: INTEGRATION
     integrationType: EXTERNAL_DEVICE
-  qualityOfServiceSubscription:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: SUPPORT
-  zoomRevenueAccelerator:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: AUTOMATION
-    automationType: BOT
-  zoomMesh:
-    description: ""
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
   zoomClipsPlus:
     description: ""
     valueType: BOOLEAN

@@ -331,7 +331,7 @@ features:
   goals:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   goalFolders:
     description: ''
@@ -813,7 +813,7 @@ usageLimits:
   useGoals:
     description: ''
     valueType: NUMERIC
-    defaultValue: 0
+    defaultValue: 100
     unit: use
     type: NON_RENEWABLE
     linkedFeatures:

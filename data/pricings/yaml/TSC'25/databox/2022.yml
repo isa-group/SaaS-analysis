@@ -389,3 +389,15 @@ addOns:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
+  prioritySupportAddOn:
+    availableFor:
+    - STARTER
+    - PROFESSIONAL
+    - PERFORMER
+    price: "Contact us"
+    unit: /month
+    features:
+      prioritySupport:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions: null

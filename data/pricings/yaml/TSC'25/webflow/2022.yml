@@ -296,11 +296,6 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  paidMemberships:
-    description: "Charge visitors a memberships fee to access gated and personalized content."
-    valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
   emailProductFields:
     description: "Add custom fields to products and use that data in your designs."
     valueType: BOOLEAN

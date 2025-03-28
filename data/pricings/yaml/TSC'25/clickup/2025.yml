@@ -442,7 +442,7 @@ features:
     type: DOMAIN
   goalFolders:
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     tag: Reporting
     type: DOMAIN
   dashboards:

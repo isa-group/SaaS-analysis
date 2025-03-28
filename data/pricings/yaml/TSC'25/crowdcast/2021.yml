@@ -187,6 +187,10 @@ plans:
         value: true
       exportData:
         value: true
+      eventAnalytics:
+        value: true
+      sessionAnalytics:
+        value: true
     usageLimits:
       liveAttendeesLimit:
         value: 100
@@ -213,6 +217,10 @@ plans:
       multistreaming:
         value: true
       customRegistrationFields:
+        value: true
+      eventAnalytics:
+        value: true
+      sessionAnalytics:
         value: true
     usageLimits:
       liveAttendeesLimit:
@@ -245,6 +253,10 @@ plans:
       multistreaming:
         value: true
       customRegistrationFields:
+        value: true
+      eventAnalytics:
+        value: true
+      sessionAnalytics:
         value: true
     usageLimits:
       liveAttendeesLimit:

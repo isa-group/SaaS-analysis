@@ -369,6 +369,8 @@ plans:
         value: true
       languageInterpretations:
         value: true
+      branding:
+        value: true
     usageLimits:
       maxParticipants:
         value: 300
@@ -422,6 +424,8 @@ plans:
       executiveBusinessReviews:
         value: true
       bundleDiscounts:
+        value: true
+      branding:
         value: true
     usageLimits:
       maxParticipants:
