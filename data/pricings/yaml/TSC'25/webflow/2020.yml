@@ -41,13 +41,13 @@ features:
     type: GUARANTEE
   uptimeSla:
     description: "ISO 27018 compliance to protect you and your customers’ personal information."
-    valueType: TEXT
-    defaultValue: "99.99%"
+    valueType: BOOLEAN
+    defaultValue: false
     type: GUARANTEE
   immediateScaling:
     description: "Your site will be snappy for the first or millionth concurrent visitor. Don't worry about getting popular overnight."
-    valueType: TEXT
-    defaultValue: "99.99%"
+    valueType: BOOLEAN
+    defaultValue: false
     type: GUARANTEE
   ## Website Plans Features
   webflowHosting:

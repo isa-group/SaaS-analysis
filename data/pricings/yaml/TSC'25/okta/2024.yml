@@ -605,7 +605,7 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: INTEGRATION
-    integrationType: 
+    integrationType: MARKETPLACE
   apiAllowsForCustomAuthenticationWorkflows:
     description: ""
     valueType: BOOLEAN
