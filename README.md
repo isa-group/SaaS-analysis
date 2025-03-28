@@ -10,6 +10,7 @@ The SaaS of the following table are the ones that have been used in the paper. T
 - ✅: The SaaS is modeled for the indicated year.
 - ✖️: There is a snapshot, but a clear feature list cannot be extracted.
 - ❌: There isn't a snapshot for the SaaS in the indicated year.
+
 | SaaS          | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
 | ------------- | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
 | Box           |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
