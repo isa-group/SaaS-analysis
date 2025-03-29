@@ -43,11 +43,6 @@ features:
     valueType: BOOLEAN
     defaultValue: true
     type: DOMAIN
-  guestsPermissions:
-    description: Control what guests can see and do in your Workspace
-    valueType: BOOLEAN
-    defaultValue: false
-    type: MANAGEMENT
   customFields:
     description: ''
     valueType: BOOLEAN
@@ -61,7 +56,7 @@ features:
   portfolios:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   portfoliosPermissions:
     description: ''
@@ -71,7 +66,7 @@ features:
   goals:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   forms:
     description: ''
@@ -479,7 +474,7 @@ usageLimits:
     unit: guest
     type: NON_RENEWABLE
     linkedFeatures:
-    - guestsPermissions
+    - guests
   customFieldsLimit:
     description: ''
     valueType: NUMERIC
@@ -491,7 +486,7 @@ usageLimits:
   portfoliosLimit:
     description: ''
     valueType: NUMERIC
-    defaultValue: 0
+    defaultValue: 100
     unit: use/workspace
     type: NON_RENEWABLE
     linkedFeatures:
@@ -499,7 +494,7 @@ usageLimits:
   goalsLimit:
     description: ''
     valueType: NUMERIC
-    defaultValue: 0
+    defaultValue: 100
     unit: use/workspace
     type: NON_RENEWABLE
     linkedFeatures:
@@ -662,6 +657,8 @@ plans:
         value: 1000000000
       teamsLimit:
         value: 1
+      readOnlyGuestsLimit:
+        value: .inf
   BUSINESS:
     description: Business class features and security
     price: 19
@@ -766,6 +763,8 @@ plans:
         value: 1000000000
       teamsLimit:
         value: 1000000000
+      readOnlyGuestsLimit:
+        value: .inf
   ENTERPRISE:
     description: ''
     price: Contact Sales
@@ -902,4 +901,6 @@ plans:
         value: 1000000000
       teamsLimit:
         value: 1000000000
+      readOnlyGuestsLimit:
+        value: .inf
 addOns: null

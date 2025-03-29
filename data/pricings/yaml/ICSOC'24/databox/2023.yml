@@ -807,7 +807,9 @@ addOns:
     features:
       outsourcedAnalyst:
         value: true
-    usageLimits: null
+    usageLimits:
+      outsourcedAnalystLimit:
+        value: 12
     usageLimitsExtensions: null
   prioritySupport:
     availableFor:

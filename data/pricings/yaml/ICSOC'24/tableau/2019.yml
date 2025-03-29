@@ -234,6 +234,8 @@ plans:
         value: true
       certifyDataSources:
         value: true
+      editExistingVisualizations:
+        value: true
     usageLimits: null
   CREATOR:
     description: >-
@@ -283,5 +285,7 @@ plans:
       certifyDataSources:
         value: true
       serverAdministration:
+        value: true
+      editExistingVisualizations:
         value: true
     usageLimits: null

@@ -525,7 +525,7 @@ usageLimits:
   githubOnlyForPublicRepositoriesFreeTier:
     description: Free tier usage limit for public repositories
     valueType: BOOLEAN
-    defaultValue: true
+    defaultValue: false
     type: NON_RENEWABLE
     linkedFeatures:
     - protectedBranches
@@ -760,6 +760,8 @@ addOns:
         value: true
       copilotDataExcludedFromTrainingByDefault:
         value: true
+      copilotIpIndemnity:
+        value: true
       copilotContentExclusions:
         value: true
       copilotSSO:
@@ -824,6 +826,8 @@ addOns:
       copilotUserManagement:
         value: true
       copilotDataExcludedFromTrainingByDefault:
+        value: true
+      copilotIpIndemnity:
         value: true
       copilotContentExclusions:
         value: true

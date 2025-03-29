@@ -979,3 +979,23 @@ addOns:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
+  partnerEditorRoleProfessional:
+    availableFor:
+    - PROFESSIONAL
+    price: 29
+    unit: seat/month
+    features:
+      partnerEditorRole:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions: null
+  partnerEditorRoleEnterprise:
+    availableFor:
+    - ENTERPRISE
+    price: 49
+    unit: seat/month
+    features:
+      partnerEditorRole:
+        value: true
+    usageLimits: null
+    usageLimitsExtensions: null

@@ -579,7 +579,7 @@ addOns:
         value: true
     usageLimits:
       usersLimit:
-        value: 10000000000
+        value: .inf
     usageLimitsExtensions: null
   extraChannels:
     availableFor:

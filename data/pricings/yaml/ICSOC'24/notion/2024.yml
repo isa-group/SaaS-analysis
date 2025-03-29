@@ -25,7 +25,7 @@ features:
   pageHistory:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   basicPageAnalytics:
     description: ''
@@ -326,7 +326,7 @@ usageLimits:
   pageHistoryThreshold:
     description: ''
     valueType: NUMERIC
-    defaultValue: 0
+    defaultValue: 7
     unit: days
     type: NON_RENEWABLE
     linkedFeatures:
@@ -396,6 +396,8 @@ plans:
     usageLimits:
       fileUploadsLimit:
         value: .inf
+      pageHistoryThreshold:
+        value: 30
       notionSiteDomainLimit:
         value: 5
       guestsLimit:
@@ -425,9 +427,13 @@ plans:
         value: true
       prioritySupport:
         value: true
+      advancedPageAnalytics:
+        value: true
     usageLimits:
       fileUploadsLimit:
         value: .inf
+      pageHistoryThreshold:
+        value: 90
       notionSiteDomainLimit:
         value: 5
       guestsLimit:
@@ -491,8 +497,14 @@ plans:
         value: true
       customerSuccessManager:
         value: true
+      advancedPageAnalytics:
+        value: true
+      advancedTeamSpacePermissions:
+        value: true
     usageLimits:
       fileUploadsLimit:
+        value: .inf
+      pageHistoryThreshold:
         value: .inf
       guestsLimit:
         value: 250

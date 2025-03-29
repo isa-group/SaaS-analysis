@@ -147,12 +147,12 @@ features:
   searchTextInsideImages:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   searchTextInsideHandwrittenNotes:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   connectWithOutlook:
     description: ''
@@ -326,6 +326,8 @@ plans:
         value: true
       chatSupport:
         value: true
+      restoreNotesFromOlderVersions:
+        value: true
     usageLimits:
       syncDevicesLimit:
         value: 1000000
@@ -371,6 +373,8 @@ plans:
       activityHistory:
         value: true
       businessDataOwnership:
+        value: true
+      restoreNotesFromOlderVersions:
         value: true
     usageLimits:
       syncDevicesLimit:

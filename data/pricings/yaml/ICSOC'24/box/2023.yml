@@ -78,7 +78,7 @@ features:
   slackIntegration:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
@@ -370,6 +370,8 @@ plans:
         value: true
       boxRelay:
         value: true
+      dataLossProtection:
+        value: true
     usageLimits:
       storageLimit:
         value: .inf
@@ -437,6 +439,8 @@ plans:
       boxZones:
         value: true
       boxKeySafe:
+        value: true
+      dataLossProtection:
         value: true
     usageLimits:
       storageLimit:
@@ -519,6 +523,8 @@ plans:
       passwordPolicyEnforcement:
         value: true
       documentWatermark:
+        value: true
+      dataLossProtection:
         value: true
     usageLimits:
       storageLimit:
@@ -605,6 +611,8 @@ plans:
       boxSignBatchSend:
         value: true
       boxSignReadySignLinks:
+        value: true
+      dataLossProtection:
         value: true
     usageLimits:
       storageLimit:

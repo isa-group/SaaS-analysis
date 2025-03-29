@@ -623,6 +623,8 @@ plans:
         value: true
       onboardingPlanningAndSupport:
         value: true
+      dedicatedAccountManager:
+        value: true
     usageLimits:
       versionHistoryDepth:
         value: .inf
