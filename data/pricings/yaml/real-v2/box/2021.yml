@@ -63,7 +63,7 @@ features:
   slackIntegration:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
@@ -211,7 +211,13 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: GUARANTEE
-  relayLite:
+  standardBoxRelay:
+    description: ''
+    valueType: BOOLEAN
+    defaultValue: true
+    type: INTEGRATION
+    integrationType: WEB_SAAS
+  advancedBoxRelay:
     description: ''
     valueType: BOOLEAN
     defaultValue: false
@@ -298,7 +304,6 @@ usageLimits:
     - googleWorkspaceIntegration
     - slackIntegration
     - activeDirectoryIntegration
-    - relayLite
 plans:
   BUSINESS:
     description: ''
@@ -391,6 +396,8 @@ plans:
         value: true
       documentWatermark:
         value: true
+      advancedBoxRelay:
+        value: true
     usageLimits:
       uploadSizeLimit:
         value: 50
@@ -448,6 +455,8 @@ plans:
       passwordPolicyEnforcement:
         value: true
       documentWatermark:
+        value: true
+      advancedBoxRelay:
         value: true
     usageLimits:
       uploadSizeLimit:

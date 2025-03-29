@@ -152,7 +152,7 @@ features:
   mockups:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   backgroundRemover:
     description: ''

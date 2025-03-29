@@ -30,7 +30,7 @@ features:
   requestsViaEmail:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: INTEGRATION
     integrationType: API
   reviewPlatform:
@@ -239,11 +239,6 @@ features:
     defaultValue: true
     type: SUPPORT
   phoneSupport:
-    description: ''
-    valueType: BOOLEAN
-    defaultValue: false
-    type: SUPPORT
-  dedicatedAccountManager:
     description: ''
     valueType: BOOLEAN
     defaultValue: false

@@ -25,7 +25,7 @@ features:
   pageHistory:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   basicPageAnalytics:
     description: ''
@@ -256,7 +256,7 @@ usageLimits:
   pageHistoryThreshold:
     description: ''
     valueType: NUMERIC
-    defaultValue: 0
+    defaultValue: 7
     unit: days
     type: NON_RENEWABLE
     linkedFeatures:
@@ -298,6 +298,8 @@ plans:
     usageLimits:
       guestsLimit:
         value: 100
+      pageHistoryThreshold:
+        value: 30
       fileUploadsLimit:
         value: .inf
       syncDatabasesLimit:
@@ -326,6 +328,8 @@ plans:
     usageLimits:
       guestsLimit:
         value: 250
+      pageHistoryThreshold:
+        value: 90
       fileUploadsLimit:
         value: .inf
       syncDatabasesLimit:
@@ -388,6 +392,8 @@ plans:
     usageLimits:
       guestsLimit:
         value: 250
+      pageHistoryThreshold:
+        value: .inf
       fileUploadsLimit:
         value: .inf
       syncDatabasesLimit:

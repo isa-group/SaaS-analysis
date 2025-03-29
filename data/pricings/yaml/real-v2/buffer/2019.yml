@@ -120,7 +120,7 @@ features:
     description: See the posts you have published with some basic information about
       when they were published and how they have performed.
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: INFORMATION
   inviteAdditionalUsers:
     description: Invite additional users to contribute to the content that is shared
@@ -231,7 +231,7 @@ usageLimits:
   postsReportTemporalThreshold:
     description: ''
     valueType: NUMERIC
-    defaultValue: 0
+    defaultValue: 30
     unit: day
     type: NON_RENEWABLE
     linkedFeatures:
@@ -241,7 +241,9 @@ plans:
     description: Ideal for getting started
     price: 15
     unit: account/month
-    features: null
+    features:
+      pinterestBoards:
+        value: true
     usageLimits: null
   PREMIUM:
     description: Ideal for growing brands
@@ -267,6 +269,8 @@ plans:
         value: 2000
       usersLimit:
         value: 2
+      postsReportTemporalThreshold:
+        value: .inf
   BUSINESS:
     description: Ideal for larger teams
     price: 99
@@ -286,6 +290,8 @@ plans:
         value: true
       approvalWorkflow:
         value: true
+      pinterestBoards:
+        value: true
     usageLimits:
       socialAccountsLimit:
         value: 25
@@ -293,4 +299,6 @@ plans:
         value: 2000
       usersLimit:
         value: 6
+      postsReportTemporalThreshold:
+        value: .inf
 addOns: null

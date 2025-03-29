@@ -40,7 +40,7 @@ features:
     description: Slack workspaces are the engine of your work, like a virtual office.
       It's where your channels, direct messages, and tools reside.
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   customSections:
     description: Keep your projects, teams, and priorities in order. Achieve this
@@ -237,7 +237,7 @@ usageLimits:
   useWorkspaces:
     description: The number of workspaces you can use
     valueType: NUMERIC
-    defaultValue: 0
+    defaultValue: 1
     type: NON_RENEWABLE
     linkedFeatures:
     - workspaces
@@ -385,6 +385,8 @@ plans:
         value: 15
       useStorageByTeamMember:
         value: 1024
+      useWorkspaces:
+        value: .inf
 addOns:
   slackEnterpriseKeys:
     availableFor:

@@ -21,7 +21,7 @@ features:
   requestsViaEmail:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: INTEGRATION
     integrationType: API
   automations:

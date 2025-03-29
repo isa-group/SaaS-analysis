@@ -423,6 +423,8 @@ plans:
         value: true
       dedicatedAccountManager:
         value: true
+      customWorkspaces:
+        value: true
     usageLimits:
       versionHistoryDepth:
         value: .inf

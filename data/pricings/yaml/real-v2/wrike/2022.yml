@@ -308,12 +308,6 @@ features:
     valueType: BOOLEAN
     defaultValue: false
     type: DOMAIN
-  cloudContentConnector:
-    description: https://www.wrike.com/cloud-content-connector/
-    valueType: BOOLEAN
-    defaultValue: false
-    type: INTEGRATION
-    integrationType: EXTERNAL_DEVICE
   openRESTfulAPI:
     description: https://developers.wrike.com/
     valueType: BOOLEAN
@@ -346,12 +340,6 @@ features:
     integrationType: WEB_SAAS
   adobeCreativeCloudExtension:
     description: https://www.wrike.com/apps/extensions/adobe/
-    valueType: BOOLEAN
-    defaultValue: false
-    type: INTEGRATION
-    integrationType: WEB_SAAS
-  powerBIIntegration:
-    description: https://www.wrike.com/apps/power-bi/
     valueType: BOOLEAN
     defaultValue: false
     type: INTEGRATION
@@ -567,6 +555,8 @@ plans:
         value: true
       folderAndProjectPermissions:
         value: true
+      salesForceIntegration:
+        value: true
     usageLimits:
       minNumberOfUsers:
         value: 5
@@ -662,6 +652,8 @@ plans:
       advancedUserAccessControls:
         value: true
       customizableUserTypes:
+        value: true
+      salesForceIntegration:
         value: true
     usageLimits:
       minNumberOfUsers:
@@ -772,6 +764,8 @@ plans:
       customizableUserTypes:
         value: true
       lockedSpaces:
+        value: true
+      salesForceIntegration:
         value: true
     usageLimits:
       minNumberOfUsers:

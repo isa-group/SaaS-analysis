@@ -15,7 +15,7 @@ features:
   apiBuilder:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   apiTesting:
     description: ''
@@ -159,7 +159,7 @@ features:
   securityTokenScanner:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: AUTOMATION
     automationType: TRACKING
   superAdminRole:
@@ -175,7 +175,7 @@ features:
   owaspRuleset:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: AUTOMATION
     automationType: TASK_AUTOMATION
   customRulesBuilder:

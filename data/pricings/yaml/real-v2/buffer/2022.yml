@@ -197,7 +197,7 @@ features:
   ideas:
     description: Capture and store your great ideas whenever they come to you.
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   twitterThreads:
     description: Draft and schedule threads on Twitter.
@@ -450,7 +450,7 @@ usageLimits:
   ideasLimit:
     description: The number of ideas you can store in Buffer.
     valueType: NUMERIC
-    defaultValue: 0
+    defaultValue: 100
     unit: idea
     type: NON_RENEWABLE
     linkedFeatures:
@@ -610,6 +610,8 @@ plans:
         value: 6
       useDataStorage:
         value: 2
+      ideasLimit:
+        value: 2000
   TEAM:
     description: For teams who want unlimited user seating, collaboration, and reporting.
     price: 12
@@ -716,6 +718,8 @@ plans:
         value: 6
       useDataStorage:
         value: 2
+      ideasLimit:
+        value: 2000
   AGENCY:
     description: For marketing agencies with 10 or more social channels.
     price: 120
@@ -822,6 +826,8 @@ plans:
         value: 6
       useDataStorage:
         value: 2
+      ideasLimit:
+        value: 2000
 addOns:
   essentialsExtraChannels:
     availableFor:

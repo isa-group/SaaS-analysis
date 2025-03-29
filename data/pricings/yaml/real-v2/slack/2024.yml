@@ -536,6 +536,8 @@ plans:
         value: true
       messageActivityAnalytics:
         value: true
+      customTemplates:
+        value: true
     usageLimits:
       useMessagesAccess:
         value: 10000000000000

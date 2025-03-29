@@ -453,6 +453,8 @@ plans:
         value: Desktop & Mobile
       customerSupport:
         value: Email & Live Chat
+      shareNotebooksWithinYourCompany:
+        value: true
     usageLimits:
       globalMonthlyUploadLimit:
         value: 20480

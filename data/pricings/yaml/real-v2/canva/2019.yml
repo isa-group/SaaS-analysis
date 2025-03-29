@@ -150,6 +150,8 @@ plans:
         value: true
       prioritySupport:
         value: true
+      downloadDesignsWithTransparentBackground:
+        value: true
     usageLimits:
       cloudStorageLimit:
         value: 1000000000
@@ -188,6 +190,8 @@ plans:
       dedicatedAccountManager:
         value: true
       99.9UptimeSLA:
+        value: true
+      downloadDesignsWithTransparentBackground:
         value: true
     usageLimits:
       cloudStorageLimit:

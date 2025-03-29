@@ -401,4 +401,8 @@ plans:
         value: true
       customDashboards:
         value: true
+      multiCurrency:
+        value: true
+      addCustomFields:
+        value: true
     usageLimits: null

@@ -418,7 +418,7 @@ features:
   goalFolders:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   dashboards:
     description: ''

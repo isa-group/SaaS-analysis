@@ -251,7 +251,9 @@ plans:
     description: Ideal for getting started
     price: 15
     unit: account/month
-    features: null
+    features:
+      pinterestBoards:
+        value: true
     usageLimits: null
   PREMIUM:
     description: Ideal for growing brands
@@ -295,6 +297,8 @@ plans:
       assignAccessAndPermissions:
         value: true
       approvalWorkflow:
+        value: true
+      pinterestBoards:
         value: true
     usageLimits:
       socialChannelsLimit:

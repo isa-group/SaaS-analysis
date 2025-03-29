@@ -378,23 +378,23 @@ features:
     description: Manage read/write permissions for different user profiles, and control
       which fields different users see on every record.
     valueType: BOOLEAN
-    defaultValue: false
-    type: DOMAIN
+    defaultValue: true
+    type: MANAGEMENT
   customizablePageLayouts:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   rolesAndPermissions:
     description: Establish roles and permissions that set object/data access for different
       users.
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: MANAGEMENT
   recordTypes:
     description: Tailor business processes, picklist values, and page layouts.
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   developerSandbox:
     description: Develop and test in an isolated environment without compromising
@@ -659,7 +659,7 @@ usageLimits:
   numberOfCustomizableProfiles:
     description: ''
     valueType: NUMERIC
-    defaultValue: 0
+    defaultValue: 2
     unit: profile/org
     type: NON_RENEWABLE
     linkedFeatures:
@@ -668,7 +668,7 @@ usageLimits:
   numberOfRoles:
     description: ''
     valueType: NUMERIC
-    defaultValue: 0
+    defaultValue: 2
     unit: rol/org
     type: NON_RENEWABLE
     linkedFeatures:
@@ -676,7 +676,7 @@ usageLimits:
   numberOfRecordTypes:
     description: ''
     valueType: NUMERIC
-    defaultValue: 0
+    defaultValue: 3
     unit: type/object
     type: NON_RENEWABLE
     linkedFeatures:
@@ -1150,5 +1150,7 @@ addOns:
     features:
       fullSandbox:
         value: true
-    usageLimits: null
+    usageLimits:
+      numberOfFullSanbox:
+        value: 1
     usageLimitsExtensions: null

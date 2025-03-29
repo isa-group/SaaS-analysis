@@ -187,6 +187,10 @@ plans:
         value: true
       exportData:
         value: true
+      eventAnalytics:
+        value: true
+      sessionAnalytics:
+        value: true
     usageLimits:
       liveAttendeesLimit:
         value: 100
@@ -215,6 +219,10 @@ plans:
       presentOnManyScreens:
         value: true
       customRegistrationFields:
+        value: true
+      eventAnalytics:
+        value: true
+      sessionAnalytics:
         value: true
     usageLimits:
       liveAttendeesLimit:
@@ -249,6 +257,10 @@ plans:
       presentOnManyScreens:
         value: true
       customRegistrationFields:
+        value: true
+      eventAnalytics:
+        value: true
+      sessionAnalytics:
         value: true
     usageLimits:
       liveAttendeesLimit:

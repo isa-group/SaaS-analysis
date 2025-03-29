@@ -1,11 +1,11 @@
 syntaxVersion: '2.1'
 saasName: UserGuiding
-createdAt: '2024-11-09'
+createdAt: '2024-07-24'
 version: '2024-11-09'
 billing:
   monthly: 1.0
 currency: USD
-url: https://web.archive.org/web/20241108031123/https://userguiding.com/pricing/
+url: https://web.archive.org/web/20240724043312/https://userguiding.com/pricing/
 features:
   guides:
     description: ''
