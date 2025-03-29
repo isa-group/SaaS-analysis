@@ -10,13 +10,24 @@ constraint
 constraint
   if num_plans > 0 /\ num_usage_limits > 0 
     then assert(forall(i in PLANS, j in FEATURES)(
-      if sum(k in USAGE_LIMITS)(linked_features[k,j] == 1 /\ plans_features[i,j] == 1) > 0 % Si hay al menos un límite de uso vinculado a la característica j, que está incluída en el plan i
-        then sum(k in USAGE_LIMITS)(linked_features[k,j] == 1 /\ plans_usage_limits[i,k] > 0) > 0 % Entonces, al menos uno de esos límites de uso debe tener un valor mayor a 0
+      if sum(k in USAGE_LIMITS)(linked_features[k,j] == 1 /\ plans_features[i,j] == 1) > 0 % If there is at least one usage limit linked to feature j, which is included in plan i
+        then sum(k in USAGE_LIMITS)(linked_features[k,j] == 1 /\ (plans_usage_limits[i,k] > 0 \/ boolean_usage_limits[k] == 1)) > 0 % Then, at least one of those usage limits must have a value greater than 0.
       endif
-    ), "Invalid datafile. At least one usage limit linked to a feature in a plan must have a value > 0")
+    ), "InvalidUsageLimitValueError: At least one usage limit linked to a feature in a plan must have a value > 0")
   endif;
 
-% C3: All add-ons must be available for, at least, one plan
+% C3: If an usage limit has a value > 0 in a plan, at least one of its linked features must be available for such plan.
+
+constraint
+  if num_plans > 0 /\ num_usage_limits > 0 
+    then assert(forall(i in PLANS, k in USAGE_LIMITS)(
+      if plans_usage_limits[i,k] > 0 /\ sum(j in FEATURES)(linked_features[k,j] == 1) > 0% Si el límite de uso k tiene un valor mayor a 0 en el plan i y está vinculado a alguna feature
+        then sum(j in FEATURES)(linked_features[k,j] == 1 /\ plans_features[i,j] == 1) > 0 % Entonces, al menos una de sus características vinculadas debe estar disponible en dicho plan
+      endif
+    ), "Invalid datafile. If a usage limit has a value > 0 in a plan, at least one of its linked features must be available for such plan.")
+  endif;
+
+% C4: All add-ons must be available for, at least, one plan
 
 constraint
   if num_addons > 0 /\ num_plans > 0
@@ -25,7 +36,7 @@ constraint
     ), "Invalid datafile. All add-ons must be available for at least one plan.")
   endif;
 
-% C4: No two plans should be exactly the same
+% C5: No two plans should be exactly the same
 
 constraint
   if num_plans > 1
@@ -39,7 +50,7 @@ constraint
     ), "Invalid datafile. No two plans should be exactly the same.")
   endif;
 
-% C5: No two addons should be exactly the same
+% C6: No two addons should be exactly the same
 
 constraint
   if num_addons > 1
@@ -64,3 +75,17 @@ constraint
       )
     ), "Invalid datafile. No two addons should be exactly the same.")
   endif;
+
+% C7: There should not be "dead features" within the pricing, i.e., every feature should be included within a plan or an add-on
+
+constraint
+  assert(forall(i in FEATURES)(
+    sum(j in PLANS)(plans_features[j,i]) + sum(j in ADDONS)(addons_features[j,i]) > 0
+  ), "DeadFeatureError: There should not be dead features within the pricing, i.e., every feature should be included within either a plan or an add-on.");
+
+% C8: There should not be "dead usage limits" within the pricing, i.e., every usage limit should be included within a plan or an add-on
+
+constraint
+  assert(forall(i in USAGE_LIMITS)(
+    sum(j in PLANS)(plans_usage_limits[j,i]) + sum(j in ADDONS)(addons_usage_limits[j,i]) + sum(j in ADDONS)(addons_usage_limits_extensions[j,i]) > 0
+  ), "DeadUsageLimitError: There should not be dead usage limits within the pricing, i.e., every usage limit should be included within either a plan or an add-on.");

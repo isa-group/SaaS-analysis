@@ -22,6 +22,7 @@ set of int: ADDONS = index_set(addons);
 
 array[PLANS] of float: plans_prices; % The position i indicates the price of a plan.
 array[ADDONS] of float: addons_prices; % The position i indicates the price of an add-on.
+array[USAGE_LIMITS] of int: boolean_usage_limits; % The position i indicates wether the usage limit i is a boolean usage limit or not.
 
 array[PLANS, FEATURES] of int: plans_features; % The position (i,j) indicates wether the plan i includes the feature j
 array[PLANS, USAGE_LIMITS] of float: plans_usage_limits; % The position (i,j) indicates the value of the usage limit j in the plan i.
@@ -75,8 +76,8 @@ constraint
 constraint 
   if num_plans > 0 /\ num_usage_limits > 0 
     then assert(forall(i in PLANS, j in USAGE_LIMITS)(
-      plans_usage_limits[i,j] >= 0
-    ), "Invalid datafile. All usage limits values must be positive")
+      plans_usage_limits[i,j] >= -1
+    ), "Invalid datafile. All usage limits values must be greater or equal to -1, with -1 indicating a false BOOLEAN usage limit.")
   endif;
 
 constraint
@@ -87,4 +88,9 @@ constraint
 
 % Calculus of the subscription cost
 
-constraint subscription_cost = if num_plans > 0 then plans_prices[selected_plan] else 0 endif + if num_addons > 0 then sum(a in ADDONS)(selected_addons[a] * addons_prices[a]) else 0 endif;
+constraint subscription_cost = 
+    round(
+      (if num_plans > 0 then plans_prices[selected_plan] else 0 endif + 
+       if num_addons > 0 then sum(a in ADDONS)(selected_addons[a] * addons_prices[a]) else 0 endif
+      ) * 100
+    ) / 100;
