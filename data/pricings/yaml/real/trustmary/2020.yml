@@ -1,9 +1,11 @@
-saasName: Trustmary - Full
 syntaxVersion: '2.1'
-version: '2020-10-31'
+saasName: Trustmary - Full
 createdAt: '2020-10-31'
+version: '2020-10-31'
+billing:
+  monthly: 1.0
 currency: USD
-variables: {}
+url: https://web.archive.org/web/20201101013956/https://trustmary.com/pricing/
 features:
   nps:
     description: ''
@@ -41,7 +43,6 @@ features:
     defaultValue: true
     type: INTEGRATION
     integrationType: WEB_SAAS
-    pricingUrls: null
   shareablelink:
     description: ''
     valueType: BOOLEAN
@@ -90,7 +91,7 @@ features:
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
-      - https://www.google.com/
+    - https://www.google.com/
   importReviewsFromFacebook:
     description: ''
     valueType: BOOLEAN
@@ -98,7 +99,7 @@ features:
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
-      - https://www.facebook.com/
+    - https://www.facebook.com/
   requestGoogleReviews:
     description: ''
     valueType: BOOLEAN
@@ -161,7 +162,7 @@ usageLimits:
     unit: form
     type: NON_RENEWABLE
     linkedFeatures:
-      - forms
+    - forms
   textReviewsLimit:
     description: ''
     valueType: NUMERIC
@@ -169,24 +170,23 @@ usageLimits:
     unit: review
     type: NON_RENEWABLE
     linkedFeatures:
-      - textReviews
+    - textReviews
   embedsLimit:
     description: ''
     valueType: NUMERIC
-    defaultValue: 2
+    defaultValue: 0
     unit: embed
     type: NON_RENEWABLE
     linkedFeatures:
-      - embedSurbeysToWebsite
-      - embedReviewsToWebsite
-      - embedTestimonialsToWebsite
+    - embedSurbeysToWebsite
+    - embedReviewsToWebsite
+    - embedTestimonialsToWebsite
   usersLimit:
     description: ''
     valueType: NUMERIC
     defaultValue: 2
     unit: user
     type: NON_RENEWABLE
-    linkedFeatures: null
   emailsLimit:
     description: ''
     valueType: NUMERIC
@@ -194,18 +194,17 @@ usageLimits:
     unit: email/month
     type: RENEWABLE
     linkedFeatures:
-      - collectWithEmail
+    - collectWithEmail
 plans:
   LIGHT:
     description: ''
-    monthlyPrice: Contact Sales
+    price: Contact Sales
     unit: /month
     features: null
     usageLimits: null
-    price: Contact Sales
   PLUS:
     description: ''
-    monthlyPrice: Contact Sales
+    price: Contact Sales
     unit: /month
     features:
       customForms:
@@ -241,16 +240,13 @@ plans:
         value: 10
       textReviewsLimit:
         value: .inf
-      embedsLimit:
-        value: 5
       usersLimit:
         value: 5
       emailsLimit:
         value: 1000
-    price: Contact Sales
   ENTERPRISE:
     description: ''
-    monthlyPrice: Contact Sales
+    price: Contact Sales
     unit: /month
     features:
       customForms:
@@ -288,10 +284,8 @@ plans:
         value: .inf
       textReviewsLimit:
         value: .inf
-      embedsLimit:
-        value: .inf
       usersLimit:
         value: .inf
       emailsLimit:
         value: .inf
-    price: Contact Sales
+addOns: null

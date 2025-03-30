@@ -2,13 +2,13 @@
  * ------------ Overview ------------
  * This script processes multiple Pricing2Yaml files to extract analytics and logs the results.
  *
- * The script recursively scans the specified data directory (../data/pricings/yaml/real-v2/) for pricing files, processes each file
+ * The script recursively scans the specified data directory (../data/pricings/yaml/real/) for pricing files, processes each file
  * using the `pricing4ts` library, and generates analytics for each SaaS pricing. The results
  * and any errors encountered during the process are logged into separate files in a timestamped
  * directory within the `logs` folder.
  *
  * ------------ Features ------------
- * - Recursively scans the `../data/pricings/yaml/real-v2/` directory to find all pricing files.
+ * - Recursively scans the `../data/pricings/yaml/real/` directory to find all pricing files.
  * - Uses a progress bar to display the processing status.
  * - Analyzes each pricing file with the `PricingService` from the `pricing4ts` library.
  * - Logs analytics and errors into separate files for clarity.
@@ -33,7 +33,7 @@
  *    both located in a timestamped folder within the `logs` directory.
  *
  * ------------ Example ------------
- * If the `data/pricings/yaml/real-v2` directory contains files like `example1.yml` and `example2.yml`,
+ * If the `data/pricings/yaml/real` directory contains files like `example1.yml` and `example2.yml`,
  * running the script will:
  * - Process each file to extract analytics.
  * - Generate a structured log file in a folder named `pricing-analytics-<timestamp>` within the `logs` directory.
@@ -57,7 +57,7 @@ import cliProgress from "cli-progress";
  * that will be processed by the analytics extraction script.
  * @constant {string}
  */
-const DATA_DIR = "data/pricings/yaml/real-v2";
+const DATA_DIR = "data/pricings/yaml/real";
 
 /**
  * Directory where log files are stored.
@@ -195,7 +195,7 @@ async function processFile(
 
     if (!analyticsData[saasName][dateKey]) {
       analyticsData[saasName][dateKey] = {};
-      analyticsData[saasName][dateKey].analytics = analytics.configurationSpaceSize;
+      analyticsData[saasName][dateKey].analytics = analytics;
       analyticsData[saasName][dateKey].yaml_path = filePath;
       analyticsData[saasName][dateKey].executionTime = executionTime;
     }

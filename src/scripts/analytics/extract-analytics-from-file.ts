@@ -34,11 +34,11 @@
  * ------------ Example ------------
  * 
  *    ```bash
- *    npm run analytics-from-file ../data/pricings/yaml/real-v2/microsoft365Business/2022.yml
+ *    npm run analytics-from-file ../data/pricings/yaml/real/microsoft365Business/2022.yml
  *    ```
  * 
  * In this example:
- * - The script processes `../data/pricings/yaml/real-v2/microsoft365Business/2022.yml`.
+ * - The script processes `../data/pricings/yaml/real/microsoft365Business/2022.yml`.
  * - Analytics will be saved in `results.log`, and any errors will be saved in `errors.log` within a log folder 
  *   in the `logs` directory, named with the corresponding timestamp of the run.
  */

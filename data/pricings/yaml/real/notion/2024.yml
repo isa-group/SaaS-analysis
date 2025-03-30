@@ -1,9 +1,11 @@
-saasName: Notion
 syntaxVersion: '2.1'
-version: 2024-7-16
+saasName: Notion
 createdAt: '2024-07-16'
+version: '2024-07-16'
+billing:
+  monthly: 1.0
 currency: USD
-variables: {}
+url: https://web.archive.org/web/20240716134101/https://www.notion.so/pricing
 features:
   pages:
     description: ''
@@ -23,7 +25,7 @@ features:
   pageHistory:
     description: ''
     valueType: BOOLEAN
-    defaultValue: false
+    defaultValue: true
     type: DOMAIN
   basicPageAnalytics:
     description: ''
@@ -149,7 +151,7 @@ features:
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
-      - https://analytics.google.com/analytics/web/
+    - https://analytics.google.com/analytics/web/
   customDomainAndBranding:
     description: ''
     valueType: BOOLEAN
@@ -173,7 +175,7 @@ features:
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
-      - https://slack.com/pricing
+    - https://slack.com/pricing
   zapierIntegration:
     description: ''
     valueType: BOOLEAN
@@ -181,7 +183,7 @@ features:
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
-      - https://zapier.com/pricing
+    - https://zapier.com/pricing
   publicApi:
     description: ''
     valueType: BOOLEAN
@@ -320,7 +322,7 @@ usageLimits:
     unit: MB
     type: NON_RENEWABLE
     linkedFeatures:
-      - fileUploads
+    - fileUploads
   pageHistoryThreshold:
     description: ''
     valueType: NUMERIC
@@ -328,7 +330,7 @@ usageLimits:
     unit: days
     type: NON_RENEWABLE
     linkedFeatures:
-      - pageHistory
+    - pageHistory
   notionSiteDomainLimit:
     description: ''
     valueType: NUMERIC
@@ -336,7 +338,7 @@ usageLimits:
     unit: domain
     type: NON_RENEWABLE
     linkedFeatures:
-      - notionSiteDomain
+    - notionSiteDomain
   guestsLimit:
     description: ''
     valueType: NUMERIC
@@ -344,7 +346,7 @@ usageLimits:
     unit: guest
     type: NON_RENEWABLE
     linkedFeatures:
-      - guests
+    - guests
   customDomainsLimit:
     description: ''
     valueType: NUMERIC
@@ -352,7 +354,7 @@ usageLimits:
     unit: domain
     type: NON_RENEWABLE
     linkedFeatures:
-      - customDomainAndBranding
+    - customDomainAndBranding
   syncDatabasesLimit:
     description: ''
     valueType: NUMERIC
@@ -360,7 +362,7 @@ usageLimits:
     unit: database
     type: NON_RENEWABLE
     linkedFeatures:
-      - syncDatabases
+    - syncDatabases
   rowLimitPerSyncedDatabase:
     description: ''
     valueType: NUMERIC
@@ -368,20 +370,17 @@ usageLimits:
     unit: row
     type: NON_RENEWABLE
     linkedFeatures:
-      - syncDatabases
+    - syncDatabases
 plans:
   FREE:
     description: ''
-    monthlyPrice: 0
-    annualPrice: 0
+    price: 0
     unit: user/month
     features: null
     usageLimits: null
-    price: 0
   PLUS:
     description: ''
-    monthlyPrice: 12
-    annualPrice: 10
+    price: 12
     unit: user/month
     features:
       customDatabaseAutomations:
@@ -399,19 +398,17 @@ plans:
         value: .inf
       pageHistoryThreshold:
         value: 30
-      guestsLimit:
-        value: 100
       notionSiteDomainLimit:
         value: 5
+      guestsLimit:
+        value: 100
       syncDatabasesLimit:
         value: .inf
       rowLimitPerSyncedDatabase:
         value: 20000
-    price: 12
   BUSINESS:
     description: ''
-    monthlyPrice: 18
-    annualPrice: 15
+    price: 18
     unit: user/month
     features:
       privateTeamSpaces:
@@ -430,24 +427,24 @@ plans:
         value: true
       prioritySupport:
         value: true
+      advancedPageAnalytics:
+        value: true
     usageLimits:
       fileUploadsLimit:
         value: .inf
       pageHistoryThreshold:
         value: 90
-      guestsLimit:
-        value: 250
       notionSiteDomainLimit:
         value: 5
+      guestsLimit:
+        value: 250
       syncDatabasesLimit:
         value: .inf
       rowLimitPerSyncedDatabase:
         value: 20000
-    price: 18
   ENTERPRISE:
     description: ''
-    monthlyPrice: Contact Sales
-    annualPrice: Contact Sales
+    price: Contact Sales
     unit: user/month
     features:
       privateTeamSpaces:
@@ -500,6 +497,10 @@ plans:
         value: true
       customerSuccessManager:
         value: true
+      advancedPageAnalytics:
+        value: true
+      advancedTeamSpacePermissions:
+        value: true
     usageLimits:
       fileUploadsLimit:
         value: .inf
@@ -511,13 +512,12 @@ plans:
         value: .inf
       rowLimitPerSyncedDatabase:
         value: 20000
-    price: Contact Sales
 addOns:
   customDomain:
     availableFor:
-      - PLUS
-      - BUSINESS
-      - ENTERPRISE
+    - PLUS
+    - BUSINESS
+    - ENTERPRISE
     price: Contact Sales
     unit: domain/month
     features:
@@ -529,11 +529,11 @@ addOns:
         value: 1
   extraCustomDomain:
     availableFor:
-      - PLUS
-      - BUSINESS
-      - ENTERPRISE
+    - PLUS
+    - BUSINESS
+    - ENTERPRISE
     dependsOn:
-      - customDomain
+    - customDomain
     price: Contact Sales
     unit: domain/month
     features: null

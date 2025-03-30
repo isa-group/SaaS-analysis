@@ -1,9 +1,11 @@
-saasName: UserGuiding
 syntaxVersion: '2.1'
-version: 2024-11-9
-createdAt: '2024-11-09'
+saasName: UserGuiding
+createdAt: '2024-07-24'
+version: '2024-11-09'
+billing:
+  monthly: 1.0
 currency: USD
-variables: {}
+url: https://web.archive.org/web/20240724043312/https://userguiding.com/pricing/
 features:
   guides:
     description: ''
@@ -254,7 +256,7 @@ features:
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
-      - https://marketingplatform.google.com/about/analytics/
+    - https://marketingplatform.google.com/about/analytics/
   webhooks:
     description: ''
     valueType: BOOLEAN
@@ -268,7 +270,7 @@ features:
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
-      - https://segment.com/pricing/
+    - https://segment.com/pricing/
   mixpanel:
     description: ''
     valueType: BOOLEAN
@@ -276,15 +278,13 @@ features:
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
-      - https://mixpanel.com/pricing/
+    - https://mixpanel.com/pricing/
   amplitude:
     description: ''
     valueType: BOOLEAN
     defaultValue: true
     type: INTEGRATION
     integrationType: API
-    pricingUrls:
-      - https://amplitude.com/pricing
   hubspot:
     description: ''
     valueType: BOOLEAN
@@ -292,7 +292,7 @@ features:
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
-      - https://www.hubspot.com/pricing/marketing/starter
+    - https://www.hubspot.com/pricing/marketing/starter
   intercom:
     description: ''
     valueType: BOOLEAN
@@ -300,7 +300,7 @@ features:
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
-      - https://www.intercom.com/pricing
+    - https://www.intercom.com/pricing
   slack:
     description: ''
     valueType: BOOLEAN
@@ -308,7 +308,7 @@ features:
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
-      - https://slack.com/pricing
+    - https://slack.com/pricing
   woopra:
     description: ''
     valueType: BOOLEAN
@@ -316,7 +316,7 @@ features:
     type: INTEGRATION
     integrationType: WEB_SAAS
     pricingUrls:
-      - https://www.woopra.com/pricing/
+    - https://www.woopra.com/pricing/
   knowledBaseIntegrations:
     description: ''
     valueType: BOOLEAN
@@ -337,7 +337,7 @@ usageLimits:
     unit: guide
     type: NON_RENEWABLE
     linkedFeatures:
-      - guides
+    - guides
   activeHotspotsLimit:
     description: ''
     valueType: NUMERIC
@@ -345,7 +345,7 @@ usageLimits:
     unit: hotspot
     type: NON_RENEWABLE
     linkedFeatures:
-      - hotspots
+    - hotspots
   activeChecklistsLimit:
     description: ''
     valueType: NUMERIC
@@ -353,7 +353,7 @@ usageLimits:
     unit: checklist
     type: NON_RENEWABLE
     linkedFeatures:
-      - checklists
+    - checklists
   activeResourceCentersLimit:
     description: ''
     valueType: NUMERIC
@@ -361,7 +361,7 @@ usageLimits:
     unit: resource center
     type: NON_RENEWABLE
     linkedFeatures:
-      - resourceCenters
+    - resourceCenters
   activeSurveysLimit:
     description: ''
     valueType: NUMERIC
@@ -369,7 +369,7 @@ usageLimits:
     unit: survey
     type: NON_RENEWABLE
     linkedFeatures:
-      - surveys
+    - surveys
   customizableThemesLimit:
     description: ''
     valueType: NUMERIC
@@ -377,7 +377,7 @@ usageLimits:
     unit: theme
     type: NON_RENEWABLE
     linkedFeatures:
-      - customizableThemes
+    - customizableThemes
   teamMembersLimit:
     description: ''
     valueType: NUMERIC
@@ -385,7 +385,7 @@ usageLimits:
     unit: member
     type: NON_RENEWABLE
     linkedFeatures:
-      - teams
+    - teams
   domainsLimit:
     description: ''
     valueType: NUMERIC
@@ -393,24 +393,19 @@ usageLimits:
     unit: domain
     type: NON_RENEWABLE
     linkedFeatures:
-      - domains
+    - domains
 plans:
   BASIC:
-    description: >-
-      Onboard new users and engage customers throughout their lifecycles. Ideal
-      for startups and SMBs.
-    monthlyPrice: 129
-    annualPrice: 89
+    description: Onboard new users and engage customers throughout their lifecycles.
+      Ideal for startups and SMBs.
+    price: 129
     unit: /month
     features: null
     usageLimits: null
-    price: 129
   PROFESSIONAL:
-    description: >-
-      Maximize activation, customer revenue, and retention. Ideal for rapidly
+    description: Maximize activation, customer revenue, and retention. Ideal for rapidly
       growing companies.
-    monthlyPrice: 399
-    annualPrice: 249
+    price: 399
     unit: /month
     features:
       companyLevelData:
@@ -456,13 +451,10 @@ plans:
         value: 5
       domainsLimit:
         value: 5
-    price: 399
   CORPORATE:
-    description: >-
-      Transform your product experience. Ideal for enterprises with multiple
+    description: Transform your product experience. Ideal for enterprises with multiple
       products.
-    monthlyPrice: Let's Talk
-    annualPrice: Let's Talk
+    price: Let's Talk
     unit: /month
     features:
       companyLevelData:
@@ -510,17 +502,14 @@ plans:
         value: 1000000000
       domainsLimit:
         value: 1000000000
-    price: Let's Talk
 addOns:
   euDataHostingAddOn:
     availableFor:
-      - BASIC
-    monthlyPrice: Contact Sales
-    annualPrice: Contact Sales
+    - BASIC
+    price: Contact Sales
     unit: /month
     features:
       euDataHosting:
         value: true
     usageLimits: null
     usageLimitsExtensions: null
-    price: Contact Sales
