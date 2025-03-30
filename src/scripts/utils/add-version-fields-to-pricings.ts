@@ -6,7 +6,7 @@ const VERSION_FIELD = "version:";
 const VERSION_FIELD_VALUE = "version: '1.0'";
 
 // Define the directory path where the YAML files are located
-const directoryPath = path.join(__dirname, "../../../data/pricings/yaml/real/");
+const directoryPath = path.join(__dirname, "../../../data/pricings/yaml/TSC'25/");
 
 function addVersionFieldToPricings(directoryPath: string) {
   const files = fs.readdirSync(directoryPath);

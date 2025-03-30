@@ -34,11 +34,11 @@
  * ------------ Example ------------
  * 
  *    ```bash
- *    npm run analytics-from-file ../data/pricings/yaml/real/microsoft365Business/2022.yml
+ *    npm run analytics-from-file ../data/pricings/yaml/TSC'25/microsoft365Business/2022.yml
  *    ```
  * 
  * In this example:
- * - The script processes `../data/pricings/yaml/real/microsoft365Business/2022.yml`.
+ * - The script processes `../data/pricings/yaml/TSC'25/microsoft365Business/2022.yml`.
  * - Analytics will be saved in `results.log`, and any errors will be saved in `errors.log` within a log folder 
  *   in the `logs` directory, named with the corresponding timestamp of the run.
  */
@@ -69,28 +69,6 @@ const LOG_FOLDER = path.join(
   );
 
 /**
- * A writable stream for logging results to a file named 'results.log' located in the LOG_FOLDER directory.
- * The stream is opened in append mode, meaning new data will be added to the end of the file.
- *
- * @constant {WriteStream} resultsLogStream - The writable stream for logging results.
- */
-const resultsLogStream = fs.createWriteStream(
-    path.join(LOG_FOLDER, "results.log"),
-    { flags: "a" }
-  );
-  
-  /**
-   * A writable stream for logging results to a file named 'results.log' located in the LOG_FOLDER directory.
-   * The stream is opened in append mode, meaning new data will be added to the end of the file.
-   *
-   * @constant {WriteStream} resultsLogStream - The writable stream for logging results.
-   */
-  const errorsLogStream = fs.createWriteStream(
-    path.join(LOG_FOLDER, "errors.log"),
-    { flags: "a" }
-  );
-
-/**
  * Create the LOG_DIR directory if it does not exist.
  */
 if (!fs.existsSync(LOG_DIR)) {
@@ -114,10 +92,10 @@ async function processFile(filePath: string): Promise<void> {
     try {
         const pricing: Pricing = retrievePricingFromPath(filePath);
         const pricingService = new PricingService(pricing);
-        const analytics = await pricingService.getAnalytics();
-        resultsLogStream.write(`Analytics for ${filePath}:\n${JSON.stringify(analytics, null, 2)}\n\n`);
+        const analytics = await pricingService.getAnalytics({printDzn: true});
+        fs.appendFileSync(path.join(LOG_FOLDER, 'results.log'), `Analytics for ${filePath}:\n${JSON.stringify(analytics, null, 2)}\n\n`);
     } catch (error) {
-        errorsLogStream.write(`Error processing file ${filePath}: ${(error as Error).message}\n\n`);
+      fs.appendFileSync(path.join(LOG_FOLDER, 'errors.log'), `Error processing file ${filePath}: ${(error as Error).message}\n\n`);
     }
 }
 
@@ -137,21 +115,10 @@ function main(): void {
 
     processFile(filePath)
         .then(() => {
-            resultsLogStream.end();
-            errorsLogStream.end();
-
-            // Remove empty log files
-            if (fs.statSync(path.join(LOG_FOLDER, 'results.log')).size === 0) {
-                fs.unlinkSync(path.join(LOG_FOLDER, 'results.log'));
-            }
-            if (fs.statSync(path.join(LOG_FOLDER, 'errors.log')).size === 0) {
-                fs.unlinkSync(path.join(LOG_FOLDER, 'errors.log'));
-            }
+            console.log("Analytics extraction completed successfully.");
         })
         .catch(error => {
             console.error('Error processing file:', error);
-            resultsLogStream.end();
-            errorsLogStream.end();
         });
 }
 

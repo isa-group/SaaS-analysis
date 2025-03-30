@@ -2,13 +2,13 @@
  * ------------ Overview ------------
  * This script processes multiple Pricing2Yaml files to extract analytics and logs the results.
  *
- * The script recursively scans the specified data directory (../data/pricings/yaml/real/) for pricing files, processes each file
+ * The script recursively scans the specified data directory (../data/pricings/yaml/TSC'25/) for pricing files, processes each file
  * using the `pricing4ts` library, and generates analytics for each SaaS pricing. The results
  * and any errors encountered during the process are logged into separate files in a timestamped
  * directory within the `logs` folder.
  *
  * ------------ Features ------------
- * - Recursively scans the `../data/pricings/yaml/real/` directory to find all pricing files.
+ * - Recursively scans the `../data/pricings/yaml/TSC'25/` directory to find all pricing files.
  * - Uses a progress bar to display the processing status.
  * - Analyzes each pricing file with the `PricingService` from the `pricing4ts` library.
  * - Logs analytics and errors into separate files for clarity.
@@ -33,7 +33,7 @@
  *    both located in a timestamped folder within the `logs` directory.
  *
  * ------------ Example ------------
- * If the `data/pricings/yaml/real` directory contains files like `example1.yml` and `example2.yml`,
+ * If the `data/pricings/yaml/TSC'25` directory contains files like `example1.yml` and `example2.yml`,
  * running the script will:
  * - Process each file to extract analytics.
  * - Generate a structured log file in a folder named `pricing-analytics-<timestamp>` within the `logs` directory.
@@ -57,7 +57,9 @@ import cliProgress from "cli-progress";
  * that will be processed by the analytics extraction script.
  * @constant {string}
  */
-const DATA_DIR = "data/pricings/yaml/real";
+const DATA_DIR = process.argv.includes("-d")
+  ? process.argv[process.argv.indexOf("-d") + 1]
+  : "data/pricings/yaml/TSC'25";
 
 /**
  * Directory where log files are stored.
@@ -211,8 +213,7 @@ async function processFile(
 function generateJsonFileFromAnalytics(
   analyticsData: Record<string, any>
 ): void {
-  const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
-  const jsonFilePath = path.join(JSON_DIR, `analytics-${timestamp}.json`);
+  const jsonFilePath = path.join(JSON_DIR, `analytics-${path.basename(DATA_DIR)}.json`);
 
   // Process analyticsData to add yaml_path and format SaaS names
   for (const saasName in analyticsData) {
@@ -282,9 +283,9 @@ async function main(): Promise<void> {
   // Build the results log
 
   resultsLogStream.write(
-    `+---------------------+-----------+-----------+-----------+-----------+-----------+-----------+\n` +
-    `| SaaS Name           | 2019      | 2020      | 2021      | 2022      | 2023      | 2024      |\n` +
-    `+---------------------+-----------+-----------+-----------+-----------+-----------+-----------+\n`
+    `+---------------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+\n` +
+    `| SaaS Name           | 2019      | 2020      | 2021      | 2022      | 2023      | 2024      | 2025      |\n` +
+    `+---------------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+\n`
   );
 
   const sortedSaasNames = Object.keys(analyticsData).sort();
@@ -292,7 +293,7 @@ async function main(): Promise<void> {
     const row = [saasName.padEnd(20)];
     const dates = Object.keys(analyticsData[saasName]).sort();
 
-    const years = ['2019', '2020', '2021', '2022', '2023', '2024'];
+    const years = ['2019', '2020', '2021', '2022', '2023', '2024', '2025'];
     for (const year of years) {
       const dateEntry = dates.find(date => date.startsWith(year));
       const value = (dateEntry ? analyticsData[saasName][dateEntry]?.executionTime : 'N/A').toString();
@@ -303,7 +304,7 @@ async function main(): Promise<void> {
   }
 
   resultsLogStream.write(
-    `+---------------------+-----------+-----------+-----------+-----------+-----------+-----------+\n`
+    `+---------------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+\n`
   );
   
   // Build the summary log

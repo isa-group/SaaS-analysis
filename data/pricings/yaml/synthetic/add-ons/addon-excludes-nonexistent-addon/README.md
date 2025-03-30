@@ -1,1 +1,0 @@
-In this case, we have one addon, `foo` that excludes a nonexistent addon, `bar`, causing the inconsistency

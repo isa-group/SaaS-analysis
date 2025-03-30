@@ -1,174 +1,117 @@
-[![CC BY 4.0][cc-by-shield]][cc-by][![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.14254341.svg)](https://doi.org/10.5281/zenodo.14254341)
-# 📊 Automated Analysis of Pricings in SaaS-based Information Systems - Supplementary Material
+[![CC BY 4.0][cc-by-shield]][cc-by] [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.13857484.svg)](https://doi.org/10.5281/zenodo.13857484)
+# "Trends in Industry Support for Pricing-Driven DevOps in SaaS": The Laboratory Package
 
-This repository contains the laboratory package for the paper **Automated Analysis of Pricings in SaaS-based Information Systems**, which includes scripts and MiniZinc models to replicate the validation performed in the study. Driven by the paper's main contribution, the primary goal of this package is to leverage the proposed automated analysis formalization and operations, among others, to uncover latent information in SaaS pricing models.
+The aim of this repository is to centralize the work performed by the authors to write the paper: "Trends in Industry Support for Pricing-Driven DevOps in SaaS" for IEEE Transactions on Services Computing about the current status of SaaS pricings.
 
-## 📚 Table of Contents
+## Available SaaS
 
-1. [⚙️ Prerequisites](#️-prerequisites)
-2. [🚀 How to Replicate the Experiment](#-how-to-replicate-the-experiment)
-3. [📂 Further Explanation About the Package](#-further-explanation-about-the-package)
-   - [🔍 Project's Structure](#-projects-structure)
-   - [📜 Scripts](#-scripts)
-   - [📦 Dependencies](#-dependencies)
-4. [📜 License](#-license)
-5. [⚠️ Disclaimer](#️-disclaimer)
+The SaaS of the following table are the ones that have been used in the paper. The following symbols are used to indicate the status of the SaaS for the indicated year:
 
-## ⚙️ Prerequisites
+- ✅: The SaaS is modeled for the indicated year.
+- ✖️: There is a snapshot, but a clear feature list cannot be extracted.
+- ❌: There isn't a snapshot for the SaaS in the indicated year.
 
-To run this package, ensure you have the following:
+| SaaS          | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | 2025 |
+| ------------- | :--: | :--: | :--: | :--: | :--: | :--: | :--: |
+| Box           |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Buffer        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Canva         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| CircleCI      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| ClickUp       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Clockify      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Crowdcast     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Databox       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Deskera       |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Dropbox       |  ✖️   |  ✖️   |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Evernote      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Figma         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| GitHub        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Hypercontext  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ❌  |
+| Jira          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| MailChimp     |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Microsoft 365 |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Notion        |  ✖️   |  ✖️   |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Okta          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| OpenPhone     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Overleaf      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Planable      |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Postman       |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Pumble        |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Quip          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Salesforce    |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Shopify       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Slack         |  ✅  |  ✅  |  ❌  |  ❌  |  ✅  |  ✅  |  ✅  |
+| Tableau       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Trello        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Trustmary     |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| UserGuiding   |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Webflow       |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Wrike         |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Zenhub        |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Zoom          |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |  ✅  |
+| Zapier        |  ✅  |  ✅  |  ❌  |  ✅  |  ✅  |  ✅  |  ✅  |
 
-- **Node.js**: Version 20.x or higher
-- **NPM**: Version 10.x or higher
-- **MiniZinc**
+**TOTAL:** 240 pricings - 37 SaaS
 
-> If you don't have MiniZinc installed on your machine, we provide a docker image to run the experiment with the repository.
+## Structure
 
-## 🚀 How to Replicate the Experiment
+The repository contains three main folders:
+- `data`
+- `figures`
+- `src`
 
-To replicate the experiment, follow these simple steps:
+In addition to these, there are some files:
 
-1. **Clone the repository and checkout to the CAISE'25-Research-Track tag**:
+- `.gitignore`: Contains the files that are ignored by git.
+- `analysis_and_figures.ipynb`: It is the notebook that contains all the data analysis performed for the paper and generates the figures included in it.
+- `Dockerfile`: Since having installed MiniZinc is mandatory to run some part of the experiment, a Dockerfile is provided to create a Docker image with MiniZinc installed.
+- `LICENSE`: Contains the license of the repository.
+- `package.json` and `package-lock.json`: Contain the dependencies needed to run some scripts that are called from the notebook.
+- `README.md`: Contains the information of the repository.
+- `requirements.txt`: Contains the dependencies needed to the `analysis_and_figures.ipynb` notebook.
+- `tsconfig.json`: Contains the configuration of the TypeScript compiler for development tasks.
+
+### Data
+
+The `data` folder initially contains a single subfolder: `pricings`. This subfolder stores the dataset of pricing models used in the study, along with metadata and analytics about them (the latter is generated by the notebook `analysis_and_figures`.ipynb).
+
+During the execution of the labpack, a few additional folders may be created:
+	
+- `CSVs`: Contains CSV files summarizing the relevant variables from both the 2019–2024 and 2019–2025 datasets, as used throughout the study.
+- `pricings/dzn`: Includes the MiniZinc data models generated from each pricing. Although not used directly in the experiments, they are stored here for transparency, in case users wish to explore them further.
+- `pricings/json`: Stores the JSON files summarizing all analytics extracted from each pricing using the [Pricing4TS package](https://github.com/Alex-GF/Pricing4TS).
+
+### Figures
+This folder contains the figures generated by the notebook `analysis_and_figures.ipynb`.
+
+### Src
+The `src` folder contains the scripts used to extract the analytics from the pricings dataset. Such scripts are written in TypeScript and leverage the [Pricing4TS package](https://github.com/Alex-GF/Pricing4TS) to extract the analytics.
+
+## Usage
+
+### Install Dependencies
+Dependencies can be installed using the following command: 
 
 ```bash
-git clone https://github.com/isa-group/SaaS-analysis.git
-cd saas-analysis
-git checkout CAISE\'25-Research-Track-v2
+pip install -r requirements.txt
 ```
 
-2. **Install the dependencies**:
+> [!WARNING]
+> If you don't want to install **MiniZinc** in your machine, you can use the Docker image provided in the repository. To build the image, run the following command:
+> ```bash
+> docker build -t minizinc .
+> ```
 
-```bash
-npm install
-```
+### Run the Scripts
+> [!WARNING]
+> The notebook is designed to be run with Python 3.9 or higher.
 
-3. **Run the experiment**:
+The scripts can be run by following the notebook `analysis_and_figures.ipynb`.
 
-```bash
-npm run experiment
-```
+## License 
 
-### What Happens During the Experiment?
-
-When executing `npm run experiment`, the following steps are performed:
-
-1.	**Adding versioning information** to the pricing models if they don’t already have it.
-2.	**Generating .dzn files** for the MiniZinc models from the Pricing2Yaml specifications. These files are primarily to showcase the results of the mapping from each Pricing2Yaml specification to a DZN file. However, they are not used during the experiment.
-3.	**Extracting analytics** from the pricings of the real-world dataset (*data/pricings/yaml/real*), generating:
-
-    - A **JSON file** with the extracted analytics in **data/pricings/json/** (the file will be titled: `analytics-{timestamp}.json`).
-    - Detailed **logs** of results and errors in the **logs/** directory (in the folder: `pricing-analyitic-{timestamp}`).
-
-4.	**Validation** of the pricings included within the synthetic dataset (*data/pricings/yaml/synthetic*), generating:
-
-    - Summary and detailed **logs** of results in the **logs/** directory (in the folder: `validation-{timestamp}`).
-
-::: warning
-Don't worry about the errors that are logged during the generation of the .dzn files. These errors are expected since most of inconsistencies from the synthetic dataset are detected by the Pricing4TS parser.
-:::
-
-### Are you using VSCode?
-
-We have configured some launch configurations to ease the launch of the experiments independently 😄.
-
-## 📂 Further Explanation About the Package
-
-### 🔍 Project’s Structure
-
-```bash
-saas-analysis
-├── .vscode
-├── data
-│   ├── models
-│   │   └── minizinc # Models utilized by Pricing4TS to get some analytics
-│   │       ├── operations
-│   │       │   ├── analysis
-│   │       │   │   ├── cheapest-subscription.mzn
-│   │       │   │   ├── configuration-space.mzn
-│   │       │   │   └── most-expensive-subscription.mzn
-│   │       │   ├── filter
-│   │       │   │   ├── cheapest-filtered-subscription.mzn
-│   │       │   │   ├── filter.mzn
-│   │       │   │   ├── filtered-configuration-space.mzn
-│   │       │   │   └── most-expensive-filtered-subscription.mzn
-│   │       │   ├── validation
-│   │       │   │   ├── valid-pricing.mzn
-│   │       │   │   └── valid-subscription.mzn
-│   │       └── PricingModel.mzn
-│   └── pricings
-│       ├── dzn           # Generated after running the experiment
-│       │   └── ...
-│       ├── json          # Generated after running the experiment
-│       │   └── ...
-│       └── yaml
-│           ├── real      # Pricing2Yaml files from the real-world dataset
-│           │   └── ...
-│           └── synthetic # Pricing2Yaml files from the synthetic dataset
-│               └── ...
-├── logs                  # Generated after running the experiment
-├── node_modules          # Generated after running npm install
-├── src
-│   ├── scripts
-│   │   ├── analytics
-│   │   │   ├── extract-analytics-from-file.ts
-│   │   │   └── extract-analytics.ts        
-│   │   ├── utils
-│   │   │   ├── extract-analytics-from-file.ts
-│   │   │   └── extract-analytics.ts        
-│   │   └── validation
-│   │       ├── synthetic-dataset-experiment.ts
-│   │       └── synthetic-pricing-validation.ts        
-│   └── services
-│       └── logging.service.ts
-├── .gitignore
-├── LICENSE
-├── package-lock.json
-├── package.json
-├── README.md
-└── tsconfig.json
-```
-
-### 📜 Scripts
-
-The package includes the following scripts:
-
-| Script Name            | Description                                                   | Usage Command                       |
-|------------------------|---------------------------------------------------------------|-------------------------------------|
-| **Extract Analytics¹** | Extracts analytics for all SaaS pricings in the dataset.      | `npm run analytics`                 |
-| **File-Based Analytics¹** | Processes analytics from a specific file.                   | `npm run analytics-from-file <path-to-pricing-file>` |
-| **Dataset Validation¹** | Runs the `valid subscription` operation over the whole synthetic dataset      | `npm run validation`                 |
-| **File-Based Validation¹** | Validates a specific Pricing2Yaml file.                   | `npm run validation-from-file <path-to-pricing-file>` |
-| **Add Versions**       | Adds missing versioning information to pricing models.        | `npm run add-versions-to-pricings`  |
-| **Generate DZN Files** | Converts pricing models into `.dzn` files for MiniZinc.       | `npm run generate-dzn-files`        |
-| **Analytics Experiment Workflow**| Executes the full pipeline of the analytics experiment.                | `npm run experiment:analytics`                |
-| **Validation Experiment Workflow**| Executes the full pipeline of the validation experiment.                | `npm run experiment:validation`                |
-| **Experiment Workflow**| Executes the full pipeline of the experiment, including analytics extraction and validation.                | `npm run experiment`                |
-
-¹**Extract Analytics**, **File-Based Analytics**, **Dataset Validation** and **File-Based Validation** scripts leverages the [PricingService](https://github.com/Alex-GF/Pricing4TS/blob/v0.9.5/src/server/services/pricing.service.ts) from our library [Pricing4TS](https://github.com/Alex-GF/Pricing4TS). This library, developed as part of our Pricing-driven Development and Operation research initiatives, was specifically extended with the automated analysis formalization and operations presented in the paper.
-
-The script utilizes the `getAnalytics(pricing: Pricing)` method from the service to process all pricing files located in the *data/pricings/yaml/real* or *data/pricings/yaml/synthetic* directories, depending on the executed experiment. In the first case, the analytics extraction method is applied to each file, generating a JSON file with the extracted analytics in *data/pricings/json/* and detailed logs of results and errors in the *logs/* directory. In the second case, the validation method is applied to each file, generating summary and detailed logs of results in the *logs/* directory.
-
-### 📦 Dependencies
-
-**Production Dependencies**
-
-- **cli-progress**: For progress visualization.
-- **@types/cli-progress**: Type definitions for cli-progress.
-- [**Pricing4TS**](https://github.com/Alex-GF/Pricing4TS): Our library for pricing-driven development and operations.
-
-**Development Dependencies**
-
-- **typescript**: Enables TypeScript support.
-- **jest & ts-jest**: For testing.
-- **ts-node**: To run TypeScript files directly.
-
-## ⚠️ Disclaimer
-
-This project is part of the research activities of the [ISA Group](https://www.isa.us.es/3.0/) and was specifically created as a laborratory package for the paper: "Taming Complexity: Automated Analysis of Intelligent Pricings". Please note that the project should be used with caution. We are not responsible for any damage caused by the use of this software. If you find any bugs or have any suggestions, please let us know by opening an issue in the [GitHub repository](https://github.com/isa-group/SaaS-analysis/issues) with the label: **CAISE'25-Research-Track**.
-
-## 📜 License
-
-This work is licensed under a [Creative Commons Attribution 4.0 International License] [cc-by].
+This work is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by].
 
 [![CC BY 4.0][cc-by-image]][cc-by]
 

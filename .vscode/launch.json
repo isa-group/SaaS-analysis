@@ -22,7 +22,37 @@
             "runtimeExecutable": "ts-node",
             "args": [
                 "${workspaceFolder}/src/scripts/analytics/extract-analytics-from-file.ts",
-                "./data/pricings/yaml/real/buffer/2024.yml"
+                "${file}"
+            ],
+            "port": 9229,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "skipFiles": ["<node_internals>/**"],
+            // "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Extract configuration space for a single pricing",
+            "runtimeExecutable": "ts-node",
+            "args": [
+                "${workspaceFolder}/src/scripts/analytics/get-configuration-space-size-from-file.ts",
+                "${file}"
+            ],
+            "port": 9229,
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "skipFiles": ["<node_internals>/**"],
+            // "outFiles": ["${workspaceFolder}/dist/**/*.js"]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Extract analytics for a single pricing",
+            "runtimeExecutable": "ts-node",
+            "args": [
+                "${workspaceFolder}/src/scripts/analytics/extract-analytics-from-file.ts",
+                "${file}"
             ],
             "port": 9229,
             "console": "integratedTerminal",
@@ -37,7 +67,7 @@
             "runtimeExecutable": "ts-node",
             "args": [
                 "${workspaceFolder}/src/scripts/validation/synthetic-dataset-experiment.ts",
-                "./data/pricings/yaml/real/github/2024.yml"
+                "./data/pricings/yaml/real-v2/github/2024.yml"
             ],
             "port": 9229,
             "console": "integratedTerminal",

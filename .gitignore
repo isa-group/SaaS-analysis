@@ -136,4 +136,5 @@ npm/
 test/
 data/pricings/dzn/
 data/pricings/json/
+data/CSVs/
 .DS_Store

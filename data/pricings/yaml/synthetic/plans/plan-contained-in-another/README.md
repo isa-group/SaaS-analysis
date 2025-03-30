@@ -1,1 +1,0 @@
-In this case, the `BASIC` plan contains the same features as the `PRO` plan, and a greater usage limits, but at a lower price. The inconsistency is being caused beacuse of the default value set in the usage limit

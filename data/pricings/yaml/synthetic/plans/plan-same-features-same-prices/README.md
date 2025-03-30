@@ -1,1 +1,0 @@
-In this case, the `BASIC` and `PRO` plans offer the same set of features and price, i.e. they are the same plan.
