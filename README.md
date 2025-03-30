@@ -1,7 +1,7 @@
 [![CC BY 4.0][cc-by-shield]][cc-by][![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.14254341.svg)](https://doi.org/10.5281/zenodo.14254341)
-# 📊 Automated Analysis of Intelligent Pricings - Supplementary Material
+# 📊 Automated Analysis of Pricings in SaaS-based Information Systems - Supplementary Material
 
-This repository contains the laboratory package for the paper **Taming Complexity: Automated Analysis of Intelligent Pricings**, which includes scripts and MiniZinc models to replicate the validation performed in the study. Driven by the paper's main contribution, the primary goal of this package is to leverage the proposed automated analysis formalization and operations, among others, to uncover latent information in SaaS pricing models.
+This repository contains the laboratory package for the paper **Automated Analysis of Pricings in SaaS-based Information Systems**, which includes scripts and MiniZinc models to replicate the validation performed in the study. Driven by the paper's main contribution, the primary goal of this package is to leverage the proposed automated analysis formalization and operations, among others, to uncover latent information in SaaS pricing models.
 
 ## 📚 Table of Contents
 
