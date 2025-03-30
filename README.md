@@ -1,4 +1,4 @@
-[![CC BY 4.0][cc-by-shield]][cc-by] 
+[![CC BY 4.0][cc-by-shield]][cc-by] [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.15110064.svg)](https://doi.org/10.5281/zenodo.15110064)
 # "Trends in Industry Support for Pricing-Driven DevOps in SaaS": The Laboratory Package
 
 The aim of this repository is to centralize the work performed by the authors to write the paper: "Trends in Industry Support for Pricing-Driven DevOps in SaaS" for IEEE Transactions on Services Computing about the current status of SaaS pricings.
