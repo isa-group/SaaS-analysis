@@ -1,4 +1,4 @@
-[![CC BY 4.0][cc-by-shield]][cc-by] [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.15110064.svg)](https://doi.org/10.5281/zenodo.15110064)
+[![CC BY 4.0][cc-by-shield]][cc-by] [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.16106711.svg)](https://doi.org/10.5281/zenodo.16106711)
 # "iSubscription: Bridging the Gap Between Contracts and Runtime Access Control in SaaS": The Laboratory Package
 
 The aim of this repository is to centralize the work performed by the authors to demonstrate the correlation beween subscription states and pricings in the paper: "iSubscription: Bridging the Gap Between Contracts and Runtime Access Control in SaaS", submitted to the International Conference on Service Oriented Computing (ICSOC) 2025.
