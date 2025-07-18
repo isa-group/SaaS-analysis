@@ -1,11 +1,11 @@
 [![CC BY 4.0][cc-by-shield]][cc-by] [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.15110064.svg)](https://doi.org/10.5281/zenodo.15110064)
-# "Trends in Industry Support for Pricing-Driven DevOps in SaaS": The Laboratory Package
+# "iSubscription: Bridging the Gap Between Contracts and Runtime Access Control in SaaS": The Laboratory Package
 
-The aim of this repository is to centralize the work performed by the authors to write the paper: "Trends in Industry Support for Pricing-Driven DevOps in SaaS" for IEEE Transactions on Services Computing about the current status of SaaS pricings.
+The aim of this repository is to centralize the work performed by the authors to demonstrate the correlation beween subscription states and pricings in the paper: "iSubscription: Bridging the Gap Between Contracts and Runtime Access Control in SaaS", submitted to the International Conference on Service Oriented Computing (ICSOC) 2025.
 
 ## Available SaaS
 
-The SaaS of the following table are the ones that have been used in the paper. The following symbols are used to indicate the status of the SaaS for the indicated year:
+The SaaS of the following table are the ones that have been used in the analysis. The following symbols are used to indicate the status of the SaaS for the indicated year:
 
 - ✅: The SaaS is modeled for the indicated year.
 - ✖️: There is a snapshot, but a clear feature list cannot be extracted.
